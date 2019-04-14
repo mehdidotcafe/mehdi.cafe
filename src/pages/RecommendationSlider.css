@@ -1,0 +1,74 @@
+.recommendation-slider .slick-prev {
+  left: 0px;
+}
+
+.recommendation-slider .slick-next {
+  right: 0px;
+  z-index: 2;
+}
+
+.recommendation-slider .slick-next, .recommendation-slider .slick-prev {
+  top: unset;
+  bottom: -33px;
+  transform: none;
+  width: 32px;
+  height: 32px;
+  z-index: 2;
+}
+
+
+.recommendation-slider .slick-arrow:before {
+  color: black;
+}
+
+.recommendation-slider {
+  color: black;
+  border-radius: .25em;
+  padding-bottom: 32px;
+}
+
+.recommendation-slider .recommendation-slide {
+  margin-top: 4%;
+  margin-bottom: 4%;
+  width: 100% !important;
+}
+
+.recommendation-slider .recommendation-author-image {
+  border-radius: 50%;
+  height: 64px;
+  object-fit: cover;
+  width: 64px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.recommendation-slider .recommendation-author-info {
+  margin-left: 16px;
+  display: inline-block;
+}
+
+.recommendation-slider .recommendation-author-name {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.recommendation-slider .recommendation-author-job {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.recommendation-slider .recommendation-content {
+  margin-left: calc(64px + 16px);
+  margin-right: calc(64px + 16px);
+  font-size: 16px;
+}
+
+.recommendation-slide:focus {
+  outline: none;
+}
+
+.recommendation-slider .slick-prev:before, .recommendation-slider .slick-next:before {
+  font-size: 32px;
+  opacity: 1;
+  color: #7a0056;
+}

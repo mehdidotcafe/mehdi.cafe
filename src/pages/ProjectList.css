@@ -1,0 +1,79 @@
+.emoji-container {
+  font-size: 110px;
+  text-align: center;
+}
+
+.no-project-text-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  text-align: center;
+}
+
+.no-project-text-container sub {
+  margin: 12px;
+  font-size: 20px !important;
+  font-family: 'Roboto';
+  text-transform: uppercase;
+}
+
+.filter-container {
+  width: 25%;
+  max-width: 25%;
+  margin-right: 2.5%;
+  padding-right: 2.5%;
+  overflow-x: auto;
+  border-right: 3px solid black;
+  box-sizing: border-box;
+}
+
+.project-list-container .row {
+  align-items: flex-start;
+}
+
+.filter-container .filter-row {
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.filter-container .filter-text {
+   margin-right: 8px;
+   margin-bottom: 16px;
+   width: 100%;
+   text-align: right;
+}
+
+.project-list-container {
+  flex: 1;
+  /* width: 70%;
+  max-width: 70%; */
+  justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 1170px) {
+  .filter-container, .project-list-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .filter-container {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    margin-left: calc(4% + 16px);
+    margin-right: calc(4% + 16px);
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 3px solid black;
+  }
+
+  .filter-container .filter-row {
+    justify-content: center;
+    width: auto;
+  }
+
+  .filter-container .filter-text {
+    text-align: left;
+  }
+
+}

@@ -1,0 +1,13 @@
+.title {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.title.margin-top {
+  margin-left: 16px;
+  /* padding-top: 80px; */
+}

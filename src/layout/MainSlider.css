@@ -1,0 +1,7 @@
+#main-slider {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+  height: calc(100vh - 80px);
+}

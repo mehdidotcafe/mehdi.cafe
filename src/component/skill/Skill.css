@@ -1,0 +1,107 @@
+.skill-container {
+  position: absolute;
+  height: 164px;
+  width: 164px;
+  background-color: #331c5d;
+  border-radius: 50%;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s, filter 0.3s;
+}
+
+.skill-sub-container {
+  position: relative;
+  height: 164px;
+  width: 164px;
+}
+
+.skill-super-container {
+  position: relative;
+  height: 164px;
+  width: 164px;
+}
+
+.skill-super-container.pr-marged {
+  margin: 5px;
+}
+
+.skill-super-container.little {
+  height: calc(64px);
+  width: calc(64px);
+}
+
+.skill-container.little, .skill-sub-container.little {
+  height: 64px;
+  width: 64px;
+}
+
+.skill-container.little.selected, .skill-super-container:hover .skill-container.little {
+  filter: brightness(150%);
+}
+
+.skill-container.selected {
+  transform: scale(0.80)
+}
+
+.skill-image {
+  margin-top: 18.75%;
+  height: 62.5%;
+  width: 62.5%;
+}
+
+.skill-pr-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 164px;
+  width: 164px;
+  z-index: 2;
+}
+
+.skill-pr-container svg {
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+.skill-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 28px;
+  background-color: #331c5d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.3);
+  border-radius: 50%;
+  transition: 0.3s;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.skill-super-container:hover .skill-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media only screen and (max-width: 1170px) {
+  .skill-container, .skill-super-container, .skill-pr-container, .skill-sub-container {
+      height: calc(164px / 1.3);
+      width: calc(164px / 1.3);
+  }
+
+  .skill-super-container.pr-marged {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .skill-overlay {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,12 @@
+.sub-title {
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  margin-left: 16px;
+  font-size: 32px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.sub-title.margin-top {
+  /* padding-top: 80px; */
+}

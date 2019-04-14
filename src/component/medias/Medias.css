@@ -1,0 +1,15 @@
+.media-button-container {
+  float: right;
+}
+
+.media-button {
+  height: 32px;
+  cursor: pointer;
+  margin-left: 8px;
+  margin-right: 8px;
+  transition: 0.3s;
+}
+
+.media-button:hover {
+  filter: contrast(5%);
+}

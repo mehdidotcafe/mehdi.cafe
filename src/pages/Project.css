@@ -1,0 +1,120 @@
+#project-page-container {
+  margin-top: 64px;
+}
+
+.icon-container {
+  margin-left: 4%;
+  margin-right: 4%;
+  z-index: 99999;
+  margin-top: -72px;
+}
+
+.icon-container * {
+  z-index: 2;
+}
+
+#project-page-container .slider-image img, #project-page-container .slick-slider, #project-page-container .slick-list {
+  max-height: calc(100vh / 2.50) !important;
+  height: calc(100vh / 2.50) !important;
+}
+
+.skill-group-separator {
+  min-width: 6px;
+  width: 6px;
+  background-color: #331c5d;
+  height: 64px;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.09), 0 3px 1px -2px rgba(0,0,0,0.07), 0 1px 5px 0 rgba(0,0,0,0.15);
+}
+
+.project-info-container {
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.project-info-container .back-button-container {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  font-size: 64px;
+  line-height: 48px;
+  bottom: -12px;
+  left: -12px;
+  background-color: #7a0056;
+  border-radius: 50%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.project-description-container {
+  width: 50%;
+  position: fixed;
+  top: 64px;
+  margin-top: 32px;  
+}
+
+.project-scroller-container {
+  margin-left: 60%;
+  width: 40%;
+  display: inline-block;
+}
+
+.project-scroller-container img {
+  background-color: #f0f0f0;
+}
+
+.project-header {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.project-header .project-title-container {
+  display: inline-block;
+  margin-left: 32px;
+}
+
+.project-skills-container {
+  max-width: 100vw;
+  overflow-x: auto;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 1170px) {
+  .project-info-container {
+    flex-direction: column;
+  }
+
+  .project-description-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .project-scroller-container {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 0;
+  }
+
+  .project-header {
+    flex-direction: column;
+    margin-top: 64px;
+  }
+
+  .project-header .project-title-container {
+    margin-top: 32px;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .project-skills-container {
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+}

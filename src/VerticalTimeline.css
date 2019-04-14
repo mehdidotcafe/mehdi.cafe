@@ -1,0 +1,115 @@
+.vertical-timeline {
+  margin-left: -14px;
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-bottom: 64px;
+}
+
+.vertical-timeline::before {
+  background: #331c5d;
+  width: 6px;
+}
+
+.vertical-timeline-element-icon {
+  box-shadow: 0 0 0 4px #331c5d, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+  height: 64px;
+  width: 64px;
+  margin-left: -11px;
+}
+
+.vertical-timeline-element img {
+  margin-left: 18.75%;
+  margin-top: 18.75%;
+  height: 62.5%;
+  width: 62.5%;
+}
+
+.vertical-timeline-element-content {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  margin-left: 84px;
+  background: white;
+  color: black !important;
+  padding-bottom: 0;
+}
+
+.element-content-first .vertical-timeline-element-content {
+  margin-top: 32px;
+}
+
+.vertical-timeline-element-content {
+  width: max-content;
+  max-width: calc(100% - 84px - 46px);
+}
+
+@media only screen and (min-width: 1170px) {
+  .vertical-timeline--two-columns .vertical-timeline-element-icon {
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+  }
+}
+
+@media only screen and (max-width: 1170px) {
+  .vertical-timeline-element-content {
+    margin-left: calc(84px + 42px);
+  }
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: white;
+  }
+
+  .vertical-timeline-element-icon {
+    margin-left: 24px;
+  }
+
+  .vertical-timeline::before {
+    left: 54px;
+  }
+}
+
+
+.bounce-in {
+  animation: none !important;
+}
+
+.vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns {
+  margin-bottom: 0;
+}
+
+.vertical-timeline-element-content::before {
+  display: none;
+}
+
+.vertical-timeline-element-title {
+  font-size: 32px;
+}
+
+.vertical-timeline-element-subtitle {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.vertical-timeline-element-link {
+  font-size: 14px;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date {
+  font-size: 12px;
+  color: black;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.experience-page .description a {
+  text-decoration: none;
+  color: #331c5d !important;
+  transition: 0.3s;
+}
+
+.experience-page .description a:hover {
+  color: #5d5d5d !important;
+}
+
+.vertical-timeline .description {
+  font-size: 1.3rem;
+}
