@@ -36,7 +36,7 @@ class Header extends Component {
     const visibleId = Location.pathname()
 
     return (
-      <div id="header" className={this.state.isCollapsed === true ? 'collapsed' : ''}>
+      <header id="header" className={this.state.isCollapsed === true ? 'collapsed' : ''}>
         <div id="header-logo-container">
           <div id="header-first"></div>
           <div className="header-shadow-clear"></div>
@@ -62,7 +62,7 @@ class Header extends Component {
           <span></span>
           <span></span>
         </div>
-      </div>
+      </header>
     )
   }
 }

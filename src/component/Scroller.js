@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 
+import WindowSize from '../WindowSize'
+
 class Scroller extends Component {
   index = 0
   nextIndex = 0
@@ -59,11 +61,14 @@ class Scroller extends Component {
       const elementRect = element.getBoundingClientRect()
 
       this.isScrolling = true
-      window.scrollBy({
-        behavior: isSmooth ? 'smooth' : 'auto',
-        left: 0,
-        top: elementRect.top
-      })
+      if (!WindowSize.isSafari()) {
+        window.scrollBy({
+          behavior: isSmooth ? 'smooth' : 'auto',
+          left: 0,
+          top: elementRect.top
+        })
+      }
+
       if (this.scrollInterval) {
         window.clearInterval(this.scrollInterval)
       }
@@ -79,6 +84,7 @@ class Scroller extends Component {
   }
 
   onScroll(e) {
+    //return
     var scrollDirectionCoeff = this.getScrollDirection() === true ?  1 : -1
 
     if (!(this.isScrolling || (this.index + scrollDirectionCoeff) >= this.sectionRefs.length || (this.index + scrollDirectionCoeff) < 0 || e.timeStamp < 2000)) {

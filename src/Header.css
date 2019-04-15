@@ -1,8 +1,8 @@
 /* #331c5d */
 
-
 #header {
   top: 0;
+  left: 0;
   position: fixed;
   min-width: 100vw;
   max-width: 100vw;
@@ -11,8 +11,9 @@
   flex-direction: row;
   align-items: flex-end;
   overflow-y: visible;
-  z-index: 12;
+  z-index: 999;
   transform: translateZ(0);
+  display: block;
 }
 
 #header.collapsed {
