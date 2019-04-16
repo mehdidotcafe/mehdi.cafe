@@ -26,9 +26,10 @@ class Landing extends BasicPage {
 
   renderContent() {
     return (
-      <div>
         <div className="landing-container">
-            <Image src="/images-webp/me-transparent-2.png" className="landing-avatar-image" alt="Mehdi Meddour"/>
+            <div style={{alignSelf: 'flex-end'}}>
+              <Image src="/images-webp/me-transparent-2.png" className="landing-avatar-image" alt="Mehdi Meddour"/>
+            </div>
             <div className="info-container">
               <div className="main-text-container">
                 <p className="first-text">Bonjour, je suis Mehdi.</p>
@@ -46,7 +47,6 @@ class Landing extends BasicPage {
               </div>
             </div>
         </div>
-      </div>
     )
   }
 }

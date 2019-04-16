@@ -33,11 +33,11 @@ class Scroller extends Component {
 
   bindListener() {
     //console.log(this.containerRef.current)
-    //this.containerRef.current.addEventListener('scroll', this.onScroll)
+    this.containerRef.current.addEventListener('scroll', this.onScroll)
   }
 
   unbindListener() {
-    //this.containerRef.current.removeEventListener('scroll', this.onScroll)
+    this.containerRef.current.removeEventListener('scroll', this.onScroll)
   }
 
   getContainerScrollTop() {
@@ -124,7 +124,7 @@ class Scroller extends Component {
 
   render() {
     return (
-      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}} onScroll={this.onScroll.bind(this)}>
+      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}}>
         { this.sections.map(child => child) }
       </div>
     )
