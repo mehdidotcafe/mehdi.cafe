@@ -1,8 +1,8 @@
 .landing-avatar-image {
-  position: absolute;
-  bottom: 0;
+  align-self: flex-end;
   height: 85vh;
-  left: 256px;
+  margin-left: 128px;
+  margin-right: 128px;
   /* left: calc(50vw - (478px / 2)); */
 }
 
@@ -40,13 +40,8 @@
 }
 
 .landing-container .main-text-container {
-  position: absolute;
-  right: 128px;
-  top: 96px;
-  z-index: 3;
   max-width: 40vw;
   padding: 16px;
-  /* border-radius: 5px; */
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   background-color: white;
 }
@@ -54,9 +49,6 @@
 .landing-container .recommendation-slider-container {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   background-color: white;
-  position: absolute;
-  right: 128px;
-  bottom: 32px;
   max-width: 40vw;
   padding: 16px;
 
@@ -98,4 +90,10 @@
 
 .media-container-row {
   margin-top: 32px;
+}
+
+.landing-container .info-container {
+  z-index: 3;
+  margin-top: 16px;
+  margin-right: 32px;
 }

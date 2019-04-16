@@ -28,7 +28,8 @@ class Landing extends BasicPage {
     return (
       <div>
         <div className="landing-container">
-            <div className="text-container">
+            <Image src="/images-webp/me-transparent-2.png" className="landing-avatar-image" alt="Mehdi Meddour"/>
+            <div className="info-container">
               <div className="main-text-container">
                 <p className="first-text">Bonjour, je suis Mehdi.</p>
                 <h1>Développeur Freelance WEB / MOBILE.</h1>
@@ -40,10 +41,9 @@ class Landing extends BasicPage {
                   <Medias className="bp-large"></Medias>
                 </Row>
               </div>
-            </div>
-            <Image src="/images-webp/me-transparent-2.png" className="landing-avatar-image" alt="Mehdi Meddour"/>
-            <div className="recommendation-slider-container">
-              <RecommendationSlider recommendations={RecommendationService.get()}/>
+              <div className="recommendation-slider-container">
+                <RecommendationSlider recommendations={RecommendationService.get()}/>
+              </div>
             </div>
         </div>
       </div>

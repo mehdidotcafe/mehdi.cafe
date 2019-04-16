@@ -1,7 +1,5 @@
 import React, {Component} from 'react'
 
-import WindowSize from '../WindowSize'
-
 class Scroller extends Component {
   index = 0
   nextIndex = 0
@@ -29,19 +27,21 @@ class Scroller extends Component {
 
     this.onScroll = this.onScroll.bind(this)
 
-    this.container = this.props.container || document.querySelector('html')
+    //this.container = this.containerRef.current
+    //console.log(props.container)
   }
 
   bindListener() {
-    window.addEventListener('scroll', this.onScroll)
+    //console.log(this.containerRef.current)
+    //this.containerRef.current.addEventListener('scroll', this.onScroll)
   }
 
   unbindListener() {
-    window.removeEventListener('scroll', this.onScroll)
+    //this.containerRef.current.removeEventListener('scroll', this.onScroll)
   }
 
   getContainerScrollTop() {
-    return this.container.scrollTop || window.pageYOffset || document.documentElement.scrollTop
+    return this.containerRef.current.scrollTop || window.pageYOffset || document.documentElement.scrollTop
   }
 
   getScrollDirection() {
@@ -61,13 +61,11 @@ class Scroller extends Component {
       const elementRect = element.getBoundingClientRect()
 
       this.isScrolling = true
-      if (!WindowSize.isSafari()) {
-        window.scrollBy({
-          behavior: isSmooth ? 'smooth' : 'auto',
-          left: 0,
-          top: elementRect.top
-        })
-      }
+      this.containerRef.current.scrollBy({
+        behavior: isSmooth ? 'smooth' : 'auto',
+        left: 0,
+        top: elementRect.top
+      })
 
       if (this.scrollInterval) {
         window.clearInterval(this.scrollInterval)
@@ -93,7 +91,7 @@ class Scroller extends Component {
       var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
       var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.container.clientHeight) ||
+      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.containerRef.current.clientHeight) ||
       (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
         e.preventDefault()
         e.stopPropagation()
@@ -126,9 +124,9 @@ class Scroller extends Component {
 
   render() {
     return (
-      <span ref={this.containerRef}>
+      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}} onScroll={this.onScroll.bind(this)}>
         { this.sections.map(child => child) }
-      </span>
+      </div>
     )
   }
 }
