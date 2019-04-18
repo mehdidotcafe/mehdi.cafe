@@ -57,15 +57,16 @@ class Scroller extends Component {
   }
 
   scrollToElement(element, index, isSmooth = true) {
-    this.scrollTimeout = setTimeout(() => {
       const elementRect = element.getBoundingClientRect()
 
       this.isScrolling = true
-      this.containerRef.current.scrollBy({
-        behavior: isSmooth ? 'smooth' : 'auto',
-        left: 0,
-        top: elementRect.top
-      })
+      this.scrollTimeout = setTimeout(() => {
+        this.containerRef.current.scrollBy({
+          behavior: isSmooth ? 'smooth' : 'auto',
+          left: 0,
+          top: elementRect.top
+        })
+      }, 0)
 
       if (this.scrollInterval) {
         window.clearInterval(this.scrollInterval)
@@ -78,7 +79,6 @@ class Scroller extends Component {
           window.clearInterval(this.scrollInterval)
         }
       }, 1000)
-    }, 0)
   }
 
   onScroll(e) {
@@ -124,7 +124,7 @@ class Scroller extends Component {
 
   render() {
     return (
-      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}}>
+      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}} className={this.props.className}>
         { this.sections.map(child => child) }
       </div>
     )

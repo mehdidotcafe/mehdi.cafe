@@ -37,12 +37,13 @@ class SkillPage extends BasicPage {
 
     return (
       <div className={`sub-basic-page`}>
+        <div className="skill-background"></div>
         <div style={{paddingTop: '64px'}}>
           <Title text={`Mes skills`} noMargin={true}/>
         </div>
         <div className="subtext-container">
           <div className="experiance-preview"></div>
-          <span style={{fontSize: '22px', textTransform: 'uppercase'}}>Années d'expériences (min. 6 mois, max. 6 ans)</span>
+          <span style={{fontSize: '22px', textTransform: 'uppercase'}}>Années d'expériences (min. 6 mois, max. 4 ans)</span>
         </div>
         <Row style={{marginTop: '64px', justifyContent: 'space-around'}} spaceAroundMob>
           { this.skills.map(skill => (

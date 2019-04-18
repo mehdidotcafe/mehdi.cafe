@@ -27,7 +27,8 @@ class Landing extends BasicPage {
   renderContent() {
     return (
         <div className="landing-container">
-            <div style={{alignSelf: 'flex-end'}}>
+          <div className="landing-background"></div>
+            <div style={{alignSelf: 'flex-end', zIndex: 2}}>
               <Image src="/images-webp/me-transparent-2.png" className="landing-avatar-image" alt="Mehdi Meddour"/>
             </div>
             <div className="info-container">

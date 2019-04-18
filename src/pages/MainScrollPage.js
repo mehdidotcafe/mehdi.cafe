@@ -23,7 +23,7 @@ class MainScrollPage extends Component {
 
   render() {
     return (
-      <Scroller onScroll={this.onScroll.bind(this)} index={pageIds.indexOf(Location.pathname())} height="100vh">
+      <Scroller className="main-scroller" onScroll={this.onScroll.bind(this)} index={pageIds.indexOf(Location.pathname())} height="100vh">
         <div id="scroll-home-container" className="children">
           <LandingPage/>
         </div>

@@ -14,15 +14,15 @@ class Skill extends Component {
   render() {
     const largeSide = 164
     const largeStroke = this.getStroke(largeSide)
-    const smallSide = largeSide / 1.3
+    const smallSide = largeSide / 1.4
     const smallStroke = this.getStroke(smallSide)
 
     return (
       <div className={`skill-super-container ${this.props.isLittle ? 'little' : ''} ${this.props.showExperience ? 'pr-marged' : ''}`}>
       { this.props.showExperience &&
         <React.Fragment>
-          <div className="skill-pr-container bp-large"><ProgressRing side={largeSide} stroke={largeStroke} radius={Math.floor(largeSide / 2 + largeStroke * 2 + largeStroke / 2)} progress={this.props.experience * 100 / 6}/></div>
-          <div className="skill-pr-container bp-small"><ProgressRing side={smallSide} stroke={smallStroke} radius={Math.floor(smallSide / 2 + smallStroke * 2 + smallStroke / 2)} progress={this.props.experience * 100 / 6}/></div>
+          <div className="skill-pr-container bp-large" style={{left: -largeStroke, top: -largeStroke}}><ProgressRing side={Math.floor(largeSide + largeStroke)} stroke={largeStroke} progress={this.props.experience * 100 / 4}/></div>
+          <div className="skill-pr-container bp-small"  style={{left: -smallStroke, top: -smallStroke}}><ProgressRing side={Math.floor(smallSide + smallStroke)} stroke={smallStroke} progress={this.props.experience * 100 / 4}/></div>
         </React.Fragment>
       }
         <div className={`
@@ -34,7 +34,7 @@ class Skill extends Component {
               {/* <img className="skill-image" src={`/images/skills/${this.props.logo}.png`}/> */}
               { !this.props.isLittle &&
                   <span className="skill-overlay" style={{backgroundColor: this.props.backgroundColor, backgroundImage: this.props.backgroundImage}}>
-                    <span>{this.props.name}</span>
+                    <span className="skill-overlay-text">{this.props.name}</span>
                   </span>
               }
             </div>

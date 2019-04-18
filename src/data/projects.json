@@ -23,7 +23,7 @@
   {
     "name": "MateMeUp Mobile",
     "logo": "matemeup",
-    "backgroundColor": "#b4b4b4",
+    "backgroundColor": "#e79090",
     "languages": ["Android", "iOS", "Java", "Swift", "Git"],
     "companies": ["freelancer"],
     "url": "https://matemeup.com",

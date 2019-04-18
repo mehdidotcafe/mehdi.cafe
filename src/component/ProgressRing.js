@@ -6,10 +6,9 @@ class ProgressRing extends Component {
   constructor(props) {
     super(props);
 
-    const { radius, stroke } = this.props;
+    const { side } = this.props;
 
-    this.normalizedRadius = radius - stroke * 2;
-    this.circumference = this.normalizedRadius * 2 * Math.PI;
+    this.circumference = side * 4
   }
 
   render() {
@@ -26,18 +25,37 @@ class ProgressRing extends Component {
         height={this.props.side}
         width={this.props.side}
        >
-        <circle
+        <rect
           stroke={strokeColor}
           fill="transparent"
           strokeWidth={ stroke }
           strokeDasharray={ this.circumference + ' ' + this.circumference }
           style={ { strokeDashoffset } }
-          r={ this.normalizedRadius }
-          cx={ this.props.side / 2}
-          cy={ this.props.side / 2}
+          width={ this.props.side}
+          height={ this.props.side}
          />
       </svg>
     );
+
+  //
+  //   return (
+  //     <svg
+  //       style={{overflow: 'visible'}}
+  //       height={this.props.side}
+  //       width={this.props.side}
+  //      >
+  //       <circle
+  //         stroke={strokeColor}
+  //         fill="transparent"
+  //         strokeWidth={ stroke }
+  //         strokeDasharray={ this.circumference + ' ' + this.circumference }
+  //         style={ { strokeDashoffset } }
+  //         r={ this.normalizedRadius }
+  //         cx={ this.props.side / 2}
+  //         cy={ this.props.side / 2}
+  //        />
+  //     </svg>
+  //   );
   }
 }
 

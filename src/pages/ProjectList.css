@@ -25,6 +25,7 @@
   overflow-x: auto;
   border-right: 3px solid black;
   box-sizing: border-box;
+  padding-bottom: 32px;
 }
 
 .project-list-container .row {
@@ -48,6 +49,7 @@
   /* width: 70%;
   max-width: 70%; */
   justify-content: space-around;
+  position: relative;
 }
 
 
@@ -76,4 +78,17 @@
     text-align: left;
   }
 
+}
+
+.project-background {
+  position: absolute;
+  bottom: -76vh;
+  height: 100vh;
+  left: -70vh;
+  background-image: linear-gradient(to left top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  /* opacity: 0.8; */
+  width: 100vh;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: -1;
 }

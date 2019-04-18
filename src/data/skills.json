@@ -31,5 +31,5 @@
   {"name": "mySQL", "logo": "mysql", "backgroundColor": "#00546b", "experience": 4},
   {"name": "MongoDB", "logo": "mongo", "backgroundColor": "#69b23f", "experience": 1},
 
-  {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1}  
+  {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1}
 ]

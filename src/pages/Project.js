@@ -62,7 +62,8 @@ class ProjectPage extends BasicPage {
   renderContent() {
 
     return (
-      <React.Fragment>
+      <div id="project-page-container">
+        <div className="project-detail-background"></div>
         {this.state.project ?
           <div className="project-info-container">
             <div className="project-description-container">
@@ -112,7 +113,7 @@ class ProjectPage extends BasicPage {
             }
           </div> :
           <Redirect to='/work'/> }
-      </React.Fragment>
+      </div>
     )
   }
 }

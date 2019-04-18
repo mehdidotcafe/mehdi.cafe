@@ -34,7 +34,7 @@
 }
 
 .recommendation-slider .recommendation-author-image {
-  border-radius: 50%;
+  /* border-radius: 50%; */
   height: 64px;
   object-fit: cover;
   width: 64px;

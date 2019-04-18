@@ -1,8 +1,8 @@
 .basic-page {
   position: relative;
   padding-top: 64px;
-  min-width: 100%;
-  max-width: 100%;
+  min-width: 100vw;
+  max-width: 100vw;
   min-height: calc(100vh - 64px);
 }
 

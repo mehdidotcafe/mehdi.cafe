@@ -177,6 +177,8 @@ class ProjectListPage extends BasicPage {
 
     return (
       <div className="sub-basic-page project-list-container">
+        <div className="project-background"></div>
+
         <div style={{paddingTop: '64px'}}>
           <Title text={`Mes projets`} noMargin={true}/>
         </div>
