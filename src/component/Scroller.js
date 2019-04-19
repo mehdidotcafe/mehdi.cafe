@@ -27,21 +27,23 @@ class Scroller extends Component {
 
     this.onScroll = this.onScroll.bind(this)
 
+    this.container = document.querySelector('html')
     //this.container = this.containerRef.current
     //console.log(props.container)
   }
 
   bindListener() {
     //console.log(this.containerRef.current)
-    this.containerRef.current.addEventListener('scroll', this.onScroll)
+    window.addEventListener('scroll', this.onScroll)
   }
 
   unbindListener() {
-    this.containerRef.current.removeEventListener('scroll', this.onScroll)
+    window.removeEventListener('scroll', this.onScroll)
   }
 
   getContainerScrollTop() {
-    return this.containerRef.current.scrollTop || window.pageYOffset || document.documentElement.scrollTop
+    return this.container.scrollTop || window.pageYOffset || document.documentElement.scrollTop
+    // return this.containerRef.current.scrollTop || window.pageYOffset || document.documentElement.scrollTop
   }
 
   getScrollDirection() {
@@ -56,13 +58,13 @@ class Scroller extends Component {
     this.props.onScroll && this.props.onScroll(index)
   }
 
-  scrollToElement(element, index, isSmooth = true) {
-      const elementRect = element.getBoundingClientRect()
-
+  scrollToElement(elementRect, index, isSmooth = true) {
       this.isScrolling = true
+      // this.containerRef.current
+      console.log(elementRect.top)
       this.scrollTimeout = setTimeout(() => {
-        this.containerRef.current.scrollBy({
-          behavior: isSmooth ? 'smooth' : 'auto',
+        this.container.scrollBy({
+          behavior: isSmooth ? 'auto' : 'auto',
           left: 0,
           top: elementRect.top
         })
@@ -91,13 +93,14 @@ class Scroller extends Component {
       var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
       var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.containerRef.current.clientHeight) ||
+      // this.containerRef.current
+      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.container.clientHeight) ||
       (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
         this.notifyOnScroll(nextIndex)
-        this.scrollToElement( this.sectionRefs[nextIndex].current, nextIndex)
+        this.scrollToElement(nextElement, nextIndex)
       } else {
         this.isScrolling = false
       }
@@ -105,7 +108,7 @@ class Scroller extends Component {
   }
 
   componentDidMount() {
-    this.scrollToElement(this.sectionRefs[this.index].current, this.index, false)
+    this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), this.index, false)
     this.bindListener()
   }
 
@@ -118,13 +121,13 @@ class Scroller extends Component {
   componentDidUpdate() {
     if (this.nextIndex !== this.props.index) {
       this.index = this.props.index
-      this.scrollToElement(this.sectionRefs[this.index].current, this.props.index)
+      this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), this.props.index)
     }
   }
 
   render() {
     return (
-      <div ref={this.containerRef} style={{height: this.props.height, maxHeight: this.props.height, overflow: 'auto'}} className={this.props.className}>
+      <div ref={this.containerRef}>
         { this.sections.map(child => child) }
       </div>
     )

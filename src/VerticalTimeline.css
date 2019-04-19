@@ -12,13 +12,15 @@
 
 .vertical-timeline-element-icon {
   border-radius: 0;
-  box-shadow: 0 0 0 4px #331c5d, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.05);
+  box-shadow: 0 0 0 4px #331c5d, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.-05);
   height: 64px;
   width: 64px;
   margin-left: -11px;
+  transform: rotate(45deg);
 }
 
 .vertical-timeline-element img {
+  transform: rotate(-45deg);
   margin-left: 18.75%;
   margin-top: 18.75%;
   height: 62.5%;
@@ -114,4 +116,18 @@
 
 .vertical-timeline .description {
   font-size: 1.3rem;
+}
+
+.experience-background {
+  position: absolute;
+  bottom: 0vh;
+  left: -70vh;
+  top: 80vh;
+  /* background-image: linear-gradient(to left, #331c5d, #47195e, #59145d, #6a0b5b, #7a0056); */
+  background-image: linear-gradient(to top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  /* opacity: 0.8; */
+  width: 100vh;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: -1;
 }

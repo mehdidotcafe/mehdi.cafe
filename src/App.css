@@ -22,9 +22,9 @@
   color: #61dafb;
 }
 
-#content {
+/* #content {
   height: 100vh;
-}
+} */
 
 .main-scroller {
   overflow-x: hidden !important;
