@@ -14,7 +14,7 @@ class Skill extends Component {
   render() {
     const largeSide = 164
     const largeStroke = this.getStroke(largeSide)
-    const smallSide = largeSide / 1.5
+    const smallSide = largeSide / 1.6
     const smallStroke = this.getStroke(smallSide)
 
     return (

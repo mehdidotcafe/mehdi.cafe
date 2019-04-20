@@ -32,35 +32,13 @@
     "recommandations": [1]
   },
   {
-    "name": "The Babel Zone",
-    "logo": "the-babel-zone",
-    "backgroundColor": "#000000",
-    "languages": ["Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
-    "companies": ["freelancer"],
-    "url": "https://thebabelcommunity.app",
-    "images": ["the-babel-zone/the_babel_zone_1.png", "the-babel-zone/the_babel_zone_2.png", "the-babel-zone/the_babel_zone_3.png", "the-babel-zone/the_babel_zone_4.png"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion.",
-    "recommandations": []
-  },
-  {
-    "name": "The Babel Staff",
-    "logo": "the-babel-staff",
-    "backgroundColor": "#000000",
-    "languages": ["React", "Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
-    "companies": ["freelancer"],
-    "images": ["the-babel-staff/the_babel_staff_1.jpg", "the-babel-staff/the_babel_staff_2.jpg", "the-babel-staff/the_babel_staff_3.jpg", "the-babel-staff/the_babel_staff_4.jpg", "the-babel-staff/the_babel_staff_5.jpg"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo.<br/>Système de connexion / déconnexion, gestion de droits et de roles, création / édition / suppression d'événements récurrents.",
-    "recommandations": []
-  },
-  {
-    "name": "The Babel Community",
-    "logo": "the-babel-community",
-    "backgroundColor": "#000000",
-    "languages": ["Javascript", "jQuery", "PHP", "Symfony", "mySQL", "Web", "Git"],
-    "companies": ["freelancer"],
-    "url": "https://thebabelcommunity.com",
-    "images": ["the-babel-community/the_babel_community_1.jpg", "the-babel-community/the_babel_community_2.jpg", "the-babel-community/the_babel_community_3.jpg", "the-babel-community/the_babel_community_4.jpg", "the-babel-community/the_babel_community_5.jpg", "the-babel-community/the_babel_community_6.jpg", "the-babel-community/the_babel_community_7.png", "the-babel-community/the_babel_community_8.png"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellements disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant.",
+    "name": "Cloudindus",
+    "logo": "cloudindus",
+    "backgroundColor": "#dadadd",
+    "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
+    "companies": ["cloudindus"],
+    "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
+    "description": "Développement d'un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site. ",
     "recommandations": []
   },
   {
@@ -95,6 +73,38 @@
     "recommandations": []
   },
   {
+    "name": "The Babel Zone",
+    "logo": "the-babel-zone",
+    "backgroundColor": "#000000",
+    "languages": ["Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
+    "companies": ["freelancer"],
+    "url": "https://thebabelcommunity.app",
+    "images": ["the-babel-zone/the_babel_zone_1.png", "the-babel-zone/the_babel_zone_2.png", "the-babel-zone/the_babel_zone_3.png", "the-babel-zone/the_babel_zone_4.png"],
+    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion.",
+    "recommandations": []
+  },
+  {
+    "name": "The Babel Staff",
+    "logo": "the-babel-staff",
+    "backgroundColor": "#000000",
+    "languages": ["React", "Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
+    "companies": ["freelancer"],
+    "images": ["the-babel-staff/the_babel_staff_1.jpg", "the-babel-staff/the_babel_staff_2.jpg", "the-babel-staff/the_babel_staff_3.jpg", "the-babel-staff/the_babel_staff_4.jpg", "the-babel-staff/the_babel_staff_5.jpg"],
+    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo.<br/>Système de connexion / déconnexion, gestion de droits et de roles, création / édition / suppression d'événements récurrents.",
+    "recommandations": []
+  },
+  {
+    "name": "The Babel Community",
+    "logo": "the-babel-community",
+    "backgroundColor": "#000000",
+    "languages": ["Javascript", "jQuery", "PHP", "Symfony", "mySQL", "Web", "Git"],
+    "companies": ["freelancer"],
+    "url": "https://thebabelcommunity.com",
+    "images": ["the-babel-community/the_babel_community_1.jpg", "the-babel-community/the_babel_community_2.jpg", "the-babel-community/the_babel_community_3.jpg", "the-babel-community/the_babel_community_4.jpg", "the-babel-community/the_babel_community_5.jpg", "the-babel-community/the_babel_community_6.jpg", "the-babel-community/the_babel_community_7.png", "the-babel-community/the_babel_community_8.png"],
+    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellements disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant.",
+    "recommandations": []
+  },
+  {
     "name": "Agora",
     "logo": "agora",
     "backgroundColor": "#f9f9f9",
@@ -124,17 +134,7 @@
     "companies": ["freelancer"],
     "url": "https://fivorites.com/",
     "images": ["fivorites/fivorites_1.jpg", "fivorites/fivorites_2.jpg", "fivorites/fivorites_3.jpg", "fivorites/fivorites_4.jpg"],
-    "description": "Fivorites est une réseau social qui permet de créer des tops 5 de ses médias préférés (musiques, séries, livres ...).<br/>Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.",
-    "recommandations": []
-  },
-  {
-    "name": "Cloudindus",
-    "logo": "cloudindus",
-    "backgroundColor": "#efefef",
-    "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
-    "companies": ["cloudindus"],
-    "images": ["cloudindus/cloudindus.jpg"],
-    "description": "Développement d'un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site. ",
+    "description": "Fivorites est une réseau social qui permet de créer des tops 5 de ses oeuvres préférés (musiques, séries, livres ...).<br/>Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.",
     "recommandations": []
   },
   {
