@@ -24,7 +24,7 @@ class RecommendationSlider extends Component {
   render() {
     return (
       <div className="recommendation-slider">
-        <SubTitle text="Ils ont collaboré avec moi" style={{textTransform: 'initial', marginBottom: '16px', fontSize: '26px'}}></SubTitle>
+        <SubTitle text="Ils ont collaboré avec moi" style={{textTransform: 'initial', marginBottom: '4px', fontSize: '26px'}}></SubTitle>
         <Slider {...this.settings} >
         { this.props.recommendations.map(recommendation => (
           <div className="recommendation-slide" key={recommendation.id}>

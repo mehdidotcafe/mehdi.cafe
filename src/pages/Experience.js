@@ -26,7 +26,7 @@ class Experience extends BasicPage {
 
   renderContent() {
     return (
-      <div className="sub-basic-page experience-page">
+      <div className="sub-basic-page experience-page" style={{paddingBottom: 0}}>
         <div className="experience-background"></div>
         <div style={{paddingTop: '64px'}}>
           <Title text={`Mes expériences`} noMargin={true}/>

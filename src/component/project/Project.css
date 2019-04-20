@@ -35,11 +35,9 @@
   align-items: center;
   justify-content: center;
   transform: scale(0.3) rotate(-45deg);
-  /* border-radius: 50%; */
   transition: 0.3s;
   opacity: 0;
   text-transform: uppercase;
-  font-style: italic;
 }
 
 .project-container:hover .project-overlay {
