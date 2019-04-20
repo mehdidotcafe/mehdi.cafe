@@ -11,6 +11,7 @@
 }
 
 .vertical-timeline-element-icon {
+  margin-top: calc(64px / 4);
   border: 5px solid white;
   border-radius: 0;
   height: 64px;

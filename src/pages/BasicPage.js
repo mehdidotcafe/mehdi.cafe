@@ -9,7 +9,7 @@ class BasicPage extends Component {
 
   render() {
     return (
-      <div className="basic-page">
+      <div className="basic-page" style={this.style}>
         {this.renderContent()}
       </div>
     )
