@@ -79,7 +79,7 @@ class Scroller extends Component {
           this.nextIndex = index
           window.clearInterval(this.scrollInterval)
         }
-      }, 800)
+      }, 1000)
   }
 
   onScroll(e) {
