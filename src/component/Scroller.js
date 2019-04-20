@@ -62,11 +62,10 @@ class Scroller extends Component {
       this.isScrolling = true
       // this.containerRef.current
       this.scrollTimeout = setTimeout(() => {
-        console.log('ca va scroll')
         window.scrollTo({
-          behavior: isSmooth ? 'auto' : 'auto',
+          behavior: isSmooth ? 'smooth' : 'auto',
           left: 0,
-          top: this.getContainerScrollTop() + elementRect.top
+          top: isSmooth ? this.getContainerScrollTop() + elementRect.top : elementRect.top
         })
       }, 10)
 
@@ -119,6 +118,7 @@ class Scroller extends Component {
   }
 
   componentDidUpdate() {
+    console.log(this.nextIndex, this.props.index)
     if (this.nextIndex !== this.props.index) {
       this.index = this.props.index
       this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), this.props.index)
