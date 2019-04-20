@@ -24,7 +24,7 @@ class ScrollableRow extends Component {
 
       if (this.props.step) {
         this.intervalId = setInterval(() => {
-          this.containerRef.scrollBy({left: this.props.step * direction, behavior: 'smooth'})
+          this.containerRef.scrollBy({left: this.props.step * direction, behavior: 'smooth'})            
           if ((direction === 1 && this.containerRef.scrollLeft + this.containerRef.clientWidth >= this.containerRef.scrollWidth)
           || (direction === -1 && this.containerRef.scrollLeft === 0)) {
             direction *= -1

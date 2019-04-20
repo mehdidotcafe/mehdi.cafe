@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.13",
+    "es6-object-assign": "^1.1.0",
     "query-string": "^6.2.0",
     "react": "^16.7.0",
+    "react-app-polyfill": "^0.2.2",
     "react-dom": "^16.7.0",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",

@@ -11,12 +11,13 @@
 }
 
 .vertical-timeline-element-icon {
+  border: 5px solid white;
   border-radius: 0;
-  box-shadow: 0 0 0 4px #331c5d, inset 0 2px 0 rgba(0,0,0,.08), 0 3px 0 4px rgba(0,0,0,.-05);
   height: 64px;
   width: 64px;
-  margin-left: -11px;
+  margin-left: -16px;
   transform: rotate(45deg);
+  box-shadow: none;
 }
 
 .vertical-timeline-element img {

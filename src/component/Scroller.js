@@ -61,14 +61,14 @@ class Scroller extends Component {
   scrollToElement(elementRect, index, isSmooth = true) {
       this.isScrolling = true
       // this.containerRef.current
-      console.log(elementRect.top)
       this.scrollTimeout = setTimeout(() => {
-        this.container.scrollBy({
+        console.log('ca va scroll')
+        window.scrollTo({
           behavior: isSmooth ? 'auto' : 'auto',
           left: 0,
-          top: elementRect.top
+          top: this.getContainerScrollTop() + elementRect.top
         })
-      }, 0)
+      }, 10)
 
       if (this.scrollInterval) {
         window.clearInterval(this.scrollInterval)
@@ -80,7 +80,7 @@ class Scroller extends Component {
           this.nextIndex = index
           window.clearInterval(this.scrollInterval)
         }
-      }, 1000)
+      }, 800)
   }
 
   onScroll(e) {
