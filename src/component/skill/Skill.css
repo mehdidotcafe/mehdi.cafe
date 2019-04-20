@@ -98,8 +98,8 @@
 
 @media only screen and (max-width: 1170px) {
   .skill-container, .skill-super-container, .skill-pr-container, .skill-sub-container {
-      height: calc(164px / 1.4);
-      width: calc(164px / 1.4);
+      height: calc(164px / 1.5);
+      width: calc(164px / 1.5);
   }
 
   .skill-super-container.pr-marged {

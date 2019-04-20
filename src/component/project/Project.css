@@ -58,8 +58,8 @@
 
 @media only screen and (max-width: 1170px) {
   .project-container:not(.full-size) {
-    height: calc(164px / 1.4);
-    width: calc(164px / 1.4);
+    height: calc(164px / 1.5);
+    width: calc(164px / 1.5);
   }
 
   .project-overlay {
