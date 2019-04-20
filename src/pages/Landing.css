@@ -63,6 +63,7 @@
 }
 
 .landing-container .main-text-container {
+  margin-top: 64px;
   margin-bottom: 64px;
   max-width: 40vw;
   padding: 16px;
