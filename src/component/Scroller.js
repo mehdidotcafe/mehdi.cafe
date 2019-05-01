@@ -118,7 +118,7 @@ class Scroller extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.nextIndex, this.props.index)
+    // console.log(this.nextIndex, this.props.index)
     if (this.nextIndex !== this.props.index) {
       this.index = this.props.index
       this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), this.props.index)
