@@ -36,7 +36,7 @@ class Landing extends BasicPage {
                 <p className="first-text">Bonjour, je suis Mehdi.</p>
                 <h1>Développeur Freelance WEB / MOBILE.</h1>
                 <span style={{marginTop: '8px'}}>
-                  <Description style={{fontSize: '24px'}} text={`Mes diverses expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement sur diverses plateformes.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.</p>`}/>
+                  <Description style={{fontSize: '24px'}} text={`Mes diverses expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement sur diverses plateformes.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.`}/>
                 </span>
                 <Row className="media-container-row">
                   <Link to="/work" className="link">Voir mes projets</Link>
