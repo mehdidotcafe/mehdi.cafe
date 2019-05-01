@@ -39,12 +39,10 @@ class Header extends Component {
       <header id="header" className={this.state.isCollapsed === true ? 'collapsed' : ''}>
         <div id="header-logo-container">
           <div id="header-first"></div>
-          <div className="header-shadow-clear"></div>
           <div className="header-logo-sub-container">
             <div className="header-logo-padding-top"></div>
-            <img src="/images/logo-header.png" id="header-logo" alt="Mehdi Meddour logo"/>
+            <img src="/images-webp/logo-header.png" id="header-logo" alt="Mehdi Meddour logo"/>
           </div>
-          <div className="header-shadow-clear"></div>
           <div id="header-last"></div>
         </div>
         <div id="header-button-container">

@@ -69,11 +69,13 @@
 .project-header {
   align-items: center;
   flex-wrap: nowrap;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .project-header .project-title-container {
   display: inline-block;
-  margin-left: 32px;
+  margin-left: 48px;
 }
 
 .project-skills-container {
@@ -121,4 +123,20 @@
     margin-left: -4%;
     margin-right: -4%;
   }
+
+  .project-page-background {
+    display: none;
+  }
+}
+
+.project-page-background {
+  position: fixed;
+  top: -150vh;
+  height: 400vh;
+  right: -250vh;
+  background-image: linear-gradient(to left bottom, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  /* opacity: 0.8; */
+  width: 300vh;
+  transform: rotate(-35deg) translateZ(0);
+  z-index: -1;
 }

@@ -62,8 +62,9 @@ class ProjectPage extends BasicPage {
   renderContent() {
 
     return (
+      <React.Fragment>
+      <div className="project-page-background"></div>
       <div id="project-page-container">
-        <div className="project-detail-background"></div>
         {this.state.project ?
           <div className="project-info-container">
             <div className="project-description-container">
@@ -83,6 +84,7 @@ class ProjectPage extends BasicPage {
                 </div>
               </Row>
               <div className="project-scroller-container bp-small">
+
                 <RectScroller>
                   { this.state.project.images.map(image => (
                       <img src={`/images-webp/project/${image}`} key={image} style={{backgroundColor: this.state.project.backgroundColor}} alt={this.state.project.name + ' ' + image}/>
@@ -104,7 +106,7 @@ class ProjectPage extends BasicPage {
             <div className="project-scroller-container bp-large">
               <RectScroller>
                 { this.state.project.images.map(image => (
-                    <img src={`/images/project/${image}`} key={image} alt={this.state.project.name + ' ' + image}/>
+                    <img src={`/images-webp/project/${image}`} key={image} alt={this.state.project.name + ' ' + image}/>
                 )) }
               </RectScroller>
             </div>
@@ -114,6 +116,7 @@ class ProjectPage extends BasicPage {
           </div> :
           <Redirect to='/work'/> }
       </div>
+      </React.Fragment>
     )
   }
 }
