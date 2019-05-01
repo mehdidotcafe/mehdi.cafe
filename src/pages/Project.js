@@ -55,6 +55,11 @@ class ProjectPage extends BasicPage {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    })
     window._projectListToProjectTrasition = undefined
   }
 
