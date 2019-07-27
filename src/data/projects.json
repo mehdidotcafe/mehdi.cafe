@@ -38,7 +38,7 @@
     "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
     "companies": ["cloudindus"],
     "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
-    "description": "Développement d'un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site. ",
+    "description": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
     "recommandations": []
   },
   {
@@ -48,7 +48,7 @@
     "languages": ["Javascript", "jQuery", "PHP", "mySQL", "Web", "Git"],
     "companies": ["axis"],
     "images": ["intranet-axis/intra_1.jpg", "intranet-axis/intra_2.jpg", "intranet-axis/intra_3.jpg", "intranet-axis/intra_4.jpg", "intranet-axis/intra_5.jpg", "intranet-axis/intra_6.jpg"],
-    "description": "Développement d'un ERP la totalité des employés d'AXIS Immobilier.<br/>Il permet le suivi des cliens de la première prise de contact jusqu'a la réserversation et facturation d'un logement.<br/>L'ERP offre la possibilité de crée / lire / modifier / supprimer des informations comme les prospects en cours , les réservations en cours, le mobilier dans les appartements, etc.",
+    "description": "Développement d'un ERP utilisé par la totalité des employés d'AXIS Immobilier.<br/>Il permet le suivi des cliens de la première prise de contact jusqu'a la réserversation et facturation d'un logement.<br/>L'ERP offre la possibilité de crée / lire / modifier / supprimer des informations comme les prospects en cours , les réservations en cours, le mobilier dans les appartements, etc.",
     "recommandations": []
   },
   {
@@ -135,6 +135,17 @@
     "url": "https://fivorites.com/",
     "images": ["fivorites/fivorites_1.jpg", "fivorites/fivorites_2.jpg", "fivorites/fivorites_3.jpg", "fivorites/fivorites_4.jpg"],
     "description": "Fivorites est une réseau social qui permet de créer des tops 5 de ses oeuvres préférés (musiques, séries, livres ...).<br/>Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.",
+    "recommandations": []
+  },
+  {
+    "name": "The Colivers",
+    "logo": "the-colivers",
+    "backgroundColor": "#d75347",
+    "languages": ["Javascript", "PHP", "mySQL", "Web", "Git"],
+    "companies": ["freelancer"],
+    "url": "https://thecolivers.com/",
+    "images": ["the-colivers/the-colivers_1.jpg", "the-colivers/the-colivers_2.jpg", "the-colivers/the-colivers_3.jpg", "the-colivers/the-colivers_4.jpg"],
+    "description": "THE COLIVERS, anciennement L'AUBERGE, est une agence de location d'appartement en colocation.<br/>Rebranding et refonte du design de l'ancien site L'AUBERGE vers la nouvelle marque THE COLIVERS.",
     "recommandations": []
   },
   {
