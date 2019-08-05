@@ -24,6 +24,13 @@ class Landing extends BasicPage {
     return ~~((Date.now() - birthday) / (31557600000));
   }
 
+  isDay() {
+    var date = new Date()
+    var hours = date.getHours()
+
+    return hours >= 6 && hours < 17
+  }
+
   renderContent() {
     return (
         <div className="landing-container">
@@ -33,7 +40,7 @@ class Landing extends BasicPage {
             </div>
             <div className="info-container">
               <div className="main-text-container">
-                <p className="first-text">Bonjour, je suis Mehdi.</p>
+                <h2 className="first-text">{this.isDay() ? 'Bonjour' : 'Bonsoir'}, je suis Mehdi.</h2>
                 <h1>Développeur Freelance WEB / MOBILE.</h1>
                 <span style={{marginTop: '8px'}}>
                   <Description style={{fontSize: '24px'}} text={`Mes diverses expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement sur diverses plateformes.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.`}/>

@@ -12,11 +12,16 @@
 }
 
 .landing-container .main-text-container h1, .landing-container .main-text-container .first-text {
+  line-height: 1;
   font-family: 'Oswald', sans-serif;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   font-size: 3em;
   font-weight: normal;
+}
+
+.landing-container .main-text-container .first-text {
+  margin-top: 12px;
 }
 
 .landing-container .main-text-container h1 {
@@ -35,7 +40,11 @@
 }
 
 .landing-container .info-container {
-  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 6%;
+  bottom: 8%;
+  /* margin: 0 auto; */
   display: flex;
   flex-direction: column;
   justify-content: space-around;
