@@ -1,24 +1,74 @@
 .recommendation-slider .slick-prev {
-  left: 0px;
+  left: calc(18px / 4);
+  transform: rotate(135deg);
 }
 
 .recommendation-slider .slick-next {
-  right: 0px;
-  z-index: 2;
+  right: calc(18px / 4);
+  transform: rotate(315deg);
 }
 
-.recommendation-slider .slick-next, .recommendation-slider .slick-prev {
+.recommendation-slider .slick-arrow {
+  cursor: pointer;
   top: 100%;
-  bottom: -33px;
-  transform: none;
-  width: 32px;
-  height: 32px;
   z-index: 2;
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  border: 0;
+  color: transparent;
+  background-color: transparent;
+  border: solid #331c5d;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  outline: none !important;
+  transition: 0.2s;
+  opacity: 0.95;
 }
-
 
 .recommendation-slider .slick-arrow:before {
   color: black;
+}
+
+.recommendation-slider .slick-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding-left: 32px;
+  padding-right: 32px;
+  justify-content: center;
+  align-items: center;
+  display: flex !important;
+  flex-direction: row;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  transition: 0.2s;
+}
+
+.recommendation-slider .slick-dots li {
+  list-style: none;
+}
+
+.recommendation-slider .slick-dots li button {
+  background-color: #331c5d;
+  border-radius: 50%;
+  color: transparent;
+  height: 14px;
+  width: 14px;
+  border: 0;
+  margin-left: 4px;
+  margin-right: 4px;
+  cursor: pointer;
+  outline: none !important;
+  opacity: 0.95;
+}
+
+.recommendation-slider .slick-dots li.slick-active button, .recommendation-slider .slick-dots li:hover button {
+  background-color: #7a0056;
+}
+
+.recommendation-slider .slick-arrow:hover {
+  border-color: #7a0056;
 }
 
 .recommendation-slider {

@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 
 import Location from './Location'
 
@@ -65,4 +65,4 @@ class Header extends Component {
   }
 }
 
-export default Header
+export default withRouter(Header)

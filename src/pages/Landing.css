@@ -85,7 +85,7 @@
   background-color: white;
   max-width: 40vw;
   padding: 16px;
-
+  padding-bottom: 4px;
 }
 
 @media only screen and (max-width: 1170px) {

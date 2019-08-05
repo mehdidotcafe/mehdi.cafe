@@ -3,25 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fullpage/react-fullpage": "^0.1.13",
+    "@fullpage/react-fullpage": "^0.1.15",
     "es6-object-assign": "^1.1.0",
-    "query-string": "^6.2.0",
-    "react": "^16.7.0",
-    "react-app-polyfill": "^0.2.2",
-    "react-dom": "^16.7.0",
-    "react-redux": "^6.0.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.3",
-    "react-slick": "^0.23.2",
-    "react-vertical-timeline-component": "^2.3.1",
+    "query-string": "^6.8.2",
+    "react": "^16.8.6",
+    "react-app-polyfill": "^1.0.1",
+    "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+    "react-router-sitemap": "^1.2.0",
+    "react-scripts": "3.0.1",
+    "react-slick": "^0.24.0",
+    "react-vertical-timeline-component": "^2.4.0",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sitemap": "babel-node ./src/scripts/sitemap-builder.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +33,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
 }

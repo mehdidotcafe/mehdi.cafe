@@ -10,6 +10,8 @@ import './RecommendationSlider.css'
 
 import Slider from 'react-slick';
 
+import './slick.min.css'
+
 class RecommendationSlider extends Component {
   constructor(props) {
     super(props)
