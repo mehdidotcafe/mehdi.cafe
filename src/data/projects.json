@@ -16,7 +16,7 @@
     "languages": ["Javascript", "NodeJS", "React", "jQuery", "Laravel", "PHP", "mySQL", "Git"],
     "companies": ["freelancer"],
     "url": "https://matemeup.com",
-    "images": ["matemeup/matemeup_web_1.jpg", "matemeup/matemeup_web_2.jpg", "matemeup/matemeup_web_3.jpg"],
+    "images": ["matemeup/matemeup_web_1.jpg", "matemeup/matemeup_web_2.jpg", "matemeup/matemeup_web_3.jpg", "matemeup/matemeup_web_4.jpg"],
     "description": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.</br><ul><li>Développement d'un système de chat en temps réel utilisant socket.io</li><li>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.</li><li>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.</li></ul>",
     "recommandations": [1]
   },
@@ -27,7 +27,7 @@
     "languages": ["Android", "iOS", "Java", "Swift", "Git"],
     "companies": ["freelancer"],
     "url": "https://matemeup.com",
-    "images": ["matemeup-mobile/matemeup_mobile_1.jpg", "matemeup-mobile/matemeup_mobile_2.jpg", "matemeup-mobile/matemeup_mobile_3.jpg"],
+    "images": ["matemeup-mobile/matemeup_mobile_1.jpg", "matemeup-mobile/matemeup_mobile_2.jpg", "matemeup-mobile/matemeup_mobile_3.jpg", "matemeup-mobile/matemeup_mobile_4.jpg", "matemeup-mobile/matemeup_mobile_5.jpg"],
     "description": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.</br><ul><li>Développement de la version Android du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.</li></ul>",
     "recommandations": [1]
   },
