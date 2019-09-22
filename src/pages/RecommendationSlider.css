@@ -51,16 +51,16 @@
 
 .recommendation-slider .slick-dots li button {
   background-color: #29154e;
-  border-radius: 50%;
   color: transparent;
-  height: 14px;
-  width: 14px;
+  height: 12px;
+  width: 12px;
   border: 0;
   margin-left: 4px;
   margin-right: 4px;
   cursor: pointer;
   outline: none !important;
   opacity: 0.95;
+  padding: 0;
 }
 
 .recommendation-slider .slick-dots li.slick-active button, .recommendation-slider .slick-dots li:hover button {
