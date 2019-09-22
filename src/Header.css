@@ -1,4 +1,4 @@
-/* #331c5d */
+/* #29154e */
 
 #header {
   top: 0;
@@ -35,7 +35,7 @@
 
 .header-logo-sub-container .header-logo-padding-top {
   height: calc(100% - 64px);
-  background-color: #331c5d;
+  background-color: #29154e;
 }
 
 #header-logo {
@@ -69,7 +69,7 @@
 #header-first, #header-last, .header-shadow-clear {
   box-sizing: border-box;
   height: 100%;
-  background-color: #331c5d;
+  background-color: #29154e;
 }
 
 #header-first {

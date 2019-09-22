@@ -1,7 +1,7 @@
 .project-container {
   height: 164px;
   width: 164px;
-  background-color: #331c5d;
+  background-color: #29154e;
   /* border-radius: 50%; */
   text-align: center;
   justify-content: center;
@@ -30,7 +30,7 @@
   color: white;
   font-family: 'Oswald', sans-serif;
   font-size: 28px;
-  background-color: #331c5d;
+  background-color: #29154e;
   display: flex;
   align-items: center;
   justify-content: center;

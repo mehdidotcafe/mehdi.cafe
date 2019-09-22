@@ -18,7 +18,7 @@
   border: 0;
   color: transparent;
   background-color: transparent;
-  border: solid #331c5d;
+  border: solid #29154e;
   border-width: 0 5px 5px 0;
   display: inline-block;
   outline: none !important;
@@ -50,7 +50,7 @@
 }
 
 .recommendation-slider .slick-dots li button {
-  background-color: #331c5d;
+  background-color: #29154e;
   border-radius: 50%;
   color: transparent;
   height: 14px;
