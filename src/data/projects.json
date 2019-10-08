@@ -57,7 +57,8 @@
     "backgroundColor": "#00d3ee",
     "languages": ["React", "iOS", "Android", "Git"],
     "companies": ["freelancer"],
-    "images": ["album-quiz/1.png", "album-quiz/2.png", "album-quiz/3.png", "album-quiz/4.png"],
+    "url": "https://play.google.com/store/apps/details?id=com.albumquiz&hl=fr",    
+    "images": ["album-quiz/1.png", "album-quiz/2.png", "album-quiz/3.png", "album-quiz/4.png", "album-quiz/5.png", "album-quiz/6.png"],
     "description": "Album Quiz est un quiz qui consiste à trouver un artiste depuis une pochette d'album.",
     "recommandations": []
   },

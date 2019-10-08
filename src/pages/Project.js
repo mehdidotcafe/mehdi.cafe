@@ -111,7 +111,7 @@ class ProjectPage extends BasicPage {
             <div className="project-scroller-container bp-large">
               <RectScroller>
                 { this.state.project.images.map(image => (
-                    <img src={`/images-webp/project/${image}`} key={image} alt={this.state.project.name + ' ' + image}/>
+                    <img src={`/images-webp/project/${image}`} key={image} alt={this.state.project.name + ' ' + image} style={{backgroundColor: this.state.project.backgroundColor}}/>
                 )) }
               </RectScroller>
             </div>
