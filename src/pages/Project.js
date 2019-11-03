@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, Redirect } from 'react-router-dom'
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom'
+import Slider from 'react-slick'
 
 import BasicPage from './BasicPage'
 
@@ -29,9 +30,12 @@ class ProjectPage extends BasicPage {
 
     this.timeoutId = undefined
 
+    this.sliderRef = React.createRef()
+
     this.state = {
       transitionVisible: !!window._projectListToProjectTrasition,
-      project: ProjectService.getFromName(name)
+      project: ProjectService.getFromName(name),
+      activeSlide: 0
     }
   }
 
@@ -66,8 +70,18 @@ class ProjectPage extends BasicPage {
     this.props.history.push(`/work`)
   }
 
-  renderContent() {
+  setActiveSlide(slide) {
+    if (this.state.activeSlide !== slide) {
+      this.setState({activeSlide: slide})
+      this.sliderRef.current.slickGoTo(slide)
+    }
+  }
 
+  onSwipe(a, b) {
+    this.setState({activeSlide: a === 'left' ? 1 : 0})
+  }
+
+  renderContent() {
     return (
       <React.Fragment>
       <div className="project-page-background"></div>
@@ -106,7 +120,22 @@ class ProjectPage extends BasicPage {
                   )) }
                 </RectScroller>
               </div>
-              <Description text={this.state.project.description || ''}/>
+              <div className="project-description-text">
+                <div className="project-description-header">
+                  <div className={this.state.activeSlide === 0 ? "isActive" : undefined} onClick={() => this.setActiveSlide(0)}>Le projet</div>
+                  { this.state.project.description_mission &&
+                    <div className={this.state.activeSlide === 1 ? "isActive" : undefined} onClick={() => this.setActiveSlide(1)}>La mission</div>
+                  }
+                </div>
+                <div className="project-description-content">
+                  <Slider settings={{dots: false, arrows: false, infine: false}} ref={this.sliderRef} onSwipe={this.onSwipe.bind(this)}>
+                    <Description text={this.state.project.description_project || ''}/>
+                    { this.state.project.description_mission &&
+                      <Description text={this.state.project.description_mission}/>
+                    }
+                  </Slider>
+                </div>
+              </div>
             </div>
             <div className="project-scroller-container bp-large">
               <RectScroller>

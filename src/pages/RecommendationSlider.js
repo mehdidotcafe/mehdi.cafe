@@ -8,7 +8,7 @@ import Description from '../component/description/Description'
 
 import './RecommendationSlider.css'
 
-import Slider from 'react-slick';
+import Slider from 'react-slick'
 
 import './slick.min.css'
 
@@ -37,7 +37,7 @@ class RecommendationSlider extends Component {
                 <div className="recommendation-author-job">{recommendation.author_job}</div>
               }
             </div>
-            <Description text={recommendation.content} style={{fontSize: '18px'}}/>
+            <Description text={`"${recommendation.content}"`} style={{fontSize: '18px'}}/>
           </div>
         ))}
         </Slider>

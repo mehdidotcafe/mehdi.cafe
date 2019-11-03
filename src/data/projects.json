@@ -6,7 +6,8 @@
     "languages": ["Javascript", "NodeJS", "mySQL", "Angular", "Web", "Git"],
     "companies": ["freelancer"],
     "images": ["kwote/kwote-1.jpg", "kwote/kwote-2.jpg", "kwote/kwote-3.jpg", "kwote/kwote-4.jpg", "kwote/kwote-5.jpg", "kwote/kwote-6.jpg"],
-    "description": "Kwote est un gestionnaire de risque à destination des ETI et PME.<br/>Il s'appuie sur les data des entreprises, grâce à sa connexion avec leurs systèmes d'information offrant à l'utilisateur - directeur financier, credit manager ou dirigeant - des outils de gestion du risque client et de pilotage de la performance des contrats d'assurance-crédit associés à une brique de services dont des solutions de financement disruptives, de recouvrement en ligne, du scoring basé sur le comportement de paiement...",
+    "description_project": "\"Kwote est un gestionnaire de risque à destination des ETI et PME.<br/>Il s'appuie sur les data des entreprises, grâce à sa connexion avec leurs systèmes d'information offrant à l'utilisateur - directeur financier, credit manager ou dirigeant - des outils de gestion du risque client et de pilotage de la performance des contrats d'assurance-crédit associés à une brique de services dont des solutions de financement disruptives, de recouvrement en ligne, du scoring basé sur le comportement de paiement...\"",
+    "description_mission": "Développement de diverses connecteurs de récupération d'informations vers des sites externes (ATRADIUS, Euler Hermes).<br/>Développement d'un module de relance de facture impayées comportant un système de planification et d'édition de templates.<br/>Migration du site vers Angular 7 puis 8.",
     "recommandations": []
   },
   {
@@ -17,7 +18,8 @@
     "companies": ["freelancer"],
     "url": "https://matemeup.com",
     "images": ["matemeup/matemeup_web_1.jpg", "matemeup/matemeup_web_2.jpg", "matemeup/matemeup_web_3.jpg", "matemeup/matemeup_web_4.jpg"],
-    "description": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.</br><ul><li>Développement d'un système de chat en temps réel utilisant socket.io</li><li>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.</li><li>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.</li></ul>",
+    "description_project": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.",
+    "description_mission": "Développement d'un système de chat en temps réel utilisant socket.io.<br/>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.<br/>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.",
     "recommandations": [1]
   },
   {
@@ -28,7 +30,8 @@
     "companies": ["freelancer"],
     "url": "https://matemeup.com",
     "images": ["matemeup-mobile/matemeup_mobile_1.jpg", "matemeup-mobile/matemeup_mobile_2.jpg", "matemeup-mobile/matemeup_mobile_3.jpg", "matemeup-mobile/matemeup_mobile_4.jpg", "matemeup-mobile/matemeup_mobile_5.jpg"],
-    "description": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.</br><ul><li>Développement de la version Android du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.</li></ul>",
+    "description_project": "MateMeUp est un réseau social orienté e-sport. Il regroupe plusieurs outils cruciaux pour l'organisation / communication autour d'un jeu vidéo.",
+    "description_mission": "Développement de la version Android et iOS du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.",
     "recommandations": [1]
   },
   {
@@ -38,7 +41,7 @@
     "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
     "companies": ["cloudindus"],
     "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
-    "description": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
+    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT.<br/>Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau.<br/>Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site.<br/>Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
     "recommandations": []
   },
   {
@@ -48,7 +51,8 @@
     "languages": ["Javascript", "jQuery", "PHP", "mySQL", "Web", "Git"],
     "companies": ["axis"],
     "images": ["intranet-axis/intra_1.jpg", "intranet-axis/intra_2.jpg", "intranet-axis/intra_3.jpg", "intranet-axis/intra_4.jpg", "intranet-axis/intra_5.jpg", "intranet-axis/intra_6.jpg"],
-    "description": "Développement d'un ERP utilisé par la totalité des employés d'AXIS Immobilier.<br/>Il permet le suivi des cliens de la première prise de contact jusqu'a la réserversation et facturation d'un logement.<br/>L'ERP offre la possibilité de crée / lire / modifier / supprimer des informations comme les prospects en cours , les réservations en cours, le mobilier dans les appartements, etc.",
+    "description_project": "L'Intranet AXIS est un outil utilisé par la totalité des employés d'AXIS Immobilier pour centraliser les informations. Il permet le suivi des cliens de la première prise de contact jusqu'a la réserversation et facturation d'un logement.",
+    "description_mission": "L'ERP offre la possibilité de crée / lire / modifier / supprimer des informations comme les prospects en cours , les réservations en cours, le mobilier dans les appartements, etc.",
     "recommandations": []
   },
   {
@@ -59,7 +63,7 @@
     "companies": ["freelancer"],
     "url": "https://play.google.com/store/apps/details?id=com.albumquiz&hl=fr",
     "images": ["album-quiz/1.png", "album-quiz/2.png", "album-quiz/3.png", "album-quiz/4.png", "album-quiz/5.png", "album-quiz/6.png"],
-    "description": "Album Quiz est un quiz qui consiste à trouver un artiste depuis un titre d'album. Plus de 3500 albums disponibles",
+    "description_project": "Album Quiz est un quiz qui consiste à trouver un artiste depuis un titre d'album. Plus de 3500 albums disponibles.",
     "recommandations": []
   },
   {
@@ -70,7 +74,7 @@
     "companies": ["freelancer"],
     "url": "https://play.google.com/store/apps/details?id=fr.hotmail.meddegivet.FoodyBasket",
     "images": ["foody-basket/in-game1.png", "foody-basket/league-fr.png", "foody-basket/menu-fr.png", "foody-basket/in-game2.png", "foody-basket/select-menu-fr.png"],
-    "description": "Foody basket est un jeu mobile de junk-food jouant au basketball. Le jeu possède plus d'une dizaine de personnages, tous basés de célèbres plats de fast-food et entièrement customisables. Plusieurs modes de jeu sont disponibles, allant du match simple à un système de championnat.",
+    "description_project": "Foody basket est un jeu mobile de junk-food jouant au basketball. Le jeu possède plus d'une dizaine de personnages, tous basés de célèbres plats de fast-food et entièrement customisables. Plusieurs modes de jeu sont disponibles, allant du match simple à un système de championnat.",
     "recommandations": []
   },
   {
@@ -81,7 +85,8 @@
     "companies": ["freelancer"],
     "url": "https://thebabelcommunity.app",
     "images": ["the-babel-zone/the_babel_zone_1.png", "the-babel-zone/the_babel_zone_2.png", "the-babel-zone/the_babel_zone_3.png", "the-babel-zone/the_babel_zone_4.png"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion.",
+    "description_project": "\"The Babel Community c’est une oasis urbaine. Un lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.  Ils y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent. Ensemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
+    "description_mission": "THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion. Développement de la totalité de l'application.",
     "recommandations": []
   },
   {
@@ -91,7 +96,8 @@
     "languages": ["React", "Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
     "companies": ["freelancer"],
     "images": ["the-babel-staff/the_babel_staff_1.jpg", "the-babel-staff/the_babel_staff_2.jpg", "the-babel-staff/the_babel_staff_3.jpg", "the-babel-staff/the_babel_staff_4.jpg", "the-babel-staff/the_babel_staff_5.jpg"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo.<br/>Système de connexion / déconnexion, gestion de droits et de roles, création / édition / suppression d'événements récurrents.",
+    "description_project": "\"The Babel Community c’est une oasis urbaine. Un lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.  Ils y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent. Ensemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
+    "description_mission": "THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo. Développement de la totalité de l'application.",
     "recommandations": []
   },
   {
@@ -102,7 +108,8 @@
     "companies": ["freelancer"],
     "url": "https://thebabelcommunity.com",
     "images": ["the-babel-community/the_babel_community_1.jpg", "the-babel-community/the_babel_community_2.jpg", "the-babel-community/the_babel_community_3.jpg", "the-babel-community/the_babel_community_4.jpg", "the-babel-community/the_babel_community_5.jpg", "the-babel-community/the_babel_community_6.jpg", "the-babel-community/the_babel_community_7.png", "the-babel-community/the_babel_community_8.png"],
-    "description": "The Babel Community est la plus grande résidence de coworking et coliving en France.<br/>Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellements disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant.",
+    "description_project": "\"The Babel Community c’est une oasis urbaine. Un lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.  Ils y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent. Ensemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
+    "description_mission": "Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellements disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant.",
     "recommandations": []
   },
   {
@@ -113,7 +120,8 @@
     "companies": ["school"],
     "url": "https://play.google.com/store/apps/details?id=io.agora.agora",
     "images": ["agora/5.png", "agora/1.png", "agora/2.png", "agora/3.png", "agora/4.png"],
-    "description": "Agora est une plateforme web et mobile dont l’objectif est de mettre en relation des personnes qui ont des compétences différentes, complémentaires, et qui veulent créer ainsi que développer de nouvelles idées en équipe. Avec Agora, vous pouvez former votre équipe autour de votre projet, ou rejoindre une équipe déjà formée en proposant votre savoir-faire.<br/>L'application fournit les outils nécessaires pour le bon déroulement d’un projet : un rétro-planning, du stockage, un gestionnaire de tâches, etc.<br/>Développement de l'application Android.",
+    "description_project": "Agora est une plateforme web et mobile dont l’objectif est de mettre en relation des personnes qui ont des compétences différentes, complémentaires, et qui veulent créer ainsi que développer de nouvelles idées en équipe. Avec Agora, vous pouvez former votre équipe autour de votre projet, ou rejoindre une équipe déjà formée en proposant votre savoir-faire.<br/>L'application fournit les outils nécessaires pour le bon déroulement d’un projet : un rétro-planning, du stockage, un gestionnaire de tâches, etc.",
+    "description_mission": "Développement de l'application Android.",
     "recommandations": []
   },
   {
@@ -124,7 +132,8 @@
     "companies": ["freelancer"],
     "url": "https://www.toocamp.com/",
     "images": ["toocamp/toocamp_1.jpg", "toocamp/toocamp_2.jpg", "toocamp/toocamp_3.jpg", "toocamp/toocamp_4.jpg", "toocamp/toocamp_5.png"],
-    "description": "Toocamp est un comparateur de camping.<br/>Réalisation d'un système de traduction via des fichiers JSON ainsi que la mise en place de mini-sites destiné à différents pays.",
+    "description_project": "Toocamp est un comparateur de camping.",
+    "description_mission": "Réalisation d'un système de traduction via des fichiers JSON ainsi que la mise en place de mini-sites destiné à différents pays.",
     "recommandations": []
   },
   {
@@ -135,7 +144,8 @@
     "companies": ["freelancer"],
     "url": "https://fivorites.com/",
     "images": ["fivorites/fivorites_1.jpg", "fivorites/fivorites_2.jpg", "fivorites/fivorites_3.jpg", "fivorites/fivorites_4.jpg"],
-    "description": "Fivorites est une réseau social qui permet de créer des tops 5 de ses oeuvres préférés (musiques, séries, livres ...).<br/>Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.",
+    "description_project": "Fivorites est une réseau social qui permet de créer des tops 5 de ses oeuvres préférés (musiques, séries, livres ...).",
+    "description_mission": "Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.",
     "recommandations": []
   },
   {
@@ -146,7 +156,8 @@
     "companies": ["freelancer"],
     "url": "https://thecolivers.com/",
     "images": ["the-colivers/the-colivers_1.jpg", "the-colivers/the-colivers_2.jpg", "the-colivers/the-colivers_3.jpg", "the-colivers/the-colivers_4.jpg"],
-    "description": "THE COLIVERS, anciennement L'AUBERGE, est une agence de location d'appartement en colocation.<br/>Rebranding et refonte du design de l'ancien site L'AUBERGE vers la nouvelle marque THE COLIVERS.",
+    "description_project": "THE COLIVERS, anciennement L'AUBERGE, est une agence de location d'appartement en colocation.",
+    "description_mission": "Rebranding et refonte du design de l'ancien site L'AUBERGE vers la nouvelle marque THE COLIVERS.",
     "recommandations": []
   },
   {
@@ -157,7 +168,7 @@
     "companies": ["freelancer"],
     "url": "https://chrome.google.com/webstore/detail/deezdl/ojkgeljdeihmnoamceidbdlcfogjlmmg",
     "images": ["deezdl/1.png", "deezdl/2.png"],
-    "description": "Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.",
+    "description_project": "Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.",
     "recommandations": []
   }
 ]
