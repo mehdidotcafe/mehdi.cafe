@@ -61,8 +61,8 @@
 .project-header {
   align-items: center;
   flex-wrap: nowrap;
-  margin-bottom: 64px;
-  margin-top: 32px;
+  margin-bottom: 0px;
+  margin-top: 16px;
 }
 
 .project-header .project-title-container {
@@ -76,7 +76,7 @@
   height: calc(164px / 1.75);
   max-width: 35vw;
   overflow: hidden;
-  padding-top: 40px;
+  padding-top: 16px;
 }
 
 
@@ -132,7 +132,7 @@
 
 @media only screen and (min-width: 1170px) {
   .project-description-text .project-description-content {
-    max-height: 40vh;
+    max-height: 35vh;
   }
 
 }
@@ -150,6 +150,7 @@
 }
 
 .project-description-text {
+  margin-top: 16px;
 }
 
 .project-description-text .project-description-header {
