@@ -39,6 +39,13 @@
   color: white;
   text-align: center;
   cursor: pointer;
+  transform: rotate(45deg);
+}
+
+.project-info-container .back-button-container div {
+  height: 100%;
+  width: 100%;
+  transform: rotate(-45deg);
 }
 
 .project-description-container {

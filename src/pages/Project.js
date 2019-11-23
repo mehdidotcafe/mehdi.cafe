@@ -92,7 +92,7 @@ class ProjectPage extends BasicPage {
               <Row className="project-header">
                 <div style={{display: 'inline-block', position: 'relative'}}>
                   <Project {...this.state.project} isHoverable={false} fullSize/>
-                  <div className="back-button-container" onClick={this.goToWork.bind(this)}><span>&#8249;</span></div>
+                  <div className="back-button-container" onClick={this.goToWork.bind(this)}><div>&#8249;</div></div>
                 </div>
                 <div className="project-title-container">
                   <Title text={this.state.project.name} noMargin={true}/>
