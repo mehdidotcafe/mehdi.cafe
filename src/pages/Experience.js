@@ -44,7 +44,7 @@ class Experience extends BasicPage {
               iconStyle={{ background: '#331c5d', color: '#fff' }}
               icon={<Image src={`images-webp/experiances/${experiance.logo}`} alt={experiance.title}></Image>}>
               <h3 className="vertical-timeline-element-title">{experiance.title}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{experiance.subtitle}</h4>
+              <h4 className="vertical-timeline-element-subtitle subTitle">{experiance.subtitle}</h4>
               {experiance.projectUrl && <div style={{marginTop: '2px'}}><Link to={experiance.projectUrl} className="vertical-timeline-element-link link">Voir le projet</Link></div>}
               <Description text={experiance.text}></Description>
             </VerticalTimelineElement>

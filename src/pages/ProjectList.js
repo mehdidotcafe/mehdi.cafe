@@ -185,7 +185,7 @@ class ProjectListPage extends BasicPage {
         <Row style={{marginTop: '16px'}}>
           <Row className="filter-container bp-large">
             <div className="filter-text" style={{cursor: `${this.filters.length > 0 ? 'pointer' : 'normal'}`}} onClick={this.clearFilters.bind(this)}>
-              <span style={{fontSize: '22px'}}><span style={{visibility: this.filters.length > 0 ? 'visible' : 'hidden'}}>(X) </span>FILTRES</span>
+              <span className="subTitle"><span style={{visibility: this.filters.length > 0 ? 'visible' : 'hidden'}}>(X) </span>FILTRES</span>
             </div>
             { this.getSkillGrouped().map((group, idx) =>
                 <Row className={`filter-row`} key={idx}>

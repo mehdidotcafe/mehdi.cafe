@@ -87,7 +87,7 @@
 }
 
 .vertical-timeline-element-title {
-  font-size: 32px;
+  font-size: 34px;
 }
 
 .vertical-timeline-element-subtitle {
@@ -100,11 +100,10 @@
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date {
-  font-size: 12px;
+  font-size: 18px;
   color: black;
   text-transform: uppercase;
   font-weight: normal;
-  opacity: 0.5;
 }
 
 .experience-page .description a {
