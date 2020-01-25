@@ -43,7 +43,7 @@ class SkillPage extends BasicPage {
         </div>
         <div className="subtext-container">
           <div className="experiance-preview"></div>
-          <span style={{fontSize: '22px', textTransform: 'uppercase'}}>Années d'expériences (min. 6 mois, max. 4 ans)</span>
+          <span style={{fontSize: '22px', textTransform: 'uppercase'}}>Années d'expériences</span>
         </div>
         <Row style={{marginTop: '64px', justifyContent: 'space-around'}} spaceAroundMob>
           { this.skills.map(skill => (

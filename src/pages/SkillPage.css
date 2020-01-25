@@ -3,9 +3,8 @@
   width: 65px;
   min-width: 65px;
   height: 13px;
-  margin-left: 16px;
   margin-right: 16px;
-  background-color: rgb(255, 171, 0);
+  background-color: #7a0056;
   display: inline-block;
   align-self: center;
 }
