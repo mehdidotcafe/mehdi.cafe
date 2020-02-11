@@ -10,7 +10,7 @@ class Medias extends Component {
   render() {
     return (
       <span className={`media-button-container ${this.props.className || ''}`} style={{marginLeft: 'auto'}}>
-        <a className="media-button" aria-label="Email" href="mailto:san@mehdimeddour2@gmail.com">
+        <a className="media-button" aria-label="Email" href="mailto:contact@meddou.com">
           <Email/>
         </a>
         <a className="media-button" aria-label="Linkedin" href="https://www.linkedin.com/in/meddou" target="_blank" rel="noopener noreferrer">

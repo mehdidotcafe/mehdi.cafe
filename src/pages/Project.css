@@ -53,16 +53,14 @@
   position: fixed;
   top: 64px;
   margin-top: 32px;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-scroller-container {
   margin-left: 60%;
   width: 40%;
   display: inline-block;
-}
-
-.project-scroller-container img {
-  /* background-color: #f0f0f0; */
 }
 
 .project-header {
@@ -138,8 +136,9 @@
 }
 
 @media only screen and (min-width: 1170px) {
-  .project-description-text .project-description-content {
-    max-height: 35vh;
+  .project-description-content {
+      height: calc(100vh - 96px);
+
   }
 
 }
@@ -156,11 +155,8 @@
   z-index: -1;
 }
 
-.project-description-text {
-  margin-top: 16px;
-}
-
-.project-description-text .project-description-header {
+.project-description-header {
+  margin-top: 32px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -169,7 +165,7 @@
 
 }
 
-.project-description-text .project-description-header div {
+.project-description-header div {
   font-family: 'Oswald', sans-serif;
   font-size: 26px;
   margin-right: 20px;
@@ -179,7 +175,7 @@
   cursor: pointer;
 }
 
-.project-description-text .project-description-header div:before {
+.project-description-header div:before {
   content: "";
   display: inline-block;
   height: 12px;
@@ -188,21 +184,45 @@
   margin-right: 8px;
 }
 
-.project-description-text .project-description-header div.isActive {
+.project-description-header div.isActive {
   color: #7a0056;
 }
 
-.project-description-text .project-description-header div.isActive:before {
+.project-description-header div.isActive:before {
   background-color: #7a0056;
 }
 
-.project-description-text .project-description-content {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-  background-color: white;
-  padding: 16px;
+.project-description-content {
+  margin-bottom: 16px;
+  padding-right: 16px;
   overflow: auto;
+  flex-grow: 1;
 }
 
-.project-description-text .slick-arrow {
+#project-page-container .slick-arrow {
   display: none !important;
+}
+
+.project-close-button-container {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  bottom: -22px;
+  left: -22px;
+  background-color: #7a0056;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.project-close-button-container div {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  margin-top: -3px;
+  margin-left: -3px;
 }

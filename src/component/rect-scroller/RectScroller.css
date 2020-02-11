@@ -14,7 +14,7 @@
   overflow: hidden;
 }
 
-.rect-scroll-element > * {
+.rect-scroll-element * {
   width: 100%;
   height: 100%;
 }

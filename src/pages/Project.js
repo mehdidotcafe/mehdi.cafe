@@ -21,6 +21,7 @@ import ProjectService from '../services/Project'
 
 import './Project.css'
 import './BasicPage.css'
+import Zoomable from '../component/zoomable/Zoomable'
 
 class ProjectPage extends BasicPage {
   constructor(props) {
@@ -81,6 +82,14 @@ class ProjectPage extends BasicPage {
     this.setState({activeSlide: a === 'left' ? 1 : 0})
   }
 
+  getCloseButton() {
+    return (
+      <div className="project-close-button-container">
+        <div>x</div>
+      </div>
+    )
+  }
+
   renderContent() {
     return (
       <React.Fragment>
@@ -120,7 +129,6 @@ class ProjectPage extends BasicPage {
                   )) }
                 </RectScroller>
               </div>
-              <div className="project-description-text">
                 <div className="project-description-header">
                   <div className={this.state.activeSlide === 0 ? "isActive" : undefined} onClick={() => this.setActiveSlide(0)}>Le projet</div>
                   { this.state.project.description_mission &&
@@ -136,11 +144,12 @@ class ProjectPage extends BasicPage {
                   </Slider>
                 </div>
               </div>
-            </div>
             <div className="project-scroller-container bp-large">
               <RectScroller>
                 { this.state.project.images.map(image => (
-                    <img src={`/images-webp/project/${image}`} key={image} alt={this.state.project.name + ' ' + image} style={{backgroundColor: this.state.project.backgroundColor}}/>
+                    <Zoomable key={image} closeButton={this.getCloseButton()}>
+                      <img src={`/images-webp/project/${image}`} alt={this.state.project.name + ' ' + image} style={{backgroundColor: this.state.project.backgroundColor, height: '100%', width: '100%'}}/>
+                    </Zoomable>
                 )) }
               </RectScroller>
             </div>
