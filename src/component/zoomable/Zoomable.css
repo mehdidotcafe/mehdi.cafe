@@ -34,5 +34,16 @@
     left: 0;
     bottom: 0;
     right: 0;
+    animation: fadeIn 0.3s;
     background-color:rgba(0, 0, 0, 0.6);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }

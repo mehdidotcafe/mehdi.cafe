@@ -134,6 +134,10 @@
       width: calc(164px / 1.5);
   }
 
+  .skill-experience-aside-text-years {
+    font-size: 6px;
+  } 
+
   .skill-super-container.pr-marged {
     margin-left: 0;
     margin-right: 0;
