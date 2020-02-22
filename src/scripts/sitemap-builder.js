@@ -1,12 +1,10 @@
-require("babel-register")({
-  presets: ["es2015", "react"]
+require('babel-register')({
+  presets: ['es2015', 'react']
 })
 
-const router = require('../router/MainSwitch').default;
-const Sitemap = require("react-router-sitemap").default;
+const Sitemap = require('react-router-sitemap').default
+const router = require('../router/MainSwitch').default
 
-(
-    new Sitemap(router)
-        .build('https://meddou.com')
-        .save('./public/sitemap.xml')
-);
+new Sitemap(router)
+    .build('https://meddou.com')
+    .save('./public/sitemap.xml')

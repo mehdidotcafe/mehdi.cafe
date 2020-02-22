@@ -6,7 +6,7 @@ class ProjectService {
   }
 
   static getFromId(id) {
-    return recommendations.find(r => r.id === id)
+    return recommendations.find((r) => r.id === id)
   }
 }
 

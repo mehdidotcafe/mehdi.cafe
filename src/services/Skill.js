@@ -6,15 +6,15 @@ class SkillService {
   }
 
   static getShowable() {
-    return skills.filter(skill => skill.isShowable !== false)
+    return skills.filter((skill) => skill.isShowable !== false)
   }
 
   static getFilterable() {
-    return skills.filter(skill => skill.isFilterable !== false)
+    return skills.filter((skill) => skill.isFilterable !== false)
   }
 
   static getFromName(name) {
-    return skills.find(skill => skill.name === name)
+    return skills.find((skill) => skill.name === name)
   }
 }
 
