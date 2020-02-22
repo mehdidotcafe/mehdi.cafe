@@ -1,19 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import MainRouter from './router/MainRouter'
+import './polyfill'
 
 import './App.css';
 
-import './polyfill.js'
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <MainRouter></MainRouter>
-      </>
-    );
-  }
+function App() {
+  return (
+    <>
+      <MainRouter />
+    </>
+  );
 }
 
 export default App;

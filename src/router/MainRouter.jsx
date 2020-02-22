@@ -1,4 +1,5 @@
 import React from 'react'
+import Analytics from 'react-router-ga'
 
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -10,8 +11,10 @@ function MainRouter() {
   return (
     <Router>
       <div>
-        <Header />
-        { MainSwitch }
+        <Analytics id="UA-144659432-1" debug>
+          <Header />
+          { MainSwitch }
+        </Analytics>
       </div>
     </Router>
   )

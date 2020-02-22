@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import LandingPage from './Landing'
 import ProjectListPage from './ProjectList'
@@ -49,7 +49,6 @@ class MainScrollPage extends Component {
 }
 
 MainScrollPage.propTypes = {
-  history: PropTypes.func.isRequired
 }
 
 export default MainScrollPage
