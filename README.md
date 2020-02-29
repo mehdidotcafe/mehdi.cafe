@@ -1,1 +1,1 @@
-My personal portfolio made with Love, Coffe and React.
+My personal portfolio made with Love, Coffee and React.
