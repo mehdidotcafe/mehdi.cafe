@@ -218,7 +218,7 @@ class ProjectListPage extends BasicPage {
 
           <Row center className="project-list-container">
             { this.state.projects.map(project => (
-              <button type="submit" onClick={(e) => this.goToProject(project, e)} key={project.name}>
+              <button type="submit" onClick={(e) => this.goToProject(project, e)} key={project.name} className="project-child-container">
                 <Item>
                   <Project
                     backgroundColor={project.backgroundColor}

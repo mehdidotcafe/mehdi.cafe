@@ -92,3 +92,7 @@
   transform: rotate(-35deg);
   z-index: -1;
 }
+
+.project-child-container {
+  overflow: visible;
+}

@@ -1,11 +1,4 @@
-#scroll-container {
-  /* padding-top: 80px; */
-}
-
-html {
-  /* scroll-snap-type: both mandatory;; */
-}
-
-.children {
-  /* scroll-snap-align: start; */
+::-webkit-scrollbar, ::-webkit-scrollbar * {
+  position: fixed;
+  z-index: 1001;
 }

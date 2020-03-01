@@ -19,6 +19,7 @@ class MainScrollPage extends Component {
     super()
     this.pageIds = Location.links.map(l => l.link)
     this.onScroll = this.onScroll.bind(this)
+    this.container = document.getElementsByTagName('body')[0]
   }
 
   onScroll(index) {
@@ -29,7 +30,7 @@ class MainScrollPage extends Component {
 
   render() {
     return (
-      <Scroller className="main-scroller" onScroll={this.onScroll} index={this.pageIds.indexOf(Location.pathname())} height="100vh">
+      <Scroller className="main-scroller" onScroll={this.onScroll} index={this.pageIds.indexOf(Location.pathname())} container={this.container}>
         <div id="scroll-home-container" className="children">
           <LandingPage />
         </div>

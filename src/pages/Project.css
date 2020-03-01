@@ -93,6 +93,10 @@
   font-size: 14px;
 }
 
+#project-page-container {
+  margin-top: -64px;
+}
+
 @media only screen and (max-width: 1170px) {
   .project-info-container {
     flex-direction: column;

@@ -6,15 +6,15 @@ class Scroller extends Component {
   constructor(props) {
     super(props)
 
-    this.index = 0
-    this.nextIndex = 0
     this.containerRef = React.createRef()
     this.sectionRefs = []
     this.lastScrollTop = 0
     this.isScrolling = false
+    this.canScroll = true
   
-    this.scrollInterval = undefined
     this.scrollTimeout = undefined
+    this.scrollTimer = undefined
+    this.canScrollTimeout = undefined
 
     this.sections = React.Children.map(props.children, child => {
       var ref = React.createRef()
@@ -27,16 +27,15 @@ class Scroller extends Component {
 
     this.nextIndex = props.index || 0
 
-    this.onScroll = this.onScroll.bind(this)
-
-    this.container = document.querySelector('html')
+    this.scrollTimerFx = this.scrollTimerFx.bind(this)
   }
 
   componentDidMount() {
-    setTimeout(() => {
-      this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), this.index, false)
-      this.bindListener()
-    }, 1)
+    this.container = this.props.container || this.containerRef.current || document.querySelector('html')
+
+    this.isScrolling = true
+    this.scrollToElement(this.sectionRefs[this.index].current, this.index, false)
+    this.bindListener()
   }
 
   componentDidUpdate() {
@@ -44,42 +43,47 @@ class Scroller extends Component {
 
     if (this.nextIndex !== index) {
       this.index = index
-      this.scrollToElement(this.sectionRefs[this.index].current.getBoundingClientRect(), index)
+      this.isScrolling = true
+      this.scrollToElement(this.sectionRefs[this.index].current, index)
     }
   }
 
   componentWillUnmount() {
     this.unbindListener()
-    window.clearInterval(this.scrollInterval)
     window.clearTimeout(this.scrollTimeout)
+    window.clearTimeout(this.canScrollTimeout)
   }
 
   onScroll(e) {
     var scrollDirectionCoeff = this.getScrollDirection() === true ?  1 : -1
 
-    if (!(this.isScrolling || (this.index + scrollDirectionCoeff) >= this.sectionRefs.length || (this.index + scrollDirectionCoeff) < 0 || e.timeStamp < 2000)) {
+    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 2000) {
       var nextIndex = this.index + scrollDirectionCoeff
 
+      // console.log('scroll start')
       var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
       var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      // this.containerRef.current
-      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.container.clientHeight) ||
+      // console.log(scrollDirectionCoeff, this.sectionRefs[this.index].current,  this.sectionRefs[nextIndex].current)
+      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.getContainerBounding().height) ||
       (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
         this.notifyOnScroll(nextIndex)
-        this.scrollToElement(nextElement, nextIndex)
-      } else {
-        this.isScrolling = false
-      }
+        this.scrollToElement(this.sectionRefs[nextIndex].current, nextIndex)
+      }/* else {
+         this.isScrolling = false
+      }*/
     }
+  }
+
+  getContainerBounding() {
+    return this.container.getBoundingClientRect()
   }
 
   getContainerScrollTop() {
     return this.container.scrollTop || window.pageYOffset || document.documentElement.scrollTop
-    // return this.containerRef.current.scrollTop || window.pageYOffset || document.documentElement.scrollTop
   }
 
   getScrollDirection() {
@@ -90,30 +94,19 @@ class Scroller extends Component {
     return ret
   }
 
-  scrollToElement(elementRect, index, isSmooth = true) {
+  scrollToElement(element, index, isSmooth = true) {
     const top = this.getContainerScrollTop()
+    const elementRect = element.getBoundingClientRect()
 
-      this.isScrolling = true
-      this.scrollTimeout = setTimeout(() => {
-        window.scrollTo({
-          behavior: isSmooth ? 'smooth' : 'instant',
-          left: 0,
-          top: top + elementRect.top
-        })
+    // this.isScrolling = true
+    this.container.scrollTo({
+      behavior: isSmooth ? 'smooth' : 'instant',
+      left: 0,
+      top: top + elementRect.top
+    })
 
-        if (this.scrollInterval) {
-          window.clearInterval(this.scrollInterval)
-        }
-        this.scrollInterval = window.setInterval(() => {
-          if (elementRect.top <= this.getContainerScrollTop()) {
-            this.isScrolling = false
-            this.index = index
-            this.nextIndex = index
-            window.clearInterval(this.scrollInterval)
-          }
-        }, 1000)
-
-      }, 10)
+    this.index = index
+    this.nextIndex = index
   }
 
   notifyOnScroll(index) {
@@ -122,17 +115,41 @@ class Scroller extends Component {
     onScroll && onScroll(index)
   }
 
+  scrollTimerFx(e) {
+    if (this.canScroll) {
+      /**
+       * @LINK https://stackoverflow.com/questions/4620906/how-do-i-know-when-ive-stopped-scrolling
+       */
+      if (this.scrollTimer !== null) {
+        clearTimeout(this.scrollTimer);        
+      }
+      this.scrollTimer = setTimeout(() => {
+        if (this.isScrolling) {
+          this.canScroll = false
+          this.getScrollDirection()
+          this.isScrolling = false
+          this.canScrollTimeout = window.setTimeout(() => this.canScroll = true, 500)
+        } else {
+          this.isScrolling = true
+          this.onScroll(e)
+        }
+      }, 100);
+    } else {
+      this.getScrollDirection()
+    }
+  }
+
   bindListener() {
-    window.addEventListener('scroll', this.onScroll)
+    this.container.addEventListener('scroll', this.scrollTimerFx)
   }
 
   unbindListener() {
-    window.removeEventListener('scroll', this.onScroll)
+    this.container.removeEventListener('scroll', this.scrollTimerFx)
   }
 
   render() {
     return (
-      <div ref={this.containerRef}>
+      <div ref={this.containerRef} className={["scroller-main-container", this.props.className || ''].join(' ')}>
         { this.sections.map(child => child) }
       </div>
     )

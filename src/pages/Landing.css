@@ -5,8 +5,9 @@
 }
 
 .landing-container {
+  margin-top: -64px;
   width: 100%;
-  height: calc(100vh - 64px);
+  height: 100vh;
   display: flex;
   flex-direction: row;
 }

@@ -34,6 +34,8 @@ class ProjectPage extends BasicPage {
 
     this.sliderRef = React.createRef()
 
+    this.container = document.getElementsByTagName('body')[0]
+
     this.state = {
       transitionVisible: !!window._projectListToProjectTrasition,
       project: ProjectService.getFromName(name),
@@ -44,7 +46,7 @@ class ProjectPage extends BasicPage {
     this.onSwipe = this.onSwipe.bind(this)
   }
 
-  componentDidMount() {
+  componentDidMount() {    
     this.timeoutId = setTimeout(() => {
       this.timeoutId = undefined
       this.setState({
@@ -52,7 +54,7 @@ class ProjectPage extends BasicPage {
       })
     }, 500)
 
-    window.scroll({
+    this.container.scroll({
       top: 0,
       left: 0,
       behavior: 'instant'
@@ -63,7 +65,7 @@ class ProjectPage extends BasicPage {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
-    window.scroll({
+    this.container.scroll({
       top: 0,
       left: 0,
       behavior: 'instant'
