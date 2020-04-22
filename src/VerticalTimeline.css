@@ -125,9 +125,7 @@
   bottom: 0vh;
   left: -70vh;
   top: 80vh;
-  /* background-image: linear-gradient(to left, #29154e, #47195e, #59145d, #6a0b5b, #7a0056); */
   background-image: linear-gradient(to top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
-  /* opacity: 0.8; */
   width: 100vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);

@@ -57,7 +57,7 @@ class Scroller extends Component {
   onScroll(e) {
     var scrollDirectionCoeff = this.getScrollDirection() === true ?  1 : -1
 
-    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 2000) {
+    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
       var nextIndex = this.index + scrollDirectionCoeff
 
       // console.log('scroll start')
@@ -65,8 +65,8 @@ class Scroller extends Component {
       var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
       // console.log(scrollDirectionCoeff, this.sectionRefs[this.index].current,  this.sectionRefs[nextIndex].current)
-      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.getContainerBounding().height) ||
-      (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
+      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height - 1 < this.getContainerBounding().height) ||
+      (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height + 1 >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
@@ -133,7 +133,7 @@ class Scroller extends Component {
           this.isScrolling = true
           this.onScroll(e)
         }
-      }, 100);
+      }, 150);
     } else {
       this.getScrollDirection()
     }

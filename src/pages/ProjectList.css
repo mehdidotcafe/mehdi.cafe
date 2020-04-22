@@ -86,7 +86,6 @@
   height: 100vh;
   left: -70vh;
   background-image: linear-gradient(to left top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
-  /* opacity: 0.8; */
   width: 100vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);

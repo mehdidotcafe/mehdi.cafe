@@ -27,7 +27,7 @@ class ProjectListPage extends BasicPage {
 
     this.hasMoreSkill = false
 
-    this.projects = Projects
+    this.projects = Projects.filter(p => p.isVisible !== false)
     this.skills = SkillService.getFilterable()
   
     this.filters = []

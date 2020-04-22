@@ -37,7 +37,7 @@
   transform: scale(0.3) rotate(-45deg);
   transition: 0.3s;
   opacity: 0;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .project-container:hover .project-overlay {

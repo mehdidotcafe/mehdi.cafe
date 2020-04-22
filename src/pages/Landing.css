@@ -60,7 +60,6 @@
   height: 300vh;
   right: -200vh;
   background-image: linear-gradient(to right bottom, #7a0056, #961356, #af2854, #c43f51, #d7574e);
-  /* opacity: 0.8; */
   width: 300vh;
   transform: rotate(-35deg);
 }

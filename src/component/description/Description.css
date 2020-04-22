@@ -3,6 +3,7 @@
   font-size: 32px;
   text-align: justify;
   margin-block-start: 16px;
+  word-wrap: normal;
 }
 
 
