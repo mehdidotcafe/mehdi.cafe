@@ -24,6 +24,9 @@ import './Project.css'
 import './BasicPage.css'
 import Zoomable from '../component/zoomable/Zoomable'
 
+import './slick.min.css'
+
+
 class ProjectPage extends BasicPage {
   constructor(props) {
     super(props)
@@ -54,26 +57,26 @@ class ProjectPage extends BasicPage {
       })
     }, 500)
 
-    if (!window.document.documentMode) {
+    // if (!window.document.documentMode) {
       this.container.scroll({
         top: 0,
         left: 0,
         behavior: 'instant'
       })
-    }
+    // }
   }
 
   componentWillUnmount() {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
-    if (!window.document.documentMode) {
+    // if (!window.document.documentMode) {
       this.container.scroll({
         top: 0,
         left: 0,
         behavior: 'instant'
       })
-    }
+    // }
     window._projectListToProjectTrasition = undefined
   }
 
