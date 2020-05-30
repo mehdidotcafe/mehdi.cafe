@@ -38,13 +38,13 @@
   color: white;
   text-align: center;
   cursor: pointer;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 
 .project-info-container .back-button-container div {
   height: 100%;
   width: 100%;
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
 }
 
 .project-description-container {
@@ -75,8 +75,7 @@
 }
 
 .project-skills-container {
-  padding-left: 8px;
-  padding-right: 8px;
+  margin-left: -8px;
   height: calc(164px / 1.75);
   max-width: 35vw;
   overflow: hidden;
@@ -158,7 +157,7 @@
 }
 
 .project-description-header {
-  margin-top: 32px;
+  margin-top: 64px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -218,13 +217,13 @@
   color: white;
   text-align: center;
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+  /* -webkit-transform: rotate(45deg); */
+  /* transform: rotate(45deg); */
 }
 
 .project-close-button-container div {
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  /* -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg); */
   margin-top: -3px;
   margin-left: -3px;
 }

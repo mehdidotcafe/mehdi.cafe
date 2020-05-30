@@ -18,9 +18,9 @@
 .skill-background {
   position: absolute;
   height: 100vh;
-  right: -25vh;
-  top: 80vh;
-  background-image: linear-gradient(to left, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  left: -35vh;
+  top: 70vh;
+  background-image: linear-gradient(to right, #7a0056, #961356, #af2854, #c43f51, #d7574e);
   width: 100vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);

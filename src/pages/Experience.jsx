@@ -40,21 +40,20 @@ class Experience extends BasicPage {
             <VerticalTimelineElement
               key={experiance.title}
               className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
-              date={experiance.date}
+              date={<div>                
+                    <span>{experiance.date}</span>
+                    {experiance.projectUrl ? ' | ' : ''}
+                    {experiance.projectUrl && (<Link to={experiance.projectUrl} className="vertical-timeline-element-link link">
+                      VOIR LE PROJET
+                    </Link>)}
+                  </div>}
               iconStyle={{background: '#331c5d', color: '#fff'}}
               icon={
                 <Image src={`images-webp/experiances/${experiance.logo}`} alt={experiance.title} />
               }
             >
               <h3 className="vertical-timeline-element-title">{experiance.title}</h3>
-              <h4 className="vertical-timeline-element-subtitle subTitle">{experiance.subtitle}</h4>
-              {experiance.projectUrl && (
-                <div style={{marginTop: '2px'}}>
-                  <Link to={experiance.projectUrl} className="vertical-timeline-element-link link">
-                    Voir le projet
-                  </Link>
-                </div>
-              )}
+              <h4 className="vertical-timeline-element-subtitle">{experiance.subtitle}</h4>            
               <Description text={experiance.text} />
             </VerticalTimelineElement>
           ))}

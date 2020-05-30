@@ -42,11 +42,11 @@ class Skill extends Component {
         </div>
       </div>
       { this.props.showExperience &&
-        <div style={{position: 'absolute', top: -this.calcExperienceSide(side), right: this.calcExperienceSide(side), margin: -side / 10 * 3.5}}>
+        <div style={{position: 'absolute', top: -this.calcExperienceSide(side), right: this.calcExperienceSide(side)}}>
 
         <div style={{width: side, height: side}} className="skill-experience-aside-container">
-          <div className="skill-pr-container bp-large" style={{left: -largeStroke - 3, top: -largeStroke - 3}}><ProgressRing side={Math.floor(largeSide + largeStroke)} stroke={largeStroke} progress={this.props.experience * 100 / 5}/></div>
-          <div className="skill-pr-container bp-small"  style={{left: -smallStroke  - 3, top: -smallStroke  - 3}}><ProgressRing side={Math.floor(smallSide + smallStroke)} stroke={smallStroke} progress={this.props.experience * 100 / 5}/></div>
+          <div className="skill-pr-container bp-large" style={{left: -largeStroke - 4, top: -largeStroke - 4}}><ProgressRing side={Math.floor(largeSide + largeStroke)} stroke={largeStroke} progress={this.props.experience * 100 / 5}/></div>
+          <div className="skill-pr-container bp-small"  style={{left: -smallStroke  - 4, top: -smallStroke  - 4}}><ProgressRing side={Math.floor(smallSide + smallStroke)} stroke={smallStroke} progress={this.props.experience * 100 / 5}/></div>
           <div className="skill-experience-aside-text-container">
             <div className="skill-experience-aside-text-num">{this.props.experience}</div>
             <div className="skill-experience-aside-text-years">{this.props.experience > 1 ? 'ANNÉES' : 'ANNÉE'}</div>

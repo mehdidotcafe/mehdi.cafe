@@ -1,5 +1,5 @@
 .emoji-container {
-  font-size: 110px;
+  font-size: 80px;
   text-align: center;
 }
 
@@ -82,9 +82,9 @@
 
 .project-background {
   position: absolute;
-  bottom: -76vh;
+  bottom: -90vh;
   height: 100vh;
-  left: -70vh;
+  right: -70vh;
   background-image: linear-gradient(to left top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
   width: 100vh;
   -webkit-transform: rotate(-35deg);

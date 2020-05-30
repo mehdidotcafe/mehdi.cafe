@@ -12,6 +12,6 @@ class WindowSize {
   }
 }
 
-WindowSize.ceil = 1170
+WindowSize.ceil = 812
 
 export default WindowSize

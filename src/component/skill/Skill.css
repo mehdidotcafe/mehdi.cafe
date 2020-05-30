@@ -20,7 +20,7 @@
   position: relative;
   height: 164px;
   width: 164px;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
 }
 
 .skill-super-container.pr-marged {
@@ -46,7 +46,7 @@
 }
 
 .skill-image {
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
 
   margin-top: 18.75%;
   height: 62.5%;
@@ -86,10 +86,6 @@
 
 }
 
-.skill-overlay-text {
-  transform: rotate(-45deg);
-}
-
 .skill-super-container:hover .skill-overlay {
   opacity: 1;
   transform: scale(1);
@@ -98,12 +94,12 @@
 .skill-experience-aside-container {
   background-color: #7a0056;
   position: relative;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 }
 
 .skill-experience-aside-text-container {
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
   text-align: center;
   position: absolute;
   top: 0;
@@ -127,10 +123,10 @@
   font-size: 10px;
 }
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 812px) {
   .skill-container, .skill-super-container, .skill-pr-container, .skill-sub-container {
-      height: calc(164px / 1.5);
-      width: calc(164px / 1.5);
+      height: calc(164px / 2);
+      width: calc(164px / 2);
   }
 
   .skill-experience-aside-text-years {

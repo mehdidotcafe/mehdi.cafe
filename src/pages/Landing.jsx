@@ -4,16 +4,16 @@ import { Link } from 'react-router-dom'
 
 import Medias from '../component/medias/Medias'
 
-import Image from '../Image'
+// import Image from '../Image'
 
 import Row from '../layout/row/Row'
 
 import Description from '../component/description/Description'
 
 import BasicPage from './BasicPage'
-import RecommendationService from '../services/Recommendation'
+// import RecommendationService from '../services/Recommendation'
 
-import RecommendationSlider from './RecommendationSlider'
+// import RecommendationSlider from './RecommendationSlider'
 
 import './Landing.css'
 
@@ -35,13 +35,6 @@ class Landing extends BasicPage {
     return (
       <div className="landing-container">
         <div className="landing-background" />
-        <div style={{alignSelf: 'flex-end', zIndex: 2}}>
-          <Image
-            src="/images-webp/mehdi_2.png"
-            className="landing-avatar-image"
-            alt="Mehdi Meddour"
-          />
-        </div>
         <div className="info-container">
           <div className="main-text-container">
             <h2 className="first-text">
@@ -51,7 +44,7 @@ class Landing extends BasicPage {
             <h1>Développeur Freelance WEB / MOBILE.</h1>
             <span style={{marginTop: '8px'}}>
               <Description
-                style={{fontSize: '24px'}}
+                style={{fontSize: '1.75em', margin: '2em 0'}}
                 text="Mes diverses expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement sur diverses plateformes.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
               />
             </span>
@@ -60,9 +53,16 @@ class Landing extends BasicPage {
               <Medias className="bp-large" />
             </Row>
           </div>
-          <div className="recommendation-slider-container">
+          {/* <div className="recommendation-slider-container">
             <RecommendationSlider recommendations={RecommendationService.get()} />
-          </div>
+          </div> */}
+        </div>
+        <div style={{alignSelf: 'center', zIndex: 2}}>
+          <img
+            src="/images-webp/mehdi_3.png"
+            className="landing-avatar-image"
+            alt="Mehdi Meddour"
+          />
         </div>
       </div>
     )

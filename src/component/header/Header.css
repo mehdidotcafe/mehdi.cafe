@@ -3,6 +3,7 @@
 #header {
   top: 0;
   left: 0;
+  position: fixed;
   position: sticky;
   width: 100%;
   height: 64px;
@@ -27,15 +28,21 @@
   bottom: 0;
   display: flex;
   flex-direction: row;
+  /* height: 64px; */
 }
 
 #header-logo-container {
   overflow-y: visible;
+  /* height: 64px; */
 }
 
 .header-logo-sub-container .header-logo-padding-top {
   height: calc(100% - 64px);
   background-color: #29154e;
+}
+
+.header-logo-sub-container {
+  z-index: 14;
 }
 
 #header-logo {
@@ -201,7 +208,7 @@
 
 @media only screen and (max-width: 1170px) {
   .header-button:not(.first) {
-    border-left: 1px solid #7a0056;
+    border-left: 3px solid #7a0056;
   }
 
   #header {
@@ -231,7 +238,7 @@
   }
 
   #header-button-container .header-button {
-    border-bottom: 1px solid #7a0056;
+    border-bottom: 3px solid #7a0056;
   }
 
   .header-media-container {
@@ -249,6 +256,6 @@
 
 @media only screen and (min-width: 1170px) {
   .header-button {
-    border-left: 1px solid #7a0056;
+    border-left: 3px solid #7a0056;
   }
 }

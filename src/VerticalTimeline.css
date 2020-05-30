@@ -12,17 +12,17 @@
 
 .vertical-timeline-element-icon {
   margin-top: calc(64px / 4);
-  border: 5px solid white;
+  border: 3px solid white;
   border-radius: 0;
   height: 64px;
   width: 64px;
   margin-left: -11px;
-  transform: rotate(45deg);
+  /* transform: rotate(45deg); */
   box-shadow: none;
 }
 
 .vertical-timeline-element img {
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
   margin-left: 18.75%;
   margin-top: 18.75%;
   height: 62.5%;
@@ -87,11 +87,11 @@
 }
 
 .vertical-timeline-element-title {
-  font-size: 34px;
+  font-size: 2.5em;
 }
 
 .vertical-timeline-element-subtitle {
-  font-size: 1.4rem;
+  font-size: 1.25em;
   font-weight: normal;
 }
 
@@ -123,11 +123,15 @@
 .experience-background {
   position: absolute;
   bottom: 0vh;
-  left: -70vh;
-  top: 80vh;
-  background-image: linear-gradient(to top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
-  width: 100vh;
+  right: -70vh;
+  top: 90vh;
+  background-image: linear-gradient(to top , #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  width: 120vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);
   z-index: -1;
+}
+
+.vertical-timeline-element-content-arrow {
+  display: none;
 }

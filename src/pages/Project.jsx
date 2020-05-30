@@ -54,22 +54,26 @@ class ProjectPage extends BasicPage {
       })
     }, 500)
 
-    this.container.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'instant'
-    })
+    if (!window.document.documentMode) {
+      this.container.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      })
+    }
   }
 
   componentWillUnmount() {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
-    this.container.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'instant'
-    })
+    if (!window.document.documentMode) {
+      this.container.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+      })
+    }
     window._projectListToProjectTrasition = undefined
   }
 

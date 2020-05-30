@@ -35,7 +35,11 @@ class Zoomable extends Component {
             this.copiedElement.style.transform = 'none'
             this.copiedElement.firstChild.style.transform = 'none'
             setTimeout(() => {
-                this.copiedElement.remove()
+                if (this.copiedElement.remove) {
+                    this.copiedElement.remove()
+                } else if (this.copiedElement.parentNode) {
+                    this.copiedElement.parentNode.removeChild(this.copiedElement)
+                }
             }, this.transitionDuration)
         }
         this.setState({

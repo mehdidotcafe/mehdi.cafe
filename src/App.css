@@ -28,6 +28,7 @@
 
 .main-scroller {
   overflow-x: hidden !important;
+  margin-top: -64px;
 }
 
 body, html {

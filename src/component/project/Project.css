@@ -9,12 +9,12 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  animation: popin 0.3s;
-  transform: rotate(45deg);
+  /* animation: popin 0.3s; */
+  /* transform: rotate(45deg); */
 }
 
 .project-image {
-  transform: rotate(-45deg);
+  /* transform: rotate(-45deg); */
   margin-top: 18.75%;
   height: 62.5%;
   width: 62.5%;
@@ -34,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.3) rotate(-45deg);
+  transform: scale(0.3);
   transition: 0.3s;
   opacity: 0;
   text-transform: capitalize;
@@ -42,24 +42,28 @@
 
 .project-container:hover .project-overlay {
   opacity: 1;
-  transform: scale(1) rotate(-45deg);
+  transform: scale(1);
 }
 
-@keyframes popin {
+.view-project-anchor a {
+  font-size: 1em;
+}
+
+/* @keyframes popin {
   from {
 
-    transform: scale(0.3) rotate(45deg);
+    transform: scale(0.3);
   }
 
   to {
-    transform: scale(1)  rotate(45deg);
+    transform: scale(1);
   }
-}
+} */
 
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 812px) {
   .project-container:not(.full-size) {
-    height: calc(164px / 1.5);
-    width: calc(164px / 1.5);
+    height: calc(164px / 2);
+    width: calc(164px / 2);
   }
 
   .project-overlay {

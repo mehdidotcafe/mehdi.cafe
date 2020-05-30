@@ -3,7 +3,6 @@
 }
 
 .media-button {
-  height: 32px;
   cursor: pointer;
   margin-left: 8px;
   margin-right: 8px;
@@ -11,5 +10,5 @@
 }
 
 .media-button:hover {
-  filter: contrast(5%);
+  filter: brightness(0.5);
 }
