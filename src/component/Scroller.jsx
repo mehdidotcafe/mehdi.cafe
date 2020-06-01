@@ -60,12 +60,10 @@ class Scroller extends Component {
     if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
       var nextIndex = this.index + scrollDirectionCoeff
 
-      // console.log('scroll start')
-      var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
+      // var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
       var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      // console.log(scrollDirectionCoeff, this.sectionRefs[this.index].current,  this.sectionRefs[nextIndex].current)
-      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height - 1 < this.getContainerBounding().height) ||
+      if ((scrollDirectionCoeff === 1) ||
       (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height + 1 >= 0)) {
         e.preventDefault()
         e.stopPropagation()

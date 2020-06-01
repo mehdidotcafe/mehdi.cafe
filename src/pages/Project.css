@@ -57,6 +57,7 @@
 }
 
 .project-scroller-container {
+  margin-top: 64px;
   margin-left: 60%;
   width: 40%;
   display: inline-block;
@@ -90,6 +91,10 @@
 
 .project-skills-container .skill-overlay-text {
   font-size: 14px;
+}
+
+#project-page-super-container {
+  width: 100%;
 }
 
 #project-page-container {

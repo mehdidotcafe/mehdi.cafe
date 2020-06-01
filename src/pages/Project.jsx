@@ -37,7 +37,7 @@ class ProjectPage extends BasicPage {
 
     this.sliderRef = React.createRef()
 
-    this.container = document.getElementsByTagName('body')[0]
+    this.container = window
 
     this.state = {
       transitionVisible: !!window._projectListToProjectTrasition,
@@ -113,7 +113,7 @@ class ProjectPage extends BasicPage {
     ].filter(t => t.test)
 
     return (
-      <>
+      <div id="project-page-super-container">
         <div className="project-page-background" />
         <div id="project-page-container">
           {this.state.project ?
@@ -199,7 +199,7 @@ class ProjectPage extends BasicPage {
               ) :
               <Redirect to='/work' /> }
         </div>
-      </>
+      </div>
     )
   }
 }
