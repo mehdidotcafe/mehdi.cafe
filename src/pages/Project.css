@@ -198,6 +198,16 @@
   background-color: #7a0056;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  .project-description-header button.isActive {
+    color: #a599bb;
+  }
+  
+  .project-description-header button.isActive:before {
+    background-color: #a599bb;
+  }
+} */
+
 .project-description-content {
   margin-bottom: 16px;
   padding-right: 16px;

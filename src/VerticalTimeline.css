@@ -135,3 +135,15 @@
 .vertical-timeline-element-content-arrow {
   display: none;
 }
+
+@media (prefers-color-scheme: dark) {
+  .vertical-timeline-element-content {
+    color: white !important;
+    background-color: #515151;
+  }
+
+  .vertical-timeline-element-content .vertical-timeline-element-date {
+    color: white;
+  }
+
+}

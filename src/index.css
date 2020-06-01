@@ -16,3 +16,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background-color: #2b2b2b;
+  }
+}
