@@ -30,7 +30,7 @@
     "name": "The Babel Zone",
     "logo": "the-babel-zone",
     "backgroundColor": "#000000",
-    "languages": ["Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git"],
+    "languages": ["Javascript", "PHP", "Laravel", "mySQL", "Web", "PWA", "Git", "React"],
     "companies": ["freelancer"],
     "url": "https://thebabelcommunity.app",
     "images": ["the-babel-zone/the_babel_zone_1.png", "the-babel-zone/the_babel_zone_2.png", "the-babel-zone/the_babel_zone_3.png", "the-babel-zone/the_babel_zone_4.png"],
@@ -202,6 +202,21 @@
     "recommandations": [],
     "start": "2018-02-01",
     "end": "2018-03-01"
+  },
+  {
+    "name": "Presta Diagnostic",
+    "logo": "prestadiagnostic",
+    "backgroundColor": "#cfe7f8",
+    "languages": ["Javascript", "PHP", "mySQL", "Laravel", "jQuery", "Web", "Git"],
+    "companies": ["freelancer"],
+    "url": "https://prestadiagnostic.com/",
+    "images": ["the-colivers/the-colivers_1.jpg", "the-colivers/the-colivers_2.jpg", "the-colivers/the-colivers_3.jpg", "the-colivers/the-colivers_4.jpg"],
+    "description_project": "\"Prestadiagnostic.com est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
+    "description_mission": "Redéveloppement du système de mise en relation un utilisateur et des diagnostiqueurs immobiliers.",
+    "recommandations": [],
+    "start": "2020-06-01",
+    "end": null,
+    "isVisible": false
   },
   {
     "name": "DeezDL",
