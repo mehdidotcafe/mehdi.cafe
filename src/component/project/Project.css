@@ -34,7 +34,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.3);
   transition: 0.3s;
   opacity: 0;
   text-transform: capitalize;
@@ -42,7 +41,6 @@
 
 .project-container:hover .project-overlay {
   opacity: 1;
-  transform: scale(1);
 }
 
 .view-project-anchor a {

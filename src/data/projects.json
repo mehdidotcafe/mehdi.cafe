@@ -210,13 +210,12 @@
     "languages": ["Javascript", "PHP", "mySQL", "Laravel", "jQuery", "Web", "Git"],
     "companies": ["freelancer"],
     "url": "https://prestadiagnostic.com/",
-    "images": ["the-colivers/the-colivers_1.jpg", "the-colivers/the-colivers_2.jpg", "the-colivers/the-colivers_3.jpg", "the-colivers/the-colivers_4.jpg"],
+    "images": ["prestadiagnostic/prestadiagnostic_2.png", "prestadiagnostic/prestadiagnostic_1.png", "prestadiagnostic/prestadiagnostic_3.png"],
     "description_project": "\"Prestadiagnostic.com est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
-    "description_mission": "Redéveloppement du système de mise en relation un utilisateur et des diagnostiqueurs immobiliers.",
+    "description_mission": "Redéveloppement du système de mise en relation un utilisateur et des diagnostiqueurs immobiliers.<br/>Intégration google analytics.",
     "recommandations": [],
     "start": "2020-06-01",
-    "end": null,
-    "isVisible": false
+    "end": "2020-07-01"
   },
   {
     "name": "DeezDL",
@@ -227,6 +226,7 @@
     "url": "https://chrome.google.com/webstore/detail/deezdl/ojkgeljdeihmnoamceidbdlcfogjlmmg",
     "images": ["deezdl/1.png", "deezdl/2.png"],
     "description_project": "Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.",
-    "recommandations": []
+    "recommandations": [],
+    "isVisible": false
   }
 ]
