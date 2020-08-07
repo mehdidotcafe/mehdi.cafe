@@ -131,7 +131,8 @@
     "description_mission": "Migration du projet vers Angular 8 puis Angular 9.",
     "recommandations": [],
     "start": "2018-02-01",
-    "end": "2018-08-01"
+    "end": "2018-08-01",
+    "isVisible": false
   },
   {
     "name": "Toocamp",
@@ -227,6 +228,6 @@
     "images": ["deezdl/1.png", "deezdl/2.png"],
     "description_project": "Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.",
     "recommandations": [],
-    "isVisible": false
+    "isVisible": true
   }
 ]
