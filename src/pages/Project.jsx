@@ -44,6 +44,7 @@ class ProjectPage extends BasicPage {
       project: ProjectService.getFromName(name),
       activeSlide: 0
     }
+    this.isSliderSliding = false
 
     this.goToWork = this.goToWork.bind(this)
     this.onSwipe = this.onSwipe.bind(this)
@@ -87,7 +88,11 @@ class ProjectPage extends BasicPage {
 
   setActiveSlide(slide, e) {
     e.preventDefault()
-    if (this.state.activeSlide !== slide) {
+    if (this.state.activeSlide !== slide && !this.isSliderSliding) {
+      this.isSliderSliding = true
+      window.setTimeout(() => {
+        this.isSliderSliding = false
+      }, 500)
       this.setState({activeSlide: slide})
       this.sliderRef.current.slickGoTo(slide)
     }
@@ -179,7 +184,7 @@ class ProjectPage extends BasicPage {
                     }
                   </div>
                   <div className="project-description-content">
-                    <Slider settings={{dots: false, arrows: false, infine: false}} ref={this.sliderRef} onSwipe={this.onSwipe}>
+                    <Slider settings={{dots: false, arrows: false, infinite: false}} ref={this.sliderRef} onSwipe={this.onSwipe}>
                       {tabs.map((tab) => <Description text={tab.content} key={`${tab.name}|content`} noMargin />)}
                     </Slider>
                   </div>
