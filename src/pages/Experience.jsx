@@ -40,15 +40,17 @@ class Experience extends BasicPage {
             <VerticalTimelineElement
               key={experiance.title}
               className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
-              date={
-                <div>                
+              date={(
+                <div>
                   <span>{experiance.date}</span>
-                    {experiance.projectUrl ? ' | ' : ''}
-                    {experiance.projectUrl && (<Link to={experiance.projectUrl} className="vertical-timeline-element-link link">
-                      VOIR LE PROJET
-                    </Link>)}
+                  {experiance.projectUrl ? ' | ' : ''}
+                  {experiance.projectUrl && (
+                  <Link to={experiance.projectUrl} className="vertical-timeline-element-link link">
+                    VOIR LE PROJET
+                  </Link>
+                  )}
                 </div>
-                }
+              )}
               iconStyle={{background: '#331c5d', color: '#fff'}}
               icon={
                 <Image src={`images-webp/experiances/${experiance.logo}`} alt={experiance.title} />

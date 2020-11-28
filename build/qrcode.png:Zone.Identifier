@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://app.qr-code-generator.com/manage/?aftercreate=1&count=1
+HostUrl=https://api.qr-code-generator.com/v1/create?access-token=LnHOEtBTVdWjeJE-8kyt5ws7_Pkyk-TKKAIJbxF8hBHf4RERgEi_MLEwfvd7oUxz&_lang=fr&qr_code_id=11444331&image_format=PNG&image_width=3000&foreground_color=%2329154e&background_color=%23ffffff&frame_color=%23000000&frame_name=no-frame&account_frame_id=0&frame_text=&frame_icon_name=&marker_left_template=version17&marker_left_inner_color=&marker_left_outer_color=&marker_right_template=version17&marker_right_inner_color=&marker_right_outer_color=&marker_bottom_template=version17&marker_bottom_inner_color=&marker_bottom_outer_color=&qr_code_logo=account6435952%2Flogo%2F6d1dd0fb473490941bd588e9c882e2b9.png&download=1&error_correction=&qr_code_pattern=&rnd=1571497372707
