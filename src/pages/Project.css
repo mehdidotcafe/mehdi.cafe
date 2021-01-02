@@ -181,7 +181,7 @@
   cursor: pointer;
 }
 
-.project-description-header button:before {
+.project-description-header button:before, .project-description-content .description div::before {
   content: "";
   display: inline-block;
   height: 12px;
@@ -190,8 +190,9 @@
   margin-right: 8px;
 }
 
-.project-description-header button.isActive {
+.project-description-header button.isActive, .project-description-content a {
   color: #7a0056;
+  text-decoration: none;
 }
 
 .project-description-header button.isActive:before {

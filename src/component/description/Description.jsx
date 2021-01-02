@@ -17,7 +17,8 @@ function Description({text, noMargin, style}) {
 
 Description.propTypes = {
   text: PropTypes.string.isRequired,
-  className: PropTypes.string
+  noMargin: PropTypes.bool.isRequired,
+  style: PropTypes.objectOf(PropTypes.any).isRequired
 }
 
 export default Description

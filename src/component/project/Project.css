@@ -36,7 +36,7 @@
   justify-content: center;
   transition: 0.3s;
   opacity: 0;
-  text-transform: capitalize;
+  text-transform: lowercase;
 }
 
 .project-container:hover .project-overlay {

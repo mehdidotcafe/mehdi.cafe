@@ -45,7 +45,7 @@ class Landing extends BasicPage {
             <span style={{marginTop: '8px'}}>
               <Description
                 style={{fontSize: '1.75em', margin: '2em 0'}}
-                text="Mes diverses expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement sur diverses plateformes.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
+                text="Mes expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement de site internet et d'application mobile.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
               />
             </span>
             <Row className="media-container-row">
