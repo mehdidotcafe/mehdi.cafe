@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-register": "^6.26.0",
-    "eslint": "^5.16.0",
+    "core-js": "^3.8.2",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
@@ -22,10 +21,10 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "sitemap": "babel-node ./src/scripts/sitemap-builder.js",
     "lint": "eslint src/**/*.js src/**/*.jsx"
   },
@@ -40,12 +39,19 @@
   ],
   "devDependencies": {
     "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.12.1",
+    "@babel/plugin-syntax-optional-chaining": "^7.8.3",
     "@babel/preset-env": "^7.12.7",
     "@babel/preset-react": "^7.12.7",
+    "@babel/register": "^7.12.10",
+    "customize-cra": "^1.0.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "react-app-rewired": "^2.1.8"
   }
 }

@@ -28,6 +28,13 @@
   color: #5d5d5d !important;
 }
 
+@media (prefers-color-scheme: dark) {
+
+  .link, .link:visited {
+    color: #7a0056 !important;
+  }
+}
+
 * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
