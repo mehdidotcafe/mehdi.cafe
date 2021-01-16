@@ -1,14 +1,12 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class Image extends Component {
-  render() {
-    return (
-      <picture>
-        <source srcSet={`${this.props.src}.webp`} type="image/webp"/>
-        <img draggable="false" src={this.props.src} alt={this.props.alt || ''} className={this.props.className}/>
-      </picture>
-    )
-  }
+function Image ({src, alt, className}) {
+  return (
+    <picture>
+      <source srcSet={`${src}.webp`} type="image/webp" />
+      <img draggable="false" src={src} alt={alt || ''} className={className} />
+    </picture>
+  )
 }
 
 export default Image
