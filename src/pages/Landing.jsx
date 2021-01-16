@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom'
 
 import Medias from '../component/medias/Medias'
 
-// import Image from '../Image'
-
 import Row from '../layout/row/Row'
+import Image from '../Image'
 
 import Description from '../component/description/Description'
 
@@ -58,8 +57,8 @@ class Landing extends BasicPage {
           </div> */}
         </div>
         <div style={{alignSelf: 'center', zIndex: 2}}>
-          <img
-            src="/images-webp/mehdi_3.png"
+          <Image
+            src="/images-webp/mehdi.png"
             className="landing-avatar-image"
             alt="Mehdi Meddour"
           />
