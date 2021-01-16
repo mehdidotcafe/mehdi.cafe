@@ -11,7 +11,7 @@ function MainRouter() {
   return (
     <Router>
       <div>
-        <Analytics id="UA-144659432-1" debug>
+        <Analytics id="UA-144659432-1">
           <Header />
           { MainSwitch }
         </Analytics>

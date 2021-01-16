@@ -8,9 +8,5 @@ module.exports = override(
       "corejs": 3,
       "targets": "defaults"
     }
-  ),
-  addBabelPlugins(
-    '@babel/plugin-proposal-nullish-coalescing-operator',
-    '@babel/plugin-syntax-optional-chaining'
   )
 )
