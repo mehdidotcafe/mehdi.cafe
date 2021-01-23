@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Image ({src, alt, className}) {
+function Image({ src, alt, className }) {
   return (
     <picture>
       <source srcSet={`${src}.webp`} type="image/webp" />

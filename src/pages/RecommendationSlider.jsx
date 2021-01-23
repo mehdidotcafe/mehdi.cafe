@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Slider from 'react-slick'
 
@@ -17,18 +17,22 @@ class RecommendationSlider extends Component {
     this.settings = {
       dots: true,
       arrows: true,
-      infinite: true
+      infinite: true,
     }
   }
 
   render() {
-    const {recommendations} = this.props
+    const { recommendations } = this.props
 
     return (
       <div className="recommendation-slider">
-        <SubTitle text="Quelques recommendations" style={{textTransform: 'initial', marginBottom: '4px', fontSize: '26px'}} />
-        <Slider dots={this.settings.dots} arrows={this.settings.arrows} inifine={this.settings.infinite}>
-          { recommendations.map(recommendation => (
+        <SubTitle text="Quelques recommendations" style={{ textTransform: 'initial', marginBottom: '4px', fontSize: '26px' }} />
+        <Slider
+          dots={this.settings.dots}
+          arrows={this.settings.arrows}
+          inifine={this.settings.infinite}
+        >
+          { recommendations.map((recommendation) => (
             <div className="recommendation-slide" key={recommendation.id}>
               <Image className="recommendation-author-image" src={`/images-webp/recommendations/${recommendation.img}`} alt={recommendation.author} />
               <div className="recommendation-author-info">
@@ -36,11 +40,11 @@ class RecommendationSlider extends Component {
                   {recommendation.author}
                 </div>
                 {
-                  recommendation.author_job &&
-                  <div className="recommendation-author-job">{recommendation.author_job}</div>
+                  recommendation.author_job
+                  && <div className="recommendation-author-job">{recommendation.author_job}</div>
                 }
               </div>
-              <Description text={recommendation.content} style={{fontSize: '18px'}} />
+              <Description text={recommendation.content} style={{ fontSize: '18px' }} />
             </div>
           ))}
         </Slider>
@@ -50,8 +54,7 @@ class RecommendationSlider extends Component {
 }
 
 RecommendationSlider.propTypes = {
-  recommendations: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired
+  recommendations: PropTypes.arrayOf(PropTypes.object.isRequired).isRequired,
 }
-
 
 export default RecommendationSlider

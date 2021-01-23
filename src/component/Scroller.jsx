@@ -1,8 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 class Scroller extends Component {
-
   constructor(props) {
     super(props)
 
@@ -11,13 +10,13 @@ class Scroller extends Component {
     this.lastScrollTop = 0
     this.isScrolling = false
     this.canScroll = true
-  
+
     this.scrollTimeout = undefined
     this.scrollTimer = undefined
     this.canScrollTimeout = undefined
 
-    this.sections = React.Children.map(props.children, child => {
-      var ref = React.createRef()
+    this.sections = React.Children.map(props.children, (child) => {
+      const ref = React.createRef()
 
       this.sectionRefs.push(ref)
       return <div ref={ref}>{child}</div>
@@ -31,7 +30,8 @@ class Scroller extends Component {
   }
 
   componentDidMount() {
-    this.container = this.props.container || this.containerRef.current || document.querySelector('html')
+    const { container } = this.props
+    this.container = container || this.containerRef.current || document.querySelector('html')
 
     this.isScrolling = true
     this.scrollToElement(this.sectionRefs[this.index].current, this.index, false)
@@ -39,7 +39,7 @@ class Scroller extends Component {
   }
 
   componentDidUpdate() {
-    const {index} = this.props
+    const { index } = this.props
 
     if (this.nextIndex !== index) {
       this.index = index
@@ -55,24 +55,22 @@ class Scroller extends Component {
   }
 
   onScroll(e) {
-    var scrollDirectionCoeff = this.getScrollDirection() === true ?  1 : -1
+    const scrollDirectionCoeff = this.getScrollDirection() === true ? 1 : -1
 
-    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
-      var nextIndex = this.index + scrollDirectionCoeff
+    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length
+      && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
+      const nextIndex = this.index + scrollDirectionCoeff
 
-      // var currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
-      var nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
+      const nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      if ((scrollDirectionCoeff === 1) ||
-      (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height + 1 >= 0)) {
+      if ((scrollDirectionCoeff === 1)
+      || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height + 1 >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
         this.notifyOnScroll(nextIndex)
         this.scrollToElement(this.sectionRefs[nextIndex].current, nextIndex)
-      }/* else {
-         this.isScrolling = false
-      }*/
+      }
     }
   }
 
@@ -85,8 +83,8 @@ class Scroller extends Component {
   }
 
   getScrollDirection() {
-    var st = this.getContainerScrollTop()
-    var ret = st > this.lastScrollTop
+    const st = this.getContainerScrollTop()
+    const ret = st > this.lastScrollTop
 
     this.lastScrollTop = st <= 0 ? 0 : st
     return ret
@@ -100,7 +98,7 @@ class Scroller extends Component {
     this.container.scrollTo({
       behavior: isSmooth ? 'smooth' : 'instant',
       left: 0,
-      top: top + elementRect.top
+      top: top + elementRect.top,
     })
 
     this.index = index
@@ -108,9 +106,11 @@ class Scroller extends Component {
   }
 
   notifyOnScroll(index) {
-    const {onScroll} = this.props
+    const { onScroll } = this.props
 
-    onScroll && onScroll(index)
+    if (onScroll) {
+      onScroll(index)
+    }
   }
 
   scrollTimerFx(e) {
@@ -119,14 +119,16 @@ class Scroller extends Component {
        * @LINK https://stackoverflow.com/questions/4620906/how-do-i-know-when-ive-stopped-scrolling
        */
       if (this.scrollTimer !== null) {
-        clearTimeout(this.scrollTimer);        
+        clearTimeout(this.scrollTimer);
       }
       this.scrollTimer = setTimeout(() => {
         if (this.isScrolling) {
           this.canScroll = false
           this.getScrollDirection()
           this.isScrolling = false
-          this.canScrollTimeout = window.setTimeout(() => this.canScroll = true, 500)
+          this.canScrollTimeout = window.setTimeout(() => {
+            this.canScroll = true
+          }, 500)
         } else {
           this.isScrolling = true
           this.onScroll(e)
@@ -146,9 +148,11 @@ class Scroller extends Component {
   }
 
   render() {
+    const { className } = this.props
+
     return (
-      <div ref={this.containerRef} className={["scroller-main-container", this.props.className || ''].join(' ')}>
-        { this.sections.map(child => child) }
+      <div ref={this.containerRef} className={['scroller-main-container', className || ''].join(' ')}>
+        { this.sections.map((child) => child) }
       </div>
     )
   }
@@ -157,7 +161,7 @@ class Scroller extends Component {
 Scroller.propTypes = {
   index: PropTypes.number.isRequired,
   children: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
-  onScroll: PropTypes.func.isRequired
+  onScroll: PropTypes.func.isRequired,
 }
 
 export default Scroller

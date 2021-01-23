@@ -1,8 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import './BasicPage.css'
 
 class BasicPage extends Component {
+  // eslint-disable-next-line
   renderContent() {
     return undefined
   }

@@ -3,19 +3,21 @@
   "version": "1.1.0",
   "private": true,
   "dependencies": {
+    "core-js": "^3.8.3",
+    "intersection-observer": "^0.12.0",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
-    "query-string": "^6.13.7",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "query-string": "^6.13.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-router-ga": "^1.2.3",
     "react-router-sitemap": "^1.2.0",
-    "react-scripts": "3.0.1",
-    "react-slick": "^0.24.0",
-    "react-vertical-timeline-component": "^2.6.2",
+    "react-scripts": "4.0.1",
+    "react-slick": "^0.27.14",
+    "react-vertical-timeline-component": "^3.3.1",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
@@ -24,10 +26,8 @@
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "sitemap": "babel-node ./src/scripts/sitemap-builder.js",
-    "lint": "eslint src/**/*.js src/**/*.jsx"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint": "./node_modules/.bin/eslint --ext .jsx,.js .",
+    "lint_auto": "./node_modules/.bin/eslint --ext .jsx,.js --fix ."
   },
   "browserslist": [
     ">0.2%",
@@ -36,19 +36,19 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "core-js": "^3.8.2",
-    "@babel/cli": "^7.12.8",
+    "@babel/cli": "^7.12.10",
     "@babel/core": "^7.12.10",
-    "@babel/preset-env": "^7.12.7",
-    "@babel/preset-react": "^7.12.7",
+    "@babel/plugin-proposal-optional-chaining": "^7.12.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "@babel/register": "^7.12.10",
     "customize-cra": "^1.0.0",
-    "eslint": "^5.16.0",
+    "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "react-app-rewired": "^2.1.8"
   }
 }

@@ -20,11 +20,11 @@ class Experience extends BasicPage {
     super(props)
 
     this.state = {
-      experiances: ExperianceService.get()
+      experiances: ExperianceService.get(),
     }
 
     this.style = {
-      paddingBottom: 0
+      paddingBottom: 0,
     }
   }
 
@@ -32,10 +32,10 @@ class Experience extends BasicPage {
     return (
       <div className="sub-basic-page experience-page">
         <div className="experience-background" />
-        <div style={{paddingTop: '64px'}}>
-          <Title text='Mes expériences' noMargin />
+        <div style={{ paddingTop: '64px' }}>
+          <Title text="Mes expériences" noMargin />
         </div>
-        <VerticalTimeline layout='1-column'>
+        <VerticalTimeline layout="1-column">
           { this.state.experiances.map((experiance, idx) => (
             <VerticalTimelineElement
               key={experiance.title}
@@ -51,13 +51,13 @@ class Experience extends BasicPage {
                   )}
                 </div>
               )}
-              iconStyle={{background: '#331c5d', color: '#fff'}}
+              iconStyle={{ background: '#331c5d', color: '#fff' }}
               icon={
                 <Image src={`images-webp/experiances/${experiance.logo}`} alt={experiance.title} />
               }
             >
               <h3 className="vertical-timeline-element-title">{experiance.title}</h3>
-              <h4 className="vertical-timeline-element-subtitle">{experiance.subtitle}</h4>            
+              <h4 className="vertical-timeline-element-subtitle">{experiance.subtitle}</h4>
               <Description text={experiance.text} />
             </VerticalTimelineElement>
           ))}

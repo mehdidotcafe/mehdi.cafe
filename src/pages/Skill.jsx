@@ -16,7 +16,7 @@ import WindowSize from '../WindowSize'
 
 import './SkillPage.css'
 
-function FakeContainer({children}) {
+function FakeContainer({ children }) {
   return (
     <div>
       {children}
@@ -25,7 +25,7 @@ function FakeContainer({children}) {
 }
 
 FakeContainer.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired
+  children: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
 }
 
 class SkillPage extends BasicPage {
@@ -33,12 +33,10 @@ class SkillPage extends BasicPage {
     super(props)
     this.skills = SkillService.getShowable()
 
-    this.fakeSkills = new Array(10).map((v, idx) => {
-      return {
-        ...this.skills[0],
-        name: `fake|${idx}`
-      }
-    })
+    this.fakeSkills = new Array(10).map((v, idx) => ({
+      ...this.skills[0],
+      name: `fake|${idx}`,
+    }))
   }
 
   renderContent() {
@@ -47,14 +45,14 @@ class SkillPage extends BasicPage {
     return (
       <div className="sub-basic-page">
         <div className="skill-background" />
-        <div style={{paddingTop: '64px'}}>
+        <div style={{ paddingTop: '64px' }}>
           <Title text="Mes skills" noMargin />
         </div>
         <div className="subtext-container">
           <div className="experiance-preview" />
-          <span style={{fontSize: '22px', textTransform: 'uppercase'}}>Années d&#39;expérience</span>
+          <span style={{ fontSize: '22px', textTransform: 'uppercase' }}>Années d&#39;expérience</span>
         </div>
-        <Row style={{marginTop: '64px'}} center>
+        <Row style={{ marginTop: '64px' }} center>
           { this.skills.map((skill) => (
             <Item key={skill.name}>
               <Container to={`/work?skill=${encodeURIComponent(skill.name)}`}>
@@ -70,7 +68,7 @@ class SkillPage extends BasicPage {
             </Item>
           ))}
           { this.fakeSkills.map((skill) => (
-            <Item key={skill.name} style={{visibility: 'hidden', height: '0px'}}>
+            <Item key={skill.name} style={{ visibility: 'hidden', height: '0px' }}>
               <Link to={`/work?skill=${encodeURIComponent(skill.name)}`}>
                 <Skill
                   name={skill.name}

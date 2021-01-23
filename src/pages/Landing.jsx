@@ -20,7 +20,7 @@ class Landing extends BasicPage {
   // because i'm lazy :)
   static getAge() {
     const birthday = +new Date('1996-11-14');
-    return ~~((Date.now() - birthday) / (31557600000));
+    return ((Date.now() - birthday) / (31557600000));
   }
 
   static isDay() {
@@ -30,6 +30,7 @@ class Landing extends BasicPage {
     return hours >= 6 && hours < 17
   }
 
+  // eslint-disable-next-line
   renderContent() {
     return (
       <div className="landing-container">
@@ -41,9 +42,9 @@ class Landing extends BasicPage {
               , je suis Mehdi.
             </h2>
             <h1>Développeur Freelance WEB / MOBILE.</h1>
-            <span style={{marginTop: '8px'}}>
+            <span style={{ marginTop: '8px' }}>
               <Description
-                style={{fontSize: '1.75em', margin: '2em 0'}}
+                style={{ fontSize: '1.75em', margin: '2em 0' }}
                 text="Mes expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement de site internet et d'application mobile.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
               />
             </span>
@@ -56,7 +57,7 @@ class Landing extends BasicPage {
             <RecommendationSlider recommendations={RecommendationService.get()} />
           </div> */}
         </div>
-        <div style={{alignSelf: 'center', zIndex: 2}}>
+        <div style={{ alignSelf: 'center', zIndex: 2 }}>
           <Image
             src="/images-webp/mehdi.png"
             className="landing-avatar-image"

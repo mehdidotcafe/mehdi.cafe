@@ -1,5 +1,5 @@
-import React, {Component} from 'react'
-// import PropTypes from 'prop-types'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 import LandingPage from './Landing'
 import ProjectListPage from './ProjectList'
@@ -14,17 +14,16 @@ import Location from '../Location'
 import './MainScrollPage.css'
 
 class MainScrollPage extends Component {
-
   constructor() {
     super()
-    this.pageIds = Location.links.map(l => l.link)
+    this.pageIds = Location.links.map((l) => l.link)
     this.onScroll = this.onScroll.bind(this)
     this.container = window
     // this.container = document.getElementsByTagName('body')[0]
   }
 
   onScroll(index) {
-    const {history} = this.props
+    const { history } = this.props
 
     history.push(`/${this.pageIds[index]}`)
   }
@@ -51,6 +50,7 @@ class MainScrollPage extends Component {
 }
 
 MainScrollPage.propTypes = {
+  history: PropTypes.objectOf(PropTypes.any).isRequired,
 }
 
 export default MainScrollPage

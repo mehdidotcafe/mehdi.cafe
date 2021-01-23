@@ -27,44 +27,42 @@ class ProjectListPage extends BasicPage {
 
     this.hasMoreSkill = false
 
-    this.projects = Projects.filter(p => p.isVisible !== false)
+    this.projects = Projects.filter((p) => p.isVisible !== false)
     this.skills = SkillService.getFilterable()
-  
+
     this.filters = []
-  
-    this.filtersGroup = ["iOS", "NodeJS", "Angular", "Laravel", "MongoDB", "C++"]
+
+    this.filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++']
 
     this.state = {
       projects: this.projects.slice(0),
       skills: this.skills.slice(0),
-      selectedProject: undefined
+      selectedProject: undefined,
     }
 
     this.addSkillFromQS()
   }
 
   addSkillFromQS() {
-    const paramSkills = Location.qs().skill ? this.skillToArray(Location.qs().skill) : []
-    let newSkills = this.state.skills.slice(0)
+    const paramSkills = Location.qs().skill ? ProjectListPage.skillToArray(Location.qs().skill) : []
+    const newSkills = this.state.skills.slice(0)
 
-    let paramSkillObj = undefined
+    let paramSkillObj
 
-    const skillCmp = (second) => {
-      return (first) => first.name === second
-    }
+    const skillCmp = (second) => (first) => first.name === second
 
     if (paramSkills && paramSkills.length > 0) {
-      for (var i = 0; i < paramSkills.length; i++) {
+      for (let i = 0; i < paramSkills.length; i += 1) {
         paramSkillObj = SkillService.getFromName(paramSkills[i])
 
-        if (newSkills.findIndex(skillCmp(paramSkills[i])) ===-1) {
+        if (newSkills.findIndex(skillCmp(paramSkills[i])) === -1) {
           if (this.hasMoreSkill === false) {
             this.filtersGroup.unshift(paramSkills[i])
             this.hasMoreSkill = true
           }
           newSkills.unshift(paramSkillObj)
           this.setState({
-            skills: newSkills
+            skills: newSkills,
           })
         }
       }
@@ -72,7 +70,7 @@ class ProjectListPage extends BasicPage {
   }
 
   hasSkills(toFind) {
-    for (var i = 0; i < toFind.length; i++) {
+    for (let i = 0; i < toFind.length; i += 1) {
       if (this.filters.indexOf(toFind[i]) === -1) {
         return false
       }
@@ -80,11 +78,10 @@ class ProjectListPage extends BasicPage {
     return true
   }
 
-
   filterFromQS(needClearFilters = false) {
     const paramSkills = Location.qs().skill
 
-    if (paramSkills && !this.hasSkills(this.skillToArray(paramSkills))) {
+    if (paramSkills && !this.hasSkills(ProjectListPage.skillToArray(paramSkills))) {
       if (needClearFilters) {
         this.filters = []
       }
@@ -101,18 +98,29 @@ class ProjectListPage extends BasicPage {
     this.filterFromQS(true)
   }
 
-  skillToArray(skill) {
-    const skills = skill ? (Array.isArray(skill) ? skill : [skill]) : []
-    return skills.map(skill => decodeURIComponent(skill))
+  static fmtSkills(skill) {
+    if (skill) {
+      if (Array.isArray(skill)) {
+        return skill
+      }
+
+      return [skill]
+    }
+    return []
+  }
+
+  static skillToArray(skill) {
+    const skills = this.fmtSkills(skill)
+    return skills.map((mSkill) => decodeURIComponent(mSkill))
   }
 
   filterProjects(skill, needToUpdateUrl = false) {
-    let filtered = []
-    let idx = undefined
+    const filtered = []
+    const skills = ProjectListPage.skillToArray(skill)
+    let idx
     let isMatching = true
-    let skills = this.skillToArray(skill)
 
-    for (var k = 0; k < skills.length; k++) {
+    for (let k = 0; k < skills.length; k += 1) {
       idx = this.filters.indexOf(skills[k])
       if (skills[k] && idx === -1) {
         this.filters.push(skills[k])
@@ -121,9 +129,9 @@ class ProjectListPage extends BasicPage {
       }
     }
 
-    for (var i = 0; i < this.projects.length; i++) {
+    for (let i = 0; i < this.projects.length; i += 1) {
       isMatching = true
-      for (var j = 0; j < this.filters.length; j++) {
+      for (let j = 0; j < this.filters.length; j += 1) {
         if (this.projects[i].languages.indexOf(this.filters[j]) === -1) {
           isMatching = false
           break
@@ -134,21 +142,21 @@ class ProjectListPage extends BasicPage {
       }
     }
     if (needToUpdateUrl) {
-      this.props.history.replace(`/work?${this.filters.map(f => 'skill=' + encodeURIComponent(f)).join('&')}`)
+      this.props.history.replace(`/work?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}`)
     }
     this.setState({
-      projects: filtered
+      projects: filtered,
     })
   }
 
   getSkillGrouped() {
-    let grouped = this.state.skills.slice(0)
-    let groups = [{group: [], id: -1}]
+    const grouped = this.state.skills.slice(0)
+    const groups = [{ group: [], id: -1 }]
 
-    for (var i = 0; i < grouped.length; i++) {
+    for (let i = 0; i < grouped.length; i += 1) {
       groups[groups.length - 1].group.push(grouped[i])
       if (this.filtersGroup.indexOf(grouped[i].name) !== -1) {
-        groups.push({group: [], id: groups.length})
+        groups.push({ group: [], id: groups.length })
       }
     }
 
@@ -158,9 +166,10 @@ class ProjectListPage extends BasicPage {
   goToProject(project, e) {
     e.preventDefault()
     this.setState({
-      selectedProject: project
+      selectedProject: project,
     }, () => {
       setTimeout(() => {
+        // eslint-disable-next-line
         window._projectListToProjectTrasition = true
         this.props.history.push(`/work/${project.name}`)
       }, 500)
@@ -169,31 +178,29 @@ class ProjectListPage extends BasicPage {
 
   clearFilters(e) {
     e.preventDefault()
-    this.props.history.replace(`/work`)
+    this.props.history.replace('/work')
     this.filters = []
     this.filterProjects(undefined)
   }
 
   renderContent() {
-    const fakeProjects = new Array(10).map((v, idx) => {
-      return {
-        ...this.projects[0],
-        name: `fake|${idx}`
-      }
-    })
+    const fakeProjects = new Array(10).map((v, idx) => ({
+      ...this.projects[0],
+      name: `fake|${idx}`,
+    }))
 
     return (
       <div className="sub-basic-page project-list-container">
         <div className="project-background" />
 
-        <div style={{paddingTop: '64px'}}>
-          <Title text='Mes projets' noMargin />
+        <div style={{ paddingTop: '64px' }}>
+          <Title text="Mes projets" noMargin />
         </div>
-        <Row style={{marginTop: '16px'}}>
+        <Row style={{ marginTop: '16px' }}>
           <Row className="filter-container bp-large">
-            <button type="submit" className="filter-text" style={{cursor: `${this.filters.length > 0 ? 'pointer' : 'normal'}`}} onClick={this.clearFilters.bind(this)}>
+            <button type="submit" className="filter-text" style={{ cursor: `${this.filters.length > 0 ? 'pointer' : 'normal'}` }} onClick={this.clearFilters.bind(this)}>
               <span className="subTitle">
-                <span style={{visibility: this.filters.length > 0 ? 'visible' : 'hidden'}}>(X) </span>
+                <span style={{ visibility: this.filters.length > 0 ? 'visible' : 'hidden' }}>(X) </span>
                 FILTRES
               </span>
             </button>
@@ -217,7 +224,7 @@ class ProjectListPage extends BasicPage {
           </Row>
 
           <Row center className="project-list-container">
-            { this.state.projects.map(project => (
+            { this.state.projects.map((project) => (
               <button type="submit" onClick={(e) => this.goToProject(project, e)} key={project.name} className="project-child-container">
                 <Item>
                   <Project
@@ -229,14 +236,14 @@ class ProjectListPage extends BasicPage {
                 </Item>
               </button>
             ))}
-            { this.state.projects.length  === 0 && (
+            { this.state.projects.length === 0 && (
               <span className="no-project-text-container">
                 <span role="img" aria-label="No project" className="emoji-container">😥</span>
                 <sub>Aucun projet</sub>
               </span>
             )}
             { fakeProjects.map((project) => (
-              <span style={{visibility: 'hidden', height: '0'}} key={project.name}>
+              <span style={{ visibility: 'hidden', height: '0' }} key={project.name}>
                 <Item>
                   <Project
                     backgroundColor={project.backgroundColor}
@@ -250,9 +257,11 @@ class ProjectListPage extends BasicPage {
           </Row>
         </Row>
         <ProjectOverlay
-          in
+          inTransition
           isVisible={!!this.state.selectedProject}
-          backgroundColor={this.state.selectedProject ? this.state.selectedProject.backgroundColor : undefined}
+          backgroundColor={
+            this.state.selectedProject ? this.state.selectedProject.backgroundColor : undefined
+          }
           logo={this.state.selectedProject ? this.state.selectedProject.logo : undefined}
         />
       </div>

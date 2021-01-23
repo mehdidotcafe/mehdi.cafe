@@ -1,10 +1,9 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import './MainSlider.css'
 
 class MainSlider extends Component {
-  
   constructor(props) {
     super(props)
 
@@ -12,13 +11,13 @@ class MainSlider extends Component {
 
     this.containerRef = React.createRef()
 
-    for (var i = 0; i < props.slides.length; i++) {
+    for (let i = 0; i < props.slides.length; i += 1) {
       this.slideRefs.push(React.createRef())
     }
   }
 
   componentDidMount() {
-    this.scrollToSlide()    
+    this.scrollToSlide()
   }
 
   componentDidUpdate() {
@@ -26,13 +25,13 @@ class MainSlider extends Component {
   }
 
   scrollToSlide() {
-    const {currentSlide} = this.props
+    const { currentSlide } = this.props
 
     this.containerRef.current.scrollTo(this.slideRefs[currentSlide].current.offsetLeft, 0)
   }
 
   render() {
-    const {slides} = this.props
+    const { slides } = this.props
 
     return (
       <div id="main-slider" ref={this.containerRef}>
@@ -48,7 +47,7 @@ class MainSlider extends Component {
 
 MainSlider.propTypes = {
   currentSlide: PropTypes.number.isRequired,
-  slides: PropTypes.arrayOf(PropTypes.symbol.isRequired).isRequired
+  slides: PropTypes.arrayOf(PropTypes.symbol.isRequired).isRequired,
 }
 
 export default MainSlider

@@ -20,16 +20,16 @@ class Location {
 
 Location.links = [{
   link: 'home',
-  label: 'Home'
+  label: 'Home',
 }, {
   link: 'work',
-  label: 'Work'
+  label: 'Work',
 }, {
   link: 'skills',
-  label: 'Skills'
+  label: 'Skills',
 }, {
   link: 'experiences',
-  label: 'Experiences'
+  label: 'Experiences',
 }]
 
 export default Location

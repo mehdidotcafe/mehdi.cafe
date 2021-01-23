@@ -26,12 +26,11 @@ import Zoomable from '../component/zoomable/Zoomable'
 
 import './slick.min.css'
 
-
 class ProjectPage extends BasicPage {
   constructor(props) {
     super(props)
 
-    const name = props.match.params.name
+    const { name } = props.match.params
 
     this.timeoutId = undefined
 
@@ -40,9 +39,10 @@ class ProjectPage extends BasicPage {
     this.container = window
 
     this.state = {
+      // eslint-disable-next-line
       transitionVisible: !!window._projectListToProjectTrasition,
       project: ProjectService.getFromName(name),
-      activeSlide: 0
+      activeSlide: 0,
     }
     this.isSliderSliding = false
 
@@ -50,20 +50,20 @@ class ProjectPage extends BasicPage {
     this.onSwipe = this.onSwipe.bind(this)
   }
 
-  componentDidMount() {    
+  componentDidMount() {
     this.timeoutId = setTimeout(() => {
       this.timeoutId = undefined
       this.setState({
-        transitionVisible: false
+        transitionVisible: false,
       })
     }, 500)
 
     // if (!window.document.documentMode) {
-      this.container.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      })
+    this.container.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    })
     // }
   }
 
@@ -71,19 +71,18 @@ class ProjectPage extends BasicPage {
     if (this.timeoutId) {
       clearTimeout(this.timeoutId)
     }
-    // if (!window.document.documentMode) {
-      this.container.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-      })
-    // }
+    this.container.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'instant',
+    })
+    // eslint-disable-next-line
     window._projectListToProjectTrasition = undefined
   }
 
   goToWork(e) {
     e.preventDefault()
-    this.props.history.push(`/work`)
+    this.props.history.push('/work')
   }
 
   setActiveSlide(slide, e) {
@@ -93,16 +92,16 @@ class ProjectPage extends BasicPage {
       window.setTimeout(() => {
         this.isSliderSliding = false
       }, 500)
-      this.setState({activeSlide: slide})
+      this.setState({ activeSlide: slide })
       this.sliderRef.current.slickGoTo(slide)
     }
   }
 
   onSwipe(direction) {
-    this.setState({activeSlide: direction === 'left' ? 1 : 0})
+    this.setState({ activeSlide: direction === 'left' ? 1 : 0 })
   }
 
-  getCloseButton() {
+  static getCloseButton() {
     return (
       <div className="project-close-button-container">
         <div>x</div>
@@ -112,21 +111,34 @@ class ProjectPage extends BasicPage {
 
   renderContent() {
     const tabs = [
-      {test: this.state.project.description_project || '', name: 'Le projet', content: this.state.project.description_project || ''},
-      {test: this.state.project.description_mission, name: 'La mission', content: this.state.project.description_mission},
-      {test: this.state.project.start, name: 'La durée', content: moment(this.state.project.start).locale('fr').format('LL') + ' - ' + (this.state.project.end ? moment(this.state.project.end).locale('fr').format('LL') : 'Actuel')}
-    ].filter(t => t.test)
+      {
+        test: this.state.project.description_project || '',
+        name: 'Le projet',
+        content: this.state.project.description_project || '',
+      },
+      {
+        test: this.state.project.description_mission,
+        name: 'La mission',
+        content: this.state.project.description_mission,
+      },
+      {
+        test: this.state.project.start,
+        name: 'La durée',
+        content: `${moment(this.state.project.start).locale('fr').format('LL')} - ${this.state.project.end
+          ? moment(this.state.project.end).locale('fr').format('LL') : 'Actuel'}`,
+      },
+    ].filter((t) => t.test)
 
     return (
       <div id="project-page-super-container">
         <div className="project-page-background" />
         <div id="project-page-container">
-          {this.state.project ?
-            (
+          {this.state.project
+            ? (
               <div className="project-info-container">
                 <div className="project-description-container">
                   <Row className="project-header">
-                    <div style={{display: 'inline-block', position: 'relative'}}>
+                    <div style={{ display: 'inline-block', position: 'relative' }}>
                       <Project
                         backgroundColor={this.state.project.backgroundColor}
                         backgroundImage={this.state.project.backgroundImage}
@@ -139,8 +151,8 @@ class ProjectPage extends BasicPage {
                     </div>
                     <div className="project-title-container">
                       <Title text={this.state.project.name} noMargin />
-                      { this.state.project.url &&
-                        (
+                      { this.state.project.url
+                        && (
                           <div className="view-project-anchor">
                             <a
                               href={this.state.project.url}
@@ -153,8 +165,8 @@ class ProjectPage extends BasicPage {
                           </div>
                         )}
                       <ScrollableRow className="project-skills-container" step={164 / 2.5}>
-                        { this.state.project.languages.map(SkillService.getFromName).map(skill =>
-                          (
+                        { this.state.project.languages.map(SkillService.getFromName)
+                          .map((skill) => (
                             <Item key={skill.name}>
                               <Link to={`/work?skill=${encodeURIComponent(skill.name)}`}>
                                 <Skill
@@ -173,36 +185,56 @@ class ProjectPage extends BasicPage {
                   </Row>
                   <div className="project-scroller-container bp-small">
                     <RectScroller>
-                      { this.state.project.images.map(image => (
-                        <img src={`/images-webp/project/${image}`} key={image} style={{backgroundColor: this.state.project.backgroundColor}} alt={this.state.project.name + ' ' + image} />
+                      { this.state.project.images.map((image) => (
+                        <img src={`/images-webp/project/${image}`} key={image} style={{ backgroundColor: this.state.project.backgroundColor }} alt={`${this.state.project.name} ${image}`} />
                       ))}
                     </RectScroller>
                   </div>
                   <div className="project-description-header">
                     {
-                      tabs.map((tab, idx) => <button type="submit" key={tab.name} className={this.state.activeSlide === idx ? "isActive" : undefined} onClick={(e) => this.setActiveSlide(idx, e)}>{tab.name}</button>)
+                      tabs.map((tab, idx) => (
+                        <button
+                          type="submit"
+                          key={tab.name}
+                          className={this.state.activeSlide === idx ? 'isActive' : undefined}
+                          onClick={(e) => this.setActiveSlide(idx, e)}
+                        >
+                          {tab.name}
+                        </button>
+                      ))
                     }
                   </div>
                   <div className="project-description-content">
-                    <Slider settings={{dots: false, arrows: false, infinite: false}} ref={this.sliderRef} onSwipe={this.onSwipe}>
+                    <Slider
+                      settings={{ dots: false, arrows: false, infinite: false }}
+                      ref={this.sliderRef}
+                      onSwipe={this.onSwipe}
+                    >
                       {tabs.map((tab) => <Description text={tab.content} key={`${tab.name}|content`} noMargin />)}
                     </Slider>
                   </div>
                 </div>
                 <div className="project-scroller-container bp-large">
                   <RectScroller>
-                    { this.state.project.images.map(image => (
-                      <Zoomable key={image} closeButton={this.getCloseButton()}>
-                        <img src={`/images-webp/project/${image}`} alt={this.state.project.name + ' ' + image} style={{backgroundColor: this.state.project.backgroundColor, height: '100%', width: '100%'}} />
+                    { this.state.project.images.map((image) => (
+                      <Zoomable key={image} closeButton={ProjectPage.getCloseButton()}>
+                        <img src={`/images-webp/project/${image}`} alt={`${this.state.project.name} ${image}`} style={{ backgroundColor: this.state.project.backgroundColor, height: '100%', width: '100%' }} />
                       </Zoomable>
                     )) }
                   </RectScroller>
                 </div>
-                { this.state.transitionVisible &&
-                  <ProjectOverlay out backgroundColor={this.state.project.backgroundColor} logo={this.state.project.logo} isVisible /> }
+                { this.state.transitionVisible
+                  && (
+                  <ProjectOverlay
+                    outTransition
+                    backgroundColor={this.state.project.backgroundColor}
+                    logo={this.state.project.logo}
+                    isVisible
+                  />
+                  ) }
               </div>
-              ) :
-              <Redirect to='/work' /> }
+            )
+            : <Redirect to="/work" /> }
         </div>
       </div>
     )
