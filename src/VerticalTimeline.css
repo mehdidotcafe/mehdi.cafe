@@ -11,22 +11,20 @@
 }
 
 .vertical-timeline-element-icon {
-  margin-top: calc(64px / 4);
+  height: calc(32px + 16px + 6px);
+  width: calc(32px + 16px + 6px);
   border: 3px solid white;
   border-radius: 0;
-  height: 64px;
-  width: 64px;
-  margin-left: -11px;
+  margin-left: -8px;
   /* transform: rotate(45deg); */
   box-shadow: none;
 }
 
 .vertical-timeline-element img {
-  /* transform: rotate(-45deg); */
-  margin-left: 18.75%;
-  margin-top: 18.75%;
-  height: 62.5%;
-  width: 62.5%;
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  display: block;
 }
 
 .vertical-timeline-element-content {
