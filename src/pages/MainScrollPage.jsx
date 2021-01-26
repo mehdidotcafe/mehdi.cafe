@@ -19,7 +19,6 @@ class MainScrollPage extends Component {
     this.pageIds = Location.links.map((l) => l.link)
     this.onScroll = this.onScroll.bind(this)
     this.container = window
-    // this.container = document.getElementsByTagName('body')[0]
   }
 
   onScroll(index) {

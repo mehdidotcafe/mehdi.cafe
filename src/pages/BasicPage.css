@@ -87,9 +87,3 @@ button.basic-button * {
    scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  .link, .link:visited {
-    color: #a599bb !important;
-  }
-} */

@@ -1,7 +1,6 @@
 .github
 build/
 node_modules/
-public/scrolloverflowreset-min.js
 src/index.js
 src/serviceWorker.js
 config-overrides.js

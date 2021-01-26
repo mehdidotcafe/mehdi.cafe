@@ -38,13 +38,11 @@
   color: white;
   text-align: center;
   cursor: pointer;
-  /* transform: rotate(45deg); */
 }
 
 .project-info-container .back-button-container div {
   height: 100%;
   width: 100%;
-  /* transform: rotate(-45deg); */
 }
 
 .project-description-container {
@@ -199,16 +197,6 @@
   background-color: #7a0056;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  .project-description-header button.isActive {
-    color: #a599bb;
-  }
-  
-  .project-description-header button.isActive:before {
-    background-color: #a599bb;
-  }
-} */
-
 .project-description-content {
   margin-bottom: 16px;
   padding-right: 16px;
@@ -233,13 +221,9 @@
   color: white;
   text-align: center;
   cursor: pointer;
-  /* -webkit-transform: rotate(45deg); */
-  /* transform: rotate(45deg); */
 }
 
 .project-close-button-container div {
-  /* -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg); */
   margin-top: -3px;
   margin-left: -3px;
 }

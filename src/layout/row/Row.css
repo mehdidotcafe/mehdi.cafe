@@ -4,11 +4,6 @@
   flex-wrap: wrap;
 }
 
-/* .row:after {
-  flex: auto;
-  flex-grow: 1;
-} */
-
 .row.noWrap {
   flex-wrap: nowrap;
 }

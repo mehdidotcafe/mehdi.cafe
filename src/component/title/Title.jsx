@@ -9,10 +9,4 @@ function Title({ noMargin, text, myStyle }) {
   )
 }
 
-// Title.propTypes = {
-//   noMargin: PropTypes.bool,
-//   text: PropTypes.string.isRequired,
-//   myStyle: PropTypes.object,
-// }
-
 export default Title

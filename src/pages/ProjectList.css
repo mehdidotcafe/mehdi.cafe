@@ -46,9 +46,6 @@
 
 .project-list-container {
   flex: 1;
-  /* width: 70%;
-  max-width: 70%; */
-  /* justify-content: space-around; */
   position: relative;
 }
 

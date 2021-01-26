@@ -7,9 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <MainRouter />
-    </>
+    <MainRouter />
   );
 }
 

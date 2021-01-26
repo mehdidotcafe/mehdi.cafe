@@ -10,9 +10,6 @@ import Image from '../Image'
 import Description from '../component/description/Description'
 
 import BasicPage from './BasicPage'
-// import RecommendationService from '../services/Recommendation'
-
-// import RecommendationSlider from './RecommendationSlider'
 
 import './Landing.css'
 
@@ -53,9 +50,6 @@ class Landing extends BasicPage {
               <Medias className="bp-large" />
             </Row>
           </div>
-          {/* <div className="recommendation-slider-container">
-            <RecommendationSlider recommendations={RecommendationService.get()} />
-          </div> */}
         </div>
         <div style={{ alignSelf: 'center', zIndex: 2 }}>
           <Image
