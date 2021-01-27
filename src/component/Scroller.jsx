@@ -64,7 +64,7 @@ class Scroller extends Component {
       const nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
       if ((scrollDirectionCoeff === 1)
-      || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height + 1 >= 0)) {
+      || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
@@ -128,7 +128,7 @@ class Scroller extends Component {
           this.isScrolling = false
           this.canScrollTimeout = window.setTimeout(() => {
             this.canScroll = true
-          }, 500)
+          }, 50)
         } else {
           this.isScrolling = true
           this.onScroll(e)
