@@ -1,4 +1,5 @@
 .zoomable-container, .zoomable-sub-container {
+    display: block;
     cursor: pointer;
     transition: all .3s ease-in-out;
     height: 100%;
