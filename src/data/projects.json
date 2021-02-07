@@ -27,6 +27,34 @@
     "isVisible": false
   },
   {
+    "name": "MateMeUp",
+    "logo": "matemeup",
+    "backgroundColor": "#b01515",
+    "languages": ["Javascript", "NodeJS", "React", "jQuery", "Laravel", "PHP", "mySQL", "Git", "Web"],
+    "companies": ["freelancer"],
+    "url": "https://matemeup.com",
+    "images": ["matemeup/matemeup_web_1.jpg", "matemeup/matemeup_web_2.jpg", "matemeup/matemeup_web_3.jpg", "matemeup/matemeup_web_4.jpg"],
+    "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
+    "description_mission": "<div>Développement d'un système de chat en temps réel utilisant socket.io.</div><div>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.</div><div>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.</div>",
+    "recommandations": [1],
+    "start": "2017-10-01",
+    "end": "2018-01-01"
+  },
+  {
+    "name": "MateMeUp Mobile",
+    "logo": "matemeup",
+    "backgroundColor": "#ec6464",
+    "languages": ["Android", "iOS", "Java", "Swift", "Git"],
+    "companies": ["freelancer"],
+    "url": "https://github.com/meddou/matemeup_android",
+    "images": ["matemeup-mobile/matemeup_mobile_1.jpg", "matemeup-mobile/matemeup_mobile_2.jpg", "matemeup-mobile/matemeup_mobile_3.jpg", "matemeup-mobile/matemeup_mobile_4.jpg", "matemeup-mobile/matemeup_mobile_5.jpg"],
+    "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
+    "description_mission": "<div>Développement de la version Android et iOS du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.</div>",
+    "recommandations": [1],
+    "start": "2018-02-01",
+    "end": "2018-08-01"
+  },
+  {
     "name": "The Babel Community",
     "logo": "the-babel-community",
     "backgroundColor": "#000000",
@@ -191,34 +219,6 @@
     "recommandations": [],
     "start": "2018-09-01",
     "end": "2018-11-01"
-  },
-  {
-    "name": "MateMeUp",
-    "logo": "matemeup",
-    "backgroundColor": "#b01515",
-    "languages": ["Javascript", "NodeJS", "React", "jQuery", "Laravel", "PHP", "mySQL", "Git", "Web"],
-    "companies": ["freelancer"],
-    "url": "https://matemeup.com",
-    "images": ["matemeup/matemeup_web_1.jpg", "matemeup/matemeup_web_2.jpg", "matemeup/matemeup_web_3.jpg", "matemeup/matemeup_web_4.jpg"],
-    "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
-    "description_mission": "<div>Développement d'un système de chat en temps réel utilisant socket.io.</div><div>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.</div><div>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.</div>",
-    "recommandations": [1],
-    "start": "2017-10-01",
-    "end": "2018-01-01"
-  },
-  {
-    "name": "MateMeUp Mobile",
-    "logo": "matemeup",
-    "backgroundColor": "#ec6464",
-    "languages": ["Android", "iOS", "Java", "Swift", "Git"],
-    "companies": ["freelancer"],
-    "url": "https://github.com/meddou/matemeup_android",
-    "images": ["matemeup-mobile/matemeup_mobile_1.jpg", "matemeup-mobile/matemeup_mobile_2.jpg", "matemeup-mobile/matemeup_mobile_3.jpg", "matemeup-mobile/matemeup_mobile_4.jpg", "matemeup-mobile/matemeup_mobile_5.jpg"],
-    "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
-    "description_mission": "<div>Développement de la version Android et iOS du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.</div>",
-    "recommandations": [1],
-    "start": "2018-02-01",
-    "end": "2018-08-01"
   },
   {
     "name": "The Colivers",
