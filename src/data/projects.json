@@ -23,8 +23,7 @@
     "description_mission": "<div>Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, édition de compte ...).</div><div>Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv.</a></div>",
     "recommandations": [],
     "start": "2020-08-01",
-    "end": null,
-    "isVisible": false
+    "end": null
   },
   {
     "name": "MateMeUp",
@@ -53,6 +52,18 @@
     "recommandations": [1],
     "start": "2018-02-01",
     "end": "2018-08-01"
+  },
+  {
+    "name": "Cloudindus",
+    "logo": "cloudindus",
+    "backgroundColor": "#dadadd",
+    "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
+    "companies": ["cloudindus"],
+    "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
+    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
+    "recommandations": [],
+    "start": "2015-05-01",
+    "end": "2017-03-01"
   },
   {
     "name": "The Babel Community",
@@ -95,18 +106,6 @@
     "recommandations": [],
     "start": "2019-03-01",
     "end": "2019-11-01"
-  },
-  {
-    "name": "Cloudindus",
-    "logo": "cloudindus",
-    "backgroundColor": "#dadadd",
-    "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
-    "companies": ["cloudindus"],
-    "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
-    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
-    "recommandations": [],
-    "start": "2015-05-01",
-    "end": "2017-03-01"
   },
   {
     "name": "Intranet AXIS",
@@ -244,6 +243,6 @@
     "images": ["deezdl/1.png", "deezdl/2.png"],
     "description_project": "<div>Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.</div>",
     "recommandations": [],
-    "isVisible": true
+    "isVisible": false
   }
 ]
