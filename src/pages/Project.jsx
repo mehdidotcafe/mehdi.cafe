@@ -44,6 +44,7 @@ class ProjectPage extends BasicPage {
       project: ProjectService.getFromName(name),
       activeSlide: 0,
     }
+    this.slideCount = 3
     this.isSliderSliding = false
 
     this.goToWork = this.goToWork.bind(this)
@@ -89,14 +90,14 @@ class ProjectPage extends BasicPage {
       this.isSliderSliding = true
       window.setTimeout(() => {
         this.isSliderSliding = false
-      }, 500)
+      }, 2000)
       this.setState({ activeSlide: slide })
       this.sliderRef.current.slickGoTo(slide)
     }
   }
 
   onSwipe(direction) {
-    this.setState({ activeSlide: direction === 'left' ? 1 : 0 })
+    this.setState({ activeSlide: (this.state.activeSlide + (direction === 'left' ? 1 : -1)) % this.slideCount })
   }
 
   static getCloseButton() {

@@ -213,7 +213,6 @@
   width: 32px;
   height: 32px;
   font-size: 24px;
-  line-height: 32px;
   bottom: -16px;
   left: -16px;
   background-color: #7a0056;
@@ -224,6 +223,5 @@
 }
 
 .project-close-button-container div {
-  margin-top: -3px;
-  margin-left: -3px;
+  line-height: 26px;
 }

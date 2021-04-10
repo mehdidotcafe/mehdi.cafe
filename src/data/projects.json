@@ -7,7 +7,7 @@
     "companies": ["freelancer"],
     "images": [],
     "description_project": "\"Kwote est un gestionnaire de risque à destination des ETI et PME.\nIl s'appuie sur les data des entreprises, grâce à sa connexion avec leurs systèmes d'information offrant à l'utilisateur - directeur financier, credit manager ou dirigeant - des outils de gestion du risque client et de pilotage de la performance des contrats d'assurance-crédit associés à une brique de services dont des solutions de financement disruptives, de recouvrement en ligne, du scoring basé sur le comportement de paiement...\"",
-    "description_mission": "<div>Développement de diverses connecteurs de récupération d'informations vers des sites externes (ATRADIUS, Euler Hermes).</div><div>Développement d'un module de relance de facture impayées comportant un système de planification et d'édition de templates.</div><div>Migration du site vers Angular 7 puis 8 puis 9.</div>",
+    "description_mission": "<div>Développement de diverses connecteurs de récupération d'informations vers des sites externes (ATRADIUS, Euler Hermes).</div><div>Développement d'un module de relance de facture impayées comportant un système de planification et d'édition de templates.</div><div>Migration du site vers Angular 7, 8, 9.</div>",
     "recommandations": [],
     "start": "2018-08-01",
     "end": null
@@ -60,7 +60,7 @@
     "languages": ["Javascript", "NodeJS", "MongoDB", "Angular", "Web", "Git"],
     "companies": ["cloudindus"],
     "images": ["cloudindus/cloudindus_1.gif", "cloudindus/cloudindus_2.jpg", "cloudindus/cloudindus_3.jpg", "cloudindus/cloudindus_4.jpg", "cloudindus/cloudindus_5.png"],
-    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.",
+    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.\nUtilisation de MEAN Stack (MongoDB, Express, Angular 1.29, Node.js) pour le développement.",
     "recommandations": [],
     "start": "2015-05-01",
     "end": "2017-03-01"
@@ -157,7 +157,7 @@
     "url": "https://prestadiagnostic.com/",
     "images": ["prestadiagnostic/prestadiagnostic_2.png", "prestadiagnostic/prestadiagnostic_1.png", "prestadiagnostic/prestadiagnostic_3.png"],
     "description_project": "\"Prestadiagnostic.com est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
-    "description_mission": "<div>Redéveloppement du système de mise en relation entre un utilisateur et des diagnostiqueurs immobiliers.</div><div>Intégration Google Analytics.</div>",
+    "description_mission": "<div>Redéveloppement du système de mise en relation entre un utilisateur et des diagnostiqueurs immobiliers.</div><div>Développement d'un système d'estimation de bien.</div><div>Intégration Google Analytics.</div>",
     "recommandations": [],
     "start": "2020-06-01",
     "end": "2020-07-01"
