@@ -1,20 +1,16 @@
-import React, { Component } from 'react'
+import styled from 'styled-components'
 
-import './BasicPage.css'
+const BasicPage = styled.div`
+  position: relative;
+  padding-top: 64px;
+  max-width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 32px;
 
-class BasicPage extends Component {
-  // eslint-disable-next-line
-  renderContent() {
-    return undefined
+  @media only screen and (min-width: 1170px) {
+    padding-left: ${(props) => (props.noMargin ? 0 : 12)}%;
+    padding-right: ${(props) => (props.noMargin ? 0 : 12)}%;
   }
-
-  render() {
-    return (
-      <div className="basic-page" style={this.style}>
-        {this.renderContent()}
-      </div>
-    )
-  }
-}
+`
 
 export default BasicPage

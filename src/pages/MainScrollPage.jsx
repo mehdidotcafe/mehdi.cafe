@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import LandingPage from './Landing'
 import ProjectListPage from './ProjectList'
@@ -11,7 +12,14 @@ import Footer from '../component/footer/Footer'
 
 import Location from '../Location'
 
-import './MainScrollPage.css'
+const StyledScroller = styled(Scroller)`
+  overflow-x: hidden !important;
+  margin-top: -64px;
+  min-height: 100%;
+  z-index: 2;
+  height: auto !important;
+  overflow-y: hidden;
+`
 
 class MainScrollPage extends Component {
   constructor() {
@@ -29,21 +37,27 @@ class MainScrollPage extends Component {
 
   render() {
     return (
-      <Scroller className="main-scroller" onScroll={this.onScroll} index={this.pageIds.indexOf(Location.pathname())} container={this.container}>
-        <div id="scroll-home-container" className="children">
-          <LandingPage />
-        </div>
-        <div id="scroll-work-container" className="children">
-          <ProjectListPage />
-        </div>
-        <div id="scroll-skills-container" className="children">
-          <SkillPage />
-        </div>
-        <div id="scroll-experiences-container" className="children">
-          <ExperiencePage />
-          <Footer />
-        </div>
-      </Scroller>
+      <>
+        <StyledScroller
+          onScroll={this.onScroll}
+          index={this.pageIds.indexOf(Location.pathname())}
+          container={this.container}
+        >
+          <div id="scroll-home-container" className="children">
+            <LandingPage />
+          </div>
+          <div id="scroll-work-container" className="children">
+            <ProjectListPage />
+          </div>
+          <div id="scroll-skills-container" className="children">
+            <SkillPage />
+          </div>
+          <div id="scroll-experiences-container" className="children">
+            <ExperiencePage />
+          </div>
+        </StyledScroller>
+        <Footer />
+      </>
     )
   }
 }

@@ -1,19 +1,116 @@
-import React from 'react'
-
-import { Link } from 'react-router-dom'
-
-import Medias from '../component/medias/Medias'
+import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 
 import Row from '../layout/row/Row'
 import Image from '../Image'
 
+import Medias from '../component/medias/Medias'
 import Description from '../component/description/Description'
+import Link from '../component/link/Link'
 
 import BasicPage from './BasicPage'
 
-import './Landing.css'
+const Container = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: -64px;
 
-class Landing extends BasicPage {
+  @media only screen and (max-width: 1170px) {
+    flex-direction: column;
+  }
+`
+
+const LandingBackground = styled.div`
+  position: absolute;
+  top: -50vh;
+  height: 200vh;
+  left: -100vh;
+  background-image: linear-gradient(to right bottom, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  width: 250vh;
+  transform: rotate(-35deg);
+`
+
+const InfoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  z-index: 3;
+  min-height: 100vh;
+
+  @media only screen and (max-width: 1170px) {
+    margin-top: 74px;
+  }
+`
+
+const AvatarPicture = styled(Image)`
+  height: 50vh;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+  align-self: center;
+  z-index: 2;
+
+  @media only screen and (max-width: 1170px) {
+    display: none;
+  }
+`
+
+const TitleContainer = styled.div`
+  margin-right: 2vw;  
+  max-width: 50vw;
+  padding: 16px;
+
+  @media only screen and (max-width: 1170px) {
+    position: relative;
+    left: 0;
+    top: 0;
+    box-shadow: none;
+    margin-top: 56px;
+    max-width: 100vw;
+  }
+`
+
+const TitleStyle = css`
+  line-height: 1;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 4.5em;
+  font-weight: normal;
+`
+
+const PrimaryTitle = styled.h1`
+  ${TitleStyle}
+  line-height: 1;
+  font-size: 2.5em;
+  margin-bottom: 16px;
+`
+
+const SecondaryTitle = styled.h2`
+  ${TitleStyle}
+  margin-top: 12px;
+`
+
+const MainDescription = styled(Description)`
+  font-size: 1.75em;
+  margin: 2em 0;
+  margin-top: 8px;
+`
+
+const MediaContainerRow = styled(Row)`
+  margin-top: 32px;
+`
+
+const MediaContainerLink = styled(Link)`
+  font-size: 2em;
+
+  a, a:active, a {
+    align-self: flex-end;
+  }
+`
+
+class Landing extends Component {
   // because i'm lazy :)
   static getAge() {
     const birthday = +new Date('1996-11-14');
@@ -28,37 +125,33 @@ class Landing extends BasicPage {
   }
 
   // eslint-disable-next-line
-  renderContent() {
+  render() {
     return (
-      <div className="landing-container">
-        <div className="landing-background" />
-        <div className="info-container">
-          <div className="main-text-container">
-            <h2 className="first-text">
-              {Landing.isDay() ? 'Bonjour' : 'Bonsoir'}
-              , je suis Mehdi.
-            </h2>
-            <h1>Développeur Freelance WEB / MOBILE.</h1>
-            <span style={{ marginTop: '8px' }}>
-              <Description
-                style={{ fontSize: '1.75em', margin: '2em 0' }}
+      <BasicPage>
+        <Container>
+          <LandingBackground />
+          <InfoContainer>
+            <TitleContainer>
+              <SecondaryTitle>
+                {Landing.isDay() ? 'Bonjour' : 'Bonsoir'}
+                , je suis Mehdi.
+              </SecondaryTitle>
+              <PrimaryTitle>Développeur Freelance WEB / MOBILE.</PrimaryTitle>
+              <MainDescription
                 text="Mes expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement de site internet et d'application mobile.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
               />
-            </span>
-            <Row className="media-container-row">
-              <Link to="/work" className="link">Voir mes projets</Link>
-              <Medias className="bp-large" />
-            </Row>
-          </div>
-        </div>
-        <div style={{ alignSelf: 'center', zIndex: 2 }}>
-          <Image
+              <MediaContainerRow>
+                <MediaContainerLink to="/work">Voir mes projets</MediaContainerLink>
+                <Medias className="bp-large" />
+              </MediaContainerRow>
+            </TitleContainer>
+          </InfoContainer>
+          <AvatarPicture
             src="/images-webp/mehdi.png"
-            className="landing-avatar-image"
             alt="Mehdi Meddour"
           />
-        </div>
-      </div>
+        </Container>
+      </BasicPage>
     )
   }
 }

@@ -1,24 +1,14 @@
-import React from 'react'
+import styled from 'styled-components'
 
-import './Row.css'
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: ${(props) => (props.noWrap ? 'nowrap' : 'wrap')};
+  justify-content: ${(props) => (props.center ? 'center' : 'none')};
 
-function Row({
-  spaceAroundMob, noWrap, className, center, style, customRef, children,
-}) {
-  return (
-    <div
-      className={`
-      row
-      ${spaceAroundMob ? 'row-space-around-mob' : ''}
-      ${noWrap ? 'noWrap' : ''}
-      ${className || ''}
-      ${center ? 'row-center' : ''}`}
-      style={style}
-      ref={customRef}
-    >
-      {children}
-    </div>
-  )
-}
+  @media only screen and (max-width: 1170px) {
+    ${(props) => (props.spaceAroundMob && 'justify-content: space-around')}
+  }
+`
 
 export default Row

@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import styled from 'styled-components'
 
-import './SubTitle.css'
-
-class SubTitle extends Component {
-  render() {
-    return (
-      <h4 style={this.props.style} className={`sub-title ${this.props.noMargin ? '' : 'margin-top'}`}>{this.props.text}</h4>
-    )
-  }
-}
+const SubTitle = styled.h4`
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+`
 
 export default SubTitle

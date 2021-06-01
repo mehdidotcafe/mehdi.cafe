@@ -1,13 +1,9 @@
-import React from 'react'
+import styled from 'styled-components'
 
-import './Item.css'
-
-function Item({ onClick, style, children }) {
-  return (
-    <button className="item" onClick={onClick} style={style} type="submit">
-      {children}
-    </button>
-  )
-}
+const Item = styled.div`
+  margin: 8px;
+  ${(props) => props.isHidden && 'visibility: hidden;'}
+  ${(props) => props.isHidden && 'height: 0px;'}
+`
 
 export default Item

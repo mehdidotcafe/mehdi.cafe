@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import './ProgressRing.css'
-
 class ProgressRing extends Component {
   constructor(props) {
     super(props)
 
     const { side } = this.props
 
-    this.circumference = side * 4
+    this.circumference = side * 5
   }
 
   render() {
@@ -19,11 +17,7 @@ class ProgressRing extends Component {
     const strokeColor = '#ffab00'
 
     return (
-      <svg
-        style={{ overflow: 'visible' }}
-        height={side}
-        width={side}
-      >
+      <svg height={side} width={side}>
         <rect
           stroke={strokeColor}
           fill="transparent"

@@ -48,10 +48,10 @@ class ScrollableRow extends Component {
   }
 
   render() {
-    const { style, className, children } = this.props
+    const { className, children } = this.props
 
     return (
-      <Row style={style} customRef={this.setContainerRef} noWrap className={className}>
+      <Row ref={this.setContainerRef} noWrap className={className}>
         {children.map((child, idx) => (
           // eslint-disable-next-line
           <span ref={this.elementRefs[idx]} key={idx}>
