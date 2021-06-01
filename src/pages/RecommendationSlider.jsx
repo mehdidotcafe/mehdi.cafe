@@ -26,7 +26,7 @@ class RecommendationSlider extends Component {
 
     return (
       <div className="recommendation-slider">
-        <SubTitle text="Quelques recommendations" style={{ textTransform: 'initial', marginBottom: '4px', fontSize: '26px' }} />
+        <SubTitle style={{ textTransform: 'initial', marginBottom: '4px', fontSize: '26px' }}>Quelques recommendations</SubTitle>
         <Slider
           dots={this.settings.dots}
           arrows={this.settings.arrows}

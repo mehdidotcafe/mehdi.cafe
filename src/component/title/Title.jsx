@@ -1,12 +1,14 @@
-import React from 'react'
-// import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import './Title.css'
+const Title = styled.h1`
+  font-family: 'Oswald', sans-serif;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 4.5em;
+  text-transform: uppercase;
+  line-height: 1;
 
-function Title({ noMargin, text, myStyle }) {
-  return (
-    <h1 className={`title ${noMargin ? '' : 'margin-top'}`} style={myStyle}>{text}</h1>
-  )
-}
+  ${(props) => !props.noMargin && 'margin-left: 16px'}
+`
 
 export default Title

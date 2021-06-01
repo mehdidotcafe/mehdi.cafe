@@ -1,6 +1,54 @@
 import React, { Component } from 'react'
+import styled, { css } from 'styled-components'
 
-import './Zoomable.css'
+const CloseButton = styled.div`
+  display: none;
+`
+
+const sharedContainer = css`
+  display: block;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  height: 100%;
+  width: 100%;
+`
+
+const SubContainer = styled.div`
+  ${sharedContainer}
+`
+
+const Container = styled.button`
+  ${sharedContainer}
+  &.zoomed {
+    position: fixed;
+    transform-origin: center center;
+    z-index: 99;
+  }
+
+  &.zoomed {
+    ${SubContainer} {
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+      transition: all .3s all-in-out;
+      position: relative;  
+    }
+    ${CloseButton} {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+  } 
+`
+
+const Background = styled.span`
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation: fadeIn 0.3s;
+  background-color:rgba(0, 0, 0, 0.6);
+`
 
 class Zoomable extends Component {
   constructor() {
@@ -19,6 +67,10 @@ class Zoomable extends Component {
       isZoom: false,
     }
     this.zoomOrNot = this.zoomOrNot.bind(this)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.currentClickListener)
   }
 
   zoomOrNot(event) {
@@ -102,16 +154,15 @@ class Zoomable extends Component {
 
     return (
       <span>
-        <button onClick={this.zoomOrNot} className="zoomable-container" ref={this.containerRef} type="submit">
-          <div className="zoomable-sub-container">
+        <Container onClick={this.zoomOrNot} ref={this.containerRef} type="submit">
+          <SubContainer>
             {children}
-            <span className="zoomable-close-button">
+            <CloseButton>
               {closeButton}
-            </span>
-          </div>
-        </button>
-        { isZoom
-                && <span className="zoomable-background" />}
+            </CloseButton>
+          </SubContainer>
+        </Container>
+        { isZoom && <Background />}
       </span>
     )
   }

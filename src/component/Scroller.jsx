@@ -1,5 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const Container = styled.main`
+  height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+`
 
 class Scroller extends Component {
   constructor(props) {
@@ -148,12 +155,10 @@ class Scroller extends Component {
   }
 
   render() {
-    const { className } = this.props
-
     return (
-      <div ref={this.containerRef} className={['scroller-main-container', className || ''].join(' ')}>
+      <Container ref={this.containerRef}>
         { this.sections.map((child) => child) }
-      </div>
+      </Container>
     )
   }
 }

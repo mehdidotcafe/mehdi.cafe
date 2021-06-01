@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import { withRouter } from 'react-router-dom'
 
@@ -7,6 +8,7 @@ import Location from '../Location'
 import Projects from '../data/projects.json'
 
 import Title from '../component/title/Title'
+import SubTitle from '../component/sub-title/SubTitle'
 import Project from '../component/project/Project'
 import ProjectOverlay from '../component/project/ProjectOverlay'
 import Skill from '../component/skill/Skill'
@@ -18,86 +20,118 @@ import BasicPage from './BasicPage'
 
 import SkillService from '../services/Skill'
 
-import './BasicPage.css'
-import './ProjectList.css'
+const Container = styled(Row)`
+  width: 25%;
+  max-width: 25%;
+  margin-right: 2.5%;
+  padding-right: 2.5%;
+  overflow-x: auto;
+  border-right: 3px solid black;
+  box-sizing: border-box;
+  padding-bottom: 32px;
 
-class ProjectListPage extends BasicPage {
-  constructor(props) {
-    super(props)
+  @media only screen and (max-width: 1170px) {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    margin-left: calc(4% + 16px);
+    margin-right: calc(4% + 16px);
+    padding-right: 0;
+    border-right: 0;
+    border-bottom: 3px solid black;
+  }
+`
 
-    this.hasMoreSkill = false
+const NoProjectText = styled.span`
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto';
+  text-align: center;
 
-    this.projects = Projects.filter((p) => p.isVisible !== false)
-    this.skills = SkillService.getFilterable()
+  sub {
+    margin: 12px;
+    font-size: 20px !important;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+  }
+`
 
-    this.filters = []
+const ProjectBackground = styled.div`
+  position: absolute;
+  bottom: -90vh;
+  height: 100vh;
+  right: -70vh;
+  background-image: linear-gradient(to left top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  width: 100vh;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: -1;
+`
 
-    this.filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++']
+const EmojiContainer = styled.span`
+  font-size: 80px;
+  text-align: center;
+`
 
-    this.state = {
-      projects: this.projects.slice(0),
-      skills: this.skills.slice(0),
-      selectedProject: undefined,
-    }
+const FilterText = styled.button`
+  margin-right: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+  text-align: right;
+  cursor: ${(props) => (props.hasPointer ? 'pointer' : 'normal')}
 
-    this.addSkillFromQS()
+  @media only screen and (max-width: 1170px) {
+    text-align: left;
+  }
+`
+
+const ProjectButton = styled.button`
+  overflow: visible;
+`
+
+const FilterRow = styled(Row)`
+  justify-content: flex-end;
+  width: 100%;
+
+  @media only screen and (max-width: 1170px) {
+    justify-content: center;
+    width: auto;
+  }
+`
+
+const ListContainer = styled(Row)`
+  flex: 1;
+  position: relative;
+
+  .row {
+    align-items: flex-start;
   }
 
-  addSkillFromQS() {
-    const paramSkills = Location.qs().skill ? ProjectListPage.skillToArray(Location.qs().skill) : []
-    const newSkills = this.state.skills.slice(0)
-
-    let paramSkillObj
-
-    const skillCmp = (second) => (first) => first.name === second
-
-    if (paramSkills && paramSkills.length > 0) {
-      for (let i = 0; i < paramSkills.length; i += 1) {
-        paramSkillObj = SkillService.getFromName(paramSkills[i])
-
-        if (newSkills.findIndex(skillCmp(paramSkills[i])) === -1) {
-          if (this.hasMoreSkill === false) {
-            this.filtersGroup.unshift(paramSkills[i])
-            this.hasMoreSkill = true
-          }
-          newSkills.unshift(paramSkillObj)
-          this.setState({
-            skills: newSkills,
-          })
-        }
-      }
-    }
+  @media only screen and (max-width: 1170px) {
+    width: 100%;
+    max-width: 100%;
   }
+`
 
-  hasSkills(toFind) {
-    for (let i = 0; i < toFind.length; i += 1) {
-      if (this.filters.indexOf(toFind[i]) === -1) {
-        return false
-      }
-    }
-    return true
-  }
+const ClearFilterButton = styled.span`
+visibility: ${(props) => (props.isVisible ? 'visible' : 'hidden')}
+`
 
-  filterFromQS(needClearFilters = false) {
-    const paramSkills = Location.qs().skill
+const FakeItem = styled(Item)`
+visibility: hidden;
+height: 0;
+`
 
-    if (paramSkills && !this.hasSkills(ProjectListPage.skillToArray(paramSkills))) {
-      if (needClearFilters) {
-        this.filters = []
-      }
-      this.filterProjects(paramSkills)
-    }
-  }
+const ProjectTitle = styled(Title)`
+padding-top: 64px;
+`
 
-  componentDidMount() {
-    this.filterFromQS()
-  }
+const ProjectRow = styled(Row)`
+margin-top: 16px;
+`
 
-  componentDidUpdate() {
-    this.addSkillFromQS()
-    this.filterFromQS(true)
-  }
-
+class ProjectListPage extends Component {
   static fmtSkills(skill) {
     if (skill) {
       if (Array.isArray(skill)) {
@@ -114,7 +148,53 @@ class ProjectListPage extends BasicPage {
     return skills.map((mSkill) => decodeURIComponent(mSkill))
   }
 
+  constructor(props) {
+    super(props)
+    this.hasMoreSkill = false
+
+    this.projects = Projects.filter((p) => p.isVisible !== false)
+    this.skills = SkillService.getFilterable()
+
+    this.filters = []
+
+    this.filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++']
+
+    this.state = {
+      projects: this.projects.slice(0),
+      skills: this.skills.slice(0),
+      selectedProject: undefined,
+    }
+
+    this.addSkillFromQS()
+    this.clearFilters = this.clearFilters.bind(this)
+  }
+
+  componentDidMount() {
+    this.filterFromQS()
+  }
+
+  componentDidUpdate() {
+    this.addSkillFromQS()
+    this.filterFromQS(true)
+  }
+
+  getSkillGrouped() {
+    const { skills } = this.state
+    const grouped = skills.slice(0)
+    const groups = [{ group: [], id: -1 }]
+
+    for (let i = 0; i < grouped.length; i += 1) {
+      groups[groups.length - 1].group.push(grouped[i])
+      if (this.filtersGroup.indexOf(grouped[i].name) !== -1) {
+        groups.push({ group: [], id: groups.length })
+      }
+    }
+
+    return groups
+  }
+
   filterProjects(skill, needToUpdateUrl = false) {
+    const { history } = this.props
     const filtered = []
     const skills = ProjectListPage.skillToArray(skill)
     let idx
@@ -142,28 +222,63 @@ class ProjectListPage extends BasicPage {
       }
     }
     if (needToUpdateUrl) {
-      this.props.history.replace(`/work?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}`)
+      history.replace(`/work?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}`)
     }
     this.setState({
       projects: filtered,
     })
   }
 
-  getSkillGrouped() {
-    const grouped = this.state.skills.slice(0)
-    const groups = [{ group: [], id: -1 }]
+  filterFromQS(needClearFilters = false) {
+    const paramSkills = Location.qs().skill
 
-    for (let i = 0; i < grouped.length; i += 1) {
-      groups[groups.length - 1].group.push(grouped[i])
-      if (this.filtersGroup.indexOf(grouped[i].name) !== -1) {
-        groups.push({ group: [], id: groups.length })
+    if (paramSkills && !this.hasSkills(ProjectListPage.skillToArray(paramSkills))) {
+      if (needClearFilters) {
+        this.filters = []
+      }
+      this.filterProjects(paramSkills)
+    }
+  }
+
+  hasSkills(toFind) {
+    for (let i = 0; i < toFind.length; i += 1) {
+      if (this.filters.indexOf(toFind[i]) === -1) {
+        return false
       }
     }
+    return true
+  }
 
-    return groups
+  addSkillFromQS() {
+    const { skills } = this.state
+    const paramSkills = Location.qs().skill ? ProjectListPage.skillToArray(Location.qs().skill) : []
+    const newSkills = skills.slice(0)
+
+    let paramSkillObj
+
+    const skillCmp = (second) => (first) => first.name === second
+
+    if (paramSkills && paramSkills.length > 0) {
+      for (let i = 0; i < paramSkills.length; i += 1) {
+        paramSkillObj = SkillService.getFromName(paramSkills[i])
+
+        if (newSkills.findIndex(skillCmp(paramSkills[i])) === -1) {
+          if (this.hasMoreSkill === false) {
+            this.filtersGroup.unshift(paramSkills[i])
+            this.hasMoreSkill = true
+          }
+          newSkills.unshift(paramSkillObj)
+          this.setState({
+            skills: newSkills,
+          })
+        }
+      }
+    }
   }
 
   goToProject(project, e) {
+    const { history } = this.props
+
     e.preventDefault()
     this.setState({
       selectedProject: project,
@@ -171,100 +286,105 @@ class ProjectListPage extends BasicPage {
       setTimeout(() => {
         // eslint-disable-next-line
         window._projectListToProjectTrasition = true
-        this.props.history.push(`/work/${project.name}`)
+        history.push(`/work/${project.name}`)
       }, 500)
     })
   }
 
   clearFilters(e) {
+    const { history } = this.props
+
     e.preventDefault()
-    this.props.history.replace('/work')
+    history.replace('/work')
     this.filters = []
     this.filterProjects(undefined)
   }
 
-  renderContent() {
+  render() {
+    const { projects, selectedProject } = this.state
     const fakeProjects = new Array(10).map((v, idx) => ({
       ...this.projects[0],
       name: `fake|${idx}`,
     }))
 
     return (
-      <div className="sub-basic-page project-list-container">
-        <div className="project-background" />
+      <BasicPage>
+        <div>
+          <ProjectBackground />
 
-        <div style={{ paddingTop: '64px' }}>
-          <Title text="Mes projets" noMargin />
-        </div>
-        <Row style={{ marginTop: '16px' }}>
-          <Row className="filter-container bp-large">
-            <button type="submit" className="filter-text" style={{ cursor: `${this.filters.length > 0 ? 'pointer' : 'normal'}` }} onClick={this.clearFilters.bind(this)}>
-              <span className="subTitle">
-                <span style={{ visibility: this.filters.length > 0 ? 'visible' : 'hidden' }}>(X) </span>
-                FILTRES
-              </span>
-            </button>
-            { this.getSkillGrouped().map((group) => (
-              <Row className="filter-row" key={group.id}>
-                {group.group.map((skill) => (
-                  <Item key={skill.name} onClick={() => this.filterProjects(skill.name, true)}>
-                    <Skill
-                      name={skill.name}
-                      backgroundImage={skill.backgroundImage}
-                      backgroundColor={skill.backgroundColor}
-                      logo={skill.logo}
-                      experience={skill.experience}
-                      isSelected={this.filters.indexOf(skill.name) !== -1}
-                      isLittle
+          <ProjectTitle noMargin>Mes projets</ProjectTitle>
+          <ProjectRow>
+            <Container className="bp-large">
+              <FilterText
+                type="submit"
+                hasPointer={this.filters.length > 0}
+                onClick={this.clearFilters}
+              >
+                <SubTitle>
+                  <ClearFilterButton isVisible={this.filters.length > 0}>(X)</ClearFilterButton>
+                  FILTRES
+                </SubTitle>
+              </FilterText>
+              {this.getSkillGrouped().map((group) => (
+                <FilterRow key={group.id}>
+                  {group.group.map((skill) => (
+                    <Item key={skill.name} onClick={() => this.filterProjects(skill.name, true)}>
+                      <Skill
+                        name={skill.name}
+                        backgroundImage={skill.backgroundImage}
+                        backgroundColor={skill.backgroundColor}
+                        logo={skill.logo}
+                        experience={skill.experience}
+                        isSelected={this.filters.indexOf(skill.name) !== -1}
+                        isLittle
+                      />
+                    </Item>
+                  ))}
+                </FilterRow>
+              ))}
+            </Container>
+
+            <ListContainer center>
+              {projects.map((project) => (
+                <ProjectButton type="submit" onClick={(e) => this.goToProject(project, e)} key={project.name}>
+                  <Item>
+                    <Project
+                      backgroundColor={project.backgroundColor}
+                      backgroundImage={project.backgroundImage}
+                      name={project.name}
+                      logo={project.logo}
                     />
                   </Item>
-                ))}
-              </Row>
-            ))}
-          </Row>
-
-          <Row center className="project-list-container">
-            { this.state.projects.map((project) => (
-              <button type="submit" onClick={(e) => this.goToProject(project, e)} key={project.name} className="project-child-container">
-                <Item>
+                </ProjectButton>
+              ))}
+              {projects.length === 0 && (
+                <NoProjectText>
+                  <EmojiContainer role="img" aria-label="No project">😥</EmojiContainer>
+                  <sub>Aucun projet</sub>
+                </NoProjectText>
+              )}
+              {fakeProjects.map((project) => (
+                <FakeItem key={project.name}>
                   <Project
                     backgroundColor={project.backgroundColor}
                     backgroundImage={project.backgroundImage}
                     name={project.name}
                     logo={project.logo}
                   />
-                </Item>
-              </button>
-            ))}
-            { this.state.projects.length === 0 && (
-              <span className="no-project-text-container">
-                <span role="img" aria-label="No project" className="emoji-container">😥</span>
-                <sub>Aucun projet</sub>
-              </span>
-            )}
-            { fakeProjects.map((project) => (
-              <span style={{ visibility: 'hidden', height: '0' }} key={project.name}>
-                <Item>
-                  <Project
-                    backgroundColor={project.backgroundColor}
-                    backgroundImage={project.backgroundImage}
-                    name={project.name}
-                    logo={project.logo}
-                  />
-                </Item>
-              </span>
-            ))}
-          </Row>
-        </Row>
-        <ProjectOverlay
-          inTransition
-          isVisible={!!this.state.selectedProject}
-          backgroundColor={
-            this.state.selectedProject ? this.state.selectedProject.backgroundColor : undefined
-          }
-          logo={this.state.selectedProject ? this.state.selectedProject.logo : undefined}
-        />
-      </div>
+                </FakeItem>
+              ))}
+            </ListContainer>
+          </ProjectRow>
+          <ProjectOverlay
+            inTransition
+            isVisible={!!selectedProject}
+            backgroundColor={
+              selectedProject ? selectedProject.backgroundColor : undefined
+            }
+            logo={selectedProject ? selectedProject.logo : undefined}
+          />
+        </div>
+      </BasicPage>
     )
   }
 }
