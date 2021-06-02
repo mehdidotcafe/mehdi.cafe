@@ -12,6 +12,7 @@ const Container = styled.div`
 `
 
 const MediaButton = styled.a`
+  display: inline-block;
   cursor: pointer;
   margin-left: 8px;
   margin-right: 8px;

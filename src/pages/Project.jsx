@@ -24,7 +24,7 @@ import ProjectService from '../services/Project'
 
 import Zoomable from '../component/zoomable/Zoomable'
 
-const CloseButton = styled.div`
+const CloseButton = styled.button`
 position: absolute;
 width: 32px;
 height: 32px;
@@ -45,13 +45,13 @@ span {
 
 const BackButton = styled.div`
 position: absolute;
-width: 64px;
-height: 64px;
-font-size: 64px;
+width: 64px !important;
+height: 64px !important;
+font-size: 64px !important;
 line-height: 48px;
 bottom: -12px;
 left: -12px;
-background-color: #7a0056;
+background: #7a0056 !important;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 color: white;
 text-align: center;
