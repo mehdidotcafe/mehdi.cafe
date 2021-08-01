@@ -4,6 +4,7 @@
   {"name": "iOS", "logo": "ios", "experience": 1},
 
   {"name": "Javascript", "logo":"javascript", "backgroundColor": "#efd81d", "experience": 4.5},
+  {"name": "Typescript", "logo":"typescript", "backgroundColor": "#2d79c7", "experience": 3},
   {"name": "NodeJS", "logo": "node", "backgroundColor": "#94b84d", "experience": 4},
   {"name": "React", "logo": "react", "backgroundColor": "#61dafb", "experience": 2},
   {"name": "Angular", "logo": "angular", "backgroundColor": "#c30e2e", "experience": 2},
