@@ -8,6 +8,10 @@ const Title = styled.h1`
   text-transform: uppercase;
   line-height: 1;
 
+  @media only screen and (max-width: 812px) {
+    font-size: 3.5em;
+  }
+
   ${(props) => !props.noMargin && 'margin-left: 16px'}
 `
 

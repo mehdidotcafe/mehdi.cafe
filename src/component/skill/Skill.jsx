@@ -34,6 +34,25 @@ background-color: #7a0056;
 position: relative;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 position: absolute;
+
+@media only screen and (max-width: 812px) {
+  width: 46px;
+  height: 46px;
+}
+
+@media only screen and (max-width: 812px) {
+  width: 28px;
+  height: 28px;
+  top: calc(-28px / 2);
+  right: calc(28px / 2);
+}
+
+@media only screen and (min-width: 812px) {
+  width: 46px;
+  height: 46px;
+  top: calc(-46px / 2);
+  right: calc(46px / 2);
+}
 `
 
 const AsideTextContainer = styled.div`
@@ -156,8 +175,7 @@ class Skill extends Component {
     const smallSide = Math.floor(largeSide / 1.6)
     const smallStroke = Skill.getStroke(smallSide)
 
-    const side = WindowSize.isLarge() ? largeSide : smallSide
-
+    console.log('IS LARGE', WindowSize.isLarge())
     const {
       isLittle,
       showExperience,
@@ -190,13 +208,7 @@ class Skill extends Component {
         </SuperContainer>
         { showExperience
         && (
-          <AsideContainer style={{
-            width: side,
-            height: side,
-            top: -Skill.calcExperienceSide(side),
-            right: Skill.calcExperienceSide(side),
-          }}
-          >
+          <AsideContainer>
             <RelativeContainer>
               <PrContainer className="bp-large"><ProgressRing side={Math.floor(largeSide)} stroke={largeStroke} progress={(experience * 100) / 5} /></PrContainer>
               <PrContainer className="bp-small"><ProgressRing side={Math.floor(smallSide)} stroke={smallStroke} progress={(experience * 100) / 5} /></PrContainer>

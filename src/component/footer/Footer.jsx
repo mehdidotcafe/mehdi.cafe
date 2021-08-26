@@ -17,6 +17,10 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  ${BasicButton} {
+    max-width: 80vw;
+  }
 }
 `
 
@@ -25,8 +29,7 @@ const Copyright = styled.p`
 `
 
 const MediasContainer = styled.div`
-width: 0;
-overflow: visible;
+float: right;
 `
 
 const ButtonText = styled.a`
@@ -35,11 +38,11 @@ text-decoration: none;
 `
 
 class Footer extends Component {
-  static onProjectClick() {
-    window.gtag('event', 'contact', {
-      event_category: 'contact',
-    })
-  }
+  // static onProjectClick() {
+  //   window.gtag('event', 'contact', {
+  //     event_category: 'contact',
+  //   })
+  // }
 
   render() {
     return (
@@ -50,9 +53,11 @@ class Footer extends Component {
           </BasicButton>
           <Copyright>Copyright @ Mehdi Meddour</Copyright>
         </ButtonContainer>
+        <div class="bp-large">
         <MediasContainer>
           <Medias />
         </MediasContainer>
+        </div>
       </Container>
     )
   }
