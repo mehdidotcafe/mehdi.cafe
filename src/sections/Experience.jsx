@@ -6,9 +6,7 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import Image from '../Image'
 import Title from '../component/title/Title'
 import Description from '../component/description/Description'
-import Link from '../component/link/Link'
-
-import ExperianceService from '../services/Experiance'
+import { Link } from '../component/link/Link'
 
 import BasicPage from './BasicPage'
 
@@ -102,6 +100,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     color: black;
     text-transform: uppercase;
     font-weight: normal;
+    opacity: 1;
   }
 
   p {
@@ -112,10 +111,19 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     display: none;
   }
 
-  a {
+  p a {
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
-    color: #29154e;
+    transition: 0.3s;  
+    background-color: #7a0056;
+    color: #fff;
+    padding: 0.05em 0.075em;
+    font-weight: 500;
+
+    :hover {
+      background-color: #29154e;
+    }
   }
 
   @media (prefers-color-scheme: dark) {
@@ -167,8 +175,11 @@ padding-top: 64px;
 class Experience extends Component {
   constructor(props) {
     super(props)
+
+    const { experiences } = this.props
+
     this.state = {
-      experiances: ExperianceService.get(),
+      experiences,
     }
 
     this.style = {
@@ -177,7 +188,7 @@ class Experience extends Component {
   }
 
   render() {
-    const { experiances } = this.state
+    const { experiences } = this.state
 
     return (
       <NoPaddingBottomBasicPage>
@@ -185,7 +196,7 @@ class Experience extends Component {
           <Background />
           <ExperienceTitle noMargin>Mes expériences</ExperienceTitle>
           <StyledVerticalTimeline layout="1-column">
-            { experiances.map((experiance, idx) => (
+            { experiences.map((experiance, idx) => (
               <VerticalTimelineElement
                 key={experiance.title}
                 className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
@@ -194,7 +205,7 @@ class Experience extends Component {
                     <span>{experiance.date}</span>
                     {experiance.projectUrl ? ' | ' : ''}
                     {experiance.projectUrl && (
-                    <Link to={experiance.projectUrl}>
+                    <Link href={experiance.projectUrl}>
                       VOIR LE PROJET
                     </Link>
                     )}
@@ -202,7 +213,7 @@ class Experience extends Component {
                 )}
                 iconStyle={{ background: '#331c5d', color: '#fff' }}
                 icon={
-                  <Image src={`images-webp/experiances/${experiance.logo}`} alt={experiance.title} />
+                  <Image src={`/images-webp/experiences/${experiance.logo}`} alt={experiance.title} />
                 }
               >
                 <ElementTitle>{experiance.title}</ElementTitle>

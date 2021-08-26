@@ -12,7 +12,7 @@
 
   {"name": "PHP", "logo": "php", "backgroundColor": "#4d588e", "experience": 3},
   {"name": "Laravel", "logo": "laravel", "backgroundColor": "#fb503b", "experience": 2},
-  {"name": "Symfony", "logo": "symfony", "backgroundColor": "#000000", "experience": 0.5, "isFilterable": false, "isShowable": false},
+  {"name": "Symfony", "logo": "symfony", "backgroundColor": "#000000", "experience": 0.5, "isFilterable": false, "isVisible": false},
 
   {"name": "Java", "logo": "java", "backgroundColor": "#096eb6", "experience": 0.5, "isFilterable": false},
   {"name": "Kotlin", "logo": "kotlin", "backgroundColor": "#4680de", "experience": 1, "isFilterable": false},
@@ -21,16 +21,16 @@
   {"name": "C", "logo": "c", "backgroundColor": "#7f8b99", "experience": 3, "isFilterable": false},
   {"name": "C++", "logo": "c++", "backgroundColor": "#004482", "experience": 3, "isFilterable": false},
 
-  {"name": "Corona", "logo":"corona", "backgroundColor": "#f47e20", "experience": 1, "isFilterable": false, "isShowable": false},
+  {"name": "Corona", "logo":"corona", "backgroundColor": "#f47e20", "experience": 1, "isFilterable": false, "isVisible": false},
 
-  {"name": "Git", "logo": "git", "backgroundColor": "#f05033", "experience": 6, "isFilterable": false, "isShowable": false},
+  {"name": "Git", "logo": "git", "backgroundColor": "#f05033", "experience": 6, "isFilterable": false, "isVisible": false},
 
-  {"name": "Chrome", "logo": "chrome", "backgroundColor": "#49ae48", "experience": 0.5, "isFilterable": false, "isShowable": false},
-  {"name": "Electron", "logo": "electron", "backgroundColor": "#6bdefb", "experience": 0.5, "isFilterable": false, "isShowable": false},
-  {"name": "PWA", "logo": "PWA", "backgroundColor": "#5a0fc8", "experience": 0.5, "isFilterable": false, "isShowable": false},
+  {"name": "Chrome", "logo": "chrome", "backgroundColor": "#49ae48", "experience": 0.5, "isFilterable": false, "isVisible": false},
+  {"name": "Electron", "logo": "electron", "backgroundColor": "#6bdefb", "experience": 0.5, "isFilterable": false, "isVisible": false},
+  {"name": "PWA", "logo": "PWA", "backgroundColor": "#5a0fc8", "experience": 0.5, "isFilterable": false, "isVisible": false},
 
-  {"name": "mySQL", "logo": "mysql", "backgroundColor": "#00546b", "experience": 4, "isShowable": false},
-  {"name": "MongoDB", "logo": "mongo", "backgroundColor": "#69b23f", "experience": 1, "isShowable": false},
+  {"name": "mySQL", "logo": "mysql", "backgroundColor": "#00546b", "experience": 4, "isVisible": false},
+  {"name": "MongoDB", "logo": "mongo", "backgroundColor": "#69b23f", "experience": 1, "isVisible": false},
 
   {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1}
 ]

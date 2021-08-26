@@ -1,4 +1,4 @@
-import experiences from '../data/experiances.json'
+import experiences from '../data/experiences.json'
 
 class ExperienceService {
   static get() {

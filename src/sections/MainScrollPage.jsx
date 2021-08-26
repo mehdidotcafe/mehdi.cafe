@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { PureComponent } from 'react'
 import styled from 'styled-components'
+import { withRouter } from 'next/router'
 
 import LandingPage from './Landing'
 import ProjectListPage from './ProjectList'
@@ -21,21 +21,30 @@ const StyledScroller = styled(Scroller)`
   overflow-y: hidden;
 `
 
-class MainScrollPage extends Component {
+class MainScrollPage extends PureComponent {
   constructor() {
     super()
     this.pageIds = Location.links.map((l) => l.link)
     this.onScroll = this.onScroll.bind(this)
-    this.container = window
+    if (typeof window !== 'undefined') {
+      this.container = window
+    }
   }
 
   onScroll(index) {
-    const { history } = this.props
+    const { router } = this.props
 
-    history.push(`/${this.pageIds[index]}`)
+    router.push(`/${this.pageIds[index]}`, undefined, { shallow: true })
   }
 
   render() {
+    const {
+      projects,
+      filterableSkills,
+      skills,
+      experiences,
+    } = this.props
+
     return (
       <>
         <StyledScroller
@@ -47,13 +56,13 @@ class MainScrollPage extends Component {
             <LandingPage />
           </div>
           <div id="scroll-work-container" className="children">
-            <ProjectListPage />
+            <ProjectListPage projects={projects} filterableSkills={filterableSkills} />
           </div>
           <div id="scroll-skills-container" className="children">
-            <SkillPage />
+            <SkillPage skills={skills} />
           </div>
           <div id="scroll-experiences-container" className="children">
-            <ExperiencePage />
+            <ExperiencePage experiences={experiences} />
           </div>
         </StyledScroller>
         <Footer />
@@ -62,8 +71,4 @@ class MainScrollPage extends Component {
   }
 }
 
-MainScrollPage.propTypes = {
-  history: PropTypes.objectOf(PropTypes.any).isRequired,
-}
-
-export default MainScrollPage
+export default withRouter(MainScrollPage)

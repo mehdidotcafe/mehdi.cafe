@@ -24,8 +24,8 @@ module.exports = {
   ],
   rules: {
     'linebreak-style': 'off',
-    'semi': 'off',
+    semi: 'off',
     'react/prop-types': 'off',
-    'no-bitwise': 'off'
+    'no-bitwise': 'off',
   },
 };

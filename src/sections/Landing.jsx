@@ -6,7 +6,7 @@ import Image from '../Image'
 
 import Medias from '../component/medias/Medias'
 import Description from '../component/description/Description'
-import Link from '../component/link/Link'
+import { Link } from '../component/link/Link'
 
 import BasicPage from './BasicPage'
 
@@ -100,14 +100,7 @@ const MainDescription = styled(Description)`
 
 const MediaContainerRow = styled(Row)`
   margin-top: 32px;
-`
-
-const MediaContainerLink = styled(Link)`
-  font-size: 2em;
-
-  a, a:active, a {
-    align-self: flex-end;
-  }
+  align-items: center;
 `
 
 class Landing extends Component {
@@ -141,7 +134,7 @@ class Landing extends Component {
                 text="Mes expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement de site internet et d'application mobile.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
               />
               <MediaContainerRow>
-                <MediaContainerLink to="/work">Voir mes projets</MediaContainerLink>
+                <Link isImportant href="/work">Voir mes projets</Link>
                 <Medias className="bp-large" />
               </MediaContainerRow>
             </TitleContainer>

@@ -10,11 +10,11 @@ class Location {
   }
 
   static qs() {
-    return qs.parse(window.location.search)
+    return typeof window !== 'undefined' ? qs.parse(window.location.search) : {}
   }
 
   static pathname() {
-    return window.location.pathname.substr(1).split('/')[0] || Location.links[0].link
+    return typeof window !== 'undefined' ? (window.location.pathname.substr(1).split('/')[0] || Location.links[0].link) : Location.links[0].link
   }
 }
 

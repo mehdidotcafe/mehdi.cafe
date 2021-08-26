@@ -4,7 +4,7 @@ class WindowSize {
   }
 
   static isLarge() {
-    return WindowSize.getWidth() >= WindowSize.ceil
+    return typeof window !== 'undefined' ? (WindowSize.getWidth() >= WindowSize.ceil) : true
   }
 
   static isSafari() {

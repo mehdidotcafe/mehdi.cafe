@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import styled, { css } from 'styled-components'
 
-const CloseButton = styled.div`
-  display: none;
-`
-
 const sharedContainer = css`
   display: block;
   cursor: pointer;
@@ -17,7 +13,7 @@ const SubContainer = styled.div`
   ${sharedContainer}
 `
 
-const Container = styled.button`
+const Container = styled.span`
   ${sharedContainer}
   &.zoomed {
     position: fixed;
@@ -30,12 +26,6 @@ const Container = styled.button`
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       transition: all .3s all-in-out;
       position: relative;  
-    }
-    ${CloseButton} {
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
     }
   } 
 `
@@ -70,7 +60,10 @@ class Zoomable extends Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('click', this.currentClickListener)
+    if (this.currentClickListener) {
+      document.removeEventListener('click', this.currentClickListener)
+    }
+    this.removeCopiedElement()
   }
 
   zoomOrNot(event) {
@@ -83,21 +76,26 @@ class Zoomable extends Component {
     }
   }
 
+  removeCopiedElement() {
+    if (this.copiedElement && this.copiedElement.remove) {
+      this.copiedElement.remove()
+    } else if (this.copiedElement && this.copiedElement.parentNode) {
+      this.copiedElement.parentNode.removeChild(this.copiedElement)
+    }
+    this.copiedElement = undefined
+  }
+
   unzoom() {
     if (this.copiedElement) {
       this.copiedElement.style.transform = 'none'
       this.copiedElement.firstChild.style.transform = 'none'
       setTimeout(() => {
-        if (this.copiedElement.remove) {
-          this.copiedElement.remove()
-        } else if (this.copiedElement.parentNode) {
-          this.copiedElement.parentNode.removeChild(this.copiedElement)
-        }
+        this.removeCopiedElement()
+        this.setState({
+          isZoom: false,
+        })
       }, this.transitionDuration)
     }
-    this.setState({
-      isZoom: false,
-    })
   }
 
   zoom(event) {
@@ -124,45 +122,44 @@ class Zoomable extends Component {
     this.copiedElement.style.height = `${reelElement.clientHeight}px`
     this.copiedElement.style.width = `${reelElement.clientWidth}px`
 
-    this.currentClickListener = window.addEventListener('click', (e) => {
+    this.currentClickListener = document.addEventListener('click', (e) => {
       e.stopPropagation()
-      e.preventDefault()
-      window.removeEventListener('click', this)
+      if (this.currentClickListener) {
+        document.removeEventListener('click', this.currentClickListener)
+        this.currentClickListener = undefined
+      }
       self.unzoom()
-      return false
     })
 
     document.getElementsByTagName('body')[0].appendChild(this.copiedElement)
-    this.setState({ isZoom: true })
-    setTimeout(() => {
-      if (this.copiedElement.firstChild) {
-        this.copiedElement.firstChild.style.transform = `scale(${this.scaleFactor})`
-      }
+    this.setState({ isZoom: true }, () => {
+      setTimeout(() => {
+        if (this.copiedElement.firstChild) {
+          this.copiedElement.firstChild.style.transform = `scale(${this.scaleFactor})`
+        }
 
-      this.copiedElement.style.transform = `
-                translate(
-                    calc((${windowWidth / 2}px - ${absolutePosition.left}px - ${scaledWidth / 2}px)),
-                    calc((${windowHeight / 2}px - ${absolutePosition.top}px - ${scaledHeight / 2}px))
-                )
-            `
-    }, 0)
+        this.copiedElement.style.transform = `
+                  translate(
+                      calc((${windowWidth / 2}px - ${absolutePosition.left}px - ${scaledWidth / 2}px)),
+                      calc((${windowHeight / 2}px - ${absolutePosition.top}px - ${scaledHeight / 2}px))
+                  )
+              `
+      }, 0)
+    })
   }
 
   render() {
-    const { children, closeButton } = this.props
+    const { children } = this.props
     const { isZoom } = this.state
 
     return (
       <span>
-        <Container onClick={this.zoomOrNot} ref={this.containerRef} type="submit">
+        <Container onClick={this.zoomOrNot} ref={this.containerRef}>
           <SubContainer>
             {children}
-            <CloseButton>
-              {closeButton}
-            </CloseButton>
           </SubContainer>
         </Container>
-        { isZoom && <Background />}
+        {isZoom && <Background />}
       </span>
     )
   }

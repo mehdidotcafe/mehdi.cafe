@@ -1,12 +1,17 @@
 {
-  "presets": [[
-    "@babel/preset-env",
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": 3,
+        "targets": "defaults"
+      }
+    ],
     "@babel/preset-react",
-    "@babel/plugin-proposal-optional-chaining",
-    {
-      "useBuiltIns": "usage",
-      "corejs": 3,
-      "targets": "defaults"
-    }
-  ]]
+    "next/babel"
+  ],
+  "plugins": [
+    ["styled-components", { "ssr": true }]
+  ]
 }

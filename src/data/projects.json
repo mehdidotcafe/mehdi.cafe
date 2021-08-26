@@ -21,7 +21,7 @@
     "url": "https://my.arte.tv",
     "images": ["arte/1.png", "arte/2.png", "arte/3.png", "arte/4.png"],
     "description_project": "\"Média européen public responsable, ARTE s'engage sur des thématiques chères aux citoyens et citoyennes d’Europe : la lutte contre les inégalités, qu’elles soient sociales, culturelles, économiques, géographiques, liées au genre ou au handicap, ainsi que le développement durable.\"",
-    "description_mission": "<div>Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, édition de compte ...).</div><div>Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv.</a></div>",
+    "description_mission": "<div>Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, édition de compte ...).</div><div>Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv</a>.</div>",
     "recommandations": [],
     "start": "2020-08-01",
     "end": null
@@ -150,14 +150,14 @@
     "isVisible": false
   },
   {
-    "name": "Presta Diagnostic",
+    "name": "Presta diagnostic",
     "logo": "prestadiagnostic",
     "backgroundColor": "#cfe7f8",
     "languages": ["Javascript", "PHP", "mySQL", "Laravel", "jQuery", "Web", "Git"],
     "companies": ["freelancer"],
     "url": "https://prestadiagnostic.com/",
     "images": ["prestadiagnostic/prestadiagnostic_2.png", "prestadiagnostic/prestadiagnostic_1.png", "prestadiagnostic/prestadiagnostic_3.png"],
-    "description_project": "\"Prestadiagnostic.com est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
+    "description_project": "\"Prestadiagnostic est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
     "description_mission": "<div>Redéveloppement du système de mise en relation entre un utilisateur et des diagnostiqueurs immobiliers.</div><div>Développement d'un système d'estimation de bien.</div><div>Intégration Google Analytics.</div>",
     "recommandations": [],
     "start": "2020-06-01",

@@ -1,34 +1,29 @@
 {
   "name": "meddou.com",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "core-js": "^3.11.0",
     "intersection-observer": "^0.12.0",
     "moment": "^2.29.1",
+    "next": "^11.1.0",
     "prop-types": "^15.7.2",
     "query-string": "^7.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
-    "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-router-ga": "^1.2.3",
-    "react-router-sitemap": "^1.2.0",
-    "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "react-vertical-timeline-component": "^3.3.3",
     "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.2.3"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject",
-    "sitemap": "babel-node ./src/scripts/sitemap-builder.js",
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev",
+    "test": "next test",
     "lint": "./node_modules/.bin/eslint --ext .jsx,.js .",
-    "lint_auto": "./node_modules/.bin/eslint --ext .jsx,.js --fix ."
+    "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js --fix ."
   },
   "browserslist": [
     ">0.2%",
@@ -43,13 +38,13 @@
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
     "@babel/register": "^7.13.16",
+    "babel-plugin-styled-components": "^1.13.2",
     "customize-cra": "^1.0.0",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "react-app-rewired": "^2.1.8"
+    "eslint-plugin-react-hooks": "^4.2.0"
   }
 }

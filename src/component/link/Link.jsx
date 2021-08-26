@@ -1,24 +1,43 @@
-import { Link as RouterLink } from 'react-router-dom'
+import React from 'react'
+import NextLink from 'next/link'
 import styled, { css } from 'styled-components'
 
 const anchorStyle = css`
-font-family: 'Roboto', sans-serif;
-font-size: 22px;
-text-transform: uppercase;
-text-decoration: none;
-transition: 0.3s;
-font-weight: bold;
-color: #29154e;
-
-:hover {
-  color: #5d5d5d !important;
+a {
+  font-family: 'Roboto', sans-serif;
+  ${(props) => (props.isImportant && 'font-size: 1.7em;')}
+  ${(props) => (props.isImportant && 'font-weight: bold;')}
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #7a0056;
+  color: #fff;
+  padding: 0.1em 0.15em;
+  font-weight: 500;
+  
+  :hover {
+    background-color: #29154e;
+  }
 }
 `
 
-export default styled(RouterLink)`
+const NextLinkContainer = styled.span`
+  ${anchorStyle}
+`
+const LinkContainer = styled.span`
   ${anchorStyle}
 `
 
-export const ExternalLink = styled.a`
-${anchorStyle}
-`
+/* eslint-disable */
+export const Link = (props) => (
+  <NextLinkContainer isImportant={props.isImportant}>
+    <NextLink {...props} />
+  </NextLinkContainer>
+)
+export default Link
+
+export const ExternalLink = (props) => (
+  <LinkContainer>
+    <a {...props} />
+  </LinkContainer>
+)
+/* eslint-enable */

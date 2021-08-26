@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'next/router'
 
 import Location from '../Location'
-
-import Projects from '../data/projects.json'
 
 import Title from '../component/title/Title'
 import SubTitle from '../component/sub-title/SubTitle'
@@ -150,10 +148,15 @@ class ProjectListPage extends Component {
 
   constructor(props) {
     super(props)
-    this.hasMoreSkill = false
 
-    this.projects = Projects.filter((p) => p.isVisible !== false)
-    this.skills = SkillService.getFilterable()
+    const {
+      projects,
+      filterableSkills,
+    } = this.props
+
+    this.hasMoreSkill = false
+    this.projects = projects
+    this.skills = filterableSkills
 
     this.filters = []
 
@@ -194,7 +197,7 @@ class ProjectListPage extends Component {
   }
 
   filterProjects(skill, needToUpdateUrl = false) {
-    const { history } = this.props
+    const { router } = this.props
     const filtered = []
     const skills = ProjectListPage.skillToArray(skill)
     let idx
@@ -221,8 +224,9 @@ class ProjectListPage extends Component {
         filtered.push(this.projects[i])
       }
     }
+    // ?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}
     if (needToUpdateUrl) {
-      history.replace(`/work?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}`)
+      router.replace({ pathname: '/work', query: { skill: this.filters } }, undefined, { shallow: true })
     }
     this.setState({
       projects: filtered,
@@ -277,7 +281,7 @@ class ProjectListPage extends Component {
   }
 
   goToProject(project, e) {
-    const { history } = this.props
+    const { router } = this.props
 
     e.preventDefault()
     this.setState({
@@ -286,18 +290,20 @@ class ProjectListPage extends Component {
       setTimeout(() => {
         // eslint-disable-next-line
         window._projectListToProjectTrasition = true
-        history.push(`/work/${project.name}`)
+        router.push(`/work/${project.name}`)
       }, 500)
     })
   }
 
   clearFilters(e) {
-    const { history } = this.props
+    const { router } = this.props
 
     e.preventDefault()
-    history.replace('/work')
-    this.filters = []
-    this.filterProjects(undefined)
+    router.replace('work', undefined, { shallow: true })
+    setTimeout(() => {
+      this.filters = []
+      this.filterProjects(undefined)
+    })
   }
 
   render() {

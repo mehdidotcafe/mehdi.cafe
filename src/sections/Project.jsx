@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter, Redirect } from 'react-router-dom'
+import { withRouter } from 'next/router'
 import Slider from 'react-slick'
 import styled from 'styled-components'
 import moment from 'moment'
@@ -17,10 +17,9 @@ import ScrollableRow from '../component/scrollable-row/ScrollableRow'
 import Title from '../component/title/Title'
 import Description, { Paragraph } from '../component/description/Description'
 import RectScroller from '../component/rect-scroller/RectScroller'
-import Link, { ExternalLink } from '../component/link/Link'
+import { ExternalLink, Link } from '../component/link/Link'
 
 import SkillService from '../services/Skill'
-import ProjectService from '../services/Project'
 
 import Zoomable from '../component/zoomable/Zoomable'
 
@@ -220,8 +219,16 @@ ${Paragraph} div::before {
 }
 
 a {
-  color: #7a0056;
+  font-family: 'Roboto', sans-serif;
   text-decoration: none;
+  background-color: #7a0056;
+  color: #fff;
+  padding: 0.1em 0.15em;
+  font-weight: 500;
+  
+  :hover {
+    background-color: #29154e;
+  }
 }
 
 @media only screen and (min-width: 1170px) {
@@ -233,18 +240,18 @@ a {
 class ProjectPage extends Component {
   constructor(props) {
     super(props)
-    const { name } = props.match.params
 
-    this.timeoutId = undefined
+    if (typeof window !== 'undefined') {
+      this.timeoutId = undefined
 
-    this.sliderRef = React.createRef()
+      this.sliderRef = React.createRef()
 
-    this.container = window
+      this.container = window
+    }
 
     this.state = {
       // eslint-disable-next-line
-      transitionVisible: !!window._projectListToProjectTrasition,
-      project: ProjectService.getFromName(name),
+      transitionVisible: typeof window !== 'undefined' && !!window._projectListToProjectTrasition,
       activeSlide: 0,
     }
     this.slideCount = 3
@@ -282,12 +289,6 @@ class ProjectPage extends Component {
     window._projectListToProjectTrasition = undefined
   }
 
-  static getCloseButton() {
-    return (
-      <CloseButton><span>x</span></CloseButton>
-    )
-  }
-
   onSwipe(direction) {
     const { activeSlide } = this.state
 
@@ -311,16 +312,17 @@ class ProjectPage extends Component {
   }
 
   goToWork(e) {
-    const { history } = this.props
+    const { router } = this.props
 
     e.preventDefault()
-    history.push('/work')
+    router.push('/work')
   }
 
   render() {
-    const { project, activeSlide, transitionVisible } = this.state
+    const { activeSlide, transitionVisible } = this.state
+    const { project } = this.props
 
-    const tabs = [
+    const tabs = project ? [
       {
         test: project.description_project || '',
         name: 'Le projet',
@@ -337,7 +339,7 @@ class ProjectPage extends Component {
         content: `${moment(project.start).locale('fr').format('LL')} - ${project.end
           ? moment(project.end).locale('fr').format('LL') : 'Actuel'}`,
       },
-    ].filter((t) => t.test)
+    ].filter((t) => t.test) : []
 
     return (
       <Container noMargin>
@@ -376,7 +378,7 @@ class ProjectPage extends Component {
                       {project.languages.map(SkillService.getFromName)
                         .map((skill) => (
                           <Item key={skill.name}>
-                            <Link to={`/work?skill=${encodeURIComponent(skill.name)}`}>
+                            <Link href={`/work?skill=${encodeURIComponent(skill.name)}`}>
                               <Skill
                                 name={skill.name}
                                 backgroundColor={skill.backgroundColor}
@@ -424,13 +426,13 @@ class ProjectPage extends Component {
               <ScrollerContainer className="bp-large">
                 <RectScroller>
                   {project.images.map((image) => (
-                    <Zoomable key={image} closeButton={ProjectPage.getCloseButton()}>
+                    <Zoomable key={image}>
                       <img src={`/images-webp/project/${image}`} alt={`${project.name} ${image}`} style={{ backgroundColor: project.backgroundColor, height: '100%', width: '100%' }} />
                     </Zoomable>
                   ))}
                 </RectScroller>
               </ScrollerContainer>
-              { transitionVisible
+              {transitionVisible
                 && (
                   <ProjectOverlay
                     outTransition
@@ -441,7 +443,7 @@ class ProjectPage extends Component {
                 )}
             </InfoContainer>
           )
-          : <Redirect to="/work" />}
+          : <></>}
       </Container>
     )
   }

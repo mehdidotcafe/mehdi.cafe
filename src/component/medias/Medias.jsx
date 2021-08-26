@@ -11,14 +11,24 @@ const Container = styled.div`
   margin-left: auto;  
 `
 
+/**
+ * @TODO change hover animation to be the same as Link component
+ * Icons must be changed
+ */
 const MediaButton = styled.a`
+  height: 32px;
   display: inline-block;
   cursor: pointer;
   margin-left: 8px;
   margin-right: 8px;
-  transition: 0.3s;
-  &:hover {
-    filter: brightness(0.5);
+
+  img {
+    background-color: #7a0056;
+    color: #fff;
+    
+    :hover {
+      background-color: #29154e;
+    }
   }
 `
 

@@ -8,7 +8,7 @@ import Description from '../component/description/Description'
 
 import './RecommendationSlider.css'
 
-import './slick.min.css'
+// import './slick.min.css'
 
 class RecommendationSlider extends Component {
   constructor(props) {

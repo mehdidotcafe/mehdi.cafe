@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 import Title from '../component/title/Title'
 import Skill from '../component/skill/Skill'
@@ -12,7 +11,6 @@ import Item from '../layout/item/Item'
 
 import BasicPage from './BasicPage'
 
-import SkillService from '../services/Skill'
 import WindowSize from '../WindowSize'
 
 const SkillBackground = styled.div`
@@ -56,23 +54,13 @@ const MarginRow = styled(Row)`
   margin-top: 64px;
 `
 
-function FakeContainer({ children }) {
-  return (
-    <div>
-      {children}
-    </div>
-  )
-}
-
-FakeContainer.propTypes = {
-  children: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
-}
-
 class SkillPage extends Component {
   constructor(props) {
     super(props)
-    this.skills = SkillService.getShowable()
 
+    const { skills } = this.props
+
+    this.skills = skills
     this.fakeSkills = new Array(10).map((v, idx) => ({
       ...this.skills[0],
       name: `fake|${idx}`,
@@ -80,7 +68,7 @@ class SkillPage extends Component {
   }
 
   render() {
-    const Container = WindowSize.isLarge() ? Link : FakeContainer
+    const Container = WindowSize.isLarge() ? Link : ((props) => <>{props.children}</>)
 
     return (
       <BasicPage>
@@ -95,30 +83,31 @@ class SkillPage extends Component {
         <MarginRow center>
           {this.skills.map((skill) => (
             <Item key={skill.name}>
-              <Container to={`/work?skill=${encodeURIComponent(skill.name)}`}>
-                <Skill
-                  name={skill.name}
-                  backgroundColor={skill.backgroundColor}
-                  backgroundImage={skill.backgroundImage}
-                  experience={skill.experience}
-                  logo={skill.logo}
-                  showExperience
-                />
+              <Container href={{ pathname: '/work', query: { skill: skill.name } }}>
+                {/* eslint-disable-next-line */}
+                <a>
+                  <Skill
+                    name={skill.name}
+                    backgroundColor={skill.backgroundColor}
+                    backgroundImage={skill.backgroundImage}
+                    experience={skill.experience}
+                    logo={skill.logo}
+                    showExperience
+                  />
+                </a>
               </Container>
             </Item>
           ))}
           {this.fakeSkills.map((skill) => (
             <Item key={skill.name} isHidden>
-              <Link to={`/work?skill=${encodeURIComponent(skill.name)}`}>
-                <Skill
-                  name={skill.name}
-                  backgroundColor={skill.backgroundColor}
-                  backgroundImage={skill.backgroundImage}
-                  experience={skill.experience}
-                  logo={skill.logo}
-                  showExperience
-                />
-              </Link>
+              <Skill
+                name={skill.name}
+                backgroundColor={skill.backgroundColor}
+                backgroundImage={skill.backgroundImage}
+                experience={skill.experience}
+                logo={skill.logo}
+                showExperience
+              />
             </Item>
           ))}
         </MarginRow>

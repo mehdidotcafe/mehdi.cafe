@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -8,7 +8,7 @@ const Container = styled.main`
   overflow: hidden;
 `
 
-class Scroller extends Component {
+class Scroller extends PureComponent {
   constructor(props) {
     super(props)
 
@@ -31,7 +31,7 @@ class Scroller extends Component {
 
     this.index = props.index || 0
 
-    this.nextIndex = props.index || 0
+    this.nextIndex = this.index
 
     this.scrollTimerFx = this.scrollTimerFx.bind(this)
   }
@@ -101,7 +101,6 @@ class Scroller extends Component {
     const top = this.getContainerScrollTop()
     const elementRect = element.getBoundingClientRect()
 
-    // this.isScrolling = true
     this.container.scrollTo({
       behavior: isSmooth ? 'smooth' : 'instant',
       left: 0,

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import { withRouter, Link } from 'react-router-dom'
+import { withRouter } from 'next/router'
+import Link from 'next/link'
 
 import LogoHeader from './LogoHeader'
 import MenuHeader from './MenuHeader'
@@ -108,7 +109,9 @@ class Header extends Component {
   onLinkClick(link) {
     const { onLinkClick } = this.props
 
-    onLinkClick?.(link.link)
+    if (onLinkClick) {
+      onLinkClick(link.link)
+    }
   }
 
   collapse() {
@@ -128,17 +131,19 @@ class Header extends Component {
   }
 
   render() {
-    const visibleId = Location.pathname()
+    const { router } = this.props
+    const visibleId = router.query.section ? router.query.section : this.links[0].link
     const { isCollapsed } = this.state
 
+    // eslint-disable
     return (
       <Container isCollapsed={isCollapsed}>
         <LogoHeader />
         <ButtonContainer>
-          { this.links.map((link, idx) => (
-            <Link aria-label={link.link} key={link.link} to={`/${link.link}`} onClick={this.collapseIfTrue}>
+          {this.links.map((link, idx) => (
+            <Link aria-label={link.link} key={link.link} href={`/${link.link}`} onClick={this.collapseIfTrue}>
               <Button
-                isActive={visibleId === link.link}
+                isActive={visibleId && visibleId.toString() === link.link.toString()}
                 className={`header-button ${idx === 0 ? 'first' : ''}
                 ${idx >= this.links.length - 1 ? 'last' : ''}
                 `}
@@ -158,6 +163,7 @@ class Header extends Component {
         />
       </Container>
     )
+    // eslint-enable
   }
 }
 
