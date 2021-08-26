@@ -53,7 +53,7 @@ class Footer extends Component {
           </BasicButton>
           <Copyright>Copyright @ Mehdi Meddour</Copyright>
         </ButtonContainer>
-        <div class="bp-large">
+        <div className="bp-large">
         <MediasContainer>
           <Medias />
         </MediasContainer>
