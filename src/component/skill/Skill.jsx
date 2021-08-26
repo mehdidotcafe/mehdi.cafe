@@ -175,7 +175,6 @@ class Skill extends Component {
     const smallSide = Math.floor(largeSide / 1.6)
     const smallStroke = Skill.getStroke(smallSide)
 
-    console.log('IS LARGE', WindowSize.isLarge())
     const {
       isLittle,
       showExperience,
