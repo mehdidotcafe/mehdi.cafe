@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 
 // eslint-disable-next-line
 import Header from '../src/component/header/Header'
@@ -20,6 +21,10 @@ export function MainApp({ Component, pageProps }) {
       <Header />
       {/* eslint-disable-next-line */}
       <Component {...pageProps} />
+      <Script
+        strategy="beforeInteractive"
+        src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+      />
     </>
   )
 }
