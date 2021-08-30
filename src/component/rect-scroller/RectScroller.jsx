@@ -40,8 +40,8 @@ const Element = styled.div`
   @media only screen and (max-width: 1170px) {
     margin-top: 0;
     margin-bottom: 0;
-    margin-left: 16px;
-    margin-right: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
     min-width: 540px;
   }
 `

@@ -97,6 +97,7 @@ display: inline-block;
   width: 100%;
   margin-left: 0;
   padding-top: 0;
+  margin-top: 0;
 }
 `
 

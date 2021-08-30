@@ -68,10 +68,11 @@ class Scroller extends PureComponent {
       && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
       const nextIndex = this.index + scrollDirectionCoeff
 
+      const currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
       const nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
 
-      if ((scrollDirectionCoeff === 1)
-      || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
+      if ((scrollDirectionCoeff === 1 && currentElement.top + currentElement.height < this.getContainerBounding().height)
+        || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
         e.preventDefault()
         e.stopPropagation()
         this.nextIndex = nextIndex
@@ -82,7 +83,9 @@ class Scroller extends PureComponent {
   }
 
   getContainerBounding() {
-    return this.container.getBoundingClientRect()
+    return window.innerHeight ?
+      { height: window.innerHeight } :
+      this.container.getBoundingClientRect()
   }
 
   getContainerScrollTop() {
@@ -156,7 +159,7 @@ class Scroller extends PureComponent {
   render() {
     return (
       <Container ref={this.containerRef}>
-        { this.sections.map((child) => child) }
+        {this.sections.map((child) => child)}
       </Container>
     )
   }

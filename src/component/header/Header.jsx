@@ -141,8 +141,9 @@ class Header extends Component {
         <LogoHeader />
         <ButtonContainer>
           {this.links.map((link, idx) => (
-            <Link aria-label={link.link} key={link.link} href={`/${link.link}`} onClick={this.collapseIfTrue}>
+            <Link aria-label={link.link} key={link.link} href={`/${link.link}`}>
               <Button
+                onClick={this.collapseIfTrue}
                 isActive={visibleId && visibleId.toString() === link.link.toString()}
                 className={`header-button ${idx === 0 ? 'first' : ''}
                 ${idx >= this.links.length - 1 ? 'last' : ''}

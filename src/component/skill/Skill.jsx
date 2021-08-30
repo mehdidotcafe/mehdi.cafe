@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components'
 import Image from '../../Image'
 
 import ProgressRing from '../ProgressRing'
-import WindowSize from '../../WindowSize'
 
 const littleSize = css`
 height: calc(164px / 2);

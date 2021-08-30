@@ -159,6 +159,10 @@ const ElementTitle = styled.h3`
   font-size: 2.5em;
   margin-block-start: 0;
   margin-block-end: 0;
+  
+  @media only screen and (max-width: 812px) {
+    font-size: 1.75em;
+  }
 `
 
 const ElementSubTitle = styled.h4`
