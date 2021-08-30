@@ -21,6 +21,7 @@
     "start": "next start",
     "build": "next build",
     "dev": "next dev",
+    "export": "next export",
     "test": "next test",
     "lint": "./node_modules/.bin/eslint --ext .jsx,.js .",
     "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js --fix ."
