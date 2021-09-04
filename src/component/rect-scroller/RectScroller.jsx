@@ -9,7 +9,7 @@ const Container = styled.div`
   margin-bottom: 16px;
   max-width: 100vw;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     margin-left: -4%;
     margin-right: -4%;
     flex-direction: row;
@@ -37,7 +37,7 @@ const Element = styled.div`
     height: 100%;
   }
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 8px;

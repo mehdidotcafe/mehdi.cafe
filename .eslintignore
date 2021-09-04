@@ -1,5 +1,6 @@
 .github
 build/
+out/
 node_modules/
 src/index.js
 src/serviceWorker.js

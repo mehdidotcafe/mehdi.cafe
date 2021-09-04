@@ -19,9 +19,9 @@ width: 96px;
 color: white;
 line-height: 64px;
 text-decoration: none;
-${(props) => (props.isActive && 'background-color: #7a0056;')}
+${(props) => (props.isActive && `background-color: ${props.theme.secondaryColor};`)}
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   width: 100vw;
   height: 64px;
   border-left: 0;
@@ -42,7 +42,7 @@ overflow-y: visible;
 z-index: 100;
 display: block;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   transition: 0.3s;
 
   ${Button} {
@@ -71,7 +71,7 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -81,7 +81,7 @@ a {
 `
 
 const MediaContainer = styled.div`
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   text-align: center;
   width: 100%;
   align-self: center;

@@ -18,7 +18,7 @@
   border: 0;
   color: transparent;
   background-color: transparent;
-  border: solid #29154e;
+  border: solid ${(props) => props.theme.mainColor};
   border-width: 0 5px 5px 0;
   display: inline-block;
   outline: none !important;
@@ -50,7 +50,7 @@
 }
 
 .recommendation-slider .slick-dots li button {
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   color: transparent;
   height: 12px;
   width: 12px;
@@ -64,11 +64,11 @@
 }
 
 .recommendation-slider .slick-dots li.slick-active button, .recommendation-slider .slick-dots li:hover button {
-  background-color: #7a0056;
+  background-color: ${(props) => props.theme.secondaryColor};
 }
 
 .recommendation-slider .slick-arrow:hover {
-  border-color: #7a0056;
+  border-color: ${(props) => props.theme.secondaryColor};
 }
 
 .recommendation-slider {
@@ -119,5 +119,5 @@
 .recommendation-slider .slick-prev:before, .recommendation-slider .slick-next:before {
   font-size: 32px;
   opacity: 1;
-  color: #7a0056;
+  color: ${(props) => props.theme.secondaryColor};
 }

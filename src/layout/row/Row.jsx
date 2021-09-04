@@ -6,7 +6,7 @@ const Row = styled.div`
   flex-wrap: ${(props) => (props.noWrap ? 'nowrap' : 'wrap')};
   justify-content: ${(props) => (props.center ? 'center' : 'none')};
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     ${(props) => (props.spaceAroundMob && 'justify-content: space-around')}
   }
 `

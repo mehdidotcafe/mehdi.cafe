@@ -15,7 +15,7 @@ const Container = styled.aside`
 const paddings = css`
   box-sizing: border-box;
   height: 100%;
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   transform: translateZ(0);
   z-index: 13;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
@@ -47,13 +47,13 @@ const Logo = styled.img`
 
 const LogoContainer = styled.div`
   height: calc(100% - 64px);
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   z-index: 14;
 `
 
 const LogoPaddingTop = styled.div`
   height: 100%;
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
 `
 
 export default function LogoHeader() {

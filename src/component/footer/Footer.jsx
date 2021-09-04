@@ -5,7 +5,7 @@ import Medias from '../medias/Medias'
 import BasicButton from '../basic-button/BasicButton'
 
 const Container = styled.footer`
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   display: flex;
   color: white;
   padding-top: 32px;
@@ -54,9 +54,9 @@ class Footer extends Component {
           <Copyright>Copyright @ Mehdi Meddour</Copyright>
         </ButtonContainer>
         <div className="bp-large">
-        <MediasContainer>
-          <Medias />
-        </MediasContainer>
+          <MediasContainer>
+            <Medias />
+          </MediasContainer>
         </div>
       </Container>
     )

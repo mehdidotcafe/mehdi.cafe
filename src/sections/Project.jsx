@@ -23,25 +23,6 @@ import SkillService from '../services/Skill'
 
 import Zoomable from '../component/zoomable/Zoomable'
 
-const CloseButton = styled.button`
-position: absolute;
-width: 32px;
-height: 32px;
-font-size: 24px;
-bottom: -16px;
-left: -16px;
-background-color: #7a0056;
-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-color: white;
-text-align: center;
-cursor: pointer;
-
-span {
-  display: block;
-  height: 100%;
-}
-`
-
 const BackButton = styled.div`
 position: absolute;
 width: 64px !important;
@@ -50,7 +31,7 @@ font-size: 64px !important;
 line-height: 48px;
 bottom: -12px;
 left: -12px;
-background: #7a0056 !important;
+background: ${(props) => props.theme.secondaryColor} !important;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 color: white;
 text-align: center;
@@ -66,7 +47,7 @@ const InfoContainer = styled.div`
 margin-left: 4%;
 margin-right: 4%;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   flex-direction: column;
 }
 `
@@ -79,7 +60,7 @@ margin-top: 32px;
 display: flex;
 flex-direction: column;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   position: relative;
   top: 0;
   width: 100%;
@@ -93,7 +74,7 @@ margin-left: 60%;
 width: 40%;
 display: inline-block;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   width: 100%;
   margin-left: 0;
   padding-top: 0;
@@ -106,7 +87,7 @@ position: fixed;
 top: -150vh;
 height: 400vh;
 right: -250vh;
-background-image: linear-gradient(to left bottom, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+background-image: linear-gradient(to left bottom, ${(props) => props.theme.gradiantColors});
 width: 300vh;
 transform: rotate(-35deg) translateZ(0);
 z-index: -1;
@@ -117,7 +98,7 @@ const TitleContainer = styled.div`
 display: inline-block;
 margin-left: 48px;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   margin-top: 32px;
   margin-left: 0;
   align-self: flex-start;
@@ -144,24 +125,16 @@ padding-inline-start: 0;
 const ProjectDescriptionTab = styled.li`
   font-family: 'Oswald', sans-serif !important;
   font-size: 26px !important;
-  margin-right: 20px;
-  padding: 8px;
-  padding-left: 0;
-  padding-right: 16px;
+  margin-top: 16px;
+  margin-right: 24px;
+  padding: 0.1em 0.15em;
   cursor: pointer;
-  ${(props) => (props.isActive && 'color: #7a0056;')}
-  ${(props) => (props.isActive && 'text-decoration: none;')}
+  background-color: ${(props) => (props.isActive ? props.theme.mainColor : props.theme.secondaryColor)};
+  color: ${(props) => props.theme.mainTextColor};
 
-  :before {
-    content: "";
-    display: inline-block;
-    height: 12px;
-    width: 12px;
-    background-color: #29154e;
-    margin-right: 8px;
-    ${(props) => (props.isActive && 'background-color: #7a0056;')}
-
-  }
+  :hover {
+    background-color: ${(props) => props.theme.mainColor};
+  }  
 `
 
 const Header = styled(Row)`
@@ -170,7 +143,7 @@ flex-wrap: nowrap;
 margin-bottom: 0px;
 margin-top: 32px;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   flex-direction: column;
   margin-top: 64px;
   margin-bottom: 0;
@@ -192,7 +165,7 @@ max-width: 35vw;
 overflow: hidden;
 padding-top: 16px;
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   max-width: 100vw;
   margin-left: -4%;
   margin-right: -4%;
@@ -215,27 +188,26 @@ ${Paragraph} div::before {
   display: inline-block;
   height: 12px;
   width: 12px;
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   margin-right: 8px;
 }
 
 a {
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
-  background-color: #7a0056;
-  color: #fff;
+  background-color: ${(props) => props.theme.secondaryColor};
+  color: ${(props) => props.theme.mainTextColor};
   padding: 0.1em 0.15em;
   font-weight: 500;
   
   :hover {
-    background-color: #29154e;
+    background-color: ${(props) => props.theme.mainColor};
   }
 }
 
-@media only screen and (min-width: 1170px) {
+${(props) => props.theme.isLaptop} {
   height: calc(100vh - 96px);
 }
-
 `
 
 class ProjectPage extends Component {
@@ -306,7 +278,7 @@ class ProjectPage extends Component {
       this.isSliderSliding = true
       window.setTimeout(() => {
         this.isSliderSliding = false
-      }, 1500)
+      }, 1200)
       this.setState({ activeSlide: slide })
       this.sliderRef.current.slickGoTo(slide)
     }

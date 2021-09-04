@@ -28,7 +28,7 @@ const Container = styled(Row)`
   box-sizing: border-box;
   padding-bottom: 32px;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     width: 100%;
     max-width: 100%;
     padding-bottom: 16px;
@@ -60,7 +60,7 @@ const ProjectBackground = styled.div`
   bottom: -90vh;
   height: 100vh;
   right: -70vh;
-  background-image: linear-gradient(to left top, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  background-image: linear-gradient(to left top, ${(props) => props.theme.gradiantColors});
   width: 100vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);
@@ -79,7 +79,7 @@ const FilterText = styled.button`
   text-align: right;
   cursor: ${(props) => (props.hasPointer ? 'pointer' : 'normal')}
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     text-align: left;
   }
 `
@@ -92,7 +92,7 @@ const FilterRow = styled(Row)`
   justify-content: flex-end;
   width: 100%;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     justify-content: center;
     width: auto;
   }
@@ -106,7 +106,7 @@ const ListContainer = styled(Row)`
     align-items: flex-start;
   }
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     width: 100%;
     max-width: 100%;
   }

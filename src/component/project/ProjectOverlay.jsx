@@ -30,7 +30,7 @@ const BackgroundOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #29154e;
+  background-color: ${(props) => props.theme.mainColor};
   ${(props) => props.inTransition && css`animation: ${fadeIn} 0.5s ease-in-out;`}
   ${(props) => props.outTransition && css`animation: ${fadeOut} 0.5s ease-in-out; opacity: 0;`}
 `

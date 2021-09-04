@@ -19,7 +19,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
   padding-bottom: 64px;
 
   ::before {
-    background: #29154e;
+    background: ${(props) => props.theme.mainColor};
     width: 6px;
   }
 
@@ -57,7 +57,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     max-width: calc(100% - 84px - 46px);
   }
 
-  @media only screen and (min-width: 1170px) {
+  ${(props) => props.theme.isLaptop} {
     .vertical-timeline--two-columns .vertical-timeline-element-icon {
       width: 64px;
       height: 64px;
@@ -65,7 +65,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     }
   }
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     .vertical-timeline-element-content {
       margin-left: calc(84px + 42px);
     }
@@ -116,13 +116,13 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     text-transform: uppercase;
     text-decoration: none;
     transition: 0.3s;  
-    background-color: #7a0056;
-    color: #fff;
+    background-color: ${(props) => props.theme.secondaryColor};
+    color: ${(props) => props.theme.mainTextColor};
     padding: 0.05em 0.075em;
     font-weight: 500;
 
     :hover {
-      background-color: #29154e;
+      background-color: ${(props) => props.theme.mainColor};
     }
   }
 
@@ -148,7 +148,7 @@ const Background = styled.div`
   bottom: 0vh;
   right: -70vh;
   top: 90vh;
-  background-image: linear-gradient(to top , #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  background-image: linear-gradient(to top , ${(props) => props.theme.gradiantColors});
   width: 120vh;
   -webkit-transform: rotate(-35deg);
   transform: rotate(-35deg);

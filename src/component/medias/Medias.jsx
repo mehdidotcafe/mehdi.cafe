@@ -23,11 +23,11 @@ const MediaButton = styled.a`
   margin-right: 8px;
 
   img {
-    background-color: #7a0056;
-    color: #fff;
+    background-color: ${(props) => props.theme.secondaryColor};
+    color: ${(props) => props.theme.mainTextColor};
     
     :hover {
-      background-color: #29154e;
+      background-color: ${(props) => props.theme.mainColor};
     }
   }
 `

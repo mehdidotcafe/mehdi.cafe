@@ -7,7 +7,7 @@ const BasicPage = styled.div`
   min-height: 100vh;
   padding-bottom: 32px;
 
-  @media only screen and (min-width: 1170px) {
+  ${(props) => props.theme.isLaptop} {
     padding-left: ${(props) => (props.noMargin ? 0 : 12)}%;
     padding-right: ${(props) => (props.noMargin ? 0 : 12)}%;
   }

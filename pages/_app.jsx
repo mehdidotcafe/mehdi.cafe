@@ -6,6 +6,8 @@ import Script from 'next/script'
 import Header from '../src/component/header/Header'
 // eslint-disable-next-line
 import MainStyle from '../src/component/MainStyle'
+// eslint-disable-next-line
+import ThemeProvider from '../src/provider/ThemeProvider'
 
 export function MainApp({ Component, pageProps }) {
   return (
@@ -18,9 +20,11 @@ export function MainApp({ Component, pageProps }) {
         />
       </Head>
       <MainStyle />
-      <Header />
-      {/* eslint-disable-next-line */}
-      <Component {...pageProps} />
+      <ThemeProvider>
+        <Header />
+        {/* eslint-disable-next-line */}
+        <Component {...pageProps} />
+      </ThemeProvider>
       <Script
         strategy="beforeInteractive"
         src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"

@@ -9,13 +9,13 @@ a {
   ${(props) => (props.isImportant && 'font-weight: bold;')}
   text-transform: uppercase;
   text-decoration: none;
-  background-color: #7a0056;
-  color: #fff;
+  background-color: ${(props) => props.theme.secondaryColor};
+  color: ${(props) => props.theme.mainTextColor};
   padding: 0.1em 0.15em;
   font-weight: 500;
   
   :hover {
-    background-color: #29154e;
+    background-color: ${(props) => props.theme.mainColor};
   }
 }
 `

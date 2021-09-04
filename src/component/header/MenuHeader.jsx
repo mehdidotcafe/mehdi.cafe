@@ -21,7 +21,7 @@ span {
   position: absolute;
   height: 4px;
   width: 100%;
-  background-color: #7a0056;
+  background-color: ${(props) => props.theme.secondaryColor};
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -49,7 +49,7 @@ span:nth-child(3) {
   ${(props) => props.isCollapsed && 'transform: rotate(-45deg);'}
 }
 
-@media only screen and (max-width: 1170px) {
+${(props) => props.theme.isPhone} {
   display: block;
 }
 `

@@ -18,7 +18,7 @@ const Container = styled.div`
   justify-content: center;
   margin-top: -64px;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     flex-direction: column;
   }
 `
@@ -28,7 +28,7 @@ const LandingBackground = styled.div`
   top: -50vh;
   height: 200vh;
   left: -100vh;
-  background-image: linear-gradient(to right bottom, #7a0056, #961356, #af2854, #c43f51, #d7574e);
+  background-image: linear-gradient(to right bottom, ${(props) => props.theme.gradiantColors});
   width: 250vh;
   transform: rotate(-35deg);
 `
@@ -40,7 +40,7 @@ const InfoContainer = styled.div`
   z-index: 3;
   min-height: 100vh;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     margin-top: 74px;
   }
 `
@@ -52,7 +52,7 @@ const AvatarPicture = styled(Image)`
   align-self: center;
   z-index: 2;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     display: none;
   }
 `
@@ -62,7 +62,7 @@ const TitleContainer = styled.div`
   max-width: 50vw;
   padding: 16px;
 
-  @media only screen and (max-width: 1170px) {
+  ${(props) => props.theme.isPhone} {
     position: relative;
     left: 0;
     top: 0;
