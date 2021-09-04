@@ -56,6 +56,25 @@ class MainDocument extends Document {
           <meta property="og:image" content="https://meddou.com/images-webp/mehdi.png" />
           <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen" />
           <link rel="stylesheet" type="text/css" href="/css/slick.min.css" media="screen" />
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          />
+          {/* eslint-disable */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
+          {/* eslint-enable */}
         </Head>
         <body>
           <Main />

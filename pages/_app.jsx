@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Script from 'next/script'
+import { useRouter } from 'next/router'
 
 // eslint-disable-next-line
 import Header from '../src/component/header/Header'
@@ -10,6 +11,21 @@ import MainStyle from '../src/component/MainStyle'
 import ThemeProvider from '../src/provider/ThemeProvider'
 
 export function MainApp({ Component, pageProps }) {
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      window.gtag('config', process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+        page_path: url,
+      })
+    }
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <>
       <Head>
