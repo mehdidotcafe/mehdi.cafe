@@ -160,7 +160,7 @@ const ElementTitle = styled.h3`
   margin-block-start: 0;
   margin-block-end: 0;
   
-  @media only screen and (max-width: 812px) {
+  ${(props) => props.theme.isPhone} {
     font-size: 1.75em;
   }
 `

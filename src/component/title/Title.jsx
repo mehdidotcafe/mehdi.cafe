@@ -8,7 +8,7 @@ const Title = styled.h1`
   text-transform: uppercase;
   line-height: 1;
 
-  @media only screen and (max-width: 812px) {
+  ${(props) => props.theme.isPhone} {
     font-size: 3.5em;
   }
 

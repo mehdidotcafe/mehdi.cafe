@@ -3,28 +3,7 @@ import styled from 'styled-components'
 
 import Image from '../../Image'
 
-const Overlay = styled.span`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  justify-content: center;
-  color: white;
-  font-family: 'Oswald', sans-serif;
-  font-size: 28px;
-  background-color: ${(props) => props.theme.mainColor};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s;
-  opacity: 0;
-  text-transform: lowercase;
-
-  @media only screen and (max-width: 812px) {
-    font-size: 22px;
-  }
-`
+import Overlay from '../tile/Overlay'
 
 const Container = styled.div`
   height: 164px;
@@ -41,7 +20,7 @@ const Container = styled.div`
     opacity: 1;
   }
 
-  @media only screen and (max-width: 812px) {
+  ${(props) => props.theme.isPhone} {
     ${(props) => !props.isFullSize && 'height: calc(164px / 2);'}
     ${(props) => !props.isFullSize && 'width: calc(164px / 2);'}
   }

@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components'
 
 import Image from '../../Image'
 
+import Overlay from '../tile/Overlay'
+
 import ProgressRing from '../ProgressRing'
 
 const littleSize = css`
@@ -23,7 +25,7 @@ transition: transform 0.2s, filter 0.3s;
 ${(props) => props.isSelected && 'transform: scale(0.8);'}
 ${(props) => props.isSelected && props.isLittle && 'filter: brightness(150%);'}
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   ${littleSize}
 }
 `
@@ -34,19 +36,19 @@ position: relative;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 position: absolute;
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   width: 46px;
   height: 46px;
 }
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   width: 28px;
   height: 28px;
   top: calc(-28px / 2);
   right: calc(28px / 2);
 }
 
-@media only screen and (min-width: 812px) {
+${(props) => props.theme.isLaptop} {
   width: 46px;
   height: 46px;
   top: calc(-46px / 2);
@@ -77,31 +79,8 @@ const AsideTextYears = styled.div`
 text-transform: uppercase;
 font-size: 10px;
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   font-size: 6px;
-}
-`
-
-const Overlay = styled.span`
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-justify-content: center;
-color: white;
-font-family: 'Oswald', sans-serif;
-font-size: 28px;
-background-color: ${(props) => props.theme.mainColor};
-display: flex;
-align-items: center;
-justify-content: center;
-transition: 0.2s;
-opacity: 0;
-text-transform: lowercase;
-
-@media only screen and (max-width: 812px) {
-  font-size: 22px;
 }
 `
 
@@ -121,7 +100,7 @@ margin: ${(props) => (props.isMarged ? '15' : '0')}px;
   }
 }
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   ${littleSize}
   ${(props) => (props.isMarged && 'margin-left: 0;')}
   ${(props) => (props.isMarged && 'margin-right: 0;')}
@@ -133,7 +112,7 @@ position: relative;
 height: ${(props) => (props.isLittle ? '64' : '164')}px;
 width: ${(props) => (props.isLittle ? '64' : '164')}px;
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   ${littleSize}
 }
 `

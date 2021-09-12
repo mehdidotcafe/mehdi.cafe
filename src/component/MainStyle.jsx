@@ -23,13 +23,13 @@ p {
   margin-block-end: 0;
 }
 
-@media only screen and (min-width: 812px) {  
+${(props) => props.theme.isLaptop} {  
   .bp-small {
     display: none !important;
   }
 }
 
-@media only screen and (max-width: 812px) {
+${(props) => props.theme.isPhone} {
   .bp-large {
     display: none !important;
   }
