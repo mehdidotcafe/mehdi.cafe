@@ -11,26 +11,15 @@ import { Link } from '../component/link/Link'
 import BasicPage from './BasicPage'
 
 const Container = styled.div`
-  width: 100%;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -64px;
 
   ${(props) => props.theme.isPhone} {
     flex-direction: column;
   }
-`
-
-const LandingBackground = styled.div`
-  position: absolute;
-  top: -50vh;
-  height: 200vh;
-  left: -100vh;
-  background-image: linear-gradient(to right bottom, ${(props) => props.theme.gradiantColors});
-  width: 250vh;
-  transform: rotate(-35deg);
 `
 
 const InfoContainer = styled.div`
@@ -38,7 +27,6 @@ const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   z-index: 3;
-  min-height: 100vh;
 
   ${(props) => props.theme.isPhone} {
     margin-top: 74px;
@@ -46,8 +34,8 @@ const InfoContainer = styled.div`
 `
 
 const AvatarPicture = styled(Image)`
-  min-width: 20vw;
   width: 20vw;
+  min-width: 300px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
   z-index: 2;
@@ -105,12 +93,6 @@ const MediaContainerRow = styled(Row)`
 `
 
 class Landing extends Component {
-  // because i'm lazy :)
-  static getAge() {
-    const birthday = +new Date('1996-11-14');
-    return ((Date.now() - birthday) / (31557600000));
-  }
-
   static isDay() {
     const date = new Date()
     const hours = date.getHours()
@@ -118,12 +100,10 @@ class Landing extends Component {
     return hours >= 6 && hours < 17
   }
 
-  // eslint-disable-next-line
   render() {
     return (
-      <BasicPage>
+      <BasicPage noPaddingTop>
         <Container>
-          <LandingBackground />
           <InfoContainer>
             <TitleContainer>
               <SecondaryTitle>

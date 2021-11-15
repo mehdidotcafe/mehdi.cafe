@@ -8,7 +8,6 @@ import Location from '../Location'
 import Title from '../component/title/Title'
 import SubTitle from '../component/sub-title/SubTitle'
 import Project from '../component/project/Project'
-import ProjectOverlay from '../component/project/ProjectOverlay'
 import Skill from '../component/skill/Skill'
 
 import Row from '../layout/row/Row'
@@ -53,18 +52,6 @@ const NoProjectText = styled.span`
     font-family: 'Roboto';
     text-transform: uppercase;
   }
-`
-
-const ProjectBackground = styled.div`
-  position: absolute;
-  bottom: -90vh;
-  height: 100vh;
-  right: -70vh;
-  background-image: linear-gradient(to left top, ${(props) => props.theme.gradiantColors});
-  width: 100vh;
-  -webkit-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-  z-index: -1;
 `
 
 const EmojiContainer = styled.span`
@@ -116,13 +103,7 @@ const ClearFilterButton = styled.span`
 visibility: ${(props) => (props.isVisible ? 'visible' : 'hidden')}
 `
 
-const FakeItem = styled(Item)`
-visibility: hidden;
-height: 0;
-`
-
 const ProjectTitle = styled(Title)`
-padding-top: 64px;
 `
 
 const ProjectRow = styled(Row)`
@@ -165,7 +146,6 @@ class ProjectListPage extends Component {
     this.state = {
       projects: this.projects.slice(0),
       skills: this.skills.slice(0),
-      selectedProject: undefined,
     }
 
     this.addSkillFromQS()
@@ -173,12 +153,25 @@ class ProjectListPage extends Component {
   }
 
   componentDidMount() {
-    this.filterFromQS()
+    this.filters = ProjectListPage.getFiltersFromQS()
+
+    this.updateProjects()
   }
 
   componentDidUpdate() {
+    const oldFilters = this.filters.slice(0)
+    this.filters = ProjectListPage.getFiltersFromQS()
+
     this.addSkillFromQS()
-    this.filterFromQS(true)
+    if (oldFilters.join('') !== this.filters.join('')) {
+      this.updateProjects()
+    }
+  }
+
+  onSkillSelect(skill) {
+    const newFilters = this.updateFilters(skill)
+
+    this.updateQS(newFilters)
   }
 
   getSkillGrouped() {
@@ -196,61 +189,55 @@ class ProjectListPage extends Component {
     return groups
   }
 
-  filterProjects(skill, needToUpdateUrl = false) {
+  static getFiltersFromQS() {
+    return ProjectListPage.fmtSkills(Location.qs().skill)
+  }
+
+  updateQS(newFilters) {
     const { router } = this.props
-    const filtered = []
-    const skills = ProjectListPage.skillToArray(skill)
+
+    router.replace({ pathname: '/work', query: { skill: newFilters } }, undefined, { shallow: true })
+  }
+
+  updateFilters(skill) {
+    const newFilters = this.filters.slice(0)
     let idx
-    let isMatching = true
+    const skills = [skill]
 
     for (let k = 0; k < skills.length; k += 1) {
-      idx = this.filters.indexOf(skills[k])
+      idx = newFilters.indexOf(skills[k])
       if (skills[k] && idx === -1) {
-        this.filters.push(skills[k])
+        newFilters.push(skills[k])
       } else if (skills[k]) {
-        this.filters.splice(idx, 1)
+        newFilters.splice(idx, 1)
       }
     }
+
+    return newFilters
+  }
+
+  updateProjects() {
+    const filteredProjets = []
+    let isMatching
 
     for (let i = 0; i < this.projects.length; i += 1) {
       isMatching = true
-      for (let j = 0; j < this.filters.length; j += 1) {
-        if (this.projects[i].languages.indexOf(this.filters[j]) === -1) {
-          isMatching = false
-          break
+      if (this.filters.length > 0) {
+        for (let j = 0; j < this.filters.length; j += 1) {
+          if (this.projects[i].languages.indexOf(this.filters[j]) === -1) {
+            isMatching = false
+            break
+          }
         }
       }
       if (isMatching) {
-        filtered.push(this.projects[i])
+        filteredProjets.push(this.projects[i])
       }
     }
-    // ?${this.filters.map((f) => `skill=${encodeURIComponent(f)}`).join('&')}
-    if (needToUpdateUrl) {
-      router.replace({ pathname: '/work', query: { skill: this.filters } }, undefined, { shallow: true })
-    }
+
     this.setState({
-      projects: filtered,
+      projects: filteredProjets,
     })
-  }
-
-  filterFromQS(needClearFilters = false) {
-    const paramSkills = Location.qs().skill
-
-    if (paramSkills && !this.hasSkills(ProjectListPage.skillToArray(paramSkills))) {
-      if (needClearFilters) {
-        this.filters = []
-      }
-      this.filterProjects(paramSkills)
-    }
-  }
-
-  hasSkills(toFind) {
-    for (let i = 0; i < toFind.length; i += 1) {
-      if (this.filters.indexOf(toFind[i]) === -1) {
-        return false
-      }
-    }
-    return true
   }
 
   addSkillFromQS() {
@@ -284,15 +271,7 @@ class ProjectListPage extends Component {
     const { router } = this.props
 
     e.preventDefault()
-    this.setState({
-      selectedProject: project,
-    }, () => {
-      setTimeout(() => {
-        // eslint-disable-next-line
-        window._projectListToProjectTrasition = true
-        router.push(`/work/${project.name}`)
-      }, 500)
-    })
+    router.push(`/work/${project.name}`)
   }
 
   clearFilters(e) {
@@ -300,24 +279,14 @@ class ProjectListPage extends Component {
 
     e.preventDefault()
     router.replace('work', undefined, { shallow: true })
-    setTimeout(() => {
-      this.filters = []
-      this.filterProjects(undefined)
-    })
   }
 
   render() {
-    const { projects, selectedProject } = this.state
-    const fakeProjects = new Array(10).map((v, idx) => ({
-      ...this.projects[0],
-      name: `fake|${idx}`,
-    }))
+    const { projects } = this.state
 
     return (
       <BasicPage>
         <div>
-          <ProjectBackground />
-
           <ProjectTitle noMargin>Mes projets</ProjectTitle>
           <ProjectRow>
             <Container className="bp-large">
@@ -334,7 +303,7 @@ class ProjectListPage extends Component {
               {this.getSkillGrouped().map((group) => (
                 <FilterRow key={group.id}>
                   {group.group.map((skill) => (
-                    <Item key={skill.name} onClick={() => this.filterProjects(skill.name, true)}>
+                    <Item key={skill.name} onClick={() => this.onSkillSelect(skill.name)}>
                       <Skill
                         name={skill.name}
                         backgroundImage={skill.backgroundImage}
@@ -369,26 +338,8 @@ class ProjectListPage extends Component {
                   <sub>Aucun projet</sub>
                 </NoProjectText>
               )}
-              {fakeProjects.map((project) => (
-                <FakeItem key={project.name}>
-                  <Project
-                    backgroundColor={project.backgroundColor}
-                    backgroundImage={project.backgroundImage}
-                    name={project.name}
-                    logo={project.logo}
-                  />
-                </FakeItem>
-              ))}
             </ListContainer>
           </ProjectRow>
-          <ProjectOverlay
-            inTransition
-            isVisible={!!selectedProject}
-            backgroundColor={
-              selectedProject ? selectedProject.backgroundColor : undefined
-            }
-            logo={selectedProject ? selectedProject.logo : undefined}
-          />
         </div>
       </BasicPage>
     )

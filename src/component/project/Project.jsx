@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Image from '../../Image'
 
-import Overlay from '../tile/Overlay'
+import { Overlay } from '../tile/Overlay'
 
 const Container = styled.div`
   height: 164px;

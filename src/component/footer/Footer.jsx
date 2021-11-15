@@ -20,6 +20,10 @@ const ButtonContainer = styled.div`
 
   ${BasicButton} {
     max-width: 80vw;
+    
+    :hover {
+      background-color: ${(props) => props.theme.mainColor} !important;
+    }
   }
 }
 `
@@ -38,17 +42,17 @@ text-decoration: none;
 `
 
 class Footer extends Component {
-  // static onProjectClick() {
-  //   window.gtag('event', 'contact', {
-  //     event_category: 'contact',
-  //   })
-  // }
+  static onProjectClick() {
+    window.gtag('event', 'contact', {
+      event_category: 'contact',
+    })
+  }
 
   render() {
     return (
       <Container>
         <ButtonContainer>
-          <BasicButton type="submit" onClick={this.onProjectClick}>
+          <BasicButton type="submit" onClick={Footer.onProjectClick}>
             <ButtonText aria-label="Envie de me proposer un projet ?" href="mailto:contact@meddou.com">Me proposer un projet ?</ButtonText>
           </BasicButton>
           <Copyright>Copyright @ Mehdi Meddour</Copyright>

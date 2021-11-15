@@ -1,176 +1,103 @@
-import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import React, { useEffect } from 'react'
+import ReactFullpage from '@fullpage/react-fullpage'
+
 import styled from 'styled-components'
 
-const Container = styled.main`
-  height: 100%;
-  max-width: 100vw;
-  overflow: hidden;
+import LandingPage from '../sections/Landing'
+import ProjectListPage from '../sections/ProjectList'
+import SkillListPage from '../sections/SkillList'
+import ExperiencePage from '../sections/Experience'
+
+import Footer from './footer/Footer'
+
+const Section = styled.div`
+  z-index: 2;
 `
 
-class Scroller extends PureComponent {
-  constructor(props) {
-    super(props)
+const LandingBackground = styled.div`
+  position: absolute;
+  top: -50vh;
+  height: 200vh;
+  left: -130vh;
+  background-image: linear-gradient(to right bottom, ${(props) => props.theme.gradiantColors});
+  width: 250vh;
+  transform: rotate(-35deg);
+`
 
-    this.containerRef = React.createRef()
-    this.sectionRefs = []
-    this.lastScrollTop = 0
-    this.isScrolling = false
-    this.canScroll = true
+const SkillBackground = styled.div`
+  position: absolute;
+  height: 100vh;
+  left: -35vh;
+  top: 270vh;
+  background-image: linear-gradient(to right, ${(props) => props.theme.gradiantColors});
+  width: 100vh;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: -1;
+`
 
-    this.scrollTimeout = undefined
-    this.scrollTimer = undefined
-    this.canScrollTimeout = undefined
+const ProjectBackground = styled.div`
+  position: absolute;
+  bottom: -130vh;
+  height: 100%;
+  right: -160vh;
+  background-image: linear-gradient(to left top, ${(props) => props.theme.gradiantColors});
+  width: 100vh;
+  -webkit-transform: rotate(-35deg);
+  transform: rotate(-35deg);
+  z-index: -1;
+`
 
-    this.sections = React.Children.map(props.children, (child) => {
-      const ref = React.createRef()
+export const Scroller = ({
+  defaultIndex = 0,
+  fullpageApi,
+  projects,
+  filterableSkills,
+  skills,
+  experiences,
+}) => {
+  const [index, setIndex] = React.useState({
+    old: undefined,
+    current: undefined,
+  })
 
-      this.sectionRefs.push(ref)
-      return <div ref={ref}>{child}</div>
-    })
-
-    this.index = props.index || 0
-
-    this.nextIndex = this.index
-
-    this.scrollTimerFx = this.scrollTimerFx.bind(this)
-  }
-
-  componentDidMount() {
-    const { container } = this.props
-    this.container = container || this.containerRef.current || document.querySelector('html')
-
-    this.isScrolling = true
-    this.scrollToElement(this.sectionRefs[this.index].current, this.index, false)
-    this.bindListener()
-  }
-
-  componentDidUpdate() {
-    const { index } = this.props
-
-    if (this.nextIndex !== index) {
-      this.index = index
-      this.isScrolling = true
-      this.scrollToElement(this.sectionRefs[this.index].current, index)
+  useEffect(() => {
+    if (fullpageApi) {
+      setIndex({
+        old: index.current,
+        current: defaultIndex + 1,
+      })
     }
-  }
+  }, [fullpageApi, defaultIndex])
 
-  componentWillUnmount() {
-    this.unbindListener()
-    window.clearTimeout(this.scrollTimeout)
-    window.clearTimeout(this.canScrollTimeout)
-  }
-
-  onScroll(e) {
-    const scrollDirectionCoeff = this.getScrollDirection() === true ? 1 : -1
-
-    if ((this.index + scrollDirectionCoeff) < this.sectionRefs.length
-      && (this.index + scrollDirectionCoeff) >= 0 && e.timeStamp >= 1000) {
-      const nextIndex = this.index + scrollDirectionCoeff
-
-      const currentElement = this.sectionRefs[this.index].current.getBoundingClientRect()
-      const nextElement = this.sectionRefs[nextIndex].current.getBoundingClientRect()
-
-      if (
-        (scrollDirectionCoeff === 1 && currentElement.top + currentElement.height
-            < this.getContainerBounding().height)
-        || (scrollDirectionCoeff === -1 && nextElement.top + nextElement.height >= 0)) {
-        e.preventDefault()
-        e.stopPropagation()
-        this.nextIndex = nextIndex
-        this.notifyOnScroll(nextIndex)
-        this.scrollToElement(this.sectionRefs[nextIndex].current, nextIndex)
-      }
+  useEffect(() => {
+    if (fullpageApi) {
+      fullpageApi[index.old === undefined ? 'silentMoveTo' : 'moveTo'](index.current)
     }
-  }
+  }, [index])
 
-  getContainerBounding() {
-    return window.innerHeight
-      ? { height: window.innerHeight }
-      : this.container.getBoundingClientRect()
-  }
-
-  getContainerScrollTop() {
-    return this.container.scrollTop || window.pageYOffset || document.documentElement.scrollTop
-  }
-
-  getScrollDirection() {
-    const st = this.getContainerScrollTop()
-    const ret = st > this.lastScrollTop
-
-    this.lastScrollTop = st <= 0 ? 0 : st
-    return ret
-  }
-
-  scrollToElement(element, index, isSmooth = true) {
-    const top = this.getContainerScrollTop()
-    const elementRect = element.getBoundingClientRect()
-
-    this.container.scrollTo({
-      behavior: isSmooth ? 'smooth' : 'instant',
-      left: 0,
-      top: top + elementRect.top,
-    })
-
-    this.index = index
-    this.nextIndex = index
-  }
-
-  notifyOnScroll(index) {
-    const { onScroll } = this.props
-
-    if (onScroll) {
-      onScroll(index)
-    }
-  }
-
-  scrollTimerFx(e) {
-    if (this.canScroll) {
-      /**
-       * @LINK https://stackoverflow.com/questions/4620906/how-do-i-know-when-ive-stopped-scrolling
-       */
-      if (this.scrollTimer !== null) {
-        clearTimeout(this.scrollTimer);
-      }
-      this.scrollTimer = setTimeout(() => {
-        if (this.isScrolling) {
-          this.canScroll = false
-          this.getScrollDirection()
-          this.isScrolling = false
-          this.canScrollTimeout = window.setTimeout(() => {
-            this.canScroll = true
-          }, 50)
-        } else {
-          this.isScrolling = true
-          this.onScroll(e)
-        }
-      }, 150);
-    } else {
-      this.getScrollDirection()
-    }
-  }
-
-  bindListener() {
-    this.container.addEventListener('scroll', this.scrollTimerFx)
-  }
-
-  unbindListener() {
-    this.container.removeEventListener('scroll', this.scrollTimerFx)
-  }
-
-  render() {
-    return (
-      <Container ref={this.containerRef}>
-        {this.sections.map((child) => child)}
-      </Container>
-    )
-  }
-}
-
-Scroller.propTypes = {
-  index: PropTypes.number.isRequired,
-  children: PropTypes.arrayOf(PropTypes.node.isRequired).isRequired,
-  onScroll: PropTypes.func.isRequired,
+  return (
+    <ReactFullpage.Wrapper>
+      <Section id="scroll-home-container" className="section">
+        <LandingPage />
+      </Section>
+      <LandingBackground />
+      <Section id="scroll-work-container" className="section">
+        <ProjectListPage projects={projects} filterableSkills={filterableSkills} />
+      </Section>
+      <ProjectBackground />
+      <Section id="scroll-skills-container" className="section">
+        <SkillListPage skills={skills} />
+      </Section>
+      <SkillBackground />
+      <Section id="scroll-experiences-container" className="section">
+        <div>
+          <ExperiencePage experiences={experiences} />
+          <Footer />
+        </div>
+      </Section>
+    </ReactFullpage.Wrapper>
+  )
 }
 
 export default Scroller

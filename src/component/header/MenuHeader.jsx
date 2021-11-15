@@ -57,6 +57,7 @@ ${(props) => props.theme.isPhone} {
 function MenuHeader({ isCollapsed, onClick }) {
   return (
     <Hamburger
+      name="menuButton"
       isCollapsed={isCollapsed}
       onClick={onClick}
       type="submit"

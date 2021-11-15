@@ -10,6 +10,7 @@ const theme = {
   gradiantColors: ['#7a0056', '#961356', '#af2854', '#c43f51', '#d7574e'].join(', '),
   isPhone: `@media only screen and (max-width: ${widthTreshold})`,
   isLaptop: `@media only screen and (min-width: ${widthTreshold})`,
+  sectionDefaultPaddingTop: '112px',
 }
 
 export const ThemeProvider = ({

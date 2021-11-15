@@ -1,6 +1,21 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const MainStyle = createGlobalStyle`
+
+.iScrollVerticalScrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 button {
   background: none;
   color: inherit;

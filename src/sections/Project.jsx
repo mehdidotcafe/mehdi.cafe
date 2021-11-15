@@ -11,7 +11,6 @@ import Row from '../layout/row/Row'
 import Item from '../layout/item/Item'
 
 import Project from '../component/project/Project'
-import ProjectOverlay from '../component/project/ProjectOverlay'
 import Skill from '../component/skill/Skill'
 import ScrollableRow from '../component/scrollable-row/ScrollableRow'
 import Title from '../component/title/Title'
@@ -36,6 +35,10 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px
 color: white;
 text-align: center;
 cursor: pointer;
+
+:hover {
+  background-color: ${(props) => props.theme.mainColor} !important;
+}
 
 div {
   height: 100%;
@@ -69,7 +72,6 @@ ${(props) => props.theme.isPhone} {
 `
 
 const ScrollerContainer = styled.aside`
-margin-top: 64px;
 margin-left: 60%;
 width: 40%;
 display: inline-block;
@@ -215,16 +217,12 @@ class ProjectPage extends Component {
     super(props)
 
     if (typeof window !== 'undefined') {
-      this.timeoutId = undefined
-
       this.sliderRef = React.createRef()
 
-      this.container = window
+      this.container = document.querySelector('html')
     }
 
     this.state = {
-      // eslint-disable-next-line
-      transitionVisible: typeof window !== 'undefined' && !!window._projectListToProjectTrasition,
       activeSlide: 0,
     }
     this.slideCount = 3
@@ -235,31 +233,7 @@ class ProjectPage extends Component {
   }
 
   componentDidMount() {
-    this.timeoutId = setTimeout(() => {
-      this.timeoutId = undefined
-      this.setState({
-        transitionVisible: false,
-      })
-    }, 500)
-
-    this.container.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'instant',
-    })
-  }
-
-  componentWillUnmount() {
-    if (this.timeoutId) {
-      clearTimeout(this.timeoutId)
-    }
-    this.container.scroll({
-      top: 0,
-      left: 0,
-      behavior: 'instant',
-    })
-    // eslint-disable-next-line
-    window._projectListToProjectTrasition = undefined
+    // document.querySelector('html').style.overflow = 'hidden'
   }
 
   onSwipe(direction) {
@@ -292,7 +266,7 @@ class ProjectPage extends Component {
   }
 
   render() {
-    const { activeSlide, transitionVisible } = this.state
+    const { activeSlide } = this.state
     const { project } = this.props
 
     const tabs = project ? [
@@ -405,15 +379,6 @@ class ProjectPage extends Component {
                   ))}
                 </RectScroller>
               </ScrollerContainer>
-              {transitionVisible
-                && (
-                  <ProjectOverlay
-                    outTransition
-                    backgroundColor={project.backgroundColor}
-                    logo={project.logo}
-                    isVisible
-                  />
-                )}
             </InfoContainer>
           )
           : <></>}

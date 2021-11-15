@@ -13,6 +13,7 @@ import BasicPage from './BasicPage'
 import 'react-vertical-timeline-component/style.min.css'
 
 const StyledVerticalTimeline = styled(VerticalTimeline)`
+  padding-top: ${(props) => props.theme.sectionDefaultPaddingTop};
   margin-left: -14px;
   padding-left: 0;
   margin-bottom: 0;
@@ -143,18 +144,6 @@ const NoPaddingBottomBasicPage = styled(BasicPage)`
   padding-bottom: 0;
 `
 
-const Background = styled.div`
-  position: absolute;
-  bottom: 0vh;
-  right: -70vh;
-  top: 90vh;
-  background-image: linear-gradient(to top , ${(props) => props.theme.gradiantColors});
-  width: 120vh;
-  -webkit-transform: rotate(-35deg);
-  transform: rotate(-35deg);
-  z-index: -1;
-`
-
 const ElementTitle = styled.h3`
   font-size: 2.5em;
   margin-block-start: 0;
@@ -173,7 +162,6 @@ const ElementSubTitle = styled.h4`
 `
 
 const ExperienceTitle = styled(Title)`
-padding-top: 64px;
 `
 
 class Experience extends Component {
@@ -197,9 +185,8 @@ class Experience extends Component {
     return (
       <NoPaddingBottomBasicPage>
         <div className="experience-page">
-          <Background />
           <ExperienceTitle noMargin>Mes expériences</ExperienceTitle>
-          <StyledVerticalTimeline layout="1-column">
+          <StyledVerticalTimeline layout="1-column" visible={true}>
             { experiences.map((experiance, idx) => (
               <VerticalTimelineElement
                 key={experiance.title}

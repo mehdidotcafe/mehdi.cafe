@@ -48,7 +48,7 @@ const Element = styled.div`
 
 function RectScroller({ children }) {
   return (
-    <Container>
+    <Container id="tmp">
       { React.Children.map(children, (child) => (
         <Element>
           {child}

@@ -2,10 +2,8 @@ import styled from 'styled-components'
 
 const BasicPage = styled.div`
   position: relative;
-  padding-top: 64px;
   max-width: 100vw;
-  min-height: 100vh;
-  padding-bottom: 32px;
+  padding-top: ${(props) => (props.noPaddingTop ? 0 : props.theme.sectionDefaultPaddingTop)};
 
   ${(props) => props.theme.isLaptop} {
     padding-left: ${(props) => (props.noMargin ? 0 : 12)}%;

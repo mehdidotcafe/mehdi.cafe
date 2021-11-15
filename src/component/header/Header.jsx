@@ -11,7 +11,7 @@ import Location from '../../Location'
 
 import Medias from '../medias/Medias'
 
-const Button = styled.li`
+const Button = styled.div`
 font-family: 'Oswald', sans-serif;
 cursor: pointer;
 text-align: center;
@@ -19,12 +19,16 @@ width: 96px;
 color: white;
 line-height: 64px;
 text-decoration: none;
-${(props) => (props.isActive && `background-color: ${props.theme.secondaryColor};`)}
+${(props) => (props.isActive ? `background-color: ${props.theme.secondaryColor};` : 'background-color: inherit;')}
 
 ${(props) => props.theme.isPhone} {
   width: 100vw;
   height: 64px;
   border-left: 0;
+}
+
+:hover {
+  background-color: ${(props) => props.theme.secondaryColor} !important;
 }
 `
 
@@ -114,6 +118,17 @@ class Header extends Component {
     }
   }
 
+  getVisibleId() {
+    const { router } = this.props
+
+    if (router.query.section) {
+      return router.query.section[0]
+    } if (router.query.name) {
+      return this.links[1].link
+    }
+    return this.links[0].link
+  }
+
   collapse() {
     const { isCollapsed } = this.state
 
@@ -131,8 +146,7 @@ class Header extends Component {
   }
 
   render() {
-    const { router } = this.props
-    const visibleId = router.query.section ? router.query.section : this.links[0].link
+    const visibleId = this.getVisibleId()
     const { isCollapsed } = this.state
 
     // eslint-disable
@@ -141,17 +155,19 @@ class Header extends Component {
         <LogoHeader />
         <ButtonContainer>
           {this.links.map((link, idx) => (
-            <Link aria-label={link.link} key={link.link} href={`/${link.link}`}>
-              <Button
-                onClick={this.collapseIfTrue}
-                isActive={visibleId && visibleId.toString() === link.link.toString()}
-                className={`header-button ${idx === 0 ? 'first' : ''}
-                ${idx >= this.links.length - 1 ? 'last' : ''}
-                `}
-              >
-                {link.label}
-              </Button>
-            </Link>
+            <li key={link.link}>
+              <Link aria-label={link.link} key={link.link} href={`/${link.link}`}>
+                <Button
+                  onClick={this.collapseIfTrue}
+                  isActive={visibleId && visibleId === link.link}
+                  className={`header-button ${idx === 0 ? 'first' : ''}
+                  ${idx >= this.links.length - 1 ? 'last' : ''}
+                  `}
+                >
+                  {link.label}
+                </Button>
+              </Link>
+            </li>
           ))}
           <MediaContainer className="bp-small">
             <Medias />

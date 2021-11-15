@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import Image from '../../Image'
 
-import Overlay from '../tile/Overlay'
+import { Overlay } from '../tile/Overlay'
 
 import ProgressRing from '../ProgressRing'
 
