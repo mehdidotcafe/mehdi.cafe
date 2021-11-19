@@ -34,6 +34,7 @@ class MainScrollPage extends PureComponent {
 
     return (
       <ReactFullpage
+        licenseKey='M7XuRiM%g5'
         scrollOverflow
         scrollbars={false}
         onLeave={this.onScroll}
