@@ -6,15 +6,19 @@
   {"name": "Javascript", "logo":"javascript", "backgroundColor": "#efd81d", "experience": 4.5},
   {"name": "Typescript", "logo":"typescript", "backgroundColor": "#2d79c7", "experience": 3},
   {"name": "NodeJS", "logo": "node", "backgroundColor": "#94b84d", "experience": 4},
-  {"name": "React", "logo": "react", "backgroundColor": "#61dafb", "experience": 2},
+  {"name": "React", "logo": "react", "backgroundColor": "#61dafb", "experience": 3},
   {"name": "Angular", "logo": "angular", "backgroundColor": "#c30e2e", "experience": 2},
-  {"name": "jQuery", "logo": "jquery", "backgroundColor": "#0865a6", "experience": 3, "isFilterable": false},
+  {"name": "jQuery", "logo": "jquery", "backgroundColor": "#0865a6", "experience": 3, "isFilterable": false, "isVisible" : false},
 
   {"name": "PHP", "logo": "php", "backgroundColor": "#4d588e", "experience": 3},
   {"name": "Laravel", "logo": "laravel", "backgroundColor": "#fb503b", "experience": 2},
   {"name": "Symfony", "logo": "symfony", "backgroundColor": "#000000", "experience": 0.5, "isFilterable": false, "isVisible": false},
 
-  {"name": "Java", "logo": "java", "backgroundColor": "#096eb6", "experience": 0.5, "isFilterable": false},
+  {"name": "Redis", "logo": "redis", "backgroundColor": "#981713", "experience": 3, "isVisible": true},
+  {"name": "mySQL", "logo": "mysql", "backgroundColor": "#00546b", "experience": 4, "isVisible": true},
+  {"name": "MongoDB", "logo": "mongo", "backgroundColor": "#69b23f", "experience": 1, "isVisible": false},
+
+  {"name": "Java", "logo": "java", "backgroundColor": "#096eb6", "experience": 0.5, "isFilterable": false, "isVisible" : false},
   {"name": "Kotlin", "logo": "kotlin", "backgroundColor": "#4680de", "experience": 1, "isFilterable": false},
   {"name": "Swift", "logo": "swift", "backgroundColor": "#f36938", "experience": 0.5, "isFilterable": false},
 
@@ -29,8 +33,6 @@
   {"name": "Electron", "logo": "electron", "backgroundColor": "#6bdefb", "experience": 0.5, "isFilterable": false, "isVisible": false},
   {"name": "PWA", "logo": "PWA", "backgroundColor": "#5a0fc8", "experience": 0.5, "isFilterable": false, "isVisible": false},
 
-  {"name": "mySQL", "logo": "mysql", "backgroundColor": "#00546b", "experience": 4, "isVisible": false},
-  {"name": "MongoDB", "logo": "mongo", "backgroundColor": "#69b23f", "experience": 1, "isVisible": false},
 
   {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1}
 ]
