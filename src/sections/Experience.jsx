@@ -186,7 +186,7 @@ class Experience extends Component {
       <NoPaddingBottomBasicPage>
         <div className="experience-page">
           <ExperienceTitle noMargin>Mes expériences</ExperienceTitle>
-          <StyledVerticalTimeline layout="1-column" visible={true}>
+          <StyledVerticalTimeline layout="1-column" visible>
             { experiences.map((experiance, idx) => (
               <VerticalTimelineElement
                 key={experiance.title}
