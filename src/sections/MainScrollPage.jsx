@@ -8,7 +8,7 @@ import { Scroller } from '../component/Scroller'
 
 class MainScrollPage extends PureComponent {
   constructor() {
-    super()
+    super ()
     this.pageIds = Location.links.map((l) => l.link)
     this.onScroll = this.onScroll.bind(this)
     if (typeof window !== 'undefined') {

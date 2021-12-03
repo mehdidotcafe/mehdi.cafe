@@ -21,7 +21,8 @@
     "dev": "next dev",
     "test": "next test",
     "lint": "./node_modules/.bin/eslint --ext .jsx,.js .",
-    "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js --fix ."
+    "lint:fix": "./node_modules/.bin/eslint --ext .jsx,.js --fix .",
+    "prepare": "husky install"
   },
   "browserslist": [
     ">0.2%",
@@ -46,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.4",
     "typescript": "^4.4.4"
   }
 }
