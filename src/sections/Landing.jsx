@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
 
 import Row from '../layout/row/Row'
@@ -38,7 +38,7 @@ const AvatarPicture = styled(Image)`
   min-width: 300px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
-  z-index: 2;
+z-index: 2;
 
   ${(props) => props.theme.isPhone} {
     display: none;
@@ -92,42 +92,41 @@ const MediaContainerRow = styled(Row)`
   align-items: center;
 `
 
-class Landing extends Component {
-  static isDay() {
-    const date = new Date()
-    const hours = date.getHours()
+const isDay = () => {
+  const date = new Date()
+  const hours = date.getHours()
 
-    return hours >= 6 && hours < 17
-  }
-
-  render() {
-    return (
-      <BasicPage noPaddingTop>
-        <Container>
-          <InfoContainer>
-            <TitleContainer>
-              <SecondaryTitle>
-                {Landing.isDay() ? 'Bonjour' : 'Bonsoir'}
-                , je suis Mehdi.
-              </SecondaryTitle>
-              <PrimaryTitle>Développeur Freelance WEB / MOBILE.</PrimaryTitle>
-              <MainDescription
-                text="Mes expériences à travers une multitude de technologies m'ont permis d’acquérir une expertise des langages de développement de site internet et d'application mobile.<br/>Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison."
-              />
-              <MediaContainerRow>
-                <Link isImportant href="/work">Voir mes projets</Link>
-                <Medias className="bp-large" />
-              </MediaContainerRow>
-            </TitleContainer>
-          </InfoContainer>
-          <AvatarPicture
-            src="/images-webp/mehdi.png"
-            alt="Mehdi Meddour"
-          />
-        </Container>
-      </BasicPage>
-    )
-  }
+  return hours >= 6 && hours < 17
 }
+
+const Landing = ({ descriptions }) => (
+  <BasicPage noPaddingTop>
+    <Container>
+      <InfoContainer>
+        <TitleContainer>
+          <SecondaryTitle>
+            {isDay() ? 'Bonjour' : 'Bonsoir'}
+            , je suis Mehdi.
+          </SecondaryTitle>
+          <PrimaryTitle>
+            {descriptions.title}
+            .
+          </PrimaryTitle>
+          <MainDescription
+            text={descriptions.shortDescription}
+          />
+          <MediaContainerRow>
+            <Link isImportant href="/work">Voir mes projets</Link>
+            <Medias className="bp-large" />
+          </MediaContainerRow>
+        </TitleContainer>
+      </InfoContainer>
+      <AvatarPicture
+        src="/images-webp/mehdi.png"
+        alt="Mehdi Meddour"
+      />
+    </Container>
+  </BasicPage>
+)
 
 export default Landing

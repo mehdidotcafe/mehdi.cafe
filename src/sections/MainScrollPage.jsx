@@ -30,6 +30,7 @@ class MainScrollPage extends PureComponent {
       filterableSkills,
       skills,
       experiences,
+      descriptions,
     } = this.props
 
     return (
@@ -46,6 +47,7 @@ class MainScrollPage extends PureComponent {
             filterableSkills={filterableSkills}
             skills={skills}
             experiences={experiences}
+            descriptions={descriptions}
           />
         )}
       />

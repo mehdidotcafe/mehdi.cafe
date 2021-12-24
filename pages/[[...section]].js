@@ -1,3 +1,4 @@
+import Description from '../src/services/Description'
 import Location from '../src/Location'
 import Experience from '../src/services/Experience'
 import Project from '../src/services/Project'
@@ -28,6 +29,7 @@ export async function getStaticProps() {
       projects: Project.get(),
       filterableSkills: Skill.getFilterable(),
       skills: Skill.get(),
+      descriptions: Description.get(),
     },
   }
 }

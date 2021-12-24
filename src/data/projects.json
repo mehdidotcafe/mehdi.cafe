@@ -24,7 +24,15 @@
       "arte/4.png"
     ],
     "description_project": "\"Média européen public responsable, ARTE s'engage sur des thématiques chères aux citoyens et citoyennes d’Europe : la lutte contre les inégalités, qu’elles soient sociales, culturelles, économiques, géographiques, liées au genre ou au handicap, ainsi que le développement durable.\"",
-    "description_mission": "<div>Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, édition de compte ...).</div><div>Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv</a>.</div>",
+    "description_context": "Maintien et refonte du front-end ainsi que du back-end du site my.arte.tv ainsi que d'autres projet de la chaine télévision ARTE",
+    "description_mission": [
+      "Refonte du site <a href='https://my.arte.tv' target='_blank'>my.arte.tv</a>sous forme de libraire de composant react",
+      "Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...)",
+      "Accompagnement de la refonte de l'API utilisateur vers Symfony",
+      "Migration du système de gestion des utilisateurs ARTE de LoginRadius vers Keycloak",
+      "Optimisation de la mise en cache des contenus",
+      "Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv</a>"
+    ],
     "recommandations": [],
     "start": "2020-08-01",
     "end": null
@@ -55,10 +63,16 @@
       "kwote/kwote_5.jpg"
     ],
     "description_project": "\"Kwote est un gestionnaire de risque à destination des ETI et PME.\nIl s'appuie sur les data des entreprises, grâce à sa connexion avec leurs systèmes d'information offrant à l'utilisateur - directeur financier, credit manager ou dirigeant - des outils de gestion du risque client et de pilotage de la performance des contrats d'assurance-crédit associés à une brique de services dont des solutions de financement disruptives, de recouvrement en ligne, du scoring basé sur le comportement de paiement...\"",
-    "description_mission": "<div>Développement de diverses connecteurs de récupération d'informations vers des sites externes (ATRADIUS, Euler Hermes).</div><div>Développement d'un module de relance de facture impayées comportant un système de planification et d'édition de templates.</div><div>Migration du site vers Angular 7, 8, 9.</div>",
+    "description_mission": [
+      "Développement de \"COLLECT\", un module de relance de factures impayées comportant un système de planification d'actions de scénarios de relance (email, sms, courrier ...) ainsi qu'un éditeur de modèle",
+      "Développement d'un système de reporting au format PDF agrégeant des données clés pour les clients",
+      "Développement de divers connecteurs vers des APIs externes (ATRADUIS, Euler Hermes)",
+      "Diverses montées de version d'Angular",
+      "Diverses améliorations de la plateforme"
+    ],
     "recommandations": [],
     "start": "2018-08-01",
-    "end": null
+    "end": "2021-10-01"
   },
   {
     "name": "MateMeUp",
@@ -87,7 +101,13 @@
       "matemeup/matemeup_web_4.jpg"
     ],
     "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
-    "description_mission": "<div>Développement d'un système de chat en temps réel utilisant socket.io.</div><div>Développement d'un système de mur où les utilisateurs peuvent poster du texte et des images.</div><div>Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer.</div>",
+    "description_mission": [
+      "Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer",
+      "Développement d'un chat en temps réel",
+      "Développement d'un fil d'actualité où les utilisateurs peuvent poster du texte et des images",
+      "Développement d'un système de Load-Balancing qui reparti la charge entre plusieurs serveurs",
+      "Conception, développement et mise en production des fonctionnalités"
+    ],
     "recommandations": [
       1
     ],
@@ -117,7 +137,12 @@
       "matemeup-mobile/matemeup_mobile_5.jpg"
     ],
     "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
-    "description_mission": "<div>Développement de la version Android et iOS du site incluant connexion / déconnexion, mur facebook-like ainsi qu'un chat en temps réel.</div>",
+    "description_mission": [
+      "Développement d'un fil d'actualité où les utilisateurs peuvent poster du texte et des images",
+      "Développement d'un chat en temps réel",
+      "Développement d'un système d'authentification",
+      "Conception, développement et mise en production des applications iOS et Android"
+    ],
     "recommandations": [
       1
     ],
@@ -147,6 +172,12 @@
       "cloudindus/cloudindus_5.png"
     ],
     "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.\nUtilisation de MEAN Stack (MongoDB, Express, Angular 1.29, Node.js) pour le développement.",
+    "description_mission": [
+      "Réalisation d'un moteur permettant la mise à jour récursive de l'état d'un objet connecté selon l'état d'autres objets",
+      "Implémentation de la notion de \"synoptique\" qui permet de visualiser l'état d'un objet connecté via une représentation graphique (SVG) sur la plateforme",
+      "Développement la partie de gestion de profil de l'utilisateur",
+      "Conception, développement et mise en production de la plateforme"
+    ],
     "recommandations": [],
     "start": "2015-05-01",
     "end": "2017-03-01"
@@ -179,7 +210,10 @@
       "the-babel-community/the_babel_community_8.png"
     ],
     "description_project": "\"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
-    "description_mission": "<div>Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellements disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant.</div>",
+    "description_mission": [
+      "Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellement disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant",
+      "Conception, développement et mise en production du site vitrine"
+    ],
     "recommandations": [],
     "start": "2018-10-01",
     "end": "2019-02-01"
@@ -209,7 +243,10 @@
       "the-babel-zone/the_babel_zone_4.png"
     ],
     "description_project": "\"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
-    "description_mission": "<div>THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion. Développement de la totalité de l'application.</div>",
+    "description_mission": [
+      "THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion. Développement de la totalité de l'application",
+      "Conception, développement et mise en production de l'application"
+    ],
     "recommandations": [],
     "start": "2018-08-01",
     "end": "2019-05-01"
@@ -237,7 +274,10 @@
       "album-quiz/6.png"
     ],
     "description_project": "Album Quiz | Rap Français est un quiz qui consiste à trouver un artiste depuis un titre d'album.<br/>Le jeu est centré autour de la musique urbaine Française.<br/>Plus de 3500 albums disponibles à travers 30 ans.",
-    "description_mission": "<div>Développement du jeu sur Android, iOS.</div>",
+    "description_mission": [
+      "Développement du jeu sur Android, iOS",
+      "Conception, développement et mise en production du jeu"
+    ],
     "recommandations": [],
     "start": "2019-03-01",
     "end": "2019-11-01"
@@ -265,8 +305,12 @@
       "intranet-axis/intra_5.jpg",
       "intranet-axis/intra_6.jpg"
     ],
-    "description_project": "L'Intranet AXIS est un outil utilisé par la totalité des employés d'AXIS Immobilier pour centraliser les informations.\nIl permet le suivi des cliens de la première prise de contact jusqu'a la réserversation et facturation d'un logement.",
-    "description_mission": "<div>L'ERP offre la possibilité de crée / lire / modifier / supprimer des informations comme les prospects en cours , les réservations en cours, le mobilier dans les appartements, etc.</div>",
+    "description_project": "L'Intranet AXIS est un outil utilisé par la totalité des employés d'AXIS Immobilier pour centraliser les informations.\nIl permet le suivi des clients de la première prise de contact jusqu'à la réservation et facturation d'un logement.",
+    "description_mission": [
+      "Refonte graphique de l'ERP",
+      "Développement de systèmes de facturation, suivi de client, suivi de stock, réservation de logement",
+      "Diverses améliorations sur l'ERP"
+    ],
     "recommandations": [],
     "start": "2017-04-01",
     "end": "2017-09-01"
@@ -294,7 +338,10 @@
       "foody-basket/select-menu-fr.png"
     ],
     "description_project": "Foody basket est un jeu mobile de junk-food jouant au basketball. Le jeu possède plus d'une dizaine de personnages, tous basés de célèbres plats de fast-food et entièrement customisables. Plusieurs modes de jeu sont disponibles, allant du match simple à un système de championnat.",
-    "description_mission": "<div>Développement du jeu sur Android, iOS et Windows.</div>",
+    "description_mission": [
+      "Développement du jeu sur Android, iOS et Windows",
+      "Conception, développement et mise en production du jeu"
+    ],
     "recommandations": [],
     "start": "2016-09-01",
     "end": "2017-04-01"
@@ -324,7 +371,10 @@
       "the-babel-staff/the_babel_staff_5.jpg"
     ],
     "description_project": "\"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community.\"",
-    "description_mission": "<div>THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo. Développement de la totalité de l'application.</div>",
+    "description_mission": [
+      "THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo. Développement de la totalité de l'application",
+      "Conception, développement et mise en production"
+    ],
     "recommandations": [],
     "start": "2018-08-01",
     "end": "2019-05-01",
@@ -353,7 +403,13 @@
       "prestadiagnostic/prestadiagnostic_3.png"
     ],
     "description_project": "\"Prestadiagnostic est une plateforme internet vous permettant une mise en relation directe avec des diagnostiqueurs immobiliers proches de chez vous.\"",
-    "description_mission": "<div>Redéveloppement du système de mise en relation entre un utilisateur et des diagnostiqueurs immobiliers.</div><div>Développement d'un système d'estimation de bien.</div><div>Intégration Google Analytics.</div>",
+    "description_mission": [
+      "Redéveloppement du système de mise en relation entre un utilisateur et des diagnostiqueurs immobiliers",
+      "Développement d'un système d'estimation de bien", 
+      "Intégration Google Analytics", 
+      "Intégration module Monetico", 
+      "Conception, développement et mise en production"
+    ],
     "recommandations": [],
     "start": "2020-06-01",
     "end": "2020-07-01"
@@ -379,7 +435,12 @@
       "agora/4.png"
     ],
     "description_project": "Agora est une plateforme web et mobile dont l’objectif est de mettre en relation des personnes qui ont des compétences différentes, complémentaires, et qui veulent créer ainsi que développer de nouvelles idées en équipe. Avec Agora, vous pouvez former votre équipe autour de votre projet, ou rejoindre une équipe déjà formée en proposant votre savoir-faire.\nL'application fournit les outils nécessaires pour le bon déroulement d’un projet : un rétro-planning, du stockage, un gestionnaire de tâches, etc.",
-    "description_mission": "<div>Développement de l'application Android.</div>",
+    "description_mission": [
+      "Développement de l'application Android",
+      "Développement des formulaires d'authentification et de recherche de projet",
+      "Développement des pages d'un projet ou d'un utilisateur",
+      "Conception, développement et mise en production"
+    ],
     "recommandations": [],
     "start": "2017-09-01",
     "end": "2019-03-01"
@@ -402,7 +463,7 @@
     "url": "https://www.koodouble.com",
     "images": [],
     "description_project": "\"KOODouble allège vos mensualités et vous permet de gagner jusqu’à 12000€ sur votre assurance de prêt.\nKOODouble, c’est la garantie d’une assurance de prêt moins chère mais aussi d’une renégociation en toute simplicité, puisque KOOdouble s’occupe de TOUT : Résiliation de l’assurance actuelle, formalités auprès de la banque et adhésion.\"",
-    "description_mission": "<div>Migration du projet vers Angular 8 puis Angular 9 puis 11.</div>",
+    "description_mission": ["Migration du projet vers Angular 8 puis Angular 9 puis 11"],
     "recommandations": [],
     "start": "2018-02-01",
     "end": "2018-08-01",
@@ -431,7 +492,10 @@
       "toocamp/toocamp_5.png"
     ],
     "description_project": "\"Portail du groupe Webedia, Toocamp est un site de contenus et services aux internautes, dédié aux vacances en camping.\nSa mission : tout faire pour faciliter la recherche puis le choix d'un camping pour les vacanciers.\nComment ? Grâce à des contenus produits par nos équipes, à une sélection des offres promotionnelles proposées par les campings et les tours opérateurs, à un moteur de recherche pour comparer la plupart des offres du marché, à des photos, vidéos, articles, avis internautes, et enfin grâce à nos sélections de campings.\"",
-    "description_mission": "<div>Réalisation d'un système de traduction via des fichiers JSON ainsi que la mise en place de mini-sites destiné à différents pays.</div>",
+    "description_mission": [
+      "Réalisation d'un système de traduction via des fichiers JSON",
+      "Mise en place des déclinaisons destinées à différents pays"
+    ],
     "recommandations": [],
     "start": "2018-06-01",
     "end": "2018-09-01"
@@ -458,7 +522,9 @@
       "fivorites/fivorites_4.jpg"
     ],
     "description_project": "\"Vous avez lu un super livre, vu un super film et vous avez envie de le faire savoir à vos amis ? Créez votre Top 5, Partagez-le avec vos amis et découvrez ce qu’ils ont aimés !\nFivorites vous permet de saisir le TOP 5 films, séries, livres, musiques et BD de votre vie et du moment.\"",
-    "description_mission": "<div>Réalisation de la data acquisition des médias du site via des scripts de récupération de contenu sur les API Deezer et iTunes.</div>",
+    "description_mission": [
+      "Réalisation de la data acquisition des (albums, séries) du réseau social via des scripts de récupération de contenu sur les API Deezer et iTunes"
+    ],
     "recommandations": [],
     "start": "2018-09-01",
     "end": "2018-11-01"
@@ -485,7 +551,10 @@
       "the-colivers/the-colivers_4.jpg"
     ],
     "description_project": "THE COLIVERS, anciennement L'AUBERGE, est une agence de location d'appartement en colocation.",
-    "description_mission": "<div>Rebranding et refonte du design de l'ancien site L'AUBERGE vers la nouvelle marque <a href='https:/thecolivers.com' target='_blank'>THE COLIVERS</a>.",
+    "description_mission": [
+      "Rebranding et refonte du design de l'ancien site L'AUBERGE vers la nouvelle marque <a href='https:/thecolivers.com' target='_blank'>THE COLIVERS</a>",
+      "Conception, développement et mise en production du site"
+    ],
     "recommandations": [],
     "start": "2018-02-01",
     "end": "2018-03-01"

@@ -199,7 +199,7 @@ a {
   text-decoration: none;
   background-color: ${(props) => props.theme.secondaryColor};
   color: ${(props) => props.theme.mainTextColor};
-  padding: 0.1em 0.15em;
+  padding: 0.01em 0.05em;
   font-weight: 500;
   
   :hover {
@@ -278,7 +278,7 @@ class ProjectPage extends Component {
       {
         test: project.description_mission,
         name: 'La mission',
-        content: project.description_mission,
+        content: Array.isArray(project.description_mission) ? project.description_mission.map((description) => `<div>${description}</div>`).join('') : project.description_mission,
       },
       {
         test: project.start,

@@ -55,6 +55,7 @@ export const Scroller = ({
   filterableSkills,
   skills,
   experiences,
+  descriptions,
 }) => {
   const [index, setIndex] = React.useState({
     old: undefined,
@@ -79,7 +80,7 @@ export const Scroller = ({
   return (
     <ReactFullpage.Wrapper>
       <Section id="scroll-home-container" className="section">
-        <LandingPage />
+        <LandingPage descriptions={descriptions} />
       </Section>
       <LandingBackground />
       <Section id="scroll-work-container" className="section">
