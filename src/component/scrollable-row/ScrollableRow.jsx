@@ -8,8 +8,6 @@ class ScrollableRow extends Component {
 
     this.elementRefs = []
 
-    this.index = 1
-
     this.containerRef = React.createRef()
 
     this.intervalId = undefined

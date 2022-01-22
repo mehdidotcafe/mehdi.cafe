@@ -50,8 +50,6 @@ class Zoomable extends Component {
     this.copiedElement = undefined
     this.currentClickListener = undefined
     this.scaleFactor = undefined
-    this.reelElementWidth = undefined
-    this.reelElementHeight = undefined
 
     this.state = {
       isZoom: false,
@@ -105,8 +103,6 @@ class Zoomable extends Component {
     this.copiedElement = reelElement.cloneNode(true)
     const scaledHeight = reelElement.clientHeight
     const scaledWidth = reelElement.clientWidth
-    this.reelElementHeight = reelElement.clientHeight
-    this.reelElementWidth = reelElement.clientWidth
     const self = this
 
     const windowWidth = window.innerWidth

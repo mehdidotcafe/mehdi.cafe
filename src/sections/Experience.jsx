@@ -173,10 +173,6 @@ class Experience extends Component {
     this.state = {
       experiences,
     }
-
-    this.style = {
-      paddingBottom: 0,
-    }
   }
 
   render() {

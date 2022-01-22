@@ -110,14 +110,6 @@ class Header extends Component {
     this.collapse = this.collapse.bind(this)
   }
 
-  onLinkClick(link) {
-    const { onLinkClick } = this.props
-
-    if (onLinkClick) {
-      onLinkClick(link.link)
-    }
-  }
-
   getVisibleId() {
     const { router } = this.props
 

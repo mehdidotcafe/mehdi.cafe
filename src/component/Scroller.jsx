@@ -48,7 +48,7 @@ const ProjectBackground = styled.div`
   z-index: -1;
 `
 
-export const Scroller = ({
+export function Scroller({
   defaultIndex = 0,
   fullpageApi,
   projects,
@@ -56,7 +56,7 @@ export const Scroller = ({
   skills,
   experiences,
   descriptions,
-}) => {
+}) {
   const [index, setIndex] = React.useState({
     old: undefined,
     current: undefined,

@@ -99,34 +99,36 @@ const isDay = () => {
   return hours >= 6 && hours < 17
 }
 
-const Landing = ({ descriptions }) => (
-  <BasicPage noPaddingTop>
-    <Container>
-      <InfoContainer>
-        <TitleContainer>
-          <SecondaryTitle>
-            {isDay() ? 'Bonjour' : 'Bonsoir'}
-            , je suis Mehdi.
-          </SecondaryTitle>
-          <PrimaryTitle>
-            {descriptions.title}
-            .
-          </PrimaryTitle>
-          <MainDescription
-            text={descriptions.shortDescription}
-          />
-          <MediaContainerRow>
-            <Link isImportant href="/work">Voir mes projets</Link>
-            <Medias className="bp-large" />
-          </MediaContainerRow>
-        </TitleContainer>
-      </InfoContainer>
-      <AvatarPicture
-        src="/images-webp/mehdi.png"
-        alt="Mehdi Meddour"
-      />
-    </Container>
-  </BasicPage>
-)
+function Landing({ descriptions }) {
+  return (
+    <BasicPage noPaddingTop>
+      <Container>
+        <InfoContainer>
+          <TitleContainer>
+            <SecondaryTitle>
+              {isDay() ? 'Bonjour' : 'Bonsoir'}
+              , je suis Mehdi.
+            </SecondaryTitle>
+            <PrimaryTitle>
+              {descriptions.title}
+              .
+            </PrimaryTitle>
+            <MainDescription
+              text={descriptions.shortDescription}
+            />
+            <MediaContainerRow>
+              <Link isImportant href="/work">Voir mes projets</Link>
+              <Medias className="bp-large" />
+            </MediaContainerRow>
+          </TitleContainer>
+        </InfoContainer>
+        <AvatarPicture
+          src="/images-webp/mehdi.png"
+          alt="Mehdi Meddour"
+        />
+      </Container>
+    </BasicPage>
+  )
+}
 
 export default Landing

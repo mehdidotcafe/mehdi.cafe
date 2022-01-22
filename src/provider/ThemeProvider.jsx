@@ -13,12 +13,14 @@ const theme = {
   sectionDefaultPaddingTop: '112px',
 }
 
-export const ThemeProvider = ({
+export function ThemeProvider({
   children,
-}) => (
-  <SCThemeProvider theme={theme}>
-    {children}
-  </SCThemeProvider>
-)
+}) {
+  return (
+    <SCThemeProvider theme={theme}>
+      {children}
+    </SCThemeProvider>
+  )
+}
 
 export default ThemeProvider

@@ -218,8 +218,6 @@ class ProjectPage extends Component {
 
     if (typeof window !== 'undefined') {
       this.sliderRef = React.createRef()
-
-      this.container = document.querySelector('html')
     }
 
     this.state = {
@@ -292,7 +290,7 @@ class ProjectPage extends Component {
       <Container noMargin>
         <Background />
         {project
-          ? (
+          && (
             <InfoContainer>
               <DescriptionContainer>
                 <Header>
@@ -380,8 +378,7 @@ class ProjectPage extends Component {
                 </RectScroller>
               </ScrollerContainer>
             </InfoContainer>
-          )
-          : <></>}
+          )}
       </Container>
     )
   }

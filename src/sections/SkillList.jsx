@@ -40,10 +40,10 @@ const MarginRow = styled(Row)`
   margin-top: 64px;
 `
 
-export const SkillPage = ({
+export function SkillPage({
   skills,
-}) => {
-  const Container = WindowSize.isLarge() ? Link : ((props) => <>{props.children}</>)
+}) {
+  const Container = WindowSize.isLarge() ? Link : ((props) => props.children)
 
   return (
     <BasicPage>

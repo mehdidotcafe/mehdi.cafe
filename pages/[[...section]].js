@@ -34,4 +34,5 @@ export async function getStaticProps() {
   }
 }
 
+// eslint-disable-next-line
 export { default } from '../src/sections/MainScrollPage'
