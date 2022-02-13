@@ -27,7 +27,7 @@
 
   {"name": "Corona", "logo":"corona", "backgroundColor": "#f47e20", "experience": 1, "isFilterable": false, "isVisible": false},
 
-  {"name": "Git", "logo": "git", "backgroundColor": "#f05033", "experience": 6, "isFilterable": false, "isVisible": false},
+  {"name": "Git", "logo": "git", "backgroundColor": "#f05033", "experience": 7, "isFilterable": false, "isVisible": false},
 
   {"name": "Chrome", "logo": "chrome", "backgroundColor": "#49ae48", "experience": 0.5, "isFilterable": false, "isVisible": false},
   {"name": "Electron", "logo": "electron", "backgroundColor": "#6bdefb", "experience": 0.5, "isFilterable": false, "isVisible": false},

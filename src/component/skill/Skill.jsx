@@ -187,8 +187,8 @@ class Skill extends Component {
         && (
           <AsideContainer>
             <RelativeContainer>
-              <PrContainer className="bp-large"><ProgressRing side={Math.floor(largeSide)} stroke={largeStroke} progress={(experience * 100) / 5} /></PrContainer>
-              <PrContainer className="bp-small"><ProgressRing side={Math.floor(smallSide)} stroke={smallStroke} progress={(experience * 100) / 5} /></PrContainer>
+              <PrContainer className="bp-large"><ProgressRing side={Math.floor(largeSide)} stroke={largeStroke} progress={(experience * 100) / 6} /></PrContainer>
+              <PrContainer className="bp-small"><ProgressRing side={Math.floor(smallSide)} stroke={smallStroke} progress={(experience * 100) / 6} /></PrContainer>
             </RelativeContainer>
             <AsideTextContainer>
               <AsideTextNum>{experience}</AsideTextNum>
