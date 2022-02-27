@@ -1,6 +1,6 @@
 [
   {
-    "name": "arte",
+    "name": "my arte",
     "logo": "arte",
     "backgroundColor": "#fd4600",
     "languages": [
@@ -8,8 +8,13 @@
       "Typescript",
       "Javascript",
       "PHP",
+      "Symfony",
       "Redis",
-      "mySQL",
+      "mySQL",      
+      "Storybook",
+      "Eslint",
+      "PHPUnit",
+      "Jest",
       "Web",
       "Git"
     ],
@@ -26,7 +31,7 @@
     "description_project": "\"Média européen public responsable, ARTE s'engage sur des thématiques chères aux citoyens et citoyennes d’Europe : la lutte contre les inégalités, qu’elles soient sociales, culturelles, économiques, géographiques, liées au genre ou au handicap, ainsi que le développement durable.\"",
     "description_context": "Maintien et refonte du front-end ainsi que du back-end du site my.arte.tv ainsi que d'autres projet de la chaine télévision ARTE",
     "description_mission": [
-      "Refonte du site <a href='https://my.arte.tv' target='_blank'>my.arte.tv</a>sous forme de libraire de composant react",
+      "Refonte du site <a href='https://my.arte.tv' target='_blank'>my.arte.tv</a>en libraire de composant react",
       "Développement et optimisation de l'API relatif aux données de l'utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...)",
       "Accompagnement de la refonte de l'API utilisateur vers Symfony",
       "Migration du système de gestion des utilisateurs ARTE de LoginRadius vers Keycloak",
@@ -48,6 +53,7 @@
       "mySQL",
       "Redis",
       "Angular",
+      "Eslint",
       "Web",
       "Git"
     ],
@@ -66,6 +72,7 @@
     "description_mission": [
       "Développement de \"COLLECT\", un module de relance de factures impayées comportant un système de planification d'actions de scénarios de relance (email, sms, courrier ...) ainsi qu'un éditeur de modèle",
       "Développement d'un système de reporting au format PDF agrégeant des données clés pour les clients",
+      "Développement d’un espace de travail collaboratif",
       "Développement de divers connecteurs vers des APIs externes (ATRADUIS, Euler Hermes)",
       "Diverses montées de version d'Angular",
       "Diverses améliorations de la plateforme"
@@ -88,7 +95,8 @@
       "PHP",
       "mySQL",
       "Git",
-      "Web"
+      "Web",
+      "Eslint"
     ],
     "companies": [
       "freelancer"
@@ -102,7 +110,7 @@
     ],
     "description_project": "\"Le site matemeup.com a pour but de centraliser les outils nécessaires aux joueurs e-sport et plus globalement aux joueurs de jeux vidéos, de faciliter la création de liens et les rencontres tout en promouvant la sphère gaming qui s'y rapporte (diffuseurs, casteurs, vidéastes...).\"",
     "description_mission": [
-      "Développement d'un outil de matchmaking qui comporte un système de salon texuel et vocal avec la possibilité d'en créer, modifier et en supprimer",
+      "Développement d'un outil de matching de joueur qui comporte un système de salon textuel et vocal avec la possibilité d'en créer, modifier et en supprimer",
       "Développement d'un chat en temps réel",
       "Développement d'un fil d'actualité où les utilisateurs peuvent poster du texte et des images",
       "Développement d'un système de Load-Balancing qui reparti la charge entre plusieurs serveurs",
@@ -171,7 +179,7 @@
       "cloudindus/cloudindus_4.jpg",
       "cloudindus/cloudindus_5.png"
     ],
-    "description_project": "Cloudindus est un superviseur industriel / platforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.\nUtilisation de MEAN Stack (MongoDB, Express, Angular 1.29, Node.js) pour le développement.",
+    "description_project": "Cloudindus est un superviseur industriel / plateforme de configuration d'objet IoT. Le site permet à des particuliers aussi bien qu'à des professionnels d’interagir et consulter l'état de leurs objets connectés entre eux sur leur réseau. Les interactions entre les objets peuvent être codée par l'utilisateur via l'interface du site. Il permet aussi d'éditer un synoptique, la représentation graphique d'un objet, via un éditeur SVG présent directement sur le site.\nUtilisation de MEAN Stack (MongoDB, Express, Angular 1.29, Node.js) pour le développement.",
     "description_mission": [
       "Réalisation d'un moteur permettant la mise à jour récursive de l'état d'un objet connecté selon l'état d'autres objets",
       "Implémentation de la notion de \"synoptique\" qui permet de visualiser l'état d'un objet connecté via une représentation graphique (SVG) sur la plateforme",
@@ -390,6 +398,7 @@
       "mySQL",
       "Laravel",
       "jQuery",
+      "PHPUnit",
       "Web",
       "Git"
     ],
@@ -412,7 +421,7 @@
     ],
     "recommandations": [],
     "start": "2020-06-01",
-    "end": "2020-07-01"
+    "end": "2021-07-01"
   },
   {
     "name": "Agora",

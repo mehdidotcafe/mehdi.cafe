@@ -25,6 +25,11 @@
   {"name": "C", "logo": "c", "backgroundColor": "#7f8b99", "experience": 3, "isFilterable": false},
   {"name": "C++", "logo": "c++", "backgroundColor": "#004482", "experience": 3, "isFilterable": false},
 
+  {"name": "Storybook", "logo": "storybook", "backgroundColor": "#fe4785", "experience": 1, "isFilterable": false, "isVisible" : false},
+  {"name": "Eslint", "logo": "eslint", "backgroundColor": "#dedcff", "experience": 3, "isFilterable": false, "isVisible" : false},
+  {"name": "Jest", "logo": "jest", "backgroundColor": "#ffffff", "experience": 2, "isFilterable": false, "isVisible" : false},
+  {"name": "PHPUnit", "logo": "phpunit", "backgroundColor": "#b5b7fe", "experience": 1, "isFilterable": false, "isVisible" : false},
+
   {"name": "Corona", "logo":"corona", "backgroundColor": "#f47e20", "experience": 1, "isFilterable": false, "isVisible": false},
 
   {"name": "Git", "logo": "git", "backgroundColor": "#f05033", "experience": 7, "isFilterable": false, "isVisible": false},
