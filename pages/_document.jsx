@@ -34,8 +34,8 @@ class MainDocument extends Document {
       <Html lang="fr">
         <Head>
           <meta charSet="UTF-8" />
-          <link rel="icon" href="/favicon.ico" />
-          <meta property="og:image" content="/favicon.ico" />
+          <link rel="icon" href="/favicon/favicon-16x16.ico" />
+          <meta property="og:image" content="/favicon/favicon-16x16.ico" />
           <meta name="theme-color" content="#29154e" />
           <link rel="manifest" href="/manifest.json" />
 
