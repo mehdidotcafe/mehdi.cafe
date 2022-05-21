@@ -32,7 +32,7 @@ class MainScrollPage extends PureComponent {
 
     return (
       <ReactFullpage
-        licenseKey ={process.env.NEXT_PUBLIC_REACTFULLPAGE_LICENSE_KEY}
+        licenseKey={process.env.NEXT_PUBLIC_REACTFULLPAGE_LICENSE_KEY}
         scrollOverflow
         scrollbars={false}
         onLeave={this.onScroll}
