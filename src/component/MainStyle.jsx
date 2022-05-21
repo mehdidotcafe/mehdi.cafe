@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const MainStyle = createGlobalStyle`
 
-.iScrollVerticalScrollbar {
+.iScrollVerticalScrollbar, .fp-watermark {
   display: none;
 }
 
