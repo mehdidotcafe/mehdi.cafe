@@ -34,11 +34,10 @@ const InfoContainer = styled.div`
 `
 
 const AvatarPicture = styled(Image)`
-  width: 20vw;
-  min-width: 300px;
+  width: 700px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
-z-index: 2;
+  z-index: 2;
 
   ${(props) => props.theme.isPhone} {
     display: none;
