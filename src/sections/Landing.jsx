@@ -34,7 +34,6 @@ const InfoContainer = styled.div`
 `
 
 const AvatarPicture = styled(Image)`
-  width: 700px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
   z-index: 2;
@@ -122,6 +121,8 @@ function Landing({ descriptions }) {
           </TitleContainer>
         </InfoContainer>
         <AvatarPicture
+          height="807"
+          width="700"
           src="/images-webp/mehdi.png"
           alt="Mehdi Meddour"
         />
