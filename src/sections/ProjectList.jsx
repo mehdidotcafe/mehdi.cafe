@@ -20,7 +20,6 @@ import SkillService from '../services/Skill'
 const Container = styled(Row)`
   width: 25%;
   max-width: 25%;
-  margin-right: 2.5%;
   padding-right: 2.5%;
   overflow-x: auto;
   border-right: 3px solid black;
@@ -141,7 +140,7 @@ class ProjectListPage extends Component {
 
     this.filters = []
 
-    this.filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++']
+    this.filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++', 'mySQL']
 
     this.state = {
       projects: this.projects.slice(0),

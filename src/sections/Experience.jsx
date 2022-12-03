@@ -56,6 +56,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
   .vertical-timeline-element-content {
     width: max-content;
     max-width: calc(100% - 84px - 46px);
+    min-width: 500px;
   }
 
   ${(props) => props.theme.isLaptop} {
@@ -120,7 +121,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     background-color: ${(props) => props.theme.secondaryColor};
     color: ${(props) => props.theme.mainTextColor};
     padding: 0.05em 0.075em;
-    font-weight: 500;
+    font-weight: 400;
 
     :hover {
       background-color: ${(props) => props.theme.mainColor};
@@ -145,7 +146,7 @@ const NoPaddingBottomBasicPage = styled(BasicPage)`
 `
 
 const ElementTitle = styled.h3`
-  font-size: 2.5em;
+  font-size: 2.25em;
   margin-block-start: 0;
   margin-block-end: 0;
   
