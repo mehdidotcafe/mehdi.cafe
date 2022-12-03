@@ -37,7 +37,7 @@ text-align: center;
 cursor: pointer;
 
 :hover {
-  background-color: ${(props) => props.theme.mainColor} !important;
+  background-color: ${(props) => props.theme.tertiaryColor} !important;
 }
 
 div {
@@ -203,7 +203,7 @@ a {
   font-weight: 500;
   
   :hover {
-    background-color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.tertiaryColor};
   }
 }
 

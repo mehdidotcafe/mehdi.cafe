@@ -22,7 +22,7 @@ const ButtonContainer = styled.div`
     max-width: 80vw;
     
     :hover {
-      background-color: ${(props) => props.theme.mainColor} !important;
+      background-color: ${(props) => props.theme.tertiaryColor} !important;
     }
   }
 }

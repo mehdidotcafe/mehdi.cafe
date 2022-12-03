@@ -117,14 +117,13 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     text-decoration: none;
-    transition: 0.3s;  
     background-color: ${(props) => props.theme.secondaryColor};
     color: ${(props) => props.theme.mainTextColor};
     padding: 0.05em 0.075em;
     font-weight: 400;
 
     :hover {
-      background-color: ${(props) => props.theme.mainColor};
+      background-color: ${(props) => props.theme.tertiaryColor};
     }
   }
 
