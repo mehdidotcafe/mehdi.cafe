@@ -8,7 +8,7 @@ const theme = {
   mainTextColor: '#ffffff',
   secondaryColor: '#7a0056',
   tertiaryColor: '#e84c84',
-  gradiantColors: ['#7a0056', '#961356', '#af2854', '#c43f51', '#d7574e'].join(', '),
+  gradiantColors: ['#7a0056', '#b3286e', '#c53476', '#d43e7c', '#e84c84'].join(', '),
   isPhone: `@media only screen and (max-width: ${widthTreshold})`,
   isLaptop: `@media only screen and (min-width: ${widthTreshold})`,
   sectionDefaultPaddingTop: '112px',
