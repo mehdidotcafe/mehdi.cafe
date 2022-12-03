@@ -38,9 +38,9 @@ const SkillBackground = styled.div`
 
 const ProjectBackground = styled.div`
   position: absolute;
-  bottom: -130vh;
-  height: 100%;
-  right: -160vh;
+  bottom: -155vh;
+  height: 100vh;
+  right: -75vh;
   background-image: linear-gradient(to left top, ${(props) => props.theme.gradiantColors});
   width: 100vh;
   -webkit-transform: rotate(-35deg);
