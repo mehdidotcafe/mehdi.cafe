@@ -1,7 +1,8 @@
 {
-  "name": "meddou.com",
-  "version": "2.0.0",
-  "private": true,
+  "name": "mehdi.cafe",
+  "version": "2.1.0",
+  "private": false,
+  "license": "MIT",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.26",
     "core-js": "^3.22.8",

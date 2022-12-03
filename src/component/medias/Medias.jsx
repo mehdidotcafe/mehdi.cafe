@@ -35,16 +35,16 @@ const MediaButton = styled.a`
 function Medias({ className }) {
   return (
     <Container>
-      <MediaButton className={className} aria-label="Email" href="mailto:contact@meddou.com">
+      <MediaButton className={className} aria-label="Email" href="mailto:contact@mehdi.cafe">
         <Email />
       </MediaButton>
-      <MediaButton className={className} aria-label="Linkedin" href="https://www.linkedin.com/in/meddou" target="_blank" rel="noopener noreferrer">
+      <MediaButton className={className} aria-label="Linkedin" href="https://www.linkedin.com/in/mehdidotcafe" target="_blank" rel="noopener noreferrer">
         <Linkedin />
       </MediaButton>
-      <MediaButton className={className} aria-label="Github" href="https://github.com/meddou" target="_blank" rel="noopener noreferrer">
+      <MediaButton className={className} aria-label="Github" href="https://github.com/mehdidotcafe" target="_blank" rel="noopener noreferrer">
         <Github />
       </MediaButton>
-      <MediaButton className={className} aria-label="Medium" href="https://medium.com/@meddou" target="_blank" rel="noopener noreferrer">
+      <MediaButton className={className} aria-label="Medium" href="https://medium.com/@mehdidotcafe" target="_blank" rel="noopener noreferrer">
         <Medium />
       </MediaButton>
     </Container>

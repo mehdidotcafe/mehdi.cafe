@@ -48,12 +48,12 @@ class MainDocument extends Document {
           <meta property="og:title" content="Mehdi Meddour | Développeur Freelance WEB / LOGICIEL" />
           <meta property="twitter:title" content="Mehdi Meddour | Développeur Freelance WEB / LOGICIEL" />
           <meta property="og:site_name" content="Mehdi Meddour" />
-          <meta property="og:url" content="https://meddou.com" />
+          <meta property="og:url" content="https://mehdi.cafe" />
 
           <meta property="og:type" content="website" />
 
-          <meta property="twitter:image" content="https://meddou.com/images-webp/mehdi.png" />
-          <meta property="og:image" content="https://meddou.com/images-webp/mehdi.png" />
+          <meta property="twitter:image" content="https://mehdi.cafe/images-webp/mehdi.png" />
+          <meta property="og:image" content="https://mehdi.cafe/images-webp/mehdi.png" />
           <link rel="stylesheet" type="text/css" href="/css/index.css" media="screen" />
           <link rel="stylesheet" type="text/css" href="/css/slick.min.css" media="screen" />
           {/* Global Site Tag (gtag.js) - Google Analytics */}

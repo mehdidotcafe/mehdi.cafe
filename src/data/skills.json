@@ -39,5 +39,7 @@
   {"name": "PWA", "logo": "PWA", "backgroundColor": "#5a0fc8", "experience": 0.5, "isFilterable": false, "isVisible": false},
 
 
-  {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1, "isFilterable": false}
+  {"name": "Lua", "logo":"lua", "backgroundColor": "#000080", "experience": 1, "isFilterable": false},
+
+  {"name": "AWS", "logo": "aws", "backgroundColor": "#082739", "experience": 1 }
 ]

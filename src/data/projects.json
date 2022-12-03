@@ -40,7 +40,7 @@
     ],
     "recommandations": [],
     "start": "2020-08-01",
-    "end": null
+    "end": "2022-04-01"
   },
   {
     "name": "kwote",
@@ -136,7 +136,7 @@
     "companies": [
       "freelancer"
     ],
-    "url": "https://github.com/meddou/matemeup_android",
+    "url": "https://github.com/mehdidotcafe/matemeup_android",
     "images": [
       "matemeup-mobile/matemeup_mobile_1.jpg",
       "matemeup-mobile/matemeup_mobile_2.jpg",
@@ -201,7 +201,8 @@
       "Symfony",
       "mySQL",
       "Web",
-      "Git"
+      "Git",
+      "Laravel"
     ],
     "companies": [
       "freelancer"
@@ -405,7 +406,6 @@
     "companies": [
       "freelancer"
     ],
-    "url": "https://prestadiagnostic.com/",
     "images": [
       "prestadiagnostic/prestadiagnostic_2.png",
       "prestadiagnostic/prestadiagnostic_1.png",
@@ -523,7 +523,6 @@
     "companies": [
       "freelancer"
     ],
-    "url": "https://fivorites.com/",
     "images": [
       "fivorites/fivorites_1.jpg",
       "fivorites/fivorites_2.jpg",
