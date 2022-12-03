@@ -50,7 +50,7 @@
 }
 
 .recommendation-slider .slick-dots li button {
-  background-color: ${(props) => props.theme.mainColor};
+  background-color: #29154e;
   color: transparent;
   height: 12px;
   width: 12px;
@@ -64,11 +64,11 @@
 }
 
 .recommendation-slider .slick-dots li.slick-active button, .recommendation-slider .slick-dots li:hover button {
-  background-color: ${(props) => props.theme.secondaryColor};
+  background-color: #7a0056;
 }
 
 .recommendation-slider .slick-arrow:hover {
-  border-color: ${(props) => props.theme.secondaryColor};
+  border-color: #29154e;
 }
 
 .recommendation-slider {

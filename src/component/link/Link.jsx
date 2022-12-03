@@ -15,7 +15,7 @@ a {
   font-weight: 500;
   
   :hover {
-    background-color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.tertiaryColor};
   }
 }
 `

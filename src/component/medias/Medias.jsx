@@ -27,7 +27,7 @@ const MediaButton = styled.a`
     color: ${(props) => props.theme.mainTextColor};
     
     :hover {
-      background-color: ${(props) => props.theme.mainColor};
+      background-color: ${(props) => props.theme.tertiaryColor};
     }
   }
 `
