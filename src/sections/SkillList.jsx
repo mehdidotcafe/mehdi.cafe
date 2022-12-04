@@ -57,7 +57,7 @@ export function SkillPage({
       <MarginRow center>
         {skills.map((skill) => (
           <Item key={skill.name}>
-            <Container href={{ pathname: '/work', query: { skill: skill.name } }}>
+            <Container href={{ pathname: '/work', query: { skill: skill.name } }} legacyBehavior>
               {/* eslint-disable-next-line */}
             <a>
               <Skill

@@ -43,7 +43,7 @@ class MainDocument extends Document {
 
           <meta property="og:description" content="Développeur Freelance basé à Marseille. Je vous accompagne dans la réalisation de votre projet numérique, site internet, application mobile." />
           <meta property="twitter:description" content="Développeur Freelance basé à Marseille. Je vous accompagne dans la réalisation de votre projet numérique, site internet, application mobile." />
-          <meta description="true" name="description" content="Développeur Freelance basé à Marseille. Je vous accompagne dans la réalisation de votre projet numérique, site internet, application mobile." />
+          <meta name="description" content="Développeur Freelance basé à Marseille. Je vous accompagne dans la réalisation de votre projet numérique, site internet, application mobile." />
           <link href="https://fonts.googleapis.com/css?family=Roboto:100,400|Major+Mono+Display|EB+Garamond|Oswald:700" rel="stylesheet" />
           <meta property="og:title" content="Mehdi Meddour | Développeur Freelance WEB / LOGICIEL" />
           <meta property="twitter:title" content="Mehdi Meddour | Développeur Freelance WEB / LOGICIEL" />

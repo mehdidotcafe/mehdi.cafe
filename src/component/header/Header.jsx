@@ -148,7 +148,7 @@ class Header extends Component {
         <ButtonContainer>
           {this.links.map((link, idx) => (
             <li key={link.link}>
-              <Link aria-label={link.link} key={link.link} href={`/${link.link}`}>
+              <Link aria-label={link.link} key={link.link} href={`/${link.link}`} legacyBehavior>
                 <Button
                   onClick={this.collapseIfTrue}
                   isActive={visibleId && visibleId === link.link}
