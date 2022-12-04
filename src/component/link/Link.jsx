@@ -30,7 +30,7 @@ const LinkContainer = styled.span`
 /* eslint-disable */
 export const Link = (props) => (
   <NextLinkContainer isImportant={props.isImportant}>
-    <NextLink {...props} />
+    <NextLink {...props} legacyBehavior/>
   </NextLinkContainer>
 )
 export default Link
