@@ -2,7 +2,7 @@
   "name": "mehdi.cafe",
   "version": "2.1.0",
   "private": false,
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.31",
     "core-js": "^3.26.1",

@@ -183,16 +183,16 @@ class Experience extends Component {
         <div className="experience-page">
           <ExperienceTitle noMargin>Mes expériences</ExperienceTitle>
           <StyledVerticalTimeline layout="1-column" visible>
-            { experiences.map((experiance, idx) => (
+            { experiences.map((experience, idx) => (
               <VerticalTimelineElement
-                key={experiance.title}
+                key={experience.title}
                 className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
                 date={(
                   <div>
-                    <span>{experiance.date}</span>
-                    {experiance.projectUrl ? ' | ' : ''}
-                    {experiance.projectUrl && (
-                    <Link href={experiance.projectUrl}>
+                    <span>{experience.date}</span>
+                    {experience.projectUrl ? ' | ' : ''}
+                    {experience.projectUrl && (
+                    <Link href={experience.projectUrl}>
                       VOIR LE PROJET
                     </Link>
                     )}
@@ -200,12 +200,12 @@ class Experience extends Component {
                 )}
                 iconStyle={{ background: '#331c5d', color: '#fff' }}
                 icon={
-                  <Image src={`/images-webp/experiences/${experiance.logo}`} alt={experiance.title} />
+                  <Image src={`/images-webp/experiences/${experience.logo}`} alt={experience.title} />
                 }
               >
-                <ElementTitle>{experiance.title}</ElementTitle>
-                <ElementSubTitle>{experiance.subtitle}</ElementSubTitle>
-                <Description text={experiance.text} />
+                <ElementTitle>{experience.title}</ElementTitle>
+                {experience.subtitle && <ElementSubTitle>{experience.subtitle}</ElementSubTitle>}
+                <Description text={experience.text} />
               </VerticalTimelineElement>
             ))}
           </StyledVerticalTimeline>
