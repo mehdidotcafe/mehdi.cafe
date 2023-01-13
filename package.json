@@ -1,11 +1,12 @@
 {
   "name": "mehdi.cafe",
-  "version": "3.0.0-beta.3",
+  "version": "3.0.0-beta.4",
   "private": false,
   "license": "GPL-3.0-or-later",
   "scripts": {
     "dev": "cp ./tsconfig.en.json tsconfig.json && next dev",
     "build": "cp ./tsconfig.en.json tsconfig.json && next build",
+    "build:fr": "cp ./tsconfig.fr.json tsconfig.json && next build",
     "start": "cp ./tsconfig.en.json tsconfig.json && next start",
     "lint": "eslint . --ext .tsx,.ts,.js",
     "lint:fix": "eslint . --ext .tsx,.ts,.js --fix",
