@@ -43,6 +43,7 @@ const AvatarPicture = styled(Image)`
   z-index: 2;
 
   img {
+    object-fit: contain;
     width: 100%;
   }
 
