@@ -10,11 +10,11 @@ module.exports = {
     defaultLocale: process.env.DEFAULT_LOCALE,
     domains: [
       {
-        domain: process.env.DOMAIN_EN,
+        domain: process.env.NEXT_PUBLIC_DOMAIN_EN,
         defaultLocale: 'en',
       },
       {
-        domain: process.env.DOMAIN_FR,
+        domain: process.env.NEXT_PUBLIC_DOMAIN_FR,
         defaultLocale: 'fr',
       },
     ],
