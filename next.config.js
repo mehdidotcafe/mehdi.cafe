@@ -5,7 +5,7 @@ module.exports = {
     styledComponents: true,
   },
 
-  i18n: process.env.ENV !== 'development' && {
+  i18n: process.env.ENV !== 'development' ? {
     locales: ['en', 'fr'],
     defaultLocale: process.env.DEFAULT_LOCALE,
     domains: [
@@ -18,5 +18,5 @@ module.exports = {
         defaultLocale: 'fr',
       },
     ],
-  },
+  } : undefined,
 }

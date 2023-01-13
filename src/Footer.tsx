@@ -1,5 +1,6 @@
 import BasicButton from '@BasicButton'
 import { CONTACT_EMAIL } from '@env'
+import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
 import styled from 'styled-components'
@@ -10,6 +11,9 @@ const Footer = () => {
   return (
     <Container>
       <ButtonContainer>
+        <I18NSwitchContainer>
+          <I18NSwitch />
+        </I18NSwitchContainer>
         <BasicButton type="submit" onClick={onContactButtonClick}>
           <ButtonText aria-label={t.footer.getInTouch} href={`mailto:${CONTACT_EMAIL}`}>{t.footer.getInTouch}</ButtonText>
         </BasicButton>
@@ -29,6 +33,7 @@ const onContactButtonClick = () => {
 }
 
 const Container = styled.footer`
+position: relative;
 background-color: ${(props) => props.theme.mainColor};
 display: flex;
 color: white;
@@ -59,11 +64,22 @@ const Copyright = styled.p`
 `
 
 const MediasContainer = styled.div`
-float: right;
+position: absolute;
+right: 0;
+// parent padding-bttom value 
+bottom: 32px;
+height: 32px;
 
 ${(props) => props.theme.isPhone} {
   display: none;
 }
+`
+
+const I18NSwitchContainer = styled.div`
+position: absolute;
+left: 8px;
+// parent padding-bttom value 
+bottom: 32px;
 `
 
 const ButtonText = styled.a`
