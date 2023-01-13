@@ -59,7 +59,6 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 64px;
-  font-family: var(${(props) => props.theme.font.terciary});
 
   ::before {
     background: ${(props) => props.theme.mainColor};
@@ -145,10 +144,13 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     text-transform: uppercase;
     font-weight: normal;
     opacity: 1;
+    font-family: var(${(props) => props.theme.font.terciary});
   }
 
   p {
+    font-weight: normal;
     font-size: 1.3rem;
+    font-family: var(${(props) => props.theme.font.content});
   }
 
   .vertical-timeline-element-content-arrow {
@@ -186,6 +188,7 @@ const NoPaddingBottomBasicSection = styled(BasicSection)`
 `
 
 const ElementTitle = styled.h3`
+  font-family: var(${(props) => props.theme.font.title});
   font-size: 2.25em;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -200,6 +203,7 @@ const ElementSubTitle = styled.h4`
   font-weight: normal;
   margin-block-start: 0;
   margin-block-end: 0;
+  font-family: var(${(props) => props.theme.font.terciary});
 `
 
 export default Section
