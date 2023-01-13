@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@lang": [
+        "lang/en.json"
+      ],
+      "@*": [
+        "src/*"
+      ],
+      "@section/description/description": [
+        "src/section/description/description.fr.ts"
+      ],
+      "@section/experience/experiences": [
+        "src/section/experience/experiences.fr.ts"
+      ],
+      "@section/project/projects": [
+        "src/section/project/projects.fr.ts"
+      ],
+      "@section/skill/skills": [
+        "src/section/skill/skills.fr.ts"
+      ],
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.json",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

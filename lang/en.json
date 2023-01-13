@@ -1,0 +1,55 @@
+{
+  "lang": "en",
+  "userIdentity": "Mehdi Meddour",
+  "description": {
+    "day": {
+      "mainTitle": "Hello I am Mehdi."
+    },
+    "night": {
+      "mainTitle": "Hello I am Mehdi."
+    },
+    "seeMyProjects": "Check out my work"
+  },
+  "work": {
+    "myProjects": "My work",
+    "clearCross": "(x) ",
+    "filters": "Filters",
+    "noProject": "No work"
+  },
+  "skill": {
+    "mySkills": "My skills",
+    "yearsOfExperience": "Years of experience"
+  },
+  "header": {
+    "links": {
+      "Home": "Home",
+      "Work": "Work",
+      "Skills": "Skills",
+      "Experiences": "Experiences"  
+    },
+    "logo": {
+      "imageAlt": "Mehdi Meddour Logo"
+    }
+  },
+  "experience": {
+    "myExperiences": "My experiences",
+    "current": "Current"
+  },
+  "projectPage": {
+    "tabs": {
+      "work": "Project",
+      "job": "Work",
+      "duration": "Duration",
+      "current": "Current"
+    },
+    "seeProject": "Check projet"
+  },
+  "skillTile": {
+    "years": "Years",
+    "year": "year"
+  },
+  "footer": {
+    "getInTouch": "Get in touch!",
+    "copyright": "Copyright @ Mehdi Meddour"  
+  }
+}
