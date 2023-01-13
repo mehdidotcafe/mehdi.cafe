@@ -4,7 +4,7 @@ import Row from '@grid/Row'
 import ScrollableRow from '@grid/ScrollableRow'
 import BasicSection from '@section/BasicSection'
 import { Project } from '@section/project/Project'
-import { useProjectByName } from '@section/project/useProjects'
+import useProjects, { useProjectByName } from '@section/project/useProjects'
 import { Skill } from '@section/skill/Skill'
 import { useAllSkills } from '@section/skill/useSkills'
 import ProjectTile from '@tile/ProjectTile'
@@ -18,13 +18,44 @@ import { useRouter } from 'next/router'
 import { MouseEvent, useEffect, useState } from 'react'
 import styled from 'styled-components'
 
+export async function getStaticPaths() {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const projects = useProjects()
+
+  return {
+    paths: projects.map((project) => ({
+      params: {
+        name: project.name,
+      },
+    })),
+    fallback: false,
+  }
+}
+
+type StaticProps = {
+  params: {
+    name: string
+  }
+}
+
+export async function getStaticProps({ params }: StaticProps) {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const projects = useProjects()
+
+  return {
+    props: {
+      project: projects.find((project) => project.name === params.name),
+    },
+  }
+}
+
 const WorkPage = () => {
   const t = useTranslations()
   const router = useRouter()
   const {
     project,
     skills,
-  } = useProjectWithSkillsByName(router.query.id as string)
+  } = useProjectWithSkillsByName(router.query.name as string)
 
   const backToWork = (e: MouseEvent) => {
     e.preventDefault()
@@ -190,12 +221,13 @@ const useProjectWithSkillsByName = (name: string) => {
   }
 }
 
-const displayDate = (locale: string, date?: Date) => date?.toLocaleDateString(locale, {
-  year: 'numeric',
-  month: 'long',
-  weekday: undefined,
-  day: undefined,
-})
+const displayDate = (locale: string, dateStr?: string) => dateStr && new Date(dateStr)
+  .toLocaleDateString(locale, {
+    year: 'numeric',
+    month: 'long',
+    weekday: undefined,
+    day: undefined,
+  })
 
 const BackButton = styled.button`
 position: absolute;

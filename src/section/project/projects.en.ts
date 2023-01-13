@@ -40,8 +40,8 @@ const projects: Project[] = [
       "Optimisation du player vidéo utilisé sur <a href='https://arte.tv' target='_blank'>arte.tv</a>",
     ],
     recommendations: [],
-    start: new Date('2020-08-01'),
-    end: new Date('2022-04-01'),
+    start: '2020-08-01',
+    end: '2022-04-01',
   },
   {
     name: 'kwote',
@@ -79,8 +79,8 @@ const projects: Project[] = [
       'Diverses améliorations de la plateforme',
     ],
     recommendations: [],
-    start: new Date('2018-08-01'),
-    end: new Date('2021-10-01'),
+    start: '2018-08-01',
+    end: '2021-10-01',
   },
   {
     name: 'MateMeUp',
@@ -120,8 +120,8 @@ const projects: Project[] = [
     recommendations: [
       1,
     ],
-    start: new Date('2017-10-01'),
-    end: new Date('2018-01-01'),
+    start: '2017-10-01',
+    end: '2018-01-01',
   },
   {
     name: 'MateMeUp Mobile',
@@ -155,8 +155,8 @@ const projects: Project[] = [
     recommendations: [
       1,
     ],
-    start: new Date('2018-02-01'),
-    end: new Date('2018-08-01'),
+    start: '2018-02-01',
+    end: '2018-08-01',
   },
   {
     name: 'Cloudindus',
@@ -188,8 +188,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production de la plateforme',
     ],
     recommendations: [],
-    start: new Date('2015-05-01'),
-    end: new Date('2017-03-01'),
+    start: '2015-05-01',
+    end: '2017-03-01',
   },
   {
     name: 'The Babel Community',
@@ -225,8 +225,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production du site vitrine',
     ],
     recommendations: [],
-    start: new Date('2018-10-01'),
-    end: new Date('2019-02-01'),
+    start: '2018-10-01',
+    end: '2019-02-01',
   },
   {
     name: 'The Babel Zone',
@@ -258,8 +258,8 @@ const projects: Project[] = [
       "Conception, développement et mise en production de l'application",
     ],
     recommendations: [],
-    start: new Date('2018-08-01'),
-    end: new Date('2019-05-01'),
+    start: '2018-08-01',
+    end: '2019-05-01',
   },
   {
     name: 'Album Quiz',
@@ -289,8 +289,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production du jeu',
     ],
     recommendations: [],
-    start: new Date('2019-03-01'),
-    end: new Date('2019-11-01'),
+    start: '2019-03-01',
+    end: '2019-11-01',
   },
   {
     name: 'Intranet AXIS',
@@ -322,8 +322,8 @@ const projects: Project[] = [
       "Diverses améliorations sur l'ERP",
     ],
     recommendations: [],
-    start: new Date('2017-04-01'),
-    end: new Date('2017-09-01'),
+    start: '2017-04-01',
+    end: '2017-09-01',
   },
   {
     name: 'Foody Basket',
@@ -353,8 +353,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production du jeu',
     ],
     recommendations: [],
-    start: new Date('2016-09-01'),
-    end: new Date('2017-04-01'),
+    start: '2016-09-01',
+    end: '2017-04-01',
   },
   {
     name: 'The Babel Staff',
@@ -386,8 +386,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production',
     ],
     recommendations: [],
-    start: new Date('2018-08-01'),
-    end: new Date('2019-05-01'),
+    start: '2018-08-01',
+    end: '2019-05-01',
     isVisible: false,
   },
   {
@@ -421,8 +421,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production',
     ],
     recommendations: [],
-    start: new Date('2020-06-01'),
-    end: new Date('2021-07-01'),
+    start: '2020-06-01',
+    end: '2021-07-01',
   },
   {
     name: 'Agora',
@@ -452,8 +452,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production',
     ],
     recommendations: [],
-    start: new Date('2017-09-01'),
-    end: new Date('2019-03-01'),
+    start: '2017-09-01',
+    end: '2019-03-01',
   },
   {
     name: 'Koodouble',
@@ -475,8 +475,8 @@ const projects: Project[] = [
     description_project: '"KOODouble allège vos mensualités et vous permet de gagner jusqu’à 12000€ sur votre assurance de prêt.\nKOODouble, c’est la garantie d’une assurance de prêt moins chère mais aussi d’une renégociation en toute simplicité, puisque KOOdouble s’occupe de TOUT : Résiliation de l’assurance actuelle, formalités auprès de la banque et adhésion."',
     description_mission: ['Migration du projet vers Angular 8 puis Angular 9 puis 11'],
     recommendations: [],
-    start: new Date('2018-02-01'),
-    end: new Date('2018-08-01'),
+    start: '2018-02-01',
+    end: '2018-08-01',
     isVisible: false,
   },
   {
@@ -507,8 +507,8 @@ const projects: Project[] = [
       'Mise en place des déclinaisons destinées à différents pays',
     ],
     recommendations: [],
-    start: new Date('2018-06-01'),
-    end: new Date('2018-09-01'),
+    start: '2018-06-01',
+    end: '2018-09-01',
   },
   {
     name: 'Fivorites',
@@ -535,8 +535,8 @@ const projects: Project[] = [
       'Réalisation de la data acquisition des (albums, séries) du réseau social via des scripts de récupération de contenu sur les API Deezer et iTunes',
     ],
     recommendations: [],
-    start: new Date('2018-09-01'),
-    end: new Date('2018-11-01'),
+    start: '2018-09-01',
+    end: '2018-11-01',
   },
   {
     name: 'The Colivers',
@@ -565,8 +565,8 @@ const projects: Project[] = [
       'Conception, développement et mise en production du site',
     ],
     recommendations: [],
-    start: new Date('2018-02-01'),
-    end: new Date('2018-03-01'),
+    start: '2018-02-01',
+    end: '2018-03-01',
   },
   {
     name: 'DeezDL',
@@ -589,8 +589,8 @@ const projects: Project[] = [
     description_project: "<div>Réalisation d'une extension Google Chrome pour lier Deezer et des sites de téléchargements de musique.</div>",
     recommendations: [],
     isVisible: false,
-    start: new Date('2015-03-01'),
-    end: new Date('2015-05-01'),
+    start: '2015-03-01',
+    end: '2015-05-01',
   },
 ]
 

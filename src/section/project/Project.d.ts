@@ -11,7 +11,7 @@ export type Project = {
   description_project: string,
   description_mission?: string[],
   recommendations: number[],
-  start: Date,
-  end: Date,
+  start: string,
+  end: string,
   isVisible?: boolean,
 }

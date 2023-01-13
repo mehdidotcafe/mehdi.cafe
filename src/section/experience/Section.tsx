@@ -25,7 +25,7 @@ const Section = () => {
             visible
             key={experience.title}
             className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
-            date={getExperienceDate(experience.startDate, experience.endDate, t)}
+            date={getExperienceDate(experience.start, experience.end, t)}
             iconStyle={{ background: theme.mainColor, color: theme.light.textColor }}
             icon={
               <Image src={`/images/experiences/${experience.logo}`} alt={experience.title} />
@@ -41,12 +41,12 @@ const Section = () => {
   )
 }
 
-const getExperienceDate = (startDate: Experience['startDate'], endDate: Experience['endDate'], t: ReturnType<typeof useTranslations>) => {
-  const fragments: (string | number)[] = [startDate]
+const getExperienceDate = (start: Experience['start'], end: Experience['end'], t: ReturnType<typeof useTranslations>) => {
+  const fragments: (string | number)[] = [start]
 
-  if (endDate) {
-    fragments.push(endDate)
-  } else if (endDate === null) {
+  if (end) {
+    fragments.push(end)
+  } else if (end === null) {
     fragments.push(t.experience.current)
   }
 

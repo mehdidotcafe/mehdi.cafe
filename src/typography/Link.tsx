@@ -1,5 +1,5 @@
-import { AnchorHTMLAttributes } from 'react'
 import NextLink, { LinkProps } from 'next/link'
+import type { AnchorHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
 
 type AnchorProps = {

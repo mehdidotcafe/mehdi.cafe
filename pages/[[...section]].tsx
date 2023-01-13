@@ -2,10 +2,28 @@ import { sections } from '@Location'
 import { useRouter } from 'next/router'
 import Sections from 'pages/Sections'
 
-export async function generateStaticParams() {
-  return sections.map((link) => ({
-    section: [link.link],
-  }))
+export async function getStaticPaths() {
+  return {
+    paths: [
+      {
+        params: {
+          section: false,
+        },
+      },
+      ...sections.map((section) => ({
+        params: {
+          section: [section.link],
+        },
+      })),
+    ],
+    fallback: false,
+  }
+}
+
+export async function getStaticProps() {
+  return {
+    props: {},
+  }
 }
 
 const SectionsPage = () => {

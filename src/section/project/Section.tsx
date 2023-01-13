@@ -139,7 +139,9 @@ const useProjectsAndSkills = () => {
     skills: Array.from(
       new Set([
         ...skills,
-        ...selectedSkills.map((skill) => allSkills.find((s) => s.name === skill)).filter((s) => s),
+        ...selectedSkills
+          .map((skill) => allSkills.find((s) => s.name === skill))
+          .filter((s) => s) as Skill[],
       ]),
     ),
     selectedSkills,
