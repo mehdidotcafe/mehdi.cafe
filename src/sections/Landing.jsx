@@ -27,6 +27,7 @@ const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   z-index: 3;
+  min-width: 65%;
 
   ${(props) => props.theme.isPhone} {
     margin-top: 74px;
@@ -34,9 +35,16 @@ const InfoContainer = styled.div`
 `
 
 const AvatarPicture = styled(Image)`
+  width: 35%;
+  max-width: 700px;
+  max-height: 807px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
   z-index: 2;
+
+  img {
+    width: 100%;
+  }
 
   ${(props) => props.theme.isPhone} {
     display: none;
