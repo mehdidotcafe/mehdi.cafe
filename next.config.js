@@ -7,7 +7,7 @@ module.exports = {
 
   i18n: {
     locales: ['en', 'fr'],
-    defaultLocale: 'en',
+    defaultLocale: process.env.DEFAULT_LOCALE,
     domains: [
       {
         domain: process.env.DOMAIN_EN,
