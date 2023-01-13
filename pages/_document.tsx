@@ -1,9 +1,9 @@
+import useTranslations from '@translation/useTranslations'
 import Document, {
   DocumentContext, DocumentInitialProps,
-  Html, Head, Main, NextScript,
+  Head, Html, Main, NextScript,
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import useTranslations from '@translation/useTranslations'
 
 const AppDocument = () => {
   const t = useTranslations()

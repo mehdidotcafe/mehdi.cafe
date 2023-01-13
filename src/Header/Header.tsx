@@ -1,16 +1,12 @@
-import { useRouter } from 'next/router'
-import styled from 'styled-components'
-import React, { useState } from 'react'
-
-import Link from 'next/link'
-
 import HeaderLogo from '@Header/HeaderLogo'
 import HeaderMenu from '@Header/HeaderMenu'
-
 import { sections } from '@Location'
-
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 const defaultHeight = 64
 const expandedHeight = 416

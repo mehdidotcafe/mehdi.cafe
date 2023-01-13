@@ -1,9 +1,7 @@
-import styled from 'styled-components'
-
 import Image from '@Image'
-
-import Overlay from '@tile/Overlay'
 import { Color } from '@theme/theme'
+import Overlay from '@tile/Overlay'
+import styled from 'styled-components'
 
 type ContainerProps = {
   isFullSize?: boolean

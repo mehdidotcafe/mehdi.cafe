@@ -1,10 +1,8 @@
-import styled from 'styled-components'
-
-import Medias from '@Medias'
 import BasicButton from '@BasicButton'
-import useTranslations from '@translation/useTranslations'
-
 import { CONTACT_EMAIL } from '@env'
+import Medias from '@Medias'
+import useTranslations from '@translation/useTranslations'
+import styled from 'styled-components'
 
 const Footer = () => {
   const t = useTranslations()

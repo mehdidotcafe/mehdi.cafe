@@ -1,6 +1,5 @@
-import { type ReactNode, useRef, useEffect } from 'react'
-
 import Row from '@grid/Row'
+import { type ReactNode, useEffect, useRef } from 'react'
 
 type Props = {
   className?: string,

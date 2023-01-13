@@ -1,16 +1,13 @@
-import React from 'react'
-import styled, { css } from 'styled-components'
-
 import Row from '@grid/Row'
 import Image from '@Image'
-
 import Medias from '@Medias'
-import Description from '@typography/Description'
-import Link from '@typography/Link'
-
 import BasicSection from '@section/BasicSection'
 import useDescription from '@section/description/useDescription'
 import useTranslations from '@translation/useTranslations'
+import Description from '@typography/Description'
+import Link from '@typography/Link'
+import React from 'react'
+import styled, { css } from 'styled-components'
 
 const Section = () => {
   const t = useTranslations()

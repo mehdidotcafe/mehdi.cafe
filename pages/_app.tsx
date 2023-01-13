@@ -1,10 +1,9 @@
-import type { FC } from 'react'
-import Head from 'next/head'
-
-import ThemeProvider from '@theme/ThemeProvider'
-import ThemeGlobalStyle from '@theme/ThemeGlobalStyle'
-import Header from '@Header'
 import Analytics from '@Analytics'
+import Header from '@Header'
+import ThemeGlobalStyle from '@theme/ThemeGlobalStyle'
+import ThemeProvider from '@theme/ThemeProvider'
+import Head from 'next/head'
+import type { FC } from 'react'
 
 const App = ({
   Component,

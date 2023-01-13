@@ -1,22 +1,16 @@
-import { useEffect, useRef } from 'react'
-import ReactFullpage, { Item, fullpageApi as FullPageApi } from '@fullpage/react-fullpage'
-import { useRouter } from 'next/router'
-
 import { REACTFULLPAGE_LICENSE_KEY } from '@env'
-
-import DescriptionSection from '@section/description/Section'
-import DescriptionBackground from '@section/description/Background'
-
-import SkillSection from '@section/skill/Section'
-import SkillBackground from '@section/skill/Background'
-
-import ProjectSection from '@section/project/Section'
-import ProjectBackground from '@section/project/Background'
-
-import ExperienceSection from '@section/experience/Section'
-
 import Footer from '@Footer'
+import ReactFullpage, { fullpageApi as FullPageApi, Item } from '@fullpage/react-fullpage'
 import { sections } from '@Location'
+import DescriptionBackground from '@section/description/Background'
+import DescriptionSection from '@section/description/Section'
+import ExperienceSection from '@section/experience/Section'
+import ProjectBackground from '@section/project/Background'
+import ProjectSection from '@section/project/Section'
+import SkillBackground from '@section/skill/Background'
+import SkillSection from '@section/skill/Section'
+import { useRouter } from 'next/router'
+import { useEffect, useRef } from 'react'
 
 type Props = {
   section: string | undefined

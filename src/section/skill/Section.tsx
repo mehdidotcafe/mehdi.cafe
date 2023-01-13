@@ -1,18 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import Link from 'next/link'
-
-import Title from '@typography/Title'
-import SkillTile from '@tile/SkillTile'
-
-import Row from '@grid/Row'
 import Item from '@grid/Item'
-
+import Row from '@grid/Row'
 import BasicSection from '@section/BasicSection'
-
 // import WindowSize from '../WindowSize'
 import useSkills from '@section/skill/useSkills'
+import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
+import Title from '@typography/Title'
+import Link from 'next/link'
+import React from 'react'
+import styled from 'styled-components'
 
 const Section = () => {
   const t = useTranslations()

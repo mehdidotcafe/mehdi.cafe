@@ -1,17 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-
-import Linkedin from '@icon/Linkedin'
-import Github from '@icon/Github'
-import Email from '@icon/Email'
-import Medium from '@icon/Medium'
-
 import {
   CONTACT_EMAIL,
-  CONTACT_LINKEDIN,
   CONTACT_GITHUB,
+  CONTACT_LINKEDIN,
   CONTACT_MEDIUM,
 } from '@env'
+import Email from '@icon/Email'
+import Github from '@icon/Github'
+import Linkedin from '@icon/Linkedin'
+import Medium from '@icon/Medium'
+import React from 'react'
+import styled from 'styled-components'
 
 const Medias = () => (
   <Container>

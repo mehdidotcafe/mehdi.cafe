@@ -1,11 +1,8 @@
-import styled, { css } from 'styled-components'
-
 import Image, { ImageProps } from '@Image'
-
 import Overlay from '@tile/Overlay'
-
 import Progress from '@tile/Progress'
 import useTranslations from '@translation/useTranslations'
+import styled, { css } from 'styled-components'
 
 const littleSide = 64
 const side = 164

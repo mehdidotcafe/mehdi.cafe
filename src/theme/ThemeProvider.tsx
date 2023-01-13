@@ -1,6 +1,5 @@
+import { EB_Garamond, Oswald, Roboto } from '@next/font/google'
 import type { ReactNode } from 'react'
-import { EB_Garamond, Roboto, Oswald } from '@next/font/google'
-
 import { DefaultTheme, ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 
 const widthThreshold = '1170px'

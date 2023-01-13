@@ -1,17 +1,15 @@
-import styled, { useTheme } from 'styled-components'
-
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import 'react-vertical-timeline-component/style.min.css'
 
 import Image from '@Image'
-import Title from '@typography/Title'
-import Description from '@typography/Description'
-
 import BasicSection from '@section/BasicSection'
-
-import 'react-vertical-timeline-component/style.min.css'
 import useTranslations from '@translation/useTranslations'
-import useExperiences from './useExperiences'
+import Description from '@typography/Description'
+import Title from '@typography/Title'
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import styled, { useTheme } from 'styled-components'
+
 import { Experience } from './Experience'
+import useExperiences from './useExperiences'
 
 const Section = () => {
   const theme = useTheme()

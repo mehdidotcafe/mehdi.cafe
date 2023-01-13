@@ -1,5 +1,6 @@
 import {
-  type MouseEvent, type ReactNode, useState, useRef, useEffect,
+  type MouseEvent, type ReactNode, useEffect,
+  useRef, useState,
 } from 'react'
 import styled, { css } from 'styled-components'
 
