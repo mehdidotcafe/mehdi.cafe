@@ -26,7 +26,7 @@
     "baseUrl": "./",
     "paths": {
       "@lang": [
-        "lang/en.json"
+        "lang/fr.json"
       ],
       "@*": [
         "src/*"
