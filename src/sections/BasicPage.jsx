@@ -6,8 +6,8 @@ const BasicPage = styled.div`
   padding-top: ${(props) => (props.noPaddingTop ? 0 : props.theme.sectionDefaultPaddingTop)};
 
   ${(props) => props.theme.isLaptop} {
-    padding-left: ${(props) => (props.noMargin ? 0 : 12)}%;
-    padding-right: ${(props) => (props.noMargin ? 0 : 12)}%;
+    padding-left: ${(props) => (props.noMargin ? 0 : 8)}%;
+    padding-right: ${(props) => (props.noMargin ? 0 : 8)}%;
   }
 `
 
