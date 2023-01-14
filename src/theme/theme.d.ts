@@ -22,6 +22,14 @@ declare module 'styled-components' {
     sectionDefaultPaddingTop: number,
     iconSize: number,
 
+    breakpoints: {
+      useWidthBreakpoints: () => {
+        isPhone: boolean,
+        isLaptop: boolean,
+      },
+      width: number,
+    },
+
     font: {
       title: string,
       content: string,

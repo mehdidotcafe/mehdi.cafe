@@ -133,8 +133,11 @@ const MainDescription = styled(Description)`
 `
 
 const MediaContainerRow = styled(Row)`
-  margin-top: 32px;
   align-items: center;
+
+  > * {
+    margin-top: 32px;
+  }
 `
 
 const StyledMedias = styled(Medias)`

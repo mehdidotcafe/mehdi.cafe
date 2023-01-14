@@ -80,6 +80,7 @@ position: absolute;
 left: 8px;
 // parent padding-bttom value 
 bottom: 32px;
+display: none;
 `
 
 const ButtonText = styled.a`

@@ -381,8 +381,8 @@ margin-top: 32px;
 
 ${(props) => props.theme.isPhone} {
   flex-direction: column;
-  margin-top: 64px;
-  margin-bottom: 0;
+  margin: 0;
+
 }
 `
 

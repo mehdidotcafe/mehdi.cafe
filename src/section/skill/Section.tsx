@@ -7,16 +7,18 @@ import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
 import Title from '@typography/Title'
 import Link from 'next/link'
-import React from 'react'
-import styled from 'styled-components'
+import React, { type ReactElement } from 'react'
+import styled, { useTheme } from 'styled-components'
 
 const Section = () => {
+  const { breakpoints: { useWidthBreakpoints } } = useTheme()
   const t = useTranslations()
   const skills = useSkills()
+  const { isPhone } = useWidthBreakpoints()
 
-  const Container = Link
-  // @TODO think about this
-  // const Container = WindowSize.isLarge() ? Link : ((props) => props.children)
+  const Container = isPhone
+    ? ({ children }: { children: ReactElement }) => children
+    : Link
 
   return (
     <BasicSection>
