@@ -245,7 +245,6 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://thebabelcommunity.app',
     images: [
       'the-babel-zone/the_babel_zone_1.png',
       'the-babel-zone/the_babel_zone_2.png',

@@ -75,7 +75,7 @@ const InfoContainer = styled.div`
 const AvatarPicture = styled(Image)`
   width: 35%;
   max-width: 700px;
-  max-height: 807px;
+  max-height: 815px;
   filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
   align-self: center;
   z-index: 2;

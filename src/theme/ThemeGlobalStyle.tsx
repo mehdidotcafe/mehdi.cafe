@@ -8,16 +8,25 @@ const ThemeGlobalStyle = createGlobalStyle`
   --font-terciary: ${roboto.style.fontFamily};
 }
 
+// Hide scrollbars
 ::-webkit-scrollbar {
   display: none;
-  width: 0;  /* Remove scrollbar space */
-  background: transparent;  /* Optional: just make scrollbar invisible */
+  width: 0;
+  background: transparent;
 }
+
 .fp-watermark {
   display: none;
 }
 
+html {
+  -ms-overflow-style: none; /* IE 11 */
+  scrollbar-width: none; /* Firefox 64 */
+  scrollbar-color: transparent transparent;
+}
+
 body {
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
   font-family: var(${(props) => props.theme.font.content});
@@ -42,8 +51,6 @@ body {
 }
 
 * {
-  --scroll-behavior: smooth;
-  scroll-behavior: smooth;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

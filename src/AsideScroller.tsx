@@ -19,8 +19,6 @@ const Container = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 16px;
   max-width: 100vw;
 
   ${(props) => props.theme.isPhone} {
@@ -32,6 +30,10 @@ const Container = styled.aside`
     overflow-x: auto;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  > :first-child {
+    margin-top: 0;
   }
 `
 

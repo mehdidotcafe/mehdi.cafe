@@ -48,7 +48,7 @@ const useSectionFromPathname = (): string => {
   const pathname = router.query.section
 
   // work details page special case
-  if (pathname === undefined && router.query.id) {
+  if (pathname === undefined && router.query.name) {
     return sections[1].link
   } if (pathname === undefined) {
     return sections[0].link

@@ -417,7 +417,7 @@ a {
   font-family: var(${(props) => props.theme.tertiaryColor});
   text-decoration: none;
   background-color: ${(props) => props.theme.secondaryColor};
-  color: ${(props) => props.theme.light.textColor};
+  color: ${(props) => props.theme.light.linkColor};
   padding: 0.01em 0.05em;
   font-weight: 500;
   

@@ -129,16 +129,12 @@ justify-content: center;
 `
 
 const AsideTextValue = styled.div`
-font-size: 16px;
+font-size: 18px;
 `
 
 const AsideTextYears = styled.div`
 text-transform: uppercase;
-font-size: 10px;
-
-${(props) => props.theme.isPhone} {
-  font-size: 6px;
-}
+font-size: 13px;
 `
 
 const SuperContainer = styled.div<{

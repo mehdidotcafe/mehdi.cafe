@@ -54,7 +54,7 @@ const getExperienceDate = (start: Experience['start'], end: Experience['end'], t
 }
 
 const StyledVerticalTimeline = styled(VerticalTimeline)`
-  padding-top: ${(props) => props.theme.sectionDefaultPaddingTop}px;
+  padding-top: 64px;
   margin-left: -14px;
   padding-left: 0;
   margin-bottom: 0;
@@ -72,6 +72,10 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     border-radius: 0;
     margin-left: -8px;
     box-shadow: none;
+
+    ${(props) => props.theme.isPhone} {
+      display: none;
+    }
   }
 
   .vertical-timeline-element img {
@@ -88,29 +92,22 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     background: white;
     color: black !important;
     padding-bottom: 0;
+    width: max-content;
+    max-width: calc(100% - 84px - 46px);
+
+    ${(props) => props.theme.isLaptop} {
+      min-width: 500px;
+    }
   }
 
   .element-content-first .vertical-timeline-element-content {
     margin-top: 32px;
   }
 
-  .vertical-timeline-element-content {
-    width: max-content;
-    max-width: calc(100% - 84px - 46px);
-    min-width: 500px;
-  }
-
-  ${(props) => props.theme.isLaptop} {
-    .vertical-timeline--two-columns .vertical-timeline-element-icon {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-    }
-  }
-
   ${(props) => props.theme.isPhone} {
     .vertical-timeline-element-content {
-      margin-left: calc(84px + 42px);
+      margin-left: 5%;
+      max-width: fit-content;
     }
 
     .vertical-timeline-element-content .vertical-timeline-element-date {
@@ -123,6 +120,14 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
 
     .vertical-timeline::before {
       left: 54px;
+    }
+  }
+
+  ${(props) => props.theme.isLaptop} {
+    .vertical-timeline--two-columns .vertical-timeline-element-icon {
+      width: 64px;
+      height: 64px;
+      margin-left: -32px;
     }
   }
 

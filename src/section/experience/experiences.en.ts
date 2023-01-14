@@ -26,7 +26,7 @@ const experiences: Experience[] = [
     title: 'Cloudindus', start: 2015, end: 2017, subtitle: 'Marseille, France', description: "Développement d'un superviseur industriel IoT qui permet d'interagir et consulter ses objets connectés.\nUtilisation de MEAN Stack (MongoDB, Express, AngularJS, Node.js) pour le développement.", logo: 'cloudindus.png', company: 'cloudindus', projectUrl: '/work/Cloudindus', isVisible: false,
   },
   {
-    title: 'Lycée Thiers', start: 2014, subtitle: 'Marseille, France', description: 'Baccalauréat Scientifique.', logo: 'graduation.png',
+    title: 'Lycée Thiers', start: 2014, subtitle: 'Marseille, France', description: 'Baccalauréat Scientifique.', logo: 'graduation.png', isVisible: false,
   },
 ]
 
