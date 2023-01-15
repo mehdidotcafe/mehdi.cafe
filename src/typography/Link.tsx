@@ -7,8 +7,7 @@ type AnchorProps = {
   $isImportant?: boolean
 }
 
-const anchorStyle = css<AnchorProps>`
-a {
+export const anchorStyle = css<AnchorProps>`
   font-family: var(${(props) => props.theme.font.terciary});
   ${(props) => (props.$isImportant && 'font-size: 1.7em;')}
   text-transform: uppercase;
@@ -19,14 +18,17 @@ a {
   :hover {
     background-color: ${(props) => props.$isStyled !== false && props.theme.tertiaryColor};
   }
-}
 `
 
 const NextLinkContainer = styled.span`
+a {
   ${anchorStyle}
+}
 `
 const LinkContainer = styled.span`
+a {
   ${anchorStyle}
+}
 `
 
 type Props = {

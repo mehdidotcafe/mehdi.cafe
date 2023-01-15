@@ -2,7 +2,7 @@ import BasicButton from '@BasicButton'
 import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
-import ExternalLink from '@typography/Link'
+import ExternalLink, { anchorStyle } from '@typography/Link'
 import styled from 'styled-components'
 
 const Footer = () => {
@@ -81,6 +81,10 @@ bottom: 32px;
 display: none;
 `
 
-const ContactLink = ExternalLink
+const ContactLink = styled.a`
+${anchorStyle}
+font-size: 32px;
+padding: 8px 16px !important;
+`
 
 export default Footer
