@@ -3,6 +3,7 @@ import { CONTACT_EMAIL } from '@env'
 import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
+import Link from '@typography/Link'
 import styled from 'styled-components'
 
 const Footer = () => {
@@ -14,9 +15,7 @@ const Footer = () => {
         <I18NSwitchContainer>
           <I18NSwitch />
         </I18NSwitchContainer>
-        <BasicButton type="submit" onClick={onContactButtonClick}>
-          <ButtonText aria-label={t.footer.getInTouch} href={`mailto:${CONTACT_EMAIL}`}>{t.footer.getInTouch}</ButtonText>
-        </BasicButton>
+        <ContactLink aria-label={t.footer.getInTouch} href={`mailto:${CONTACT_EMAIL}`} onClick={onContactButtonClick}>{t.footer.getInTouch}</ContactLink>
         <Copyright>{t.footer.copyright}</Copyright>
       </ButtonContainer>
       <MediasContainer>
@@ -83,9 +82,12 @@ bottom: 32px;
 display: none;
 `
 
-const ButtonText = styled.a`
-color: white !important;
+const ContactLink = styled(Link)`
 text-decoration: none;
+text-transform: uppercase !important;
+font-size: 32px;
+color: white;
+padding: 8px 16px !important;
 `
 
 export default Footer

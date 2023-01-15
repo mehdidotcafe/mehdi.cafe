@@ -34,7 +34,7 @@ const Section = () => {
           </TitleContainer>
         </InfoContainer>
         <AvatarPicture
-          src="/images/mehdi.png"
+          src="/images/user.png"
           alt={t.userIdentity}
         />
       </Container>

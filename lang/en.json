@@ -1,6 +1,10 @@
 {
   "lang": "en",
   "userIdentity": "Mehdi Meddour",
+  "app": {
+    "title": "Mehdi Meddour | Développeur Freelance WEB / LOGICIEL",
+    "description": "Développeur Freelance basé à Marseille. Je vous accompagne dans la réalisation de votre projet numérique, site internet, application mobile."
+  },
   "description": {
     "day": {
       "mainTitle": "Hello I am Mehdi."

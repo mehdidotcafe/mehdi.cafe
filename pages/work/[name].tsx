@@ -178,7 +178,7 @@ const ProjectDescriptionTabs = ({
   ].filter((tab) => tab.test)
 
   return (
-    <>
+    <ProjectDescriptionContainer>
       <ProjectDescriptionSwitch>
         {
           tabs.map((tab, idx) => (
@@ -201,7 +201,7 @@ const ProjectDescriptionTabs = ({
           />
         ))}
       </DescriptionContent>
-    </>
+    </ProjectDescriptionContainer>
   )
 }
 
@@ -344,7 +344,6 @@ font-size: 1em;
 `
 
 const ProjectDescriptionSwitch = styled.ul`
-margin-top: 64px;
 width: 100%;
 display: flex;
 flex-direction: row;
@@ -371,6 +370,10 @@ const ProjectDescriptionTab = styled.li<{
   :hover {
     background-color: ${(props) => props.theme.mainColor};
   }  
+`
+
+const ProjectDescriptionContainer = styled.div`
+margin-top: 32px;
 `
 
 const Header = styled(Row)`

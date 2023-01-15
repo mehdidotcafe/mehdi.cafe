@@ -11,6 +11,7 @@ const HeaderMenu = ({ isExpanded, onClick }: Props) => (
     isExpanded={isExpanded}
     onClick={onClick}
     type="submit"
+    title="menu"
   >
     <span />
     <span />

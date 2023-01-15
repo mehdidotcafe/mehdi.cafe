@@ -246,6 +246,7 @@ visibility: ${(props) => (props.isVisible ? 'visible' : 'hidden')}
 
 const ProjectRow = styled(Row)`
 margin-top: 16px;
+align-items: center;
 `
 
 export default Section

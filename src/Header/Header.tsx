@@ -135,12 +135,11 @@ ${(props) => props.theme.isPhone} {
 }
 `
 
-const MediaContainer = styled.div`
+const MediaContainer = styled.li`
 ${(props) => props.theme.isPhone} {
   text-align: center;
   width: 100%;
   align-self: center;
-  padding-top: 12px;
 
   > * {
     margin-top: 24px;
