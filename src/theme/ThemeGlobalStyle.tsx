@@ -41,6 +41,10 @@ body {
     color: ${(props) => props.theme.dark.textColor};
     background-color: ${(props) => props.theme.dark.backgroundColor};  
   }
+
+  a {
+    color: ${(props) => props.theme.dark.linkColor};
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -48,6 +52,11 @@ body {
     color: ${(props) => props.theme.light.textColor};
     background-color: ${(props) => props.theme.light.backgroundColor};  
   }
+
+  a {
+    color: ${(props) => props.theme.light.linkColor};
+  }
+
 }
 
 * {
@@ -83,7 +92,6 @@ p {
 
 a {
   text-decoration: inherit;
-  color: inherit;
 }
 `
 

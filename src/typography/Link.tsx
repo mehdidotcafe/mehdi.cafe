@@ -18,6 +18,7 @@ export const anchorStyle = css<AnchorProps>`
   :hover {
     background-color: ${(props) => props.$isStyled !== false && props.theme.tertiaryColor};
   }
+}
 `
 
 const NextLinkContainer = styled.span`
