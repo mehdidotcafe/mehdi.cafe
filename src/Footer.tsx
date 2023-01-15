@@ -81,12 +81,6 @@ bottom: 32px;
 display: none;
 `
 
-const ContactLink = styled(ExternalLink)`
-text-decoration: none;
-text-transform: uppercase !important;
-font-size: 32px;
-color: white;
-padding: 8px 16px !important;
-`
+const ContactLink = ExternalLink
 
 export default Footer
