@@ -9,7 +9,7 @@ import EmptyTile from '@tile/EmptyTile'
 import ProjectTile from '@tile/ProjectTile'
 import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
-import SubTitle from '@typography/SubTitle'
+import { subTitleStyle } from '@typography/SubTitle'
 import Title from '@typography/Title'
 import { useRouter } from 'next/router'
 import type { MouseEvent } from 'react'
@@ -55,12 +55,10 @@ const Section = () => {
             hasPointerCursor={selectedSkills.length > 0}
             onClick={clearFilters}
           >
-            <SubTitle>
-              <ClearFilterButton isVisible={selectedSkills.length > 0}>
-                {t.work.clearCross}
-              </ClearFilterButton>
-              {t.work.filters}
-            </SubTitle>
+            <ClearFilterButton isVisible={selectedSkills.length > 0}>
+              {t.work.clearCross}
+            </ClearFilterButton>
+            {t.work.filters}
           </FilterText>
           {getSkillGrouped(skills).map((group) => (
             <FilterRow key={group.id}>
@@ -208,6 +206,8 @@ const FilterText = styled.button<{
   ${(props) => props.theme.isPhone} {
     text-align: left;
   }
+
+ ${subTitleStyle}
 `
 
 const ProjectButton = styled.button`
