@@ -3,7 +3,7 @@ import { CONTACT_EMAIL } from '@env'
 import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
-import Link from '@typography/Link'
+import ExternalLink from '@typography/Link'
 import styled from 'styled-components'
 
 const Footer = () => {
@@ -82,7 +82,7 @@ bottom: 32px;
 display: none;
 `
 
-const ContactLink = styled(Link)`
+const ContactLink = styled(ExternalLink)`
 text-decoration: none;
 text-transform: uppercase !important;
 font-size: 32px;
