@@ -47,11 +47,11 @@ export const Link = ({
 export default Link
 
 export const ExternalLink = (props: AnchorHTMLAttributes<HTMLAnchorElement>) => {
-  const { children } = props
+  const { children, href } = props
 
   return (
     <LinkContainer>
-      <a {...props}>{children}</a>
+      <a {...props} href={href}>{children}</a>
     </LinkContainer>
   )
 }
