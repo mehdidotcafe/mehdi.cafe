@@ -1,3 +1,5 @@
+console.log(JSON.stringify(process.env, null, 2))
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   trailingSlash: true,
