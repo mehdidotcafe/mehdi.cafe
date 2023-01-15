@@ -1,5 +1,4 @@
 import BasicButton from '@BasicButton'
-import { CONTACT_EMAIL } from '@env'
 import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
@@ -15,7 +14,7 @@ const Footer = () => {
         <I18NSwitchContainer>
           <I18NSwitch />
         </I18NSwitchContainer>
-        <ContactLink aria-label={t.footer.getInTouch} href={`mailto:${CONTACT_EMAIL}`} onClick={onContactButtonClick}>{t.footer.getInTouch}</ContactLink>
+        <ContactLink aria-label={t.footer.getInTouch} href="contact@meddou.com" onClick={onContactButtonClick}>{t.footer.getInTouch}</ContactLink>
         <Copyright>{t.footer.copyright}</Copyright>
       </ButtonContainer>
       <MediasContainer>
