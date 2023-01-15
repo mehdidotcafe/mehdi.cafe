@@ -2,6 +2,7 @@ import BasicButton from '@BasicButton'
 import I18NSwitch from '@I18nSwitch'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
+import { anchorStyle } from '@typography/Link'
 import styled from 'styled-components'
 
 const Footer = () => {
