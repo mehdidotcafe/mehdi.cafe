@@ -14,6 +14,7 @@ import Description, { Paragraph } from '@typography/Description'
 import { ExternalLink, Link } from '@typography/Link'
 import Title from '@typography/Title'
 import Zoomable from '@Zoomable'
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { MouseEvent, useEffect, useState } from 'react'
 import styled from 'styled-components'
@@ -69,84 +70,89 @@ const WorkPage = () => {
   }, [router, project, skills])
 
   return (
-    <StyledBasicSection noMargin>
-      <Background />
-      {project
-        && skills && (
-          <InfoContainer>
-            <DescriptionContainer>
-              <Header>
-                <ProjectBack>
-                  <ProjectTile
-                    backgroundColor={project.color}
-                    name={project.name}
-                    logo={project.logo}
-                    isHoverable={false}
-                    fullSize
-                  />
-                  <BackButton type="submit" onClick={backToWork}>
-                    <div>&#8249;</div>
-                  </BackButton>
-                </ProjectBack>
-                <TitleContainer>
-                  <Title noMargin>{project.name}</Title>
-                  {project.url
-                    && (
-                      <StyledExternalLink
-                        href={project.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {t.projectPage.seeProject}
-                      </StyledExternalLink>
-                    )}
-                  <StyledScrollableRow step={164 / 2.5}>
-                    {skills.map((skill) => (
-                      <Item key={skill.name}>
-                        <Link href={`/work?skill=${encodeURIComponent(skill.name)}`} isStyled={false}>
-                          <SkillTile
-                            name={skill.name}
-                            backgroundColor={skill.color}
-                            experience={skill.experience}
-                            logo={skill.logo}
-                            isLittle
-                          />
-                        </Link>
-                      </Item>
+    <>
+      <Head>
+        <meta name="robots" content="noindex" />
+      </Head>
+      <StyledBasicSection noMargin>
+        <Background />
+        {project
+          && skills && (
+            <InfoContainer>
+              <DescriptionContainer>
+                <Header>
+                  <ProjectBack>
+                    <ProjectTile
+                      backgroundColor={project.color}
+                      name={project.name}
+                      logo={project.logo}
+                      isHoverable={false}
+                      fullSize
+                    />
+                    <BackButton type="submit" onClick={backToWork}>
+                      <div>&#8249;</div>
+                    </BackButton>
+                  </ProjectBack>
+                  <TitleContainer>
+                    <Title noMargin>{project.name}</Title>
+                    {project.url
+                      && (
+                        <StyledExternalLink
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {t.projectPage.seeProject}
+                        </StyledExternalLink>
+                      )}
+                    <StyledScrollableRow step={164 / 2.5}>
+                      {skills.map((skill) => (
+                        <Item key={skill.name}>
+                          <Link href={`/work?skill=${encodeURIComponent(skill.name)}`} isStyled={false}>
+                            <SkillTile
+                              name={skill.name}
+                              backgroundColor={skill.color}
+                              experience={skill.experience}
+                              logo={skill.logo}
+                              isLittle
+                            />
+                          </Link>
+                        </Item>
+                      ))}
+                    </StyledScrollableRow>
+                  </TitleContainer>
+                </Header>
+                <MobileScrollerContainer>
+                  <AsideScroller>
+                    {project.images.map((image) => (
+                      <img
+                        src={`/images/project/${image}`}
+                        key={image}
+                        style={{ backgroundColor: project.color, height: '100%', width: '100%' }}
+                        alt={`${project.name} ${image}`}
+                      />
                     ))}
-                  </StyledScrollableRow>
-                </TitleContainer>
-              </Header>
-              <MobileScrollerContainer>
+                  </AsideScroller>
+                </MobileScrollerContainer>
+                <ProjectDescriptionTabs project={project} />
+              </DescriptionContainer>
+              <LaptopScrollerContainer>
                 <AsideScroller>
                   {project.images.map((image) => (
-                    <img
-                      src={`/images/project/${image}`}
-                      key={image}
-                      style={{ backgroundColor: project.color, height: '100%', width: '100%' }}
-                      alt={`${project.name} ${image}`}
-                    />
+                    <Zoomable key={image}>
+                      <img
+                        src={`/images/project/${image}`}
+                        alt={`${project.name} ${image}`}
+                        style={{ backgroundColor: project.color, height: '100%', width: '100%' }}
+                      />
+                    </Zoomable>
                   ))}
                 </AsideScroller>
-              </MobileScrollerContainer>
-              <ProjectDescriptionTabs project={project} />
-            </DescriptionContainer>
-            <LaptopScrollerContainer>
-              <AsideScroller>
-                {project.images.map((image) => (
-                  <Zoomable key={image}>
-                    <img
-                      src={`/images/project/${image}`}
-                      alt={`${project.name} ${image}`}
-                      style={{ backgroundColor: project.color, height: '100%', width: '100%' }}
-                    />
-                  </Zoomable>
-                ))}
-              </AsideScroller>
-            </LaptopScrollerContainer>
-          </InfoContainer>
-      )}
-    </StyledBasicSection>
+              </LaptopScrollerContainer>
+            </InfoContainer>
+        )}
+      </StyledBasicSection>
+    </>
   )
 }
 

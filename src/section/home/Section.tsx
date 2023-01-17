@@ -2,7 +2,6 @@ import Row from '@grid/Row'
 import Image from '@Image'
 import Medias from '@Medias'
 import BasicSection from '@section/BasicSection'
-import useDescription from '@section/description/useDescription'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Link from '@typography/Link'
@@ -11,7 +10,6 @@ import styled, { css } from 'styled-components'
 
 const Section = () => {
   const t = useTranslations()
-  const description = useDescription()
 
   return (
     <BasicSection noPaddingTop>
@@ -19,16 +17,16 @@ const Section = () => {
         <InfoContainer>
           <TitleContainer>
             <SecondaryTitle>
-              {t.description[isDay() ? 'day' : 'night'].mainTitle}
+              {t.home[isDay() ? 'day' : 'night'].mainTitle}
             </SecondaryTitle>
             <PrimaryTitle>
-              {description.title}
+              {t.home.title}
             </PrimaryTitle>
             <MainDescription
-              text={description.shortDescription}
+              text={t.home.shortDescription}
             />
             <MediaContainerRow>
-              <Link isImportant href="/work">{t.description.seeMyProjects}</Link>
+              <Link isImportant href="/work">{t.home.seeMyProjects}</Link>
               <StyledMedias />
             </MediaContainerRow>
           </TitleContainer>

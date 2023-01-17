@@ -2,9 +2,9 @@ import { REACTFULLPAGE_LICENSE_KEY } from '@env'
 import Footer from '@Footer'
 import ReactFullpage, { fullpageApi as FullPageApi, Item } from '@fullpage/react-fullpage'
 import { sections } from '@Location'
-import DescriptionBackground from '@section/description/Background'
-import DescriptionSection from '@section/description/Section'
 import ExperienceSection from '@section/experience/Section'
+import HomeBackground from '@section/home/Background'
+import HomeSection from '@section/home/Section'
 import ProjectBackground from '@section/project/Background'
 import ProjectSection from '@section/project/Section'
 import SkillBackground from '@section/skill/Background'
@@ -60,9 +60,9 @@ const NestedSections = ({
   return (
     <ReactFullpage.Wrapper>
       <div className="section" data-href="home">
-        <DescriptionSection />
+        <HomeSection />
       </div>
-      <DescriptionBackground />
+      <HomeBackground />
       <div className="section" data-href="work">
         <ProjectSection />
       </div>

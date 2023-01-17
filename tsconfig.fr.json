@@ -31,9 +31,6 @@
       "@*": [
         "src/*"
       ],
-      "@section/description/description": [
-        "src/section/description/description.fr.ts"
-      ],
       "@section/experience/experiences": [
         "src/section/experience/experiences.fr.ts"
       ],
