@@ -11,11 +11,11 @@ const experiences: Experience[] = [
     title: 'TOEIC', start: 2022, description: '970 / 990 <br /><br />  <a target="_blank" href="https://www.etsglobal.org/fr/en/digital-score-report/AF2990DE526BA7ABBAD8E904C93630088612FAFE5CBBFB8C9CBC8F31561462CCNHBITGZ0N0JXTVhOUkN0WHF1ZldhTXhBVHNoZ2lWS2hKQU9rUHJGRERpZyt4V3dp">Certification</a>', logo: 'graduation.png', company: 'freelance',
   },
   {
-    title: 'Computer science Master degree',
+    title: 'Computer science Master\'s degree',
     start: 2018,
     end: 2019,
     subtitle: 'Epitech Paris, France',
-    description: "Obtaining a Master's degree in Computer Science at the end of my fifth year at Epitech Paris, a French computer science school",
+    description: "Master's degree in Computer Science at the end of my fifth year at Epitech Paris, a French computer science school",
     highlights: [
       {
         content: ['Advanced web programming', 'Mobile programming', 'AI', 'Development of the Android version of <a href=\'/work/Agora\'>AGORA</a>, an application for connecting a project leader and a talent to make an idea a reality'],
@@ -39,7 +39,7 @@ const experiences: Experience[] = [
     company: 'school',
   },
   {
-    title: 'Computer science Bachelor degree',
+    title: 'Computer science Bachelor\'s degree',
     start: 2014,
     end: 2017,
     subtitle: 'Epitech Marseille, France',
@@ -55,7 +55,7 @@ const experiences: Experience[] = [
       },
       {
         title: 'First year',
-        content: ['Development of projects from the command line in C', 'Algorithms, algorithmic complexity', 'Data structures (lists, graphs, AST, B-tree ..)'],
+        content: ['Development of command line projects in C', 'Algorithms, algorithmic complexity', 'Data structures (lists, graphs, AST, B-tree ..)'],
       },
 
     ],
