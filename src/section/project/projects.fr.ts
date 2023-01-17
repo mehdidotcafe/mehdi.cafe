@@ -73,7 +73,7 @@ const projects: Project[] = [
     description_mission: [
       'Développement de "COLLECT", un module de relance de factures impayées comportant un système de planification d\'actions de scénarios de relance (email, sms, courrier ...) ainsi qu\'un éditeur de modèle de relance',
       'Développement d\'un système de reporting agrégeant des données clés pour les clients',
-      'Développement d\'un espace de travail collaboratif',
+      'Développement d\'un système d\'espace de travail collaboratif',
       'Développement de divers connecteurs vers des APIs externes (ATRADUIS, Euler Hermes)',
       'Diverses montées de version d\'Angular',
     ],
@@ -112,7 +112,7 @@ const projects: Project[] = [
     description_mission: [
       "Développement d'un outil de matching de joueur qui comporte un système de salon textuel et vocal avec la possibilité d'en créer, modifier et en supprimer",
       "Développement d'un chat en temps réel",
-      "Développement d'un fil d'actualité où les utilisateurs peuvent poster du texte et des images",
+      "Développement d'un fil d'actualité où les utilisateurs peuvent publier du texte et des images",
       'Conception, développement et mise en production',
     ],
     recommendations: [
@@ -183,7 +183,7 @@ const projects: Project[] = [
       "Réalisation d'un moteur permettant la mise à jour récursive de l'état d'un objet connecté selon l'état d'autres objets",
       "Developpement du systeme de visualisation l'état d'un objet connecté via une représentation graphique (SVG) sur l'application",
       "Développement de la gestion de profil de l'utilisateur",
-      'Conception, développement et mise en production de la plateforme',
+      'Conception, développement et mise en production',
     ],
     recommendations: [],
     start: '2015-05-01',
