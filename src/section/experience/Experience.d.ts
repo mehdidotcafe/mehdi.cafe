@@ -10,4 +10,10 @@ export type Experience = {
   projectUrl?: string
   company?: string
   isVisible?: boolean
+  highlights?: Highlight[]
+}
+
+type Highlight = {
+  title?: string,
+  content: string[]
 }

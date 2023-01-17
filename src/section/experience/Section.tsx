@@ -4,6 +4,7 @@ import Image from '@Image'
 import BasicSection from '@section/BasicSection'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
+import Highlights from '@typography/Highlights'
 import Title from '@typography/Title'
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import styled, { useTheme } from 'styled-components'
@@ -34,6 +35,7 @@ const Section = () => {
             <ElementTitle>{experience.title}</ElementTitle>
             {experience.subtitle && <ElementSubTitle>{experience.subtitle}</ElementSubTitle>}
             <Description text={experience.description} />
+            {experience.highlights && <Highlights highlights={experience.highlights} />}
           </VerticalTimelineElement>
         ))}
       </StyledVerticalTimeline>
@@ -162,7 +164,7 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     display: none;
   }
 
-  p a {
+  a {
     font-family: var(${(props) => props.theme.font.terciary});
     text-transform: uppercase;
     text-decoration: none;
