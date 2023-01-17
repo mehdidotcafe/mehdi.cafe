@@ -37,9 +37,6 @@
       "@section/project/projects": [
         "src/section/project/projects.fr.ts"
       ],
-      "@section/skill/skills": [
-        "src/section/skill/skills.fr.ts"
-      ],
     }
   },
   "include": [

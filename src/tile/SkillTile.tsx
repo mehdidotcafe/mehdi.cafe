@@ -10,7 +10,7 @@ const side = 164
 const progressSide = Math.floor(side / 3.5)
 const progressStroke = Math.floor(progressSide / 8)
 
-const years = 6
+const years = 7
 
 type Props = {
   isLittle?: boolean

@@ -2,7 +2,7 @@ import type { Skill } from '@section/skill/Skill'
 
 const skills: Skill[] = [
   {
-    name: 'Web', logo: 'web', color: '#29154e', experience: 6,
+    name: 'Web', logo: 'web', color: '#29154e', experience: 7,
   },
   {
     name: 'Android', logo: 'android', color: '#29154e', experience: 1,
@@ -12,16 +12,16 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Javascript', logo: 'javascript', color: '#efd81d', experience: 5.5,
+    name: 'Javascript', logo: 'javascript', color: '#efd81d', experience: 7,
   },
   {
-    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 3,
+    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 4,
   },
   {
-    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 4,
+    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 5,
   },
   {
-    name: 'React', logo: 'react', color: '#61dafb', experience: 4,
+    name: 'React', logo: 'react', color: '#61dafb', experience: 5,
   },
   {
     name: 'next', logo: 'next', color: '#000000', experience: 1, isFilterable: false, isVisible: true,
@@ -74,10 +74,10 @@ const skills: Skill[] = [
     name: 'Storybook', logo: 'storybook', color: '#fe4785', experience: 1, isFilterable: false, isVisible: false,
   },
   {
-    name: 'Eslint', logo: 'eslint', color: '#dedcff', experience: 3, isFilterable: false, isVisible: false,
+    name: 'Eslint', logo: 'eslint', color: '#dedcff', experience: 4, isFilterable: false, isVisible: false,
   },
   {
-    name: 'Jest', logo: 'jest', color: '#ffffff', experience: 2, isFilterable: false, isVisible: false,
+    name: 'Jest', logo: 'jest', color: '#ffffff', experience: 3, isFilterable: false, isVisible: false,
   },
   {
     name: 'PHPUnit', logo: 'phpunit', color: '#b5b7fe', experience: 1, isFilterable: false, isVisible: false,
