@@ -33,8 +33,8 @@ const projects: Project[] = [
     description_project: '"A responsible European public media, ARTE is committed to themes dear to the citizens of Europe: the fight against inequalities, whether social, cultural, economic, geographical, linked to gender or disability, as well as the sustainable development',
     description_mission: [
       'Migration of the website <a href=\'https://my.arte.tv\' target=\'_blank\'>my.arte.tv</a> to a component library',
-      'Development and optimization of the user API (viewing history, content suggestion, account update ...) processing more than 3 millions requests / day',
-      'Migration of the ARTE authentication system from LoginRadius to Keycloak',
+      'Development and optimization of the user API (viewing history, content suggestion, account update ...) processing more than 3 million requests / day',
+      'Migration of the ARTE authentication system (IAM) from LoginRadius to Keycloak',
       'Content caching optimization',
       'Video player used on <a href=\'https://arte.tv\' target=\'_blank\'>arte.tv</a> optimization',
       'Support for the redesign of the user API to Symfony',

@@ -34,7 +34,7 @@ const projects: Project[] = [
     description_mission: [
       'Refonte du site internet <a href=\'https://my.arte.tv\' target=\'_blank\'>my.arte.tv</a> en collection de composant',
       'Développement et optimisation de l\'API utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...) traitant 3 millions requêtes / jour',
-      'Migration du système d\'authentification ARTE de LoginRadius vers Keycloak',
+      'Migration du système d\'authentification (IAM) ARTE de LoginRadius vers Keycloak',
       'Optimisation de la mise en cache des contenus',
       'Optimisation du player vidéo utilisé sur <a href=\'https://arte.tv\' target=\'_blank\'>arte.tv</a>',
       'Accompagnement de la refonte de l\'API utilisateur vers Symfony',
