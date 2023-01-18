@@ -112,7 +112,7 @@ const projects: Project[] = [
     description_mission: [
       'Development of a player matching tool that includes a textual and vocal lobby system with the ability to create, modify and delete ones',
       'Development of a real-time chat',
-      'Development of a newsfeed where users can post text and images',
+      'Development of a newsfeed where users can publish text and images',
       'Design, development and deployment',
     ],
     recommendations: [
@@ -144,10 +144,10 @@ const projects: Project[] = [
     ],
     description_project: '"The purpose of the matemeup.com website is to centralize the tools necessary for e-sport players and more generally for video game players, to facilitate the creation of links and meetings while promoting the related gaming sphere (broadcasters , casters, videographers, etc.)."',
     description_mission: [
-      'Development of a newsfeed where users can post text and images',
+      'Development of a newsfeed where users can publish text and images',
       'Development of a real-time chat',
       'Development of an authentication system',
-      'Design, devlopment and depoyment of iOS and Android apps',
+      'Design, development and deployment of iOS and Android apps',
     ],
     recommendations: [
       1,
@@ -206,7 +206,7 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://thebabelcommunity.com',
+    url: 'https://thebabelcommunity.com/en',
     images: [
       'the-babel-community/the_babel_community_1.jpg',
       'the-babel-community/the_babel_community_2.jpg',
@@ -217,7 +217,7 @@ const projects: Project[] = [
       'the-babel-community/the_babel_community_7.png',
       'the-babel-community/the_babel_community_8.png',
     ],
-    description_project: '"The Babel Community is an urban oasis.\nA place of refuge where, to enter life and conquer the city, young active people collaborate and pool.\nThey live there, work, play sports, meet. They remake the world around a drink or a dish and have fun.\nTogether, they coexist and form a living community: The Babel Community."',
+    description_project: 'The Babel Community is the largest coworking and coliving residence brand in France.',
     description_mission: [
       "Development of the residence's showcase website to list the services offered and the goods currently available. The website also allows you to plan a visit or to book an apartment as well as to register for a sports course or reserve a table at the restaurant.",
       'Design, development and deployment',
@@ -249,7 +249,7 @@ const projects: Project[] = [
       'the-babel-zone/the_babel_zone_3.png',
       'the-babel-zone/the_babel_zone_4.png',
     ],
-    description_project: '"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community."',
+    description_project: 'The Babel Community is the largest coworking and coliving residence brand in France.',
     description_mission: [
       "THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion. Développement de la totalité de l'application",
       "Conception, développement et mise en production de l'application",
@@ -313,7 +313,7 @@ const projects: Project[] = [
       'intranet-axis/intra_5.jpg',
       'intranet-axis/intra_6.jpg',
     ],
-    description_project: 'The AXIS Intranet is a tool used by every AXIS Immobilier employees to centralize data.\nIt allows customer follow-up from the first contact to the reservation and invoicing of accommodation.',
+    description_project: 'The AXIS Intranet is an ERP used by every AXIS Immobilier employees to centralize data.\nIt allows customer follow-up from the first contact to the reservation and invoicing of accommodation.',
     description_mission: [
       'Graphical redesign of the ERP',
       'Development of invoicing systems, customer follow-up, stock follow-up, accommodation reservation',
@@ -378,7 +378,7 @@ const projects: Project[] = [
       'the-babel-staff/the_babel_staff_4.jpg',
       'the-babel-staff/the_babel_staff_5.jpg',
     ],
-    description_project: '"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community."',
+    description_project: 'The Babel Community is the largest coworking and coliving residence brand in France.',
     description_mission: [
       "THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo. Développement de la totalité de l'application",
       'Design, development and deployment',

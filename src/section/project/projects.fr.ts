@@ -217,7 +217,7 @@ const projects: Project[] = [
       'the-babel-community/the_babel_community_7.png',
       'the-babel-community/the_babel_community_8.png',
     ],
-    description_project: '"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community."',
+    description_project: 'The Babel Community est la plus grande marque de résidence de coworking et coliving en France.',
     description_mission: [
       "Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellement disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant",
       'Conception, développement et mise en production du site vitrine',
@@ -249,7 +249,7 @@ const projects: Project[] = [
       'the-babel-zone/the_babel_zone_3.png',
       'the-babel-zone/the_babel_zone_4.png',
     ],
-    description_project: '"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community."',
+    description_project: 'The Babel Community est la plus grande marque de résidence de coworking et coliving en France.',
     description_mission: [
       "THE BABEL ZONE est une web-app à destination des locataires de la résidence. L'application leur permet d'interagir avec les services de cette dernière. Ils peuvent en effet, depuis l'application, commander un plat au restaurant, s'inscrire à un cours de sport ou encore réserver une salle de réunion. Développement de la totalité de l'application",
       "Conception, développement et mise en production de l'application",
@@ -378,7 +378,7 @@ const projects: Project[] = [
       'the-babel-staff/the_babel_staff_4.jpg',
       'the-babel-staff/the_babel_staff_5.jpg',
     ],
-    description_project: '"The Babel Community c’est une oasis urbaine.\nUn lieu refuge où, pour entrer dans la vie et conquérir la ville, de jeunes actifs collaborent et mutualisent.\nIls y habitent, travaillent, font du sport, se rencontrent. Ils refont le monde autour d’un verre ou d’un plat et se divertissent.\nEnsemble, ils coexistent et forment une communauté vivante : The Babel Community."',
+    description_project: 'The Babel Community est la plus grande marque de résidence de coworking et coliving en France.',
     description_mission: [
       "THE BABEL STAFF est une web-app à destination du staff de la résidence (serveur, cuisine, service ménage ...) qui leur permet de gérer leurs taches journalière sous forme de ToDo. Développement de la totalité de l'application",
       'Conception, développement et mise en production',
