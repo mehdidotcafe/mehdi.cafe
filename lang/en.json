@@ -1,0 +1,58 @@
+{
+  "lang": "en",
+  "userIdentity": "Mehdi Meddour",
+  "home": {
+    "title": "Freelance Full-Stack Engineer",
+    "shortDescription": "Certified and passionate software engineer, I am expert in the development of clean and quality applications.<br />I support you in the realization of your project from its conception to its delivery.",
+    "longDescription": "Certified and passionate software engineer, I am expert in the development of web applications and websites (high volume sites, intranets, CRMs). I support you in the realization of your project from its conception to its delivery.<br />Being an entrepreneur since 2017, I had the opportunity to collaborate with a large number of clients including fortune 50 companies (pfizer …) in their digital transformations.<br />I have a real interest in user ergonomics, optimization and quality of the application in accordance with good practices.",
+    "day": {
+      "mainTitle": "Hello I am Mehdi."
+    },
+    "night": {
+      "mainTitle": "Hello I am Mehdi."
+    },
+    "seeMyProjects": "Check out my work"
+  },
+  "work": {
+    "myProjects": "My work",
+    "clearCross": "(x) ",
+    "filters": "Filters",
+    "noProject": "No work"
+  },
+  "skill": {
+    "mySkills": "My skills",
+    "yearsOfExperience": "Years of experience"
+  },
+  "header": {
+    "links": {
+      "Home": "Home",
+      "Work": "Work",
+      "Skills": "Skills",
+      "Experiences": "Experiences"  
+    },
+    "logo": {
+      "imageAlt": "Mehdi Meddour Logo"
+    }
+  },
+  "experience": {
+    "myExperiences": "My experiences",
+    "current": "Current"
+  },
+  "projectPage": {
+    "tabs": {
+      "work": "Project",
+      "keyWork": "Key work",
+      "duration": "Duration",
+      "current": "Current"
+    },
+    "seeProject": "Check out project"
+  },
+  "skillTile": {
+    "years": "Years",
+    "year": "year"
+  },
+  "footer": {
+    "getInTouch": "Get in touch!",
+    "copyright": "Copyright @ Mehdi Meddour"
+  }
+}

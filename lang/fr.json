@@ -1,0 +1,58 @@
+{
+  "lang": "fr",
+  "userIdentity": "Mehdi Meddour",
+  "home": {
+    "title": "Ingénieur Full-stack Freelance",
+    "shortDescription": "Ingénieur logiciel passionné et certifié, je suis expert dans le développement d'applications propres et de qualité.<br />Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.",
+    "longDescription": "Ingénieur logiciel passionné et certifié, je suis expert dans le développement d'applications web et de sites internet (sites à haut volume, intranets, CRMs). Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.<br />Étant entrepreneur depuis 2017, j'ai eu l'occasion de collaborer avec un grand nombre de clients dont des entreprises du fortune 50 dans leurs transformations digitales.<br />Je porte un vrai intérêt sur les problématiques d'ergonomie utilisateur, d'optimisation et de qualité de l'application dans le respect des bonnes pratiques.",
+    "day": {
+      "mainTitle": "Bonjour, je suis Mehdi."
+    },
+    "night": {
+      "mainTitle": "Bonsoir, je suis Mehdi."
+    },
+    "seeMyProjects": "Voir mes projets"
+  },
+  "work": {
+    "myProjects": "Mes projets",
+    "clearCross": "(x) ",
+    "filters": "Filtres",
+    "noProject": "Aucun projet"
+  },
+  "skill": {
+    "mySkills": "Mes skills",
+    "yearsOfExperience": "Années d'expérience"
+  },
+  "header": {
+    "links": {
+      "Home": "Home",
+      "Work": "Work",
+      "Skills": "Skills",
+      "Experiences": "Experiences"  
+    },
+    "logo": {
+      "imageAlt": "Mehdi Meddour Logo"
+    }
+  },
+  "experience": {
+    "myExperiences": "Mes expériences",
+    "current": "Actuel"
+  },
+  "projectPage": {
+    "tabs": {
+      "work": "Project",
+      "keyWork": "Mission",
+      "duration": "Durée",
+      "current": "Actuel"
+    },
+    "seeProject": "Voir le projet"
+  },
+  "skillTile": {
+    "years": "Années",
+    "year": "Année"
+  },
+  "footer": {
+    "getInTouch": "Me proposer un projet ?",
+    "copyright": "Copyright @ Mehdi Meddour"
+  }
+}
