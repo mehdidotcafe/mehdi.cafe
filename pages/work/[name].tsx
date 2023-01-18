@@ -173,7 +173,7 @@ const ProjectDescriptionTabs = ({
     },
     {
       test: project.description_mission,
-      name: t.projectPage.tabs.job,
+      name: t.projectPage.tabs.keyWork,
       content: Array.isArray(project.description_mission) ? project.description_mission.map((description) => `<div>${description}</div>`).join('') : project.description_mission ?? '',
     },
     {

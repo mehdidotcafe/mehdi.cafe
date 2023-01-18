@@ -33,7 +33,7 @@ const projects: Project[] = [
     description_project: '"Média européen public responsable, ARTE s\'engage sur des thématiques chères aux citoyens et citoyennes d’Europe : la lutte contre les inégalités, qu’elles soient sociales, culturelles, économiques, géographiques, liées au genre ou au handicap, ainsi que le développement durable."',
     description_mission: [
       'Refonte du site internet <a href=\'https://my.arte.tv\' target=\'_blank\'>my.arte.tv</a> en collection de composant',
-      'Développement et optimisation de l\'API utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...)',
+      'Développement et optimisation de l\'API utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...) traitant 3 millions requêtes / jour',
       'Migration du système d\'authentification ARTE de LoginRadius vers Keycloak',
       'Optimisation de la mise en cache des contenus',
       'Optimisation du player vidéo utilisé sur <a href=\'https://arte.tv\' target=\'_blank\'>arte.tv</a>',
@@ -61,6 +61,7 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
+    url: 'https://kwote.fr',
     images: [
       'kwote/kwote_1.jpg',
       'kwote/kwote_2.jpg',
@@ -71,7 +72,7 @@ const projects: Project[] = [
     ],
     description_project: '"Kwote est un gestionnaire de risque à destination des ETI et PME.\nIl s\'appuie sur les data des entreprises, grâce à sa connexion avec leurs systèmes d\'information offrant à l\'utilisateur - directeur financier, credit manager ou dirigeant - des outils de gestion du risque client et de pilotage de la performance des contrats d\'assurance-crédit associés à une brique de services dont des solutions de financement disruptives, de recouvrement en ligne, du scoring basé sur le comportement de paiement..."',
     description_mission: [
-      'Développement de "COLLECT", un module de relance de factures impayées comportant un système de planification d\'actions de scénarios de relance (email, sms, courrier ...) ainsi qu\'un éditeur de modèle de relance',
+      'Développement de "COLLECT", un module de relance de factures impayées comportant un système de planification d\'actions de scénarios de relance (email, sms, courrier ...) ainsi qu\'un éditeur de modèle de relance. Le module traite 10 000 actions / mois en moyenne',
       'Développement d\'un système de reporting agrégeant des données clés pour les clients',
       'Développement d\'un système d\'espace de travail collaboratif',
       'Développement de divers connecteurs vers des APIs externes (ATRADUIS, Euler Hermes)',
@@ -101,7 +102,6 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://matemeup.com',
     images: [
       'matemeup/matemeup_web_1.jpg',
       'matemeup/matemeup_web_2.jpg',
@@ -135,7 +135,6 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://github.com/mehdidotcafe/matemeup_android',
     images: [
       'matemeup-mobile/matemeup_mobile_1.jpg',
       'matemeup-mobile/matemeup_mobile_2.jpg',
@@ -183,6 +182,7 @@ const projects: Project[] = [
       "Réalisation d'un moteur permettant la mise à jour récursive de l'état d'un objet connecté selon l'état d'autres objets",
       "Developpement du systeme de visualisation l'état d'un objet connecté via une représentation graphique (SVG) sur l'application",
       "Développement de la gestion de profil de l'utilisateur",
+      "Mise en place de l'internationalisation du site internet",
       'Conception, développement et mise en production',
     ],
     recommendations: [],

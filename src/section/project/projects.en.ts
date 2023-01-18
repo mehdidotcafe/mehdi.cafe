@@ -33,7 +33,7 @@ const projects: Project[] = [
     description_project: '"A responsible European public media, ARTE is committed to themes dear to the citizens of Europe: the fight against inequalities, whether social, cultural, economic, geographical, linked to gender or disability, as well as the sustainable development',
     description_mission: [
       'Migration of the website <a href=\'https://my.arte.tv\' target=\'_blank\'>my.arte.tv</a> to a component library',
-      'Development and optimization of the user API (viewing history, content suggestion, account update ...)',
+      'Development and optimization of the user API (viewing history, content suggestion, account update ...) processing more than 3 millions requests / day',
       'Migration of the ARTE authentication system from LoginRadius to Keycloak',
       'Content caching optimization',
       'Video player used on <a href=\'https://arte.tv\' target=\'_blank\'>arte.tv</a> optimization',
@@ -61,6 +61,7 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
+    url: 'https://kwote.fr',
     images: [
       'kwote/kwote_1.jpg',
       'kwote/kwote_2.jpg',
@@ -71,7 +72,7 @@ const projects: Project[] = [
     ],
     description_project: '"Kwote is a risk manager for companies. It relies on company data, thanks to its connection with their information systems, offering the user tools for managing customer risk and monitoring the performance of credit insurance contracts associated with a brick of services including disruptive financing solutions, online recovery, scoring based on payment behavior..."',
     description_mission: [
-      'Development of "COLLECT", a recovery module for unpaid invoices including an action planning system for recovery scenarios (email, sms, mail, etc.) as well as a recovery template editor',
+      'Development of "COLLECT", a recovery module for unpaid invoices including an action planning system for recovery scenarios (email, sms, mail, etc.) as well as a recovery template editor. This module processes 10 000 actions / month on average',
       'Development of a reporting system aggregating key data for clients',
       'Development of a collaborative workspace',
       'Development of various connectors to external APIs (ATRADUIS, Euler Hermes)',
@@ -101,7 +102,6 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://matemeup.com',
     images: [
       'matemeup/matemeup_web_1.jpg',
       'matemeup/matemeup_web_2.jpg',
@@ -135,7 +135,6 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://github.com/mehdidotcafe/matemeup_android',
     images: [
       'matemeup-mobile/matemeup_mobile_1.jpg',
       'matemeup-mobile/matemeup_mobile_2.jpg',
@@ -183,6 +182,7 @@ const projects: Project[] = [
       'Development of an engine allowing the update of the state of a connected object according to the state of other network objects',
       'Development of the visualization system for the state of a connected object via a graphical representation (SVG) on the application',
       'Development of user profile management',
+      'Implementation of website internationalization',
       'Design, development and deployment',
     ],
     recommendations: [],

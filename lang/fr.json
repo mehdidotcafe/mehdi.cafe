@@ -41,7 +41,7 @@
   "projectPage": {
     "tabs": {
       "work": "Project",
-      "job": "Mission",
+      "keyWork": "Mission",
       "duration": "Durée",
       "current": "Actuel"
     },
