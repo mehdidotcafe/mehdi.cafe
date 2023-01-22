@@ -4,8 +4,8 @@ import Progress from '@tile/Progress'
 import useTranslations from '@translation/useTranslations'
 import styled, { css } from 'styled-components'
 
-const littleSide = 64
 const side = 164
+const littleSide = side / 2
 
 const progressSide = Math.floor(side / 3.5)
 const progressStroke = Math.floor(progressSide / 8)

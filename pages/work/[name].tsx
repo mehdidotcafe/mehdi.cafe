@@ -1,7 +1,6 @@
 import AsideScroller from '@AsideScroller'
 import Item from '@grid/Item'
 import Row from '@grid/Row'
-import ScrollableRow from '@grid/ScrollableRow'
 import BasicSection from '@section/BasicSection'
 import { Project } from '@section/project/Project'
 import useProjects, { useProjectByName } from '@section/project/useProjects'
@@ -11,7 +10,7 @@ import ProjectTile from '@tile/ProjectTile'
 import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
 import Description, { Paragraph } from '@typography/Description'
-import { ExternalLink, Link } from '@typography/Link'
+import { ExternalLink } from '@typography/Link'
 import Title from '@typography/Title'
 import Zoomable from '@Zoomable'
 import Head from 'next/head'
@@ -105,21 +104,6 @@ const WorkPage = () => {
                           {t.projectPage.seeProject}
                         </StyledExternalLink>
                       )}
-                    <StyledScrollableRow step={164 / 2.5}>
-                      {skills.map((skill) => (
-                        <Item key={skill.name}>
-                          <Link href={`/work?skill=${encodeURIComponent(skill.name)}`} isStyled={false}>
-                            <SkillTile
-                              name={skill.name}
-                              backgroundColor={skill.color}
-                              experience={skill.experience}
-                              logo={skill.logo}
-                              isLittle
-                            />
-                          </Link>
-                        </Item>
-                      ))}
-                    </StyledScrollableRow>
                   </TitleContainer>
                 </Header>
                 <MobileScrollerContainer>
@@ -134,7 +118,7 @@ const WorkPage = () => {
                     ))}
                   </AsideScroller>
                 </MobileScrollerContainer>
-                <ProjectDescriptionTabs project={project} />
+                <ProjectDescriptionTabs project={project} skills={skills} />
               </DescriptionContainer>
               <LaptopScrollerContainer>
                 <AsideScroller>
@@ -156,12 +140,53 @@ const WorkPage = () => {
   )
 }
 
+const DescriptionMission = ({
+  text = '',
+}: {
+  text: string | string[] | undefined
+}) => (Array.isArray(text)
+  ? (
+    <div>
+      {text.map((t) => (
+        <Description
+          text={t || ''}
+          noMargin
+        />
+      ))}
+    </div>
+  )
+  : (
+    <div>{text}</div>
+  ))
+
+const DescriptionSkills = ({
+  skills,
+}: {
+  skills: Skill[]
+}) => (
+  <SkillRow>
+    {skills.map((skill) => (
+      <Item>
+        <SkillTile
+          isLittle
+          logo={skill.logo}
+          name={skill.name}
+          backgroundColor={skill.color}
+          experience={skill.experience}
+        />
+      </Item>
+    ))}
+  </SkillRow>
+)
+
 type ProjectDescriptionTabsProps = {
   project: Project
+  skills: Skill[]
 }
 
 const ProjectDescriptionTabs = ({
   project,
+  skills,
 }: ProjectDescriptionTabsProps) => {
   const t = useTranslations()
   const [activeTab, setActiveTab] = useState<number>(0)
@@ -169,17 +194,30 @@ const ProjectDescriptionTabs = ({
     {
       test: project.description_project || '',
       name: t.projectPage.tabs.work,
-      content: project.description_project || '',
+      Content: <Description
+        text={project.description_project || ''}
+        noMargin
+      />,
     },
     {
       test: project.description_mission,
       name: t.projectPage.tabs.keyWork,
-      content: Array.isArray(project.description_mission) ? project.description_mission.map((description) => `<div>${description}</div>`).join('') : project.description_mission ?? '',
+      Content: <DescriptionMission
+        text={project.description_mission}
+      />,
+
     },
     {
       test: project.start,
       name: t.projectPage.tabs.duration,
-      content: `${displayDate(t.lang, project.start)} - ${displayDate(t.lang, project.end) ?? t.projectPage.tabs.current}`,
+      Content: <Description
+        text={`${displayDate(t.lang, project.start)} - ${displayDate(t.lang, project.end) ?? t.projectPage.tabs.current}`}
+      />,
+    },
+    {
+      test: true,
+      name: t.projectPage.tabs.skills,
+      Content: <DescriptionSkills skills={skills} />,
     },
   ].filter((tab) => tab.test)
 
@@ -199,13 +237,7 @@ const ProjectDescriptionTabs = ({
         }
       </ProjectDescriptionSwitch>
       <DescriptionContent>
-        {tabs.map((tab, idx) => idx === activeTab && (
-          <Description
-            text={tab.content}
-            key={tab.name}
-            noMargin
-          />
-        ))}
+        {tabs.map((tab, idx) => idx === activeTab && tab.Content)}
       </DescriptionContent>
     </ProjectDescriptionContainer>
   )
@@ -269,7 +301,7 @@ ${(props) => props.theme.isPhone} {
 `
 
 const DescriptionContainer = styled.div`
-width: 50%;
+width: 40%;
 position: fixed;
 top: 64px;
 margin-top: 32px;
@@ -294,19 +326,6 @@ ${(props) => props.theme.isPhone} {
   margin-left: 0;
   padding-top: 0;
   margin-top: 0;
-}
-`
-
-const StyledScrollableRow = styled(ScrollableRow)`
-margin-left: -8px;
-max-width: 35vw;
-overflow: hidden;
-padding-top: 16px;
-
-${(props) => props.theme.isPhone} {
-  max-width: 100vw;
-  margin-left: -4%;
-  margin-right: -4%;
 }
 `
 
@@ -340,6 +359,7 @@ margin-left: 48px;
 
 ${(props) => props.theme.isPhone} {
   margin-top: 32px;
+  margin-bottom: 32px;
   margin-left: 0;
   align-self: flex-start;
 }
@@ -352,6 +372,7 @@ font-size: 1em;
 const ProjectDescriptionSwitch = styled.ul`
 width: 100%;
 display: flex;
+flex-wrap: wrap;
 flex-direction: row;
 padding-bottom: 8px;
 align-items: center;
@@ -437,6 +458,12 @@ a {
 
 ${(props) => props.theme.isLaptop} {
   height: calc(100vh - 96px);
+}
+`
+
+const SkillRow = styled(Row)`
+${(props) => props.theme.isPhone} {
+  justify-content: space-around;
 }
 `
 

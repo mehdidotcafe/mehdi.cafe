@@ -43,7 +43,8 @@
       "work": "Project",
       "keyWork": "Mission",
       "duration": "Durée",
-      "current": "Actuel"
+      "current": "Actuel",
+      "skills": "Skills"
     },
     "seeProject": "Voir le projet"
   },
