@@ -52,6 +52,9 @@ const skills: Skill[] = [
   {
     name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: false,
   },
+  {
+    name: 'neo4j', logo: 'neo4j', color: '#ffffff', experience: 1, isVisible: false,
+  },
 
   {
     name: 'Java', logo: 'java', color: '#096eb6', experience: 0.5, isFilterable: false, isVisible: false,
