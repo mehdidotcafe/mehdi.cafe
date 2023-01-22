@@ -146,14 +146,14 @@ const DescriptionMission = ({
   text: string | string[] | undefined
 }) => (Array.isArray(text)
   ? (
-    <div>
+    <DescriptionMissionContainer>
       {text.map((t) => (
         <Description
           text={t || ''}
           noMargin
         />
       ))}
-    </div>
+    </DescriptionMissionContainer>
   )
   : (
     <div>{text}</div>
@@ -429,12 +429,14 @@ display: inline-block;
 position: relative;
 `
 
+const DescriptionMissionContainer = styled.div``
+
 const DescriptionContent = styled.div`
 margin-bottom: 16px;
 overflow: auto;
 flex-grow: 1;
 
-${Paragraph} div::before {
+${DescriptionMissionContainer} ${Paragraph} > ::before {
   content: "";
   display: inline-block;
   height: 12px;

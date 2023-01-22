@@ -83,6 +83,38 @@ const projects: Project[] = [
     end: '2021-10-01',
   },
   {
+    name: 'centaur',
+    logo: 'centaur',
+    color: '#0008c4',
+    skills: [
+      'React',
+      'Typescript',
+      'Javascript',
+      'AWS',
+      'neo4j',
+      'Storybook',
+      'Eslint',
+      'Jest',
+      'Web',
+      'Git',
+    ],
+    companies: [
+      'freelancer',
+    ],
+    images: [
+    ],
+    description_project: 'Centaur est une plateforme BI utilisée en interne par une société pharmaceutique majeure.\nÀ travers différents modules, elle améliore la prise de décision des employés via l\'analyse, la consolidation et la restitution graphique de données clés.',
+    description_mission: [
+      'Développement de "Simple Search", un moteur de recherche permettant aux utilisateurs de visualiser des données graphiques et agrégées à partir d\'une recherche textuelle',
+      'Multiples remaniements techniques visant à baisser grandement la dette technique de l\'application',
+      'Refonte et amélioration de plusieurs interfaces utilisateurs visant à simplifier le parcours utilisateur',
+      'Divers développements de fonctionnalités',
+    ],
+    recommendations: [],
+    start: '2022-04-01',
+    end: '2022-12-23',
+  },
+  {
     name: 'MateMeUp',
     logo: 'matemeup',
     color: '#b01515',
