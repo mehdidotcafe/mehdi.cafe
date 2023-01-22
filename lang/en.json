@@ -43,7 +43,8 @@
       "work": "Project",
       "keyWork": "Key work",
       "duration": "Duration",
-      "current": "Current"
+      "current": "Current",      
+      "skills": "Skills"
     },
     "seeProject": "Check out project"
   },
