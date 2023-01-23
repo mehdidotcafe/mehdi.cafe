@@ -17,6 +17,7 @@ import styled from 'styled-components'
 
 const QUERY_PARAM_NAME = 'skill'
 
+// @todo see how to remove this array
 const filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++', 'mySQL', 'AWS']
 
 const Section = () => {

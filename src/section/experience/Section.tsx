@@ -1,12 +1,11 @@
-import 'react-vertical-timeline-component/style.min.css'
-
+import Row from '@grid/Row'
 import Image from '@Image'
 import BasicSection from '@section/BasicSection'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Highlights from '@typography/Highlights'
 import Title from '@typography/Title'
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
+import type { ReactNode } from 'react'
 import styled, { useTheme } from 'styled-components'
 
 import { Experience } from './Experience'
@@ -20,12 +19,10 @@ const Section = () => {
   return (
     <NoPaddingBottomBasicSection>
       <Title noMargin>{t.experience.myExperiences}</Title>
-      <StyledVerticalTimeline layout="1-column">
-        {experiences.map((experience, idx) => (
+      <StyledVerticalTimeline>
+        {experiences.map((experience) => (
           <VerticalTimelineElement
-            visible
             key={experience.title}
-            className={`vertical-timeline-element ${idx === 0 ? 'element-content-first' : ''}`}
             date={getExperienceDate(experience.start, experience.end, t)}
             iconStyle={{ background: theme.mainColor, color: theme.light.textColor }}
             icon={
@@ -55,113 +52,134 @@ const getExperienceDate = (start: Experience['start'], end: Experience['end'], t
   return fragments.join(' - ')
 }
 
-const StyledVerticalTimeline = styled(VerticalTimeline)`
+type VerticalTimelineElementProps = {
+  date: string
+  iconStyle: Record<string, unknown>
+  icon: JSX.Element
+  children: ReactNode,
+}
+
+const VerticalTimelineElement = ({
+  date,
+  iconStyle,
+  icon,
+  children,
+}: VerticalTimelineElementProps) => (
+  <VerticalTimelineElementRow>
+    <VerticalTimelineElementIcon style={iconStyle}>
+      {icon}
+    </VerticalTimelineElementIcon>
+    <VerticalTimelineElementContent>
+      {children}
+      <VerticalTimelineElementDate>{date}</VerticalTimelineElementDate>
+    </VerticalTimelineElementContent>
+  </VerticalTimelineElementRow>
+)
+
+const VerticalTimelineElementRow = styled(Row)`
+margin-top: 32px;
+margin-bottom: 32px;
+flex-wrap: nowrap;
+z-index: 2;
+`
+
+const VerticalTimelineElementIcon = styled.div`
+height: calc(54px);
+width: calc(54px);
+border: 3px solid white;
+border-radius: 0;
+margin-left: -8px;
+box-shadow: none;
+box-sizing: border-box;
+z-index: 2;
+
+${(props) => props.theme.isPhone} {
+  display: none;
+}
+
+img {
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  display: block;
+}
+`
+
+const VerticalTimelineElementContent = styled.div`
+border-radius: 0;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+margin-left: 38px;
+margin-right: 38px;
+background: white;
+color: black !important;
+padding-bottom: 0;
+padding: 1em;
+z-index: 2;
+
+${(props) => props.theme.isLaptop} {
+  min-width: 500px;
+}
+
+${(props) => props.theme.isPhone} {
+  margin-left: 5%;
+  margin-right: 0%;
+  width: 90%;
+}
+
+// @media (prefers-color-scheme: dark) {
+  color: white !important;
+  background-color: #515151;
+// }
+`
+
+const VerticalTimelineElementDate = styled.div`
+font-size: 18px;
+color: black;
+text-transform: uppercase;
+font-weight: normal;
+opacity: 1;
+font-family: var(${(props) => props.theme.font.terciary});
+padding-top: 0.8em;
+
+${(props) => props.theme.isPhone} {
+    color: white;
+}
+
+// @media (prefers-color-scheme: dark) {
+    color: white;
+// }
+`
+
+const StyledVerticalTimeline = styled.div`
+  max-width: 100%;
   padding-top: 64px;
   margin-left: -14px;
   padding-left: 0;
   margin-bottom: 0;
   padding-bottom: 64px;
+  position: relative;
 
   ::before {
     background: ${(props) => props.theme.mainColor};
     width: 6px;
-  }
-
-  .vertical-timeline-element-icon {
-    height: calc(32px + 16px + 6px);
-    width: calc(32px + 16px + 6px);
-    border: 3px solid white;
-    border-radius: 0;
-    margin-left: -8px;
-    box-shadow: none;
-
-    ${(props) => props.theme.isPhone} {
-      display: none;
-    }
-  }
-
-  .vertical-timeline-element img {
-    height: 32px;
-    width: 32px;
-    margin: 8px;
-    display: block;
-  }
-
-  .vertical-timeline-element-content {
-    border-radius: 0;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-    margin-left: 84px;
-    background: white;
-    color: black !important;
-    padding-bottom: 0;
-    width: max-content;
-    max-width: calc(100% - 84px - 46px);
-
-    ${(props) => props.theme.isLaptop} {
-      min-width: 500px;
-    }
-  }
-
-  .element-content-first .vertical-timeline-element-content {
-    margin-top: 32px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
   }
 
   ${(props) => props.theme.isPhone} {
-    .vertical-timeline-element-content {
-      margin-left: 5%;
-      max-width: fit-content;
-    }
-
-    .vertical-timeline-element-content .vertical-timeline-element-date {
-      color: white;
-    }
-
-    .vertical-timeline-element-icon {
-      margin-left: 20px;
-    }
-
     .vertical-timeline::before {
       left: 54px;
     }
-  }
-
-  ${(props) => props.theme.isLaptop} {
-    .vertical-timeline--two-columns .vertical-timeline-element-icon {
-      width: 64px;
-      height: 64px;
-      margin-left: -32px;
-    }
-  }
-
-  .bounce-in {
-    animation: none !important;
-  }
-
-  .vertical-timeline.vertical-timeline--animate.vertical-timeline--two-columns {
-    margin-bottom: 0;
-  }
-
-  .vertical-timeline-element-content::before {
-    display: none;
-  }
-
-  .vertical-timeline-element-content .vertical-timeline-element-date {
-    font-size: 18px;
-    color: black;
-    text-transform: uppercase;
-    font-weight: normal;
-    opacity: 1;
-    font-family: var(${(props) => props.theme.font.terciary});
   }
 
   p {
     font-weight: normal;
     font-size: 1.3rem;
     font-family: var(${(props) => props.theme.font.content});
-  }
-
-  .vertical-timeline-element-content-arrow {
-    display: none;
+    line-height: 1.6;
   }
 
   a {
@@ -175,18 +193,6 @@ const StyledVerticalTimeline = styled(VerticalTimeline)`
     :hover {
       background-color: ${(props) => props.theme.tertiaryColor};
     }
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .vertical-timeline-element-content {
-      color: white !important;
-      background-color: #515151;
-    }
-
-    .vertical-timeline-element-content .vertical-timeline-element-date {
-      color: white;
-    }
-
   }
 `
 
@@ -211,6 +217,8 @@ const ElementSubTitle = styled.h4`
   margin-block-start: 0;
   margin-block-end: 0;
   font-family: var(${(props) => props.theme.font.terciary});
+  line-height: 1;
+
 `
 
 export default Section

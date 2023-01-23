@@ -1,6 +1,6 @@
 {
   "name": "mehdi.cafe",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "private": false,
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -19,7 +19,6 @@
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-vertical-timeline-component": "^3.6.0",
     "styled-components": "^5.3.6"
   },
   "devDependencies": {
@@ -27,7 +26,6 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
-    "@types/react-vertical-timeline-component": "^3.3.3",
     "@types/styled-components": "^5.1.26",
     "eslint": "8.31.0",
     "eslint-config-airbnb": "^19.0.4",

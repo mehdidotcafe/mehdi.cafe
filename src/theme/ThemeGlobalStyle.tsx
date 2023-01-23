@@ -36,7 +36,7 @@ body {
 // See below
 // https://stackoverflow.com/questions/67094919/how-to-fix-dark-mode-background-color-flicker-in-nextjs
 
-@media (prefers-color-scheme: dark) {
+// @media (prefers-color-scheme: dark) {
   body {
     color: ${(props) => props.theme.dark.textColor};
     background-color: ${(props) => props.theme.dark.backgroundColor};  
@@ -45,19 +45,19 @@ body {
   a {
     color: ${(props) => props.theme.dark.linkColor};
   }
-}
+// }
 
-@media (prefers-color-scheme: light) {
-  body {
-    color: ${(props) => props.theme.light.textColor};
-    background-color: ${(props) => props.theme.light.backgroundColor};  
-  }
+// @media (prefers-color-scheme: light) {
+//   body {
+//     color: ${(props) => props.theme.light.textColor};
+//     background-color: ${(props) => props.theme.light.backgroundColor};  
+//   }
 
-  a {
-    color: ${(props) => props.theme.light.linkColor};
-  }
+//   a {
+//     color: ${(props) => props.theme.light.linkColor};
+//   }
 
-}
+// }
 
 * {
   -webkit-touch-callout: none;
