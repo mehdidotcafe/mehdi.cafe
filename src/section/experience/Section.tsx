@@ -1,15 +1,14 @@
 import Row from '@grid/Row'
 import Image from '@Image'
 import BasicSection from '@section/BasicSection'
+import type { Experience } from '@section/experience/Experience'
+import useExperiences from '@section/experience/useExperiences'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Highlights from '@typography/Highlights'
 import Title from '@typography/Title'
 import type { ReactNode } from 'react'
 import styled, { useTheme } from 'styled-components'
-
-import { Experience } from './Experience'
-import useExperiences from './useExperiences'
 
 const Section = () => {
   const theme = useTheme()
@@ -19,7 +18,7 @@ const Section = () => {
   return (
     <NoPaddingBottomBasicSection>
       <Title noMargin>{t.experience.myExperiences}</Title>
-      <StyledVerticalTimeline>
+      <VerticalTimelineContainer>
         {experiences.map((experience) => (
           <VerticalTimelineElement
             key={experience.title}
@@ -35,7 +34,7 @@ const Section = () => {
             {experience.highlights && <Highlights highlights={experience.highlights} />}
           </VerticalTimelineElement>
         ))}
-      </StyledVerticalTimeline>
+      </VerticalTimelineContainer>
     </NoPaddingBottomBasicSection>
   )
 }
@@ -150,7 +149,7 @@ ${(props) => props.theme.isPhone} {
 // }
 `
 
-const StyledVerticalTimeline = styled.div`
+const VerticalTimelineContainer = styled.div`
   max-width: 100%;
   padding-top: 64px;
   margin-left: -14px;
@@ -200,18 +199,20 @@ const NoPaddingBottomBasicSection = styled(BasicSection)`
   padding-bottom: 0;
 `
 
-const ElementTitle = styled.h3`
+const ElementTitle = styled.em`
   font-family: var(${(props) => props.theme.font.title});
   font-size: 2.25em;
   margin-block-start: 0;
   margin-block-end: 0;
+  font-style: normal;
+  display: block;
   
   ${(props) => props.theme.isPhone} {
     font-size: 1.75em;
   }
 `
 
-const ElementSubTitle = styled.h4`
+const ElementSubTitle = styled.small`
   font-size: 1.25em;
   font-weight: normal;
   margin-block-start: 0;
