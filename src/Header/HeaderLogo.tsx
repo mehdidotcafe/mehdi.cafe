@@ -13,6 +13,8 @@ const HeaderLogo = () => {
         <Logo
           src="/images/logo-header.png"
           alt={t.header.logo.imageAlt}
+          width={221}
+          height={120}
         />
       </LogoContainer>
       <TrailingPadding />
@@ -61,7 +63,6 @@ const Logo = styled.img`
   -moz-user-select: none;
   -o-user-select: none;
   user-select: none;
-  height: 120px;
 `
 
 const LogoContainer = styled.div`
