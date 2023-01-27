@@ -31,7 +31,9 @@ const Section = () => {
             </MediaContainerRow>
           </TitleContainer>
         </InfoContainer>
-        <AvatarPicture
+        <AvatarImage
+          height={575}
+          width={494}
           src="/images/user.png"
           alt={t.userIdentity}
         />
@@ -70,7 +72,7 @@ const InfoContainer = styled.div`
   }
 `
 
-const AvatarPicture = styled(Image)`
+const AvatarImage = styled(Image)`
   width: 35%;
   max-width: 700px;
   max-height: 815px;
