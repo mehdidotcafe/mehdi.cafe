@@ -5,19 +5,19 @@ import { DefaultTheme, ThemeProvider as StyledComponentsThemeProvider } from 'st
 const widthThreshold = 1170
 
 export const ebGaramond = EB_Garamond({
-  variable: '--font-content',
+  // variable: '--font-content',
   subsets: ['latin'],
 })
 
 export const oswald = Oswald({
   weight: '700',
-  variable: '--font-title',
+  // variable: '--font-title',
   subsets: ['latin'],
 })
 
 export const roboto = Roboto({
   weight: '400',
-  variable: '--font-terciary',
+  // variable: '--font-terciary',
   subsets: ['latin'],
 })
 
