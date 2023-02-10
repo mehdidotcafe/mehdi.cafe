@@ -8,7 +8,6 @@ import Email from '@icon/Email'
 import Github from '@icon/Github'
 import Linkedin from '@icon/Linkedin'
 import Medium from '@icon/Medium'
-import React from 'react'
 import styled from 'styled-components'
 
 const Medias = () => (

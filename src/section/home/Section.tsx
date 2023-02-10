@@ -5,7 +5,6 @@ import BasicSection from '@section/BasicSection'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Link from '@typography/Link'
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 const Section = () => {

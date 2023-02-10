@@ -1,5 +1,4 @@
 import useTranslations from '@translation/useTranslations'
-import React from 'react'
 import styled, { css } from 'styled-components'
 
 const HeaderLogo = () => {
