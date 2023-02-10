@@ -11,6 +11,7 @@ import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
 import Description, { Paragraph } from '@typography/Description'
 import { ExternalLink } from '@typography/Link'
+import { subTitleStyle } from '@typography/SubTitle'
 import Title from '@typography/Title'
 import Zoomable from '@Zoomable'
 import Head from 'next/head'
@@ -163,21 +164,43 @@ const DescriptionSkills = ({
   skills,
 }: {
   skills: Skill[]
-}) => (
-  <SkillRow>
-    {skills.map((skill) => (
-      <Item>
-        <SkillTile
-          isLittle
-          logo={skill.logo}
-          name={skill.name}
-          backgroundColor={skill.color}
-          experience={skill.experience}
-        />
-      </Item>
-    ))}
-  </SkillRow>
-)
+}) => {
+  const t = useTranslations()
+  const groupedSkills = skills.reduce((acc, skill) => {
+    if (skill.kind !== 'other') {
+      acc[skill.kind].push(skill)
+    }
+    return acc
+  }, {
+    language: [] as Skill[],
+    framework: [] as Skill[],
+    tool: [] as Skill[],
+    database: [] as Skill[],
+  } as Record<Exclude<Skill['kind'], 'other'>, Skill[]>)
+
+  return (
+    <>
+      {(Object.keys(groupedSkills) as (keyof typeof groupedSkills)[]).map((key) => (
+        <>
+          <SkillRowTitle>{t.skillKind[key]}</SkillRowTitle>
+          <SkillRow>
+            {groupedSkills[key].map((skill) => (
+              <Item>
+                <SkillTile
+                  isLittle
+                  logo={skill.logo}
+                  name={skill.name}
+                  backgroundColor={skill.color}
+                  experience={skill.experience}
+                />
+              </Item>
+            ))}
+          </SkillRow>
+        </>
+      ))}
+    </>
+  )
+}
 
 type ProjectDescriptionTabsProps = {
   project: Project
@@ -268,205 +291,211 @@ const displayDate = (locale: string, dateStr?: string) => dateStr && new Date(da
   })
 
 const BackButton = styled.button`
-position: absolute;
-width: 64px !important;
-height: 64px !important;
-font-size: 64px !important;
-line-height: 48px;
-bottom: -12px;
-left: -12px;
-background: ${(props) => props.theme.secondaryColor} !important;
-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-color: white;
-text-align: center;
-cursor: pointer;
+        position: absolute;
+        width: 64px !important;
+        height: 64px !important;
+        font-size: 64px !important;
+        line-height: 48px;
+        bottom: -12px;
+        left: -12px;
+        background: ${(props) => props.theme.secondaryColor} !important;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        color: white;
+        text-align: center;
+        cursor: pointer;
 
-:hover {
-  background-color: ${(props) => props.theme.tertiaryColor} !important;
+        :hover {
+          background - color: ${(props) => props.theme.tertiaryColor} !important;
 }
 
-div {
-  height: 100%;
-  width: 100%;
+        div {
+          height: 100%;
+        width: 100%;
 }
-`
+        `
 
 const InfoContainer = styled.div`
-margin-left: 4%;
-margin-right: 4%;
+        margin-left: 4%;
+        margin-right: 4%;
 
-${(props) => props.theme.isPhone} {
-  flex-direction: column;
+        ${(props) => props.theme.isPhone} {
+          flex - direction: column;
 }
-`
+        `
 
 const DescriptionContainer = styled.div`
-width: 40%;
-position: fixed;
-top: 64px;
-margin-top: 32px;
-display: flex;
-flex-direction: column;
+        width: 40%;
+        position: fixed;
+        top: 64px;
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
 
-${(props) => props.theme.isPhone} {
-  position: relative;
-  top: 0;
-  width: 100%;
-  margin-right: 0;
+        ${(props) => props.theme.isPhone} {
+          position: relative;
+        top: 0;
+        width: 100%;
+        margin-right: 0;
 }
-`
+        `
 
 const ScrollerContainer = styled.aside`
-margin-left: 60%;
-width: 40%;
-display: inline-block;
+        margin-left: 60%;
+        width: 40%;
+        display: inline-block;
 
-${(props) => props.theme.isPhone} {
-  width: 100%;
-  margin-left: 0;
-  padding-top: 0;
-  margin-top: 0;
+        ${(props) => props.theme.isPhone} {
+          width: 100%;
+        margin-left: 0;
+        padding-top: 0;
+        margin-top: 0;
 }
-`
+        `
 
 const MobileScrollerContainer = styled(ScrollerContainer)`
-${(props) => props.theme.isLaptop} {
-  display: none;
+        ${(props) => props.theme.isLaptop} {
+          display: none;
 }
-`
+        `
 
 const LaptopScrollerContainer = styled(ScrollerContainer)`
-${(props) => props.theme.isPhone} {
-  display: none;
+        ${(props) => props.theme.isPhone} {
+          display: none;
 }
-`
+        `
 
 const Background = styled.div`
-position: fixed;
-top: -150vh;
-height: 400vh;
-right: -250vh;
-background-image: linear-gradient(to left bottom, ${(props) => props.theme.gradiantColors.join(',')});
-width: 300vh;
-transform: rotate(-35deg) translateZ(0);
-z-index: -1;
+        position: fixed;
+        top: -150vh;
+        height: 400vh;
+        right: -250vh;
+        background-image: linear-gradient(to left bottom, ${(props) => props.theme.gradiantColors.join(',')});
+        width: 300vh;
+        transform: rotate(-35deg) translateZ(0);
+        z-index: -1;
 }
-`
+        `
 
 const TitleContainer = styled.div`
-display: inline-block;
-margin-left: 48px;
+        display: inline-block;
+        margin-left: 48px;
 
-${(props) => props.theme.isPhone} {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  margin-left: 0;
-  align-self: flex-start;
+        ${(props) => props.theme.isPhone} {
+          margin - top: 32px;
+        margin-bottom: 32px;
+        margin-left: 0;
+        align-self: flex-start;
 }
-`
+        `
 
 const StyledExternalLink = styled(ExternalLink)`
-font-size: 1em;
-`
+        font-size: 1em;
+        `
 
 const ProjectDescriptionSwitch = styled.ul`
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-flex-direction: row;
-padding-bottom: 8px;
-align-items: center;
-list-style-type: none;
-margin-block-start: 0;
-margin-block-end: 0;
-padding-inline-start: 0;
-`
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        padding-bottom: 8px;
+        align-items: center;
+        list-style-type: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        `
 
 const ProjectDescriptionTab = styled.li<{
   isActive: boolean
 }>`
-  font-family: var(${(props) => props.theme.font.title});
-  font-size: 26px !important;
-  margin-top: 16px;
-  margin-right: 24px;
-  padding: 0.1em 0.15em;
-  cursor: pointer;
-  background-color: ${(props) => (props.isActive ? props.theme.mainColor : props.theme.secondaryColor)};
-  color: ${(props) => props.theme.light.linkColor};
+        font-family: var(${(props) => props.theme.font.title});
+        font-size: 26px !important;
+        margin-top: 16px;
+        margin-right: 24px;
+        padding: 0.1em 0.15em;
+        cursor: pointer;
+        background-color: ${(props) => (props.isActive ? props.theme.mainColor : props.theme.secondaryColor)};
+        color: ${(props) => props.theme.light.linkColor};
 
-  :hover {
-    background-color: ${(props) => props.theme.mainColor};
-  }  
-`
+        :hover {
+          background - color: ${(props) => props.theme.mainColor};
+  }
+        `
 
 const ProjectDescriptionContainer = styled.div`
-margin-top: 32px;
-`
+        margin-top: 32px;
+        `
 
 const Header = styled(Row)`
-align-items: center;
-flex-wrap: nowrap;
-margin-bottom: 0px;
-margin-top: 32px;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-bottom: 0px;
+        margin-top: 32px;
 
-${(props) => props.theme.isPhone} {
-  flex-direction: column;
-  margin: 0;
+        ${(props) => props.theme.isPhone} {
+          flex - direction: column;
+        margin: 0;
 
 }
-`
+        `
 
 const StyledBasicSection = styled(BasicSection)`
-margin-top: -64px;
+        margin-top: -64px;
 
-.slick-arrow {
-  display: none !important;
+        .slick-arrow {
+          display: none !important;
 }
-`
+        `
 
 const ProjectBack = styled.div`
-display: inline-block;
-position: relative;
-`
+        display: inline-block;
+        position: relative;
+        `
 
 const DescriptionMissionContainer = styled.div``
 
 const DescriptionContent = styled.div`
-margin-bottom: 16px;
-overflow: auto;
-flex-grow: 1;
+        margin-bottom: 16px;
+        overflow: auto;
+        flex-grow: 1;
 
-${DescriptionMissionContainer} ${Paragraph} > ::before {
-  content: "";
-  display: inline-block;
-  height: 12px;
-  width: 12px;
-  background-color: ${(props) => props.theme.mainColor};
-  margin-right: 8px;
+        ${DescriptionMissionContainer} ${Paragraph} > ::before {
+          content: "";
+        display: inline-block;
+        height: 12px;
+        width: 12px;
+        background-color: ${(props) => props.theme.mainColor};
+        margin-right: 8px;
 }
 
-a {
-  font-family: var(${(props) => props.theme.tertiaryColor});
-  text-decoration: none;
-  background-color: ${(props) => props.theme.secondaryColor};
-  color: ${(props) => props.theme.light.linkColor};
-  padding: 0.01em 0.05em;
-  font-weight: 500;
-  
-  :hover {
-    background-color: ${(props) => props.theme.tertiaryColor};
+        a {
+          font - family: var(${(props) => props.theme.tertiaryColor});
+        text-decoration: none;
+        background-color: ${(props) => props.theme.secondaryColor};
+        color: ${(props) => props.theme.light.linkColor};
+        padding: 0.01em 0.05em;
+        font-weight: 500;
+
+        :hover {
+          background - color: ${(props) => props.theme.tertiaryColor};
   }
 }
 
-${(props) => props.theme.isLaptop} {
-  height: calc(100vh - 96px);
+        ${(props) => props.theme.isLaptop} {
+          height: calc(100vh - 96px);
 }
+        `
+
+const SkillRowTitle = styled.div`
+${subTitleStyle}
+margin-top: 8px;
 `
 
 const SkillRow = styled(Row)`
-${(props) => props.theme.isPhone} {
-  justify-content: space-around;
+margin-left: -8px;
+        ${(props) => props.theme.isPhone} {
+          justify - content: space-around;
 }
-`
+        `
 
 export default WorkPage

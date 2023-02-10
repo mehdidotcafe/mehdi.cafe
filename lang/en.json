@@ -23,6 +23,12 @@
     "mySkills": "My skills",
     "yearsOfExperience": "Years of experience"
   },
+  "skillKind": {
+    "language": "Languages",
+    "framework": "Frameworks",
+    "database": "Databases",
+    "tool": "Tools"
+  },
   "header": {
     "links": {
       "Home": "Home",
