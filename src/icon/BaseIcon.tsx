@@ -1,5 +1,4 @@
 import Image from '@Image'
-import React from 'react'
 import { useTheme } from 'styled-components'
 
 type Props = {
