@@ -32,6 +32,9 @@ const Sections = ({
 
   return (
     <ReactFullpage
+      credits={{
+        enabled: false,
+      }}
       licenseKey={REACTFULLPAGE_LICENSE_KEY}
       onLeave={onScroll}
       render={({ fullpageApi }) => (
