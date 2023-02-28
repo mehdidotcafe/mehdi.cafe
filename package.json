@@ -1,6 +1,6 @@
 {
   "name": "mehdi.cafe",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "private": false,
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.33",
-    "@next/font": "13.2.1",
     "next": "13.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",

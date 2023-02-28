@@ -1,4 +1,4 @@
-import { EB_Garamond, Oswald, Roboto } from '@next/font/google'
+import { EB_Garamond, Oswald, Roboto } from 'next/font/google'
 import { ReactNode, useEffect, useState } from 'react'
 import { DefaultTheme, ThemeProvider as StyledComponentsThemeProvider } from 'styled-components'
 
