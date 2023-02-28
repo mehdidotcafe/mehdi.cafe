@@ -150,6 +150,7 @@ const DescriptionMission = ({
     <DescriptionMissionContainer>
       {text.map((t) => (
         <Description
+          key={t || ''}
           text={t || ''}
           noMargin
         />
@@ -181,11 +182,11 @@ const DescriptionSkills = ({
   return (
     <>
       {(Object.keys(groupedSkills) as (keyof typeof groupedSkills)[]).map((key) => (
-        <>
+        <span key={key}>
           <SkillRowTitle>{t.skillKind[key]}</SkillRowTitle>
           <SkillRow>
             {groupedSkills[key].map((skill) => (
-              <Item>
+              <Item key={skill.name}>
                 <SkillTile
                   isLittle
                   logo={skill.logo}
@@ -196,7 +197,7 @@ const DescriptionSkills = ({
               </Item>
             ))}
           </SkillRow>
-        </>
+        </span>
       ))}
     </>
   )
@@ -215,6 +216,7 @@ const ProjectDescriptionTabs = ({
   const [activeTab, setActiveTab] = useState<number>(0)
   const tabs = [
     {
+      key: 'work',
       test: project.description_project || '',
       name: t.projectPage.tabs.work,
       Content: <Description
@@ -223,6 +225,7 @@ const ProjectDescriptionTabs = ({
       />,
     },
     {
+      key: 'mission',
       test: project.description_mission,
       name: t.projectPage.tabs.keyWork,
       Content: <DescriptionMission
@@ -231,6 +234,7 @@ const ProjectDescriptionTabs = ({
 
     },
     {
+      key: 'duration',
       test: project.start,
       name: t.projectPage.tabs.duration,
       Content: <Description
@@ -238,6 +242,7 @@ const ProjectDescriptionTabs = ({
       />,
     },
     {
+      key: 'skills',
       test: true,
       name: t.projectPage.tabs.skills,
       Content: <DescriptionSkills skills={skills} />,
@@ -250,7 +255,7 @@ const ProjectDescriptionTabs = ({
         {
           tabs.map((tab, idx) => (
             <ProjectDescriptionTab
-              key={tab.name}
+              key={tab.key}
               isActive={activeTab === idx}
               onClick={() => setActiveTab(idx)}
             >
@@ -260,7 +265,7 @@ const ProjectDescriptionTabs = ({
         }
       </ProjectDescriptionSwitch>
       <DescriptionContent>
-        {tabs.map((tab, idx) => idx === activeTab && tab.Content)}
+        {tabs.map((tab, idx) => idx === activeTab && <span key={tab.key}>{tab.Content}</span>)}
       </DescriptionContent>
     </ProjectDescriptionContainer>
   )
