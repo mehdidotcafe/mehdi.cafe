@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .tsx,.ts,.js",
     "lint:fix": "eslint . --ext .tsx,.ts,.js --fix",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "echo $NODE_ENV && husky install "
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.33",
