@@ -1,6 +1,6 @@
 {
   "name": "mehdi.cafe",
-  "version": "3.5.0",
+  "version": "3.5.1",
   "private": false,
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -11,7 +11,7 @@
     "lint": "eslint . --ext .tsx,.ts,.js",
     "lint:fix": "eslint . --ext .tsx,.ts,.js --fix",
     "lint-staged": "lint-staged",
-    "prepare": "echo $NODE_ENV && husky install "
+    "prepare": "./scripts/npm-prepare.sh"
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.33",
