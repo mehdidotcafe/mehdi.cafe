@@ -62,18 +62,18 @@ const NestedSections = ({
 
   return (
     <ReactFullpage.Wrapper>
+      <HomeBackground />
       <div className="section" data-href="home">
         <HomeSection />
       </div>
-      <HomeBackground />
+      <ProjectBackground />
       <div className="section" data-href="work">
         <ProjectSection />
       </div>
-      <ProjectBackground />
+      <SkillBackground />
       <div className="section" data-href="skills">
         <SkillSection />
       </div>
-      <SkillBackground />
       <div className="section" data-href="experiences">
         <ExperienceSection />
         <Footer />
