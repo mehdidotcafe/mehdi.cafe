@@ -87,7 +87,7 @@ const projects: Project[] = [
     end: '2021-10-01',
   },
   {
-    name: 'centaur',
+    name: 'pfizer centaur',
     logo: 'centaur',
     color: '#0008c4',
     skills: [
@@ -109,7 +109,7 @@ const projects: Project[] = [
     ],
     images: [
     ],
-    description_project: 'Centaur est une plateforme BI utilisée en interne par une société pharmaceutique majeure.\nÀ travers différents modules, elle améliore la prise de décision des employés via l\'analyse, la consolidation et la restitution graphique de données clés.',
+    description_project: 'Centaur est une plateforme BI utilisée en interne par Pfizer.\nÀ travers différents modules, elle améliore la prise de décision des employés via l\'analyse, la consolidation et la restitution graphique de données clés.',
     description_mission: [
       'Développement de "Simple Search", un moteur de recherche permettant aux utilisateurs de visualiser des données graphiques et agrégées à partir d\'une recherche textuelle',
       'Multiples remaniements techniques visant à baisser grandement la dette technique de l\'application',
