@@ -18,7 +18,7 @@ const skills: Skill[] = [
     name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 4, kind: 'language',
   },
   {
-    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 5, kind: 'language',
+    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 5, kind: 'framework',
   },
   {
     name: 'React', logo: 'react', color: '#61dafb', experience: 5, kind: 'framework',

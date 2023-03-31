@@ -92,9 +92,10 @@ const projects: Project[] = [
     logo: 'centaur',
     color: '#0008c4',
     skills: [
-      'React',
       'Typescript',
       'Javascript',
+      'NodeJS',
+      'React',
       'AWS',
       'neo4j',
       'Docker',
