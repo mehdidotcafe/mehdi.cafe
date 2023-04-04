@@ -98,6 +98,7 @@ const projects: Project[] = [
       'NodeJS',
       'AWS',
       'neo4j',
+      'mySQL',
       'Docker',
       'Github',
       'Jenkins',
@@ -114,7 +115,7 @@ const projects: Project[] = [
     description_project: 'Centaur est une plateforme BI utilisée en interne par Pfizer.\nÀ travers différents modules, elle améliore la prise de décision des employés via l\'analyse, la consolidation et la restitution graphique de données clés.',
     description_mission: [
       'Développement de "Simple Search", un moteur de recherche permettant aux utilisateurs de visualiser des données graphiques et agrégées à partir d\'une recherche textuelle',
-      'Réalisation et exécution d\'un audit technique visant à baisser grandement la dette technique, améliorer la qualité et lisibilité du code ainsi que l\'architecture logicielle',
+      'Réalisation et application d\'un audit technique visant à baisser grandement la dette technique, améliorer la qualité et lisibilité du code ainsi que l\'architecture logicielle',
       'Développement et déploiement d\'un PoC de "Trial Review", un outil permettant l\'annotation / correction / revue de fichiers utilisés en interne par Pfizer',
       'Refonte et amélioration de plusieurs interfaces utilisateurs visant à simplifier l\'ergonomie',
       'Divers développements de fonctionnalités',

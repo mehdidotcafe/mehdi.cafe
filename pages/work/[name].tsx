@@ -181,24 +181,27 @@ const DescriptionSkills = ({
 
   return (
     <>
-      {(Object.keys(groupedSkills) as (keyof typeof groupedSkills)[]).map((key) => (
-        <span key={key}>
-          <SkillRowTitle>{t.skillKind[key]}</SkillRowTitle>
-          <SkillRow>
-            {groupedSkills[key].map((skill) => (
-              <Item key={skill.name}>
-                <SkillTile
-                  isLittle
-                  logo={skill.logo}
-                  name={skill.name}
-                  backgroundColor={skill.color}
-                  experience={skill.experience}
-                />
-              </Item>
-            ))}
-          </SkillRow>
-        </span>
-      ))}
+      {(Object.keys(groupedSkills) as (keyof typeof groupedSkills)[])
+        .map((key) => (groupedSkills[key].length > 0
+          ? (
+            <span key={key}>
+              <SkillRowTitle>{t.skillKind[key]}</SkillRowTitle>
+              <SkillRow>
+                {groupedSkills[key].map((skill) => (
+                  <Item key={skill.name}>
+                    <SkillTile
+                      isLittle
+                      logo={skill.logo}
+                      name={skill.name}
+                      backgroundColor={skill.color}
+                      experience={skill.experience}
+                    />
+                  </Item>
+                ))}
+              </SkillRow>
+            </span>
+          ) : null
+        ))}
     </>
   )
 }

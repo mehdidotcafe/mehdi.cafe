@@ -1,4 +1,5 @@
 import Image, { ImageProps } from '@Image'
+import { Color } from '@theme/theme'
 import Overlay from '@tile/Overlay'
 import Progress from '@tile/Progress'
 import useTranslations from '@translation/useTranslations'
@@ -15,7 +16,7 @@ const years = 7
 type Props = {
   isLittle?: boolean
   showExperience?: boolean
-  backgroundColor: string
+  backgroundColor: Color
   isSelected?: boolean
   logo: string
   name: string
@@ -43,12 +44,13 @@ const SkillTile = ({
         >
           <SubContainer isLittle={isLittle}>
             <SkillImage alt={`${name} logo`} src={`/images/skills/${logo}.png`} />
-            { !isLittle
-                && (
-                <Overlay style={{ backgroundColor }}>
-                  <span>{name}</span>
-                </Overlay>
-                )}
+            <Overlay
+              style={{ backgroundColor }}
+              isLittle={isLittle}
+              backgroundColor={backgroundColor}
+            >
+              <span>{name}</span>
+            </Overlay>
           </SubContainer>
         </Container>
       </SuperContainer>
@@ -85,6 +87,7 @@ const Container = styled.div<{
   isSelected?: boolean
 }>`
 position: absolute;
+overflow: hidden;
 height: ${(props) => (props.isLittle ? littleSide : side)}px;
 width: ${(props) => (props.isLittle ? littleSide : side)}px;
 background-color: ${(props) => props.theme.mainColor};
@@ -94,7 +97,6 @@ box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px
 cursor: pointer;
 transition: transform 0.2s, filter 0.3s;  
 ${(props) => props.isSelected && 'transform: scale(0.8);'}
-${(props) => props.isSelected && props.isLittle && 'filter: brightness(150%);'}
 
 ${(props) => props.theme.isPhone} {
   ${littleSize}
@@ -150,10 +152,6 @@ margin: ${(props) => (props.isMarged ? '15' : '0')}px;
 &:hover {
   ${Overlay} {
     opacity: 1;
-  }
-  
-  ${Container} {
-    ${(props) => (props.isLittle && 'filter: brightness(150%);')}
   }
 }
 
