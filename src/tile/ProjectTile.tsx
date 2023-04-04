@@ -22,7 +22,7 @@ const ProjectTile = ({
     <ProjectImage alt={`${name} logo`} src={`/images/project/${logo}-logo.png`} />
     {isHoverable !== false
         && (
-          <Overlay style={{ backgroundColor, color: shouldDisplayBlackText(backgroundColor) ? 'black' : 'white' }}>
+          <Overlay style={{ backgroundColor }} backgroundColor={backgroundColor} isLittle={false}>
             <span>{name}</span>
           </Overlay>
         )}
@@ -55,18 +55,5 @@ const ProjectImage = styled(Image)`
   height: 62.5%;
   width: 62.5%;
 `
-
-/* eslint-disable no-bitwise */
-const shouldDisplayBlackText = (color: Color) => {
-  const rgb = parseInt(color.slice(1), 16) // convert rrggbb to decimal
-  const r = (rgb >> 16) & 0xff // extract red
-  const g = (rgb >> 8) & 0xff // extract green
-  const b = (rgb >> 0) & 0xff // extract blue
-
-  const luma = 0.2126 * r + 0.7152 * g + 0.0722 * b // per ITU-R BT.709
-
-  return luma >= 220
-}
-/* eslint-enable no-bitwise */
 
 export default ProjectTile
