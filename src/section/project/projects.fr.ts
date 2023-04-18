@@ -263,8 +263,9 @@ const projects: Project[] = [
     ],
     description_project: 'The Babel Community est la plus grande marque de résidence de coworking et coliving en France.',
     description_mission: [
-      "Développement du site vitrine de la résidence permettant de lister les services proposés et les biens actuellement disponibles. Le site permet aussi de planifier une visite ou une réservation d'appartement ainsi que de s'inscrire à un cours de sport ou réserver une table au restaurant",
-      'Conception, développement et mise en production du site vitrine',
+      'Mise en place de la présence numérique de la marque The Babel Community',
+      'Développement et déploiement du site vitrine de la marque <a href="https://thebabelcommunity.com" target="_blank">The Babel Community</a>',
+      'Développement et déploiement d\'une webapp permettant d\'interagir avec les différents services de la résidence incluant notamment la réservation d\'une table au restaurant ou d\'un cours de sport',
     ],
     recommendations: [],
     start: '2018-10-01',

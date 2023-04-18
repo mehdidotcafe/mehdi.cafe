@@ -263,8 +263,9 @@ const projects: Project[] = [
     ],
     description_project: 'The Babel Community is the largest coworking and coliving residence brand in France.',
     description_mission: [
-      "Development of the residence's showcase website to list the services offered and the goods currently available. The website also allows you to plan a visit or to book an apartment as well as to register for a sports course or reserve a table at the restaurant.",
-      'Design, development and deployment',
+      'Implementation of the digital presence of The Babel Community brand',
+      'Development and deployment of the brand\'s showcase site  <a href="https://thebabelcommunity.com" target="_blank">The Babel Community</a>',
+      'Development and deployment of a webapp allowing to interact with the various services of the residence including the booking of a table at the restaurant or a sports course',
     ],
     recommendations: [],
     start: '2018-10-01',
