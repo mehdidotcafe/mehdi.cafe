@@ -1,6 +1,6 @@
 {
   "name": "mehdi.cafe",
-  "version": "3.6.2",
+  "version": "3.6.3",
   "private": false,
   "license": "GPL-3.0-or-later",
   "scripts": {
@@ -15,28 +15,28 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.39",
-    "next": "13.3.1",
+    "next": "13.3.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.10"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.12",
-    "@types/node": "18.16.0",
-    "@types/react": "18.0.38",
-    "@types/react-dom": "18.0.11",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.1",
     "@types/styled-components": "^5.1.26",
     "eslint": "8.39.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
-    "eslint-config-next": "13.3.1",
+    "eslint-config-next": "13.3.2",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.1",
+    "lint-staged": "^13.2.2",
     "typescript": "5.0.4"
   },
   "lint-staged": {
