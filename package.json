@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.39",
-    "next": "13.3.2",
+    "next": "13.3.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "styled-components": "^5.3.10"
