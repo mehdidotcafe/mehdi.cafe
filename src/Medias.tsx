@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 import {
   CONTACT_EMAIL,
   CONTACT_GITHUB,
@@ -8,7 +10,6 @@ import Email from '@icon/Email'
 import Github from '@icon/Github'
 import Linkedin from '@icon/Linkedin'
 import Medium from '@icon/Medium'
-import styled from 'styled-components'
 
 const Medias = () => (
   <Container>

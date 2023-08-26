@@ -1,3 +1,5 @@
+import styled, { css } from 'styled-components'
+
 import Row from '@grid/Row'
 import Image from '@Image'
 import Medias from '@Medias'
@@ -5,7 +7,6 @@ import BasicSection from '@section/BasicSection'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Link from '@typography/Link'
-import styled, { css } from 'styled-components'
 
 const Section = () => {
   const t = useTranslations()
@@ -133,10 +134,7 @@ const MainDescription = styled(Description)`
 
 const MediaContainerRow = styled(Row)`
   align-items: center;
-
-  > * {
-    margin-top: 32px;
-  }
+  margin-top: 32px;
 `
 
 const StyledMedias = styled(Medias)`

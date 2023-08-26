@@ -1,5 +1,6 @@
-import { sections } from '@Location'
 import { useRouter } from 'next/router'
+
+import { sections } from '@Location'
 import Sections from 'pages/Sections'
 
 export async function getStaticPaths() {

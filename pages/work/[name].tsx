@@ -1,3 +1,8 @@
+import Head from 'next/head'
+import { useRouter } from 'next/router'
+import { MouseEvent, useEffect, useState } from 'react'
+import styled from 'styled-components'
+
 import AsideScroller from '@AsideScroller'
 import Item from '@grid/Item'
 import Row from '@grid/Row'
@@ -14,10 +19,6 @@ import { ExternalLink } from '@typography/Link'
 import { subTitleStyle } from '@typography/SubTitle'
 import Title from '@typography/Title'
 import Zoomable from '@Zoomable'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import { MouseEvent, useEffect, useState } from 'react'
-import styled from 'styled-components'
 
 export async function getStaticPaths() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -94,7 +95,7 @@ const WorkPage = () => {
                     </BackButton>
                   </ProjectBack>
                   <TitleContainer>
-                    <Title noMargin>{project.name}</Title>
+                    <Title $noMargin>{project.name}</Title>
                     {project.url
                       && (
                         <StyledExternalLink
@@ -259,7 +260,7 @@ const ProjectDescriptionTabs = ({
           tabs.map((tab, idx) => (
             <ProjectDescriptionTab
               key={tab.key}
-              isActive={activeTab === idx}
+              $isActive={activeTab === idx}
               onClick={() => setActiveTab(idx)}
             >
               {tab.name}
@@ -414,7 +415,7 @@ const ProjectDescriptionSwitch = styled.ul`
         `
 
 const ProjectDescriptionTab = styled.li<{
-  isActive: boolean
+  $isActive: boolean
 }>`
         font-family: var(${(props) => props.theme.font.title});
         font-size: 26px !important;
@@ -422,7 +423,7 @@ const ProjectDescriptionTab = styled.li<{
         margin-right: 24px;
         padding: 0.1em 0.15em;
         cursor: pointer;
-        background-color: ${(props) => (props.isActive ? props.theme.mainColor : props.theme.secondaryColor)};
+        background-color: ${(props) => (props.$isActive ? props.theme.mainColor : props.theme.secondaryColor)};
         color: ${(props) => props.theme.light.linkColor};
 
         :hover {

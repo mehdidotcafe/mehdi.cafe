@@ -1,5 +1,6 @@
-import Image from '@Image'
 import { useTheme } from 'styled-components'
+
+import Image from '@Image'
 
 type Props = {
   src: string,

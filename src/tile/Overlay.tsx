@@ -1,5 +1,6 @@
-import { Color } from '@theme/theme'
 import styled from 'styled-components'
+
+import { Color } from '@theme/theme'
 
 /* eslint-disable no-bitwise */
 const shouldDisplayBlackText = (color: Color) => {
@@ -15,8 +16,8 @@ const shouldDisplayBlackText = (color: Color) => {
 /* eslint-enable no-bitwise */
 
 export default styled.span<{
-  isLittle?: boolean,
-  backgroundColor: Color,
+  $isLittle?: boolean,
+  $backgroundColor: Color,
 }>`
 position: absolute;
 top: 0;
@@ -24,7 +25,7 @@ left: 0;
 right: 0;
 bottom: 0;
 justify-content: center;
-color: ${(props) => (shouldDisplayBlackText(props.backgroundColor) ? 'black' : 'white')};
+color: ${(props) => (shouldDisplayBlackText(props.$backgroundColor) ? 'black' : 'white')};
 font-family: var(${(props) => props.theme.font.title});
 font-size: 28px;
 background-color: ${(props) => props.theme.mainColor};
@@ -38,5 +39,5 @@ ${(props) => props.theme.isPhone} {
   font-size: 22px;
 }
 
-font-size: ${(props) => (props.isLittle ? '18px' : 'inehrit')};
+font-size: ${(props) => (props.$isLittle ? '18px' : 'inehrit')};
 `

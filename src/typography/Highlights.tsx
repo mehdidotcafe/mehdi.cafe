@@ -34,7 +34,7 @@ padding-left: 16px;
 `
 
 const SyledLi = styled.li`
-:before {
+&:before {
   content: "";
   display: inline-block;
   height: 6px;

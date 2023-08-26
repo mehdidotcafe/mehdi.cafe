@@ -1,12 +1,13 @@
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import styled from 'styled-components'
+
 import HeaderLogo from '@Header/HeaderLogo'
 import HeaderMenu from '@Header/HeaderMenu'
 import { sections } from '@Location'
 import Medias from '@Medias'
 import useTranslations from '@translation/useTranslations'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-import styled from 'styled-components'
 
 const defaultHeight = 64
 const expandedHeight = 416
@@ -19,7 +20,7 @@ const Header = () => {
   const toggleIsExpanded = () => setIsExpanded((prev) => !prev)
 
   return (
-    <Container isExpanded={isExpanded}>
+    <Container $isExpanded={isExpanded}>
       <HeaderLogo />
       <ButtonContainer>
         {sections.map((section) => (
@@ -82,13 +83,13 @@ ${(props) => props.theme.isPhone} {
 `
 
 const Container = styled.header<{
-  isExpanded: boolean
+  $isExpanded: boolean
 }>`
 top: 0;
 left: 0;
 position: fixed;
 width: 100%;
-height: ${(props) => (props.isExpanded ? expandedHeight : defaultHeight)}px;
+height: ${(props) => (props.$isExpanded ? expandedHeight : defaultHeight)}px;
 min-height: ${defaultHeight}px;
 display: flex;
 flex-direction: row;
@@ -101,7 +102,7 @@ ${(props) => props.theme.isPhone} {
   transition: 0.3s;
 
   ${LinkButton} {
-    display: ${(props) => (props.isExpanded ? 'block' : 'none')};
+    display: ${(props) => (props.$isExpanded ? 'block' : 'none')};
   }
 }
 `

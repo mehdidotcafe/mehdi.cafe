@@ -1,10 +1,11 @@
+import styled from 'styled-components'
+
 import Image from '@Image'
 import { Color } from '@theme/theme'
 import Overlay from '@tile/Overlay'
-import styled from 'styled-components'
 
 type ContainerProps = {
-  isFullSize?: boolean
+  $isFullSize?: boolean
 }
 
 type Props = {
@@ -18,11 +19,11 @@ type Props = {
 const ProjectTile = ({
   backgroundColor, logo, name, isHoverable, fullSize,
 }: Props) => (
-  <Container isFullSize={fullSize} style={{ backgroundColor }}>
+  <Container $isFullSize={fullSize} style={{ backgroundColor }}>
     <ProjectImage alt={`${name} logo`} src={`/images/project/${logo}-logo.png`} />
     {isHoverable !== false
         && (
-          <Overlay style={{ backgroundColor }} backgroundColor={backgroundColor} isLittle={false}>
+          <Overlay style={{ backgroundColor }} $backgroundColor={backgroundColor} $isLittle={false}>
             <span>{name}</span>
           </Overlay>
         )}
@@ -45,8 +46,8 @@ const Container = styled.div<ContainerProps>`
   }
 
   ${(props) => props.theme.isPhone} {
-    ${(props) => !props.isFullSize && 'height: calc(164px / 2);'}
-    ${(props) => !props.isFullSize && 'width: calc(164px / 2);'}
+    ${(props) => !props.$isFullSize && 'height: calc(164px / 2);'}
+    ${(props) => !props.$isFullSize && 'width: calc(164px / 2);'}
   }
 `
 

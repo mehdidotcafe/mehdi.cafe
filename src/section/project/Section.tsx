@@ -1,7 +1,9 @@
+import { useRouter } from 'next/router'
+import styled from 'styled-components'
+
 import Item from '@grid/Item'
 import Row from '@grid/Row'
 import BasicSection from '@section/BasicSection'
-import type { Project } from '@section/project/Project'
 import useProjects from '@section/project/useProjects'
 import { Skill } from '@section/skill/Skill'
 import { useAllSkills, useFilterableSkills } from '@section/skill/useSkills'
@@ -11,9 +13,9 @@ import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
 import { subTitleStyle } from '@typography/SubTitle'
 import Title from '@typography/Title'
-import { useRouter } from 'next/router'
+
 import type { MouseEvent } from 'react'
-import styled from 'styled-components'
+import type { Project } from '@section/project/Project'
 
 const QUERY_PARAM_NAME = 'skill'
 
@@ -48,15 +50,15 @@ const Section = () => {
 
   return (
     <BasicSection>
-      <Title noMargin>{t.work.myProjects}</Title>
+      <Title $noMargin>{t.work.myProjects}</Title>
       <ProjectRow>
         <FiltersContainer>
           <FilterText
             type="submit"
-            hasPointerCursor={selectedSkills.length > 0}
+            $hasPointerCursor={selectedSkills.length > 0}
             onClick={clearFilters}
           >
-            <ClearFilterButton isVisible={selectedSkills.length > 0}>
+            <ClearFilterButton $isVisible={selectedSkills.length > 0}>
               {t.work.clearCross}
             </ClearFilterButton>
             {t.work.filters}
@@ -78,7 +80,7 @@ const Section = () => {
             </FilterRow>
           ))}
         </FiltersContainer>
-        <ListContainer center>
+        <ListContainer $isCenter>
           {projects.map((project) => (
             <ProjectButton type="submit" key={project.name} onClick={redirectToProject(project)}>
               <Item>
@@ -196,13 +198,13 @@ const FiltersContainer = styled(Row)`
 `
 
 const FilterText = styled.button<{
-  hasPointerCursor: boolean
+  $hasPointerCursor: boolean
 }>`
   margin-right: 8px;
   margin-bottom: 16px;
   width: 100%;
   text-align: right;
-  cursor: ${(props) => (props.hasPointerCursor ? 'pointer' : 'normal')}
+  cursor: ${(props) => (props.$hasPointerCursor ? 'pointer' : 'normal')}
 
   ${(props) => props.theme.isPhone} {
     text-align: left;
@@ -240,9 +242,9 @@ const ListContainer = styled(Row)`
 `
 
 const ClearFilterButton = styled.span<{
-  isVisible: boolean
+  $isVisible: boolean
 }>`
-visibility: ${(props) => (props.isVisible ? 'visible' : 'hidden')}
+visibility: ${(props) => (props.$isVisible ? 'visible' : 'hidden')}
 `
 
 const ProjectRow = styled(Row)`

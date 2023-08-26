@@ -1,5 +1,6 @@
-import useTranslations from '@translation/useTranslations'
 import styled, { css } from 'styled-components'
+
+import useTranslations from '@translation/useTranslations'
 
 const HeaderLogo = () => {
   const t = useTranslations()

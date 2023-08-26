@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 type Props = {
-  noMargin?: boolean
+  $noMargin?: boolean
 }
 
 export default styled.h1<Props>`
@@ -16,5 +16,5 @@ export default styled.h1<Props>`
     font-size: 3.5em;
   }
 
-  ${(props) => !props.noMargin && 'margin-left: 16px'}
+  ${(props) => !props.$noMargin && 'margin-left: 16px'}
 `

@@ -1,7 +1,8 @@
-import { GOOGLE_ANALYTICS } from '@env'
 import { type NextRouter, useRouter } from 'next/router'
 import Script from 'next/script'
 import { useEffect } from 'react'
+
+import { GOOGLE_ANALYTICS } from '@env'
 
 const useWatchAndSendNavigationEvents = (router: NextRouter) => {
   useEffect(() => {

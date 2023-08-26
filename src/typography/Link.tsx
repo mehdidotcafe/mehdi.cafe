@@ -1,6 +1,7 @@
 import NextLink, { LinkProps } from 'next/link'
-import type { AnchorHTMLAttributes } from 'react'
 import styled, { css } from 'styled-components'
+
+import type { AnchorHTMLAttributes } from 'react'
 
 type AnchorProps = {
   $isStyled?: boolean

@@ -1,3 +1,7 @@
+import Link from 'next/link'
+import { type ReactElement } from 'react'
+import styled, { useTheme } from 'styled-components'
+
 import Item from '@grid/Item'
 import Row from '@grid/Row'
 import BasicSection from '@section/BasicSection'
@@ -5,9 +9,6 @@ import useSkills from '@section/skill/useSkills'
 import SkillTile from '@tile/SkillTile'
 import useTranslations from '@translation/useTranslations'
 import Title from '@typography/Title'
-import Link from 'next/link'
-import { type ReactElement } from 'react'
-import styled, { useTheme } from 'styled-components'
 
 const Section = () => {
   const { breakpoints: { useWidthBreakpoints } } = useTheme()
@@ -21,12 +22,12 @@ const Section = () => {
 
   return (
     <BasicSection>
-      <Title noMargin>{t.skill.mySkills}</Title>
+      <Title $noMargin>{t.skill.mySkills}</Title>
       <SubTextContainer>
         <ExperiancePreview />
         <ExperianceText>{t.skill.yearsOfExperience}</ExperianceText>
       </SubTextContainer>
-      <MarginRow center>
+      <MarginRow $isCenter>
         {skills.map((skill) => (
           <Item key={skill.name}>
             <Container href={{ pathname: '/work', query: { skill: skill.name } }}>
