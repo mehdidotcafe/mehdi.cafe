@@ -1,5 +1,6 @@
-import { ebGaramond, oswald, roboto } from '@theme/ThemeProvider'
 import { createGlobalStyle } from 'styled-components'
+
+import { ebGaramond, oswald, roboto } from '@theme/ThemeProvider'
 
 const ThemeGlobalStyle = createGlobalStyle`
 :root {

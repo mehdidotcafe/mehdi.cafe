@@ -8,6 +8,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/jsx-runtime',
+    'plugin:import/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
     'airbnb',
     'airbnb-typescript',
   ],
@@ -26,7 +30,7 @@ module.exports = {
   },
   plugins: [
     'react',
-    'simple-import-sort',
+    'import',
   ],
   rules: {
     semi: [2, 'never'],
@@ -39,10 +43,15 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'import/prefer-default-export': 'off',
     'import/no-named-as-default': 'off',
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
     '@typescript-eslint/no-use-before-define': ['error', { functions: false, variables: false }],
     'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+        'newlines-between': 'always',
+      },
+    ],
   },
   settings: {
     react: {

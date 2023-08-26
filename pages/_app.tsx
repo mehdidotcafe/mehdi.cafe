@@ -1,3 +1,6 @@
+import Head from 'next/head'
+import { useTheme } from 'styled-components'
+
 import Analytics from '@Analytics'
 import {
   DOMAIN,
@@ -7,9 +10,8 @@ import Header from '@Header'
 import ThemeGlobalStyle from '@theme/ThemeGlobalStyle'
 import ThemeProvider from '@theme/ThemeProvider'
 import useTranslations from '@translation/useTranslations'
-import Head from 'next/head'
+
 import type { FC } from 'react'
-import { useTheme } from 'styled-components'
 
 const NestedHead = () => {
   const theme = useTheme()

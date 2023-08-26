@@ -1,14 +1,16 @@
+import styled, { useTheme } from 'styled-components'
+
 import Row from '@grid/Row'
 import Image from '@Image'
 import BasicSection from '@section/BasicSection'
-import type { Experience } from '@section/experience/Experience'
 import useExperiences from '@section/experience/useExperiences'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
 import Highlights from '@typography/Highlights'
 import Title from '@typography/Title'
+
 import type { ReactNode } from 'react'
-import styled, { useTheme } from 'styled-components'
+import type { Experience } from '@section/experience/Experience'
 
 const Section = () => {
   const theme = useTheme()
@@ -17,7 +19,7 @@ const Section = () => {
 
   return (
     <NoPaddingBottomBasicSection>
-      <Title noMargin>{t.experience.myExperiences}</Title>
+      <Title $noMargin>{t.experience.myExperiences}</Title>
       <VerticalTimelineContainer>
         {experiences.map((experience) => (
           <VerticalTimelineElement
@@ -158,7 +160,7 @@ const VerticalTimelineContainer = styled.div`
   padding-bottom: 64px;
   position: relative;
 
-  ::before {
+  &::before {
     background: ${(props) => props.theme.mainColor};
     width: 6px;
     content: "";

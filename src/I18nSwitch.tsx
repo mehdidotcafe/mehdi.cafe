@@ -1,9 +1,10 @@
+import styled from 'styled-components'
+
 import {
   DOMAIN_EN,
   DOMAIN_FR,
 } from '@env'
 import { ExternalLink } from '@typography/Link'
-import styled from 'styled-components'
 
 const Container = styled.div`
 font-size: 1.5rem;

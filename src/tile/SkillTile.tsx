@@ -1,9 +1,10 @@
+import styled, { css } from 'styled-components'
+
 import Image, { ImageProps } from '@Image'
 import { Color } from '@theme/theme'
 import Overlay from '@tile/Overlay'
 import Progress from '@tile/Progress'
 import useTranslations from '@translation/useTranslations'
-import styled, { css } from 'styled-components'
 
 const side = 164
 const littleSide = side / 2
@@ -36,18 +37,18 @@ const SkillTile = ({
 
   return (
     <RelativeContainer>
-      <SuperContainer isLittle={isLittle} isSelected={isSelected} isMarged={showExperience}>
+      <SuperContainer $isLittle={isLittle} $isSelected={isSelected} $isMarged={showExperience}>
         <Container
-          isSelected={isSelected}
-          isLittle={isLittle}
+          $isSelected={isSelected}
+          $isLittle={isLittle}
           style={{ backgroundColor }}
         >
-          <SubContainer isLittle={isLittle}>
+          <SubContainer $isLittle={isLittle}>
             <SkillImage alt={`${name} logo`} src={`/images/skills/${logo}.png`} />
             <Overlay
               style={{ backgroundColor }}
-              isLittle={isLittle}
-              backgroundColor={backgroundColor}
+              $isLittle={isLittle}
+              $backgroundColor={backgroundColor}
             >
               <span>{name}</span>
             </Overlay>
@@ -83,20 +84,20 @@ width: calc(${side}px / 2);
 `
 
 const Container = styled.div<{
-  isLittle?: boolean
-  isSelected?: boolean
+  $isLittle?: boolean
+  $isSelected?: boolean
 }>`
 position: absolute;
 overflow: hidden;
-height: ${(props) => (props.isLittle ? littleSide : side)}px;
-width: ${(props) => (props.isLittle ? littleSide : side)}px;
+height: ${(props) => (props.$isLittle ? littleSide : side)}px;
+width: ${(props) => (props.$isLittle ? littleSide : side)}px;
 background-color: ${(props) => props.theme.mainColor};
 text-align: center;
 justify-content: center;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 cursor: pointer;
 transition: transform 0.2s, filter 0.3s;  
-${(props) => props.isSelected && 'transform: scale(0.8);'}
+${(props) => props.$isSelected && 'transform: scale(0.8);'}
 
 ${(props) => props.theme.isPhone} {
   ${littleSize}
@@ -140,14 +141,14 @@ font-size: 13px;
 `
 
 const SuperContainer = styled.div<{
-  isSelected?: boolean
-  isLittle?: boolean
-  isMarged?: boolean
+  $isSelected?: boolean
+  $isLittle?: boolean
+  $isMarged?: boolean
 }>`
 position: relative;
-height: ${(props) => (props.isLittle ? littleSide : side)}px;
-width: ${(props) => (props.isLittle ? littleSide : side)}px;
-margin: ${(props) => (props.isMarged ? '15' : '0')}px;
+height: ${(props) => (props.$isLittle ? littleSide : side)}px;
+width: ${(props) => (props.$isLittle ? littleSide : side)}px;
+margin: ${(props) => (props.$isMarged ? '15' : '0')}px;
 
 &:hover {
   ${Overlay} {
@@ -157,17 +158,17 @@ margin: ${(props) => (props.isMarged ? '15' : '0')}px;
 
 ${(props) => props.theme.isPhone} {
   ${littleSize}
-  ${(props) => (props.isMarged && 'margin-left: 0;')}
-  ${(props) => (props.isMarged && 'margin-right: 0;')}
+  ${(props) => (props.$isMarged && 'margin-left: 0;')}
+  ${(props) => (props.$isMarged && 'margin-right: 0;')}
 }
 `
 
 const SubContainer = styled.div<{
-  isLittle?: boolean
+  $isLittle?: boolean
 }>`
 position: relative;
-height: ${(props) => (props.isLittle ? littleSide : side)}px;
-width: ${(props) => (props.isLittle ? littleSide : side)}px;
+height: ${(props) => (props.$isLittle ? littleSide : side)}px;
+width: ${(props) => (props.$isLittle ? littleSide : side)}px;
 
 ${(props) => props.theme.isPhone} {
   ${littleSize}
