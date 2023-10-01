@@ -11,7 +11,7 @@ import Github from '@icon/Github'
 import Linkedin from '@icon/Linkedin'
 import Medium from '@icon/Medium'
 
-const Medias = () => (
+const Media = () => (
   <Container>
     <MediaButton aria-label="Email" href={`mailto:${CONTACT_EMAIL}`}>
       <Email />
@@ -49,4 +49,4 @@ const MediaButton = styled.a`
   }
 `
 
-export default Medias
+export default Media

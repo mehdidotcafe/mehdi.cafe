@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BasicButton from '@BasicButton'
 import { CONTACT_EMAIL } from '@env'
 import I18NSwitch from '@I18nSwitch'
-import Medias from '@Medias'
+import Media from '@Media'
 import useTranslations from '@translation/useTranslations'
 import { anchorStyle } from '@typography/Link'
 
@@ -20,7 +20,7 @@ const Footer = () => {
         <Copyright>{t.footer.copyright}</Copyright>
       </ButtonContainer>
       <MediasContainer>
-        <Medias />
+        <Media />
       </MediasContainer>
     </Container>
   )
