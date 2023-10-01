@@ -60,7 +60,7 @@ const skills: Skill[] = [
     name: 'Java', logo: 'java', color: '#096eb6', experience: 0.5, isFilterable: false, isVisible: false, kind: 'language',
   },
   {
-    name: 'Kotlin', logo: 'kotlin', color: '#4680de', experience: 1, isFilterable: false, kind: 'language',
+    name: 'Kotlin', logo: 'kotlin', color: '#4680de', experience: 1, isFilterable: false, isVisible: false, kind: 'language',
   },
   {
     name: 'Swift', logo: 'swift', color: '#f36938', experience: 0.5, isFilterable: false, isVisible: false, kind: 'language',
@@ -113,6 +113,10 @@ const skills: Skill[] = [
   },
 
   {
+    name: 'Terraform', logo: 'terraform', color: '#ffffff', experience: 1, kind: 'tool', isFilterable: false,
+  },
+
+  {
     name: 'Github', logo: 'github', color: '#ffffff', experience: 6, isFilterable: false, isVisible: false, kind: 'tool',
   },
   {
@@ -123,6 +127,10 @@ const skills: Skill[] = [
   },
   {
     name: 'Docker', logo: 'docker', color: '#ffffff', experience: 1, isFilterable: false, isVisible: false, kind: 'tool',
+  },
+
+  {
+    name: 'Datadog', logo: 'datadog', color: '#ffffff', experience: 1, kind: 'tool', isVisible: false, isFilterable: false,
   },
 ]
 

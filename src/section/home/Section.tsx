@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 import Row from '@grid/Row'
 import Image from '@Image'
-import Medias from '@Medias'
+import Media from '@Media'
 import BasicSection from '@section/BasicSection'
 import useTranslations from '@translation/useTranslations'
 import Description from '@typography/Description'
@@ -137,7 +137,7 @@ const MediaContainerRow = styled(Row)`
   margin-top: 32px;
 `
 
-const StyledMedias = styled(Medias)`
+const StyledMedias = styled(Media)`
 ${(props) => props.theme.isPhone} {
   display: none;
 }

@@ -6,7 +6,7 @@ import styled from 'styled-components'
 import HeaderLogo from '@Header/HeaderLogo'
 import HeaderMenu from '@Header/HeaderMenu'
 import { sections } from '@Location'
-import Medias from '@Medias'
+import Media from '@Media'
 import useTranslations from '@translation/useTranslations'
 
 const defaultHeight = 64
@@ -31,7 +31,7 @@ const Header = () => {
           </li>
         ))}
         <MediaContainer>
-          <Medias />
+          <Media />
         </MediaContainer>
       </ButtonContainer>
       <HeaderMenu

@@ -125,6 +125,38 @@ const projects: Project[] = [
     end: '2022-12-23',
   },
   {
+    name: 'Arkema',
+    logo: 'arkema',
+    color: '#FFF',
+    skills: [
+      'AWS',
+      'NodeJS',
+      'Typescript',
+      'Javascript',
+      'Terraform',
+      'Gitlab',
+      'Eslint',
+      'Jest',
+      'Web',
+      'Git',
+    ],
+    companies: [
+      'freelancer',
+    ],
+    images: [
+    ],
+    description_project: 'Arkema est une entreprise internationale spécialisée dans les produits chimiques\nAu sein de l\'équipe HIP, développement de flux de données cloud ETL permettant l\'échange d\'informations clés entre différentes applications de l\'entreprise à travers le monde.',
+    description_mission: [
+      'Développement et maintien de "Magellan", un projet en charge de la supply-chain de l\'entreprise traitant plus d\'1 million de message par mois',
+      'Gestion complète du projet, allant de la prise en compte des besoins utilisateurs, aux choix techniques ainsi qu\'à leur implémentation',
+      'Contribution à l\'architecture technique cloud des différents flux de l\'entreprise',
+      'Configuration d\'outils DevOps afin de monitorer des indicateurs clés (taux de succèss, temps de traitement ...)',
+    ],
+    recommendations: [],
+    start: '2023-05-22',
+    end: '2023-08-04',
+  },
+  {
     name: 'MateMeUp',
     logo: 'matemeup',
     color: '#b01515',
