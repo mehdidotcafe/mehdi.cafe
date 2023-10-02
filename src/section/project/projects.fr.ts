@@ -145,7 +145,7 @@ const projects: Project[] = [
     ],
     images: [
     ],
-    description_project: 'Arkema est une entreprise internationale spécialisée dans les produits chimiques\nAu sein de l\'équipe HIP, développement de flux de données cloud ETL permettant l\'échange d\'informations clés entre différentes applications de l\'entreprise à travers le monde.',
+    description_project: 'Arkema est une entreprise internationale spécialisée dans les produits chimiques.\n\nAu sein de l\'équipe HIP, développement de flux de données cloud ETL permettant l\'échange d\'informations clés entre différentes applications de l\'entreprise à travers le monde.',
     description_mission: [
       'Développement et maintien de "Magellan", un projet en charge de la supply-chain de l\'entreprise traitant plus d\'1 million de message par mois',
       'Gestion complète du projet, allant de la prise en compte des besoins utilisateurs, aux choix techniques ainsi qu\'à leur implémentation',
