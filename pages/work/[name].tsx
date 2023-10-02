@@ -406,7 +406,7 @@ const ProjectDescriptionSwitch = styled.ul`
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        padding-bottom: 8px;
+        padding-bottom: 16px;
         align-items: center;
         list-style-type: none;
         margin-block-start: 0;
@@ -473,7 +473,7 @@ const DescriptionContent = styled.div`
         display: inline-block;
         height: 12px;
         width: 12px;
-        background-color: ${(props) => props.theme.mainColor};
+        background-color: ${(props) => props.theme.secondaryColor};
         margin-right: 8px;
 }
 
