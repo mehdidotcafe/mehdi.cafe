@@ -113,7 +113,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Terraform', logo: 'terraform', color: '#ffffff', experience: 1, kind: 'tool', isFilterable: false,
+    name: 'Terraform', logo: 'terraform', color: '#ffffff', experience: 1, kind: 'tool', isFilterable: true,
   },
 
   {

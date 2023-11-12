@@ -468,7 +468,7 @@ const DescriptionContent = styled.div`
         overflow: auto;
         flex-grow: 1;
 
-        ${DescriptionMissionContainer} ${Paragraph} > ::before {
+        ${DescriptionMissionContainer} ${Paragraph}:not(:has(h1, h2, h3, h4, h5)) > ::before {
           content: "";
         display: inline-block;
         height: 12px;
