@@ -36,7 +36,7 @@ const projects: Project[] = [
     description_mission: [
       'Refonte du frontend du site internet <a href=\'https://my.arte.tv\' target=\'_blank\'>my.arte.tv</a> en collection de composant',
       'Développement et optimisation de l\'API utilisateur (historique de visualisation, suggestion de contenu, édition de compte ...) traitant 3 millions requêtes / jour',
-      'Migration du système d\'authentification (IAM) ARTE de LoginRadius vers Keycloak',
+      'Migration du système d\'authentification (IAM, OPENID) ARTE de LoginRadius vers Keycloak',
       'Contribution à la stratégie de mise en cache des contenus, de design de base de données, d\'architecture logicielle et de qualité de code',
       'Optimisation du player vidéo utilisé sur <a href=\'https://arte.tv\' target=\'_blank\'>arte.tv</a>',
       'Accompagnement d\'une équipe externe en charge de la refonte de l\'API utilisateur vers Symfony',
@@ -112,17 +112,21 @@ const projects: Project[] = [
     ],
     images: [
     ],
-    description_project: 'Centaur est une plateforme BI utilisée en interne par Pfizer.\nÀ travers différents modules, elle améliore la prise de décision des employés via l\'analyse, la consolidation et la restitution graphique de données clés.',
+    description_project: 'Pfizer est une entreprise pharmaceutique internationale.\n\nDéveloppement d’une plateforme permettant la mise en place et le suivi d’essais cliniques à travers le monde via l’analyse, la consolidation et la restitution graphique de données clés générées par IA.',
     description_mission: [
-      'Développement de "Simple Search", un moteur de recherche permettant aux utilisateurs de visualiser des données graphiques et agrégées à partir d\'une recherche textuelle',
+      'Développement de nouveaux modules accompagnant les utilisateurs dans leur prise de décision au quotidien',
+      'Refonte de l’architecture cloud de la plateforme dans le but d’améliorer sa fiabilité ainsi que ses performances',
+      'Optimisation de base de données (normalisation, indexation …) contribuant à améliorer ses performances',
+      'Mise en place d’outils DevOps (monitoring, alerting, dashboards …) ayant pour but de baisser le taux d’erreur ainsi que leur délai de résolution',
+      '',
+      'Développement de "Simple Search", un moteur de recherche alimenté par IA permettant aux utilisateurs de visualiser des données clées provenant de multiples sources à partir d\'une recherche textuelle',
       'Réalisation et application d\'un audit technique visant à baisser grandement la dette technique, améliorer la qualité et lisibilité du code ainsi que l\'architecture logicielle',
-      'Développement et déploiement d\'un PoC de "Trial Review", un outil permettant l\'annotation / correction / revue de fichiers utilisés en interne par Pfizer',
-      'Refonte et amélioration de plusieurs interfaces utilisateurs visant à simplifier l\'ergonomie',
-      'Divers développements de fonctionnalités',
+      'Refonte et amélioration de plusieurs interfaces utilisateurs visant à simplifier l\'ergonomie et l’expérience utilisateur',
+      'Développement de fonctionnalités sur divers modules de la plateforme dans le but d’améliorer la prise de décision des utilisateurs au quotidien',
     ],
     recommendations: [],
     start: '2022-04-01',
-    end: '2022-12-23',
+    end: '2023-12-23',
   },
   {
     name: 'Arkema',
@@ -145,7 +149,7 @@ const projects: Project[] = [
     ],
     images: [
     ],
-    description_project: 'Arkema est une entreprise internationale spécialisée dans les produits chimiques.\n\nAu sein de l\'équipe HIP, développement de flux de données cloud ETL permettant l\'échange d\'informations clés entre différentes applications de l\'entreprise à travers le monde.',
+    description_project: 'Arkema est une entreprise internationale spécialisée dans les produits chimiques.\n\nDéveloppement d’architectures cloud ETL permettant l\'échange d\'informations clés entre différentes applications de l\'entreprise à travers le monde.',
     description_mission: [
       'Développement et maintien de "Magellan", un projet en charge de la supply-chain de l\'entreprise traitant plus d\'1 million de message par mois',
       'Gestion complète du projet, allant de la prise en compte des besoins utilisateurs, aux choix techniques ainsi qu\'à leur implémentation',
