@@ -20,7 +20,7 @@ import type { Project } from '@section/project/Project'
 const QUERY_PARAM_NAME = 'skill'
 
 // @todo see how to remove this array
-const filtersGroup = ['iOS', 'NodeJS', 'Angular', 'Laravel', 'MongoDB', 'C++', 'mySQL', 'Terraform']
+const filtersGroup = ['Web', 'Typescript', 'Nest', 'Angular', 'Laravel', 'MongoDB', 'C++', 'MongoDB', 'Terraform']
 
 const Section = () => {
   const t = useTranslations()
@@ -71,6 +71,7 @@ const Section = () => {
                     name={skill.name}
                     backgroundColor={skill.color}
                     logo={skill.logo}
+                    logoType={skill.logoType}
                     experience={skill.experience}
                     isSelected={selectedSkills.indexOf(skill.name) !== -1}
                     isLittle

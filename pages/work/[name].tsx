@@ -194,6 +194,7 @@ const DescriptionSkills = ({
                     <SkillTile
                       isLittle
                       logo={skill.logo}
+                      logoType={skill.logoType}
                       name={skill.name}
                       backgroundColor={skill.color}
                       experience={skill.experience}

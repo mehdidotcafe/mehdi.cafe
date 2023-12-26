@@ -2,29 +2,32 @@ import type { Skill } from '@section/skill/Skill'
 
 const skills: Skill[] = [
   {
-    name: 'Web', logo: 'web', color: '#29154e', experience: 7, kind: 'other',
+    name: 'Web', logo: 'web', color: '#29154e', experience: 8, kind: 'other',
   },
   {
-    name: 'Android', logo: 'android', color: '#29154e', experience: 1, kind: 'other',
+    name: 'Android', logo: 'android', color: '#29154e', experience: 1, kind: 'other', isVisible: false,
   },
   {
-    name: 'iOS', logo: 'ios', color: '#29154e', experience: 1, kind: 'other',
+    name: 'iOS', logo: 'ios', color: '#29154e', experience: 1, kind: 'other', isVisible: false,
   },
 
   {
-    name: 'Javascript', logo: 'javascript', color: '#efd81d', experience: 7, kind: 'language',
+    name: 'Javascript', logo: 'javascript', color: '#efd81d', experience: 8, kind: 'language',
   },
   {
-    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 4, kind: 'language',
+    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 6, kind: 'language',
   },
   {
-    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 5, kind: 'framework',
+    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 6, kind: 'framework',
   },
   {
-    name: 'React', logo: 'react', color: '#61dafb', experience: 5, kind: 'framework',
+    name: 'Nest', logo: 'nest', color: '#320009', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'next', logo: 'next', color: '#000000', experience: 1, isFilterable: false, isVisible: true, kind: 'framework',
+    name: 'React', logo: 'react', color: '#61dafb', experience: 6, kind: 'framework',
+  },
+  {
+    name: 'Next', logo: 'next', color: '#000000', experience: 1, kind: 'framework',
   },
   {
     name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework',
@@ -47,10 +50,10 @@ const skills: Skill[] = [
     name: 'Redis', logo: 'redis', color: '#981713', experience: 3, isVisible: true, kind: 'database',
   },
   {
-    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 5, isVisible: true, kind: 'database',
+    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 6, isVisible: true, kind: 'database',
   },
   {
-    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: false, kind: 'database',
+    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: true, kind: 'database',
   },
   {
     name: 'neo4j', logo: 'neo4j', color: '#ffffff', experience: 1, isVisible: false, kind: 'database',
@@ -109,7 +112,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'AWS', logo: 'aws', color: '#082739', experience: 1, kind: 'tool',
+    name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool',
   },
 
   {
