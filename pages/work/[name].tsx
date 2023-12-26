@@ -87,6 +87,7 @@ const WorkPage = () => {
                       backgroundColor={project.color}
                       name={project.name}
                       logo={project.logo}
+                      logoType={project.logoType}
                       isHoverable={false}
                       fullSize
                     />
