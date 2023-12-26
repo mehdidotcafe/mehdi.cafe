@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32.057" height="32.057" viewBox="0 4 32.057 32.057">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Tracé_13" data-name="Tracé 13" d="M0-21.929H147.75V-53.986H0Z" transform="translate(0 53.986)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_1544" data-name="Groupe 1544" transform="translate(0 53.986)">
+    <g id="Groupe_13" data-name="Groupe 13" transform="translate(0 -53.986)" clip-path="url(#clip-path)">
+      <g id="Groupe_8" data-name="Groupe 8" transform="translate(0 10.921)">
+        <path id="Tracé_8" data-name="Tracé 8" d="M-6.732,0A2.111,2.111,0,0,1-4.621,2.112a2.111,2.111,0,0,1-1.953,2.1l-.158.005h-7.73a2.11,2.11,0,0,1-2.111-2.11A2.111,2.111,0,0,1-14.619.006L-14.462,0Z" transform="translate(16.573)" fill="#6066f7"/>
+      </g>
+      <g id="Groupe_9" data-name="Groupe 9" transform="translate(6.652 19.258)">
+        <path id="Tracé_9" data-name="Tracé 9" d="M-5.935,0A2.111,2.111,0,0,1-3.824,2.112a2.111,2.111,0,0,1-1.953,2.1l-.158.005H-12.5a2.11,2.11,0,0,1-2.112-2.11A2.111,2.111,0,0,1-12.656.006L-12.5,0Z" transform="translate(14.61)" fill="#51ccaa"/>
+      </g>
+      <g id="Groupe_10" data-name="Groupe 10" transform="translate(20.045 19.258)">
+        <path id="Tracé_10" data-name="Tracé 10" d="M-1.451,0A2.111,2.111,0,0,1,.66,2.112a2.111,2.111,0,0,1-1.953,2.1l-.168.005a2.109,2.109,0,0,1-2.111-2.11A2.111,2.111,0,0,1-1.619.006Z" transform="translate(3.572)" fill="#fc6"/>
+      </g>
+      <g id="Groupe_11" data-name="Groupe 11" transform="translate(13.301 27.7)">
+        <path id="Tracé_11" data-name="Tracé 11" d="M-1.516,0A2.11,2.11,0,0,1,.595,2.111a2.11,2.11,0,0,1-1.953,2.1l-.158.006h-.105a2.11,2.11,0,0,1-2.112-2.11A2.112,2.112,0,0,1-1.779.005L-1.621,0Z" transform="translate(3.733)"/>
+      </g>
+      <g id="Groupe_12" data-name="Groupe 12" transform="translate(14.462 10.921)">
+        <path id="Tracé_12" data-name="Tracé 12" d="M-9.761,0A2.111,2.111,0,0,1-7.65,2.112,2.111,2.111,0,0,1-9.6,4.216l-.158.005H-21.917a2.11,2.11,0,0,1-2.112-2.11A2.111,2.111,0,0,1-22.075.006L-21.917,0Z" transform="translate(24.029)" fill="#ff8266"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -3,6 +3,7 @@ import { Color } from '@theme/theme'
 export type Project = {
   name: string,
   logo: string,
+  logoType?: string,
   color: Color,
   skills: string[],
   companies: string[],
