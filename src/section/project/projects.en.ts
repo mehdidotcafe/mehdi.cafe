@@ -8,6 +8,7 @@ const projects: Project[] = [
     color: '#fd4600',
     skills: [
       'React',
+      'Next',
       'Typescript',
       'Javascript',
       'PHP',
@@ -56,6 +57,7 @@ const projects: Project[] = [
       'Javascript',
       'NodeJS',
       'React',
+      'Nest',
       'AWS',
       'neo4j',
       'mySQL',
@@ -354,6 +356,7 @@ const projects: Project[] = [
       'React',
       'iOS',
       'Android',
+      'AWS',
       'Git',
     ],
     companies: [

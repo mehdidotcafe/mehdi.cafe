@@ -36,6 +36,7 @@ const Section = () => {
                 backgroundColor={skill.color}
                 experience={skill.experience}
                 logo={skill.logo}
+                logoType={skill.logoType}
                 showExperience
               />
             </Container>
@@ -56,8 +57,8 @@ const ExperiancePreview = styled.div`
   width: 65px;
   min-width: 65px;
   height: 13px;
-  margin-right: 16px;
-  background-color: #ffab00;
+  margin-right: 12px;
+  background-color: ${(props) => props.theme.secondaryColor};
   display: inline-block;
   align-self: center;
 `

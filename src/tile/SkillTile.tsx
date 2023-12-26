@@ -3,16 +3,12 @@ import styled, { css } from 'styled-components'
 import Image, { ImageProps } from '@Image'
 import { Color } from '@theme/theme'
 import Overlay from '@tile/Overlay'
-import Progress from '@tile/Progress'
 import useTranslations from '@translation/useTranslations'
 
 const side = 164
 const littleSide = side / 2
 
 const progressSide = Math.floor(side / 3.5)
-const progressStroke = Math.floor(progressSide / 8)
-
-const years = 7
 
 type Props = {
   isLittle?: boolean
@@ -20,6 +16,7 @@ type Props = {
   backgroundColor: Color
   isSelected?: boolean
   logo: string
+  logoType?: string
   name: string
   experience: number
 }
@@ -30,6 +27,7 @@ const SkillTile = ({
   backgroundColor,
   isSelected,
   logo,
+  logoType = 'png',
   name,
   experience,
 }: Props) => {
@@ -44,7 +42,7 @@ const SkillTile = ({
           style={{ backgroundColor }}
         >
           <SubContainer $isLittle={isLittle}>
-            <SkillImage alt={`${name} logo`} src={`/images/skills/${logo}.png`} />
+            <SkillImage alt={`${name} logo`} src={`/images/skills/${logo}.${logoType}`} type={logoType} />
             <Overlay
               style={{ backgroundColor }}
               $isLittle={isLittle}
@@ -58,15 +56,6 @@ const SkillTile = ({
       { showExperience
       && (
         <AsideContainer>
-          <RelativeContainer>
-            <ProgressContainer>
-              <Progress
-                side={Math.floor(progressSide)}
-                stroke={progressStroke}
-                progress={(experience * 100) / years}
-              />
-            </ProgressContainer>
-          </RelativeContainer>
           <AsideTextContainer>
             <AsideTextValue>{experience}</AsideTextValue>
             <AsideTextYears>{t.skillTile[experience > 1 ? 'years' : 'year']}</AsideTextYears>
@@ -179,17 +168,6 @@ const SkillImage = styled(Image)<ImageProps>`
 margin-top: 18.75%;
 height: 62.5%;
 width: 62.5%;
-`
-
-const ProgressContainer = styled.div`
-position: absolute;
-width: 100%;
-height: 100%;
-z-index: 2;
-
-svg {
-  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
-}
 `
 
 const RelativeContainer = styled.div`
