@@ -2,8 +2,9 @@ import type { Project } from '@section/project/Project'
 
 const projects: Project[] = [
   {
-    name: 'my arte',
+    name: 'arte',
     logo: 'arte',
+    logoType: 'svg',
     color: '#fd4600',
     skills: [
       'React',
@@ -48,7 +49,8 @@ const projects: Project[] = [
   {
     name: 'kwote',
     logo: 'kwote',
-    color: '#e0cbaa',
+    logoType: 'svg',
+    color: '#987654',
     skills: [
       'Typescript',
       'Javascript',
@@ -88,9 +90,10 @@ const projects: Project[] = [
     end: '2021-10-01',
   },
   {
-    name: 'pfizer centaur',
+    name: 'pfizer',
     logo: 'centaur',
-    color: '#0008c4',
+    logoType: 'svg',
+    color: '#FFFFFF',
     skills: [
       'Typescript',
       'Javascript',
@@ -131,7 +134,8 @@ const projects: Project[] = [
   {
     name: 'Arkema',
     logo: 'arkema',
-    color: '#FFF',
+    logoType: 'svg',
+    color: '#299d80',
     skills: [
       'AWS',
       'NodeJS',
@@ -372,7 +376,7 @@ const projects: Project[] = [
     end: '2019-11-01',
   },
   {
-    name: 'Intranet AXIS',
+    name: 'AXIS',
     logo: 'axis',
     color: '#FFFFFF',
     skills: [

@@ -88,6 +88,7 @@ const Section = () => {
                   backgroundColor={project.color}
                   name={project.name}
                   logo={project.logo}
+                  logoType={project.logoType}
                 />
               </Item>
             </ProjectButton>

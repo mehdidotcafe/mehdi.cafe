@@ -11,16 +11,17 @@ type ContainerProps = {
 type Props = {
   backgroundColor: Color
   logo: string
+  logoType?: string
   name: string
   isHoverable?: boolean
   fullSize?: boolean
 }
 
 const ProjectTile = ({
-  backgroundColor, logo, name, isHoverable, fullSize,
+  backgroundColor, logo, name, isHoverable, fullSize, logoType,
 }: Props) => (
   <Container $isFullSize={fullSize} style={{ backgroundColor }}>
-    <ProjectImage alt={`${name} logo`} src={`/images/project/${logo}-logo.png`} />
+    <ProjectImage alt={`${name} logo`} src={`/images/project/${logo}-logo.${logoType ?? 'png'}`} type={logoType} />
     {isHoverable !== false
         && (
           <Overlay style={{ backgroundColor }} $backgroundColor={backgroundColor} $isLittle={false}>
