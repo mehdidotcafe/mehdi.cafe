@@ -2,7 +2,7 @@ import type { Skill } from '@section/skill/Skill'
 
 const skills: Skill[] = [
   {
-    name: 'Web', logo: 'web', color: '#29154e', experience: 8, kind: 'other',
+    name: 'Web', logo: 'web', color: '#29154e', experience: 8, kind: 'other', logoType: 'svg',
   },
   {
     name: 'Android', logo: 'android', color: '#29154e', experience: 1, kind: 'other', isVisible: false,
@@ -12,48 +12,48 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Javascript', logo: 'javascript', color: '#efd81d', experience: 8, kind: 'language',
+    name: 'Javascript', logo: 'javascript', color: '#efdb5f', experience: 8, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 6, kind: 'language',
+    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 6, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 6, kind: 'framework',
+    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 6, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'Nest', logo: 'nest', color: '#320009', experience: 1, kind: 'framework', logoType: 'svg',
+    name: 'Nest', logo: 'nest', color: '#e0234e', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'React', logo: 'react', color: '#61dafb', experience: 6, kind: 'framework',
+    name: 'React', logo: 'react', color: '#61dafb', experience: 6, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'Next', logo: 'next', color: '#000000', experience: 1, kind: 'framework',
+    name: 'Next', logo: 'next', color: '#000000', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework',
+    name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework', logoType: 'svg',
   },
   {
     name: 'jQuery', logo: 'jquery', color: '#0865a6', experience: 3, isFilterable: false, isVisible: false, kind: 'framework',
   },
 
   {
-    name: 'PHP', logo: 'php', color: '#4d588e', experience: 3, kind: 'language',
+    name: 'PHP', logo: 'php', color: '#4d588e', experience: 3, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'Laravel', logo: 'laravel', color: '#fb503b', experience: 2, kind: 'framework',
+    name: 'Laravel', logo: 'laravel', color: '#fb503b', experience: 2, kind: 'framework', logoType: 'svg',
   },
   {
     name: 'Symfony', logo: 'symfony', color: '#000000', experience: 0.5, isFilterable: false, isVisible: false, kind: 'framework',
   },
 
   {
-    name: 'Redis', logo: 'redis', color: '#981713', experience: 3, isVisible: true, kind: 'database',
+    name: 'Redis', logo: 'redis', color: '#FFFFFF', experience: 3, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
-    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 6, isVisible: true, kind: 'database',
+    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 6, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
-    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: true, kind: 'database',
+    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
     name: 'neo4j', logo: 'neo4j', color: '#ffffff', experience: 1, isVisible: false, kind: 'database',
@@ -70,10 +70,10 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'C', logo: 'c', color: '#7f8b99', experience: 3, isFilterable: false, kind: 'language',
+    name: 'C', logo: 'c', color: '#7f8b99', experience: 3, isFilterable: false, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'C++', logo: 'c++', color: '#004482', experience: 3, isFilterable: false, kind: 'language',
+    name: 'C++', logo: 'c++', color: '#004482', experience: 3, isFilterable: false, kind: 'language', logoType: 'svg',
   },
 
   {
@@ -108,15 +108,15 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Lua', logo: 'lua', color: '#000080', experience: 1, isFilterable: false, kind: 'language',
+    name: 'Lua', logo: 'lua', color: '#000080', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg',
   },
 
   {
-    name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool',
+    name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool', logoType: 'svg',
   },
 
   {
-    name: 'Terraform', logo: 'terraform', color: '#ffffff', experience: 1, kind: 'tool', isFilterable: true,
+    name: 'Terraform', logo: 'terraform', color: '#ffffff', experience: 1, kind: 'tool', isFilterable: true, logoType: 'svg',
   },
 
   {

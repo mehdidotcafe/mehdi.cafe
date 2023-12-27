@@ -12,7 +12,7 @@ const BaseIcon = ({
 }: Props) => {
   const theme = useTheme()
 
-  return <Image src={src} alt={alt} width={theme.iconSize} height={theme.iconSize} />
+  return <Image src={src} alt={alt} width={theme.iconSize} height={theme.iconSize} type="svg" />
 }
 
 export default BaseIcon

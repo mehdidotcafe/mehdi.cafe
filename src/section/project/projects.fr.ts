@@ -243,6 +243,7 @@ const projects: Project[] = [
   {
     name: 'Cloudindus',
     logo: 'cloudindus',
+    logoType: 'svg',
     color: '#dadadd',
     skills: [
       'Javascript',

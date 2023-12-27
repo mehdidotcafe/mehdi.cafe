@@ -38,14 +38,17 @@ const MediaButton = styled.a`
   cursor: pointer;
   margin-left: 8px;
   margin-right: 8px;
+  background-color: ${(props) => props.theme.secondaryColor};
+  color: ${(props) => props.theme.light.linkColor};
+
+  :hover {
+    background-color: ${(props) => props.theme.tertiaryColor};
+  }
 
   img {
-    background-color: ${(props) => props.theme.secondaryColor};
-    color: ${(props) => props.theme.light.linkColor};
-    
-    :hover {
-      background-color: ${(props) => props.theme.tertiaryColor};
-    }
+    height: calc(32px - 8px);
+    width: calc(32px - 8px);
+    margin: 4px;
   }
 `
 
