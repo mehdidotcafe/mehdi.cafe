@@ -2,13 +2,13 @@ import type { Experience } from '@section/experience/Experience'
 
 const experiences: Experience[] = [
   {
-    title: 'Freelancer', start: 2017, end: null, description: 'Ingénieur logiciel passionné et certifié, je suis expert dans le développement d\'applications web et de sites internet (sites à haut volume, intranets, CRMs). Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.<br />Étant entrepreneur depuis 2017, j\'ai eu l\'occasion de collaborer avec un grand nombre de clients dont des entreprises du fortune 50 dans leurs transformations digitales.<br />Je porte un vrai intérêt sur les problématiques d\'ergonomie utilisateur, d\'optimisation et de qualité de l\'application dans le respect des bonnes pratiques', logo: 'freelance.png', company: 'freelance',
+    title: 'Freelancer', start: 2017, end: null, description: 'Ingénieur logiciel passionné et certifié, je suis expert dans le développement d\'applications web et de sites internet (sites à haut volume, intranets, CRMs). Je vous accompagne dans la réalisation de votre projet de sa conception à sa livraison.<br />Étant entrepreneur depuis 2017, j\'ai eu l\'occasion de collaborer avec un grand nombre de clients dont des entreprises du fortune 50 dans leurs transformations digitales.<br />Je porte un vrai intérêt sur les problématiques d\'ergonomie utilisateur, d\'optimisation et de qualité de l\'application dans le respect des bonnes pratiques', logo: 'freelance.svg', company: 'freelance',
   },
   {
-    title: 'Certifié AWS x5', start: 2022, end: null, description: '<a target="_blank" href="https://www.credly.com/badges/0210fd45-9112-4d3d-b1eb-67da8c811ca4/public_url">AWS Certified Solutions Architect – Professional</a><br /><a target="_blank" href="https://www.credly.com/badges/be7e5536-9e30-43c2-a198-4367d5f97615/public_url">AWS Certified Solutions Architect – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/e749a2f6-1fb0-4f6e-a8fb-5db2e02d9181/public_url">AWS Certified SysOps Administrator – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/a2dc8af6-5098-45a8-8571-68be1e3e2014/public_url">AWS Certified Developer – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/3f7e4cf4-adec-4b31-9a4d-19e31d12533d/public_url">AWS Certified Cloud Practitioner</a>', logo: 'aws.png', company: 'freelance',
+    title: 'Certifié AWS x5', start: 2022, end: null, description: '<a target="_blank" href="https://www.credly.com/badges/0210fd45-9112-4d3d-b1eb-67da8c811ca4/public_url">AWS Certified Solutions Architect – Professional</a><br /><a target="_blank" href="https://www.credly.com/badges/be7e5536-9e30-43c2-a198-4367d5f97615/public_url">AWS Certified Solutions Architect – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/e749a2f6-1fb0-4f6e-a8fb-5db2e02d9181/public_url">AWS Certified SysOps Administrator – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/a2dc8af6-5098-45a8-8571-68be1e3e2014/public_url">AWS Certified Developer – Associate</a><br /><a target="_blank" href="https://www.credly.com/badges/3f7e4cf4-adec-4b31-9a4d-19e31d12533d/public_url">AWS Certified Cloud Practitioner</a>', logo: 'aws.svg', company: 'freelance',
   },
   {
-    title: 'TOEIC', start: 2022, end: null, description: '970 / 990 <br /><br />  <a target="_blank" href="https://www.etsglobal.org/fr/en/digital-score-report/AF2990DE526BA7ABBAD8E904C93630088612FAFE5CBBFB8C9CBC8F31561462CCNHBITGZ0N0JXTVhOUkN0WHF1ZldhTXhBVHNoZ2lWS2hKQU9rUHJGRERpZyt4V3dp">Certification</a>', logo: 'graduation.png', company: 'freelance',
+    title: 'TOEIC', start: 2022, end: null, description: '970 / 990 <br /><br />  <a target="_blank" href="https://www.etsglobal.org/fr/en/digital-score-report/AF2990DE526BA7ABBAD8E904C93630088612FAFE5CBBFB8C9CBC8F31561462CCNHBITGZ0N0JXTVhOUkN0WHF1ZldhTXhBVHNoZ2lWS2hKQU9rUHJGRERpZyt4V3dp">Certification</a>', logo: 'graduation.svg', company: 'freelance',
   },
   {
     title: 'Master en informatique',
@@ -21,7 +21,7 @@ const experiences: Experience[] = [
         content: ['Programmation web avancée', 'Programmation mobile', 'Intelligence artificielle', 'Réalisation de la version Android d\'<a href=\'/work/Agora\'>AGORA</a>, application de mise en relation entre un porteur de projet et un talent pour concrétiser une idée'],
       },
     ],
-    logo: 'graduation.png',
+    logo: 'graduation.svg',
     company: 'school',
   },
   {
@@ -35,7 +35,7 @@ const experiences: Experience[] = [
         content: ['Marketing', 'Finance', 'Gestion de projet', 'Réalisation d\'un projet de fin d\'année visant à optimiser le trafic urbain via des sensors placés sur des feux rouges'],
       },
     ],
-    logo: 'graduation.png',
+    logo: 'graduation.svg',
     company: 'school',
   },
   {
@@ -59,7 +59,7 @@ const experiences: Experience[] = [
       },
 
     ],
-    logo: 'graduation.png',
+    logo: 'graduation.svg',
     company: 'school',
   },
   {
@@ -67,7 +67,7 @@ const experiences: Experience[] = [
     start: 2014,
     subtitle: 'Marseille, France',
     description: 'Baccalauréat Scientifique',
-    logo: 'graduation.png',
+    logo: 'graduation.svg',
   },
 ]
 

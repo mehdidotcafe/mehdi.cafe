@@ -27,7 +27,7 @@ const Section = () => {
             date={getExperienceDate(experience.start, experience.end, t)}
             iconStyle={{ background: theme.mainColor, color: theme.light.textColor }}
             icon={
-              <Image src={`/images/experiences/${experience.logo}`} alt={experience.title} />
+              <Image src={`/images/experiences/${experience.logo}`} alt={experience.title} type="svg" />
             }
           >
             <ElementTitle>{experience.title}</ElementTitle>
