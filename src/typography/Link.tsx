@@ -14,7 +14,8 @@ export const anchorStyle = css<AnchorProps>`
   text-transform: uppercase;
   text-decoration: none;
   background-color: ${(props) => props.$isStyled !== false && props.theme.secondaryColor};
-  padding: ${(props) => props.$isStyled !== false && '0.1em 0.15em'};
+  padding: 0.1em 0.15em;
+  display: block;
 
   :hover {
     background-color: ${(props) => props.$isStyled !== false && props.theme.tertiaryColor};
@@ -22,12 +23,12 @@ export const anchorStyle = css<AnchorProps>`
 }
 `
 
-const NextLinkContainer = styled.span`
+const NextLinkContainer = styled.div`
 a {
   ${anchorStyle}
 }
 `
-const LinkContainer = styled.span`
+const LinkContainer = styled.div`
 a {
   ${anchorStyle}
 }

@@ -80,7 +80,7 @@ const WorkPage = () => {
         {project
           && skills && (
             <InfoContainer>
-              <DescriptionContainer>
+              <DescriptionContainer $isWide={project.images.length === 0}>
                 <Header>
                   <ProjectBack>
                     <ProjectTile
@@ -99,13 +99,15 @@ const WorkPage = () => {
                     <Title $noMargin>{project.name}</Title>
                     {project.url
                       && (
-                        <StyledExternalLink
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {t.projectPage.seeProject}
-                        </StyledExternalLink>
+                        <LinkContainer>
+                          <ExternalLink
+                            href={project.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {t.projectPage.seeProject}
+                          </ExternalLink>
+                        </LinkContainer>
                       )}
                   </TitleContainer>
                 </Header>
@@ -334,8 +336,10 @@ const InfoContainer = styled.div`
 }
         `
 
-const DescriptionContainer = styled.div`
-        width: 40%;
+const DescriptionContainer = styled.div<{
+  $isWide?: boolean
+}>`
+        width: ${(props) => (props.$isWide === true ? '80' : '50')}%;
         position: fixed;
         top: 64px;
         margin-top: 32px;
@@ -399,8 +403,9 @@ const TitleContainer = styled.div`
 }
         `
 
-const StyledExternalLink = styled(ExternalLink)`
+const LinkContainer = styled.div`
         font-size: 1em;
+        margin-top: 8px;
         `
 
 const ProjectDescriptionSwitch = styled.ul`
@@ -434,7 +439,7 @@ const ProjectDescriptionTab = styled.li<{
         `
 
 const ProjectDescriptionContainer = styled.div`
-        margin-top: 32px;
+        margin-top: 8px;
         `
 
 const Header = styled(Row)`
