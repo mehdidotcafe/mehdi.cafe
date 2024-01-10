@@ -123,11 +123,10 @@ const projects: Project[] = [
       'Refonte de l’architecture cloud de la plateforme dans le but d’améliorer sa fiabilité ainsi que ses performances',
       'Optimisation de base de données (normalisation, indexation …) contribuant à améliorer ses performances',
       'Mise en place d’outils DevOps (monitoring, alerting, dashboards …) ayant pour but de baisser le taux d’erreur ainsi que leur délai de résolution',
-      '',
+
       'Développement de "Simple Search", un moteur de recherche alimenté par IA permettant aux utilisateurs de visualiser des données clées provenant de multiples sources à partir d\'une recherche textuelle',
       'Réalisation et application d\'un audit technique visant à baisser grandement la dette technique, améliorer la qualité et lisibilité du code ainsi que l\'architecture logicielle',
       'Refonte et amélioration de plusieurs interfaces utilisateurs visant à simplifier l\'ergonomie et l’expérience utilisateur',
-      'Développement de fonctionnalités sur divers modules de la plateforme dans le but d’améliorer la prise de décision des utilisateurs au quotidien',
     ],
     recommendations: [],
     start: '2022-04-01',
@@ -629,6 +628,7 @@ const projects: Project[] = [
     recommendations: [],
     start: '2018-02-01',
     end: '2018-03-01',
+    isVisible: false,
   },
   {
     name: 'DeezDL',

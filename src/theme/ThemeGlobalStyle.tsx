@@ -31,34 +31,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: greyscale;
   font-family: var(${(props) => props.theme.font.content});
+  color: ${(props) => props.theme.dark.textColor};
+  background-color: ${(props) => props.theme.dark.backgroundColor};  
 }
-
-// Handle dark theme with css since js doesnt work with SSR
-// See below
-// https://stackoverflow.com/questions/67094919/how-to-fix-dark-mode-background-color-flicker-in-nextjs
-
-// @media (prefers-color-scheme: dark) {
-  body {
-    color: ${(props) => props.theme.dark.textColor};
-    background-color: ${(props) => props.theme.dark.backgroundColor};  
-  }
-
-  a {
-    color: ${(props) => props.theme.dark.linkColor};
-  }
-// }
-
-// @media (prefers-color-scheme: light) {
-//   body {
-//     color: ${(props) => props.theme.light.textColor};
-//     background-color: ${(props) => props.theme.light.backgroundColor};  
-//   }
-
-//   a {
-//     color: ${(props) => props.theme.light.linkColor};
-//   }
-
-// }
 
 * {
   -webkit-touch-callout: none;
@@ -93,6 +68,15 @@ p {
 
 a {
   text-decoration: inherit;
+  color: ${(props) => props.theme.dark.linkColor};
+}
+
+h5 {
+  font-size: 32px !important;
+  font-family:var(${(props) => props.theme.font.content});
+  margin-top: 16px;
+  margin-bottom: 0;
+  text-transform: uppercase;
 }
 `
 

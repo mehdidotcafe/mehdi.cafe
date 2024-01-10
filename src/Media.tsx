@@ -33,7 +33,8 @@ const Container = styled.div`
   margin-left: auto;  
 `
 const MediaButton = styled.a`
-  height: 32px;
+  height: 48px;
+  width: 48px;
   display: inline-block;
   cursor: pointer;
   margin-left: 8px;
@@ -46,8 +47,8 @@ const MediaButton = styled.a`
   }
 
   img {
-    height: calc(32px - 8px);
-    width: calc(32px - 8px);
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
     margin: 4px;
   }
 `

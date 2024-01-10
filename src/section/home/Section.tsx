@@ -133,7 +133,7 @@ const MainDescription = styled(Description)`
 `
 
 const MediaContainerRow = styled(Row)`
-  align-items: center;
+  align-items: flex-end;
   margin-top: 32px;
 `
 
