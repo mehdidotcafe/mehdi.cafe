@@ -53,6 +53,9 @@ const skills: Skill[] = [
     name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 6, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
+    name: 'Postgresql', logo: 'postgresql', color: '#336791', experience: 1, isVisible: false, kind: 'database', logoType: 'svg',
+  },
+  {
     name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
@@ -113,6 +116,10 @@ const skills: Skill[] = [
 
   {
     name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool', logoType: 'svg',
+  },
+
+  {
+    name: 'Heroku', logo: 'heroku', color: '#6663a2', experience: 1, kind: 'tool', logoType: 'svg', isVisible: false,
   },
 
   {
