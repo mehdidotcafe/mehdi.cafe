@@ -632,6 +632,7 @@ const projects: Project[] = [
     recommendations: [],
     start: '2018-09-01',
     end: '2018-11-01',
+    isVisible: false,
   },
   {
     name: 'The Colivers',
