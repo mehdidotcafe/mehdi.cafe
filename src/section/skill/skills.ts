@@ -30,7 +30,7 @@ const skills: Skill[] = [
     name: 'Next', logo: 'next', color: '#000000', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework', logoType: 'svg',
+    name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework', isVisible: false, logoType: 'svg',
   },
   {
     name: 'jQuery', logo: 'jquery', color: '#0865a6', experience: 3, isFilterable: false, isVisible: false, kind: 'framework',
@@ -56,7 +56,7 @@ const skills: Skill[] = [
     name: 'Postgresql', logo: 'postgresql', color: '#336791', experience: 1, isVisible: false, kind: 'database', logoType: 'svg',
   },
   {
-    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: true, kind: 'database', logoType: 'svg',
+    name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: false, kind: 'database', logoType: 'svg',
   },
   {
     name: 'neo4j', logo: 'neo4j', color: '#ffffff', experience: 1, isVisible: false, kind: 'database',
@@ -71,14 +71,15 @@ const skills: Skill[] = [
   {
     name: 'Swift', logo: 'swift', color: '#f36938', experience: 0.5, isFilterable: false, isVisible: false, kind: 'language',
   },
-
   {
     name: 'C', logo: 'c', color: '#7f8b99', experience: 3, isFilterable: false, kind: 'language', logoType: 'svg',
   },
   {
     name: 'C++', logo: 'c++', color: '#004482', experience: 3, isFilterable: false, kind: 'language', logoType: 'svg',
   },
-
+  {
+    name: 'Haskell', logo: 'haskell', color: '#590755', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg',
+  },
   {
     name: 'Storybook', logo: 'storybook', color: '#fe4785', experience: 1, isFilterable: false, isVisible: false, kind: 'tool',
   },
@@ -116,6 +117,9 @@ const skills: Skill[] = [
 
   {
     name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool', logoType: 'svg',
+  },
+  {
+    name: 'GCP', logo: 'gcp', color: '#FFFFFF', experience: 1, kind: 'tool', logoType: 'svg', isVisible: true, isFilterable: true,
   },
 
   {

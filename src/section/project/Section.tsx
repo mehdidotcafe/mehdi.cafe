@@ -20,7 +20,7 @@ import type { Project } from '@section/project/Project'
 const QUERY_PARAM_NAME = 'skill'
 
 // @todo see how to remove this array
-const filtersGroup = ['Web', 'Typescript', 'Nest', 'Angular', 'Laravel', 'MongoDB', 'C++', 'MongoDB', 'Terraform']
+const filtersGroup = ['Web', 'Typescript', 'Nest', 'Next', 'Laravel', 'mySQL', 'C++', 'MongoDB', 'Terraform']
 
 const Section = () => {
   const t = useTranslations()
