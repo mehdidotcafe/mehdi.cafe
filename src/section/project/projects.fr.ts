@@ -51,7 +51,7 @@ const projects: Project[] = [
     name: 'pfizer',
     logo: 'centaur',
     logoType: 'svg',
-    color: '#FFFFFF',
+    color: '#2294fa',
     skills: [
       'Typescript',
       'Javascript',

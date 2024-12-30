@@ -24,6 +24,9 @@ const skills: Skill[] = [
     name: 'Nest', logo: 'nest', color: '#e0234e', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
+    name: 'Bun', logo: 'bun', color: '#faf0e0', experience: 1, kind: 'framework', logoType: 'svg', isVisible: false, isFilterable: false,
+  },
+  {
     name: 'React', logo: 'react', color: '#61dafb', experience: 6, kind: 'framework', logoType: 'svg',
   },
   {
