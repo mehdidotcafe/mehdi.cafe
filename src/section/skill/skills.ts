@@ -78,7 +78,7 @@ const skills: Skill[] = [
     name: 'C++', logo: 'c++', color: '#004482', experience: 3, isFilterable: false, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'Haskell', logo: 'haskell', color: '#590755', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg',
+    name: 'Haskell', logo: 'haskell', color: '#5e5086', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg',
   },
   {
     name: 'Storybook', logo: 'storybook', color: '#fe4785', experience: 1, isFilterable: false, isVisible: false, kind: 'tool',
