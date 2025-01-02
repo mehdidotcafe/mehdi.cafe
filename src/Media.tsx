@@ -4,12 +4,12 @@ import {
   CONTACT_EMAIL,
   CONTACT_GITHUB,
   CONTACT_LINKEDIN,
-  CONTACT_MEDIUM,
+  CONTACT_X,
 } from '@env'
 import Email from '@icon/Email'
 import Github from '@icon/Github'
 import Linkedin from '@icon/Linkedin'
-import Medium from '@icon/Medium'
+import X from '@icon/X'
 
 const Media = () => (
   <Container>
@@ -22,8 +22,8 @@ const Media = () => (
     <MediaButton aria-label="Github" href={`https://github.com/${CONTACT_GITHUB}`} target="_blank" rel="noopener noreferrer">
       <Github />
     </MediaButton>
-    <MediaButton aria-label="Medium" href={`https://medium.com/${CONTACT_MEDIUM}`} target="_blank" rel="noopener noreferrer">
-      <Medium />
+    <MediaButton aria-label="X" href={`https://x.com/${CONTACT_X}`} target="_blank" rel="noopener noreferrer">
+      <X />
     </MediaButton>
   </Container>
 )

@@ -13,6 +13,9 @@ if (!process.env.NEXT_PUBLIC_CONTACT_LINKEDIN) {
 if (!process.env.NEXT_PUBLIC_CONTACT_GITHUB) {
   throw new Error('Missing NEXT_PUBLIC_CONTACT_GITHUB')
 }
+if (!process.env.NEXT_PUBLIC_CONTACT_X) {
+  throw new Error('Missing NEXT_PUBLIC_CONTACT_X')
+}
 if (!process.env.NEXT_PUBLIC_CONTACT_MEDIUM) {
   throw new Error('Missing NEXT_PUBLIC_CONTACT_MEDIUM')
 }
@@ -34,6 +37,7 @@ export const GOOGLE_ANALYTICS = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS
 export const CONTACT_EMAIL = process.env.NEXT_PUBLIC_CONTACT_EMAIL
 export const CONTACT_LINKEDIN = process.env.NEXT_PUBLIC_CONTACT_LINKEDIN
 export const CONTACT_GITHUB = process.env.NEXT_PUBLIC_CONTACT_GITHUB
+export const CONTACT_X = process.env.NEXT_PUBLIC_CONTACT_X
 export const CONTACT_MEDIUM = process.env.NEXT_PUBLIC_CONTACT_MEDIUM
 export const DOMAIN_EN = process.env.NEXT_PUBLIC_DOMAIN_EN
 export const DOMAIN_FR = process.env.NEXT_PUBLIC_DOMAIN_FR
