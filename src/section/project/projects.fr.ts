@@ -157,12 +157,7 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    images: [
-      'sunshare/sunshare_1.png',
-      'sunshare/sunshare_2.png',
-      'sunshare/sunshare_3.png',
-      'sunshare/sunshare_4.png',
-    ],
+    images: [],
     description_project: 'Pour une très grande marque de luxe Française, développement d’une API BFF au sein d’architecture en micro-services à destination des applications mobiles e-commerce de la marque.',
     description_mission: [
       'Développement de “Store mode”, une fonctionnalité permettant une expérience unique en magasin à partir du scan d’un QR Code',
