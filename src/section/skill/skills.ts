@@ -5,6 +5,9 @@ const skills: Skill[] = [
     name: 'Web', logo: 'web', color: '#29154e', experience: 8, kind: 'other', logoType: 'svg',
   },
   {
+    name: 'Web 3', logo: 'web3', color: '#29154e', experience: 2, kind: 'other', logoType: 'svg',
+  },
+  {
     name: 'Android', logo: 'android', color: '#29154e', experience: 1, kind: 'other', isVisible: false,
   },
   {
@@ -115,7 +118,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Lua', logo: 'lua', color: '#000080', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg',
+    name: 'Lua', logo: 'lua', color: '#000080', experience: 1, isFilterable: false, kind: 'language', logoType: 'svg', isVisible: false,
   },
 
   {

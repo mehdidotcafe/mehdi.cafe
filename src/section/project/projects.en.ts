@@ -122,7 +122,7 @@ const projects: Project[] = [
     ],
     recommendations: [],
     start: '2024-02-12',
-    end: 'Current',
+    end: '2025-12-31',
   },
   {
     name: 'sunshare',
@@ -140,6 +140,7 @@ const projects: Project[] = [
       'Github',
       'Eslint',
       'Web',
+      'Web 3',
       'Git',
     ],
     companies: [
