@@ -27,7 +27,7 @@ const projects: Project[] = [
     companies: [
       'freelancer',
     ],
-    url: 'https://my.arte.tv',
+    url: 'https://arte.tv',
     images: [
       'arte/1.png',
       'arte/2.png',

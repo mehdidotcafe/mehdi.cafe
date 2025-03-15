@@ -393,7 +393,7 @@ const Background = styled.div`
 
 const TitleContainer = styled.div`
         display: inline-block;
-        margin-left: 48px;
+        margin-left: 32px;
 
         ${(props) => props.theme.isPhone} {
           margin - top: 32px;

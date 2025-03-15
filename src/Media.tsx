@@ -30,7 +30,9 @@ const Media = () => (
 
 const Container = styled.div`
   float: right;
-  margin-left: auto;  
+  margin-left: auto;
+  display: flex;
+  
 `
 const MediaButton = styled.a`
   height: 48px;

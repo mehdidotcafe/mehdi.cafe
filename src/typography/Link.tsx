@@ -14,8 +14,7 @@ export const anchorStyle = css<AnchorProps>`
   text-transform: uppercase;
   text-decoration: none;
   background-color: ${(props) => props.$isStyled !== false && props.theme.secondaryColor};
-  padding: 0.1em 0.15em;
-  display: block;
+  padding: 0 0.1em;
 
   :hover {
     background-color: ${(props) => props.$isStyled !== false && props.theme.tertiaryColor};
