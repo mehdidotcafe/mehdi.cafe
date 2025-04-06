@@ -9,7 +9,6 @@ const ThemeGlobalStyle = createGlobalStyle`
   --font-terciary: ${roboto.style.fontFamily};
 }
 
-// Hide scrollbars
 ::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -20,7 +19,7 @@ const ThemeGlobalStyle = createGlobalStyle`
   display: none;
 }
 
-html {
+html * {
   -ms-overflow-style: none; /* IE 11 */
   scrollbar-width: none; /* Firefox 64 */
   scrollbar-color: transparent transparent;

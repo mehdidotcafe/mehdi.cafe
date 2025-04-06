@@ -66,7 +66,6 @@ const Copyright = styled.p`
 const MediasContainer = styled.div`
 position: absolute;
 right: 0;
-// parent padding-bottom value 
 bottom: 32px;
 height: 32px;
 
@@ -78,7 +77,6 @@ ${(props) => props.theme.isPhone} {
 const I18NSwitchContainer = styled.div`
 position: absolute;
 left: 8px;
-// parent padding-bttom value 
 bottom: 32px;
 display: none;
 `

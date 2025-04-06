@@ -14,7 +14,7 @@ const Highlights = ({ highlights }: Props) => (
         <p>{highlight.title ?? ''}</p>
         <StyledUl>
           {highlight.content.map((content) => (
-            <SyledLi key={content} dangerouslySetInnerHTML={{ __html: content }} />
+            <StyledLi key={content} dangerouslySetInnerHTML={{ __html: content }} />
           ))}
         </StyledUl>
       </div>
@@ -33,7 +33,7 @@ list-style: none;
 padding-left: 16px;
 `
 
-const SyledLi = styled.li`
+const StyledLi = styled.li`
 &:before {
   content: "";
   display: inline-block;
