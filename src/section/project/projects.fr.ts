@@ -135,8 +135,8 @@ const projects: Project[] = [
     end: '2022-04-01',
   },
   {
-    name: 'Marque de luxe',
-    logo: 'bff',
+    name: 'Louis Vuitton',
+    logo: 'louis-vuitton',
     logoType: 'svg',
     color: '#FFFFFF',
     skills: [
@@ -158,7 +158,7 @@ const projects: Project[] = [
       'freelancer',
     ],
     images: [],
-    description_project: 'Pour une très grande marque de luxe Française, développement d’une API BFF au sein d’architecture en micro-services à destination des applications mobiles e-commerce de la marque.',
+    description_project: 'Louis Vuitton est une marque de luxe Française.\nDéveloppement d’une API BFF au sein d’architecture en micro-services à destination des applications mobiles e-commerce de la marque.',
     description_mission: [
       'Développement de “Store mode”, une fonctionnalité permettant une expérience unique en magasin à partir du scan d’un QR Code',
       'Développement de divers fonctionnalités relatives aux pages produits des applications tels que de la suggestion de contenu ou recherche de produit',
@@ -167,7 +167,7 @@ const projects: Project[] = [
     ],
     recommendations: [],
     start: '2024-02-12',
-    end: '2055-12-31',
+    end: '2025-06-30',
   },
   {
     name: 'sunshare',

@@ -89,8 +89,8 @@ const projects: Project[] = [
     end: '2023-12-23',
   },
   {
-    name: 'French Luxury brand',
-    logo: 'bff',
+    name: 'Louis Vuitton',
+    logo: 'louis-vuitton',
     logoType: 'svg',
     color: '#FFFFFF',
     skills: [
@@ -113,7 +113,7 @@ const projects: Project[] = [
     ],
     images: [
     ],
-    description_project: 'For a major French luxury brand, development of a BFF API within a microservices architecture powering the brand\'s mobile e-commerce applications.',
+    description_project: 'Louis Vuitton is a French luxury brand.\nDevelopment of a BFF API within a microservices architecture powering the brand\'s mobile e-commerce applications.',
     description_mission: [
       'Development of “Store mode”, a unique in-store experience based on a QR Code scan',
       'Development of various functionalities related to the application\'s product pages, such as content suggestion or product search',
@@ -122,7 +122,7 @@ const projects: Project[] = [
     ],
     recommendations: [],
     start: '2024-02-12',
-    end: '2025-12-31',
+    end: '2025-06-30',
   },
   {
     name: 'sunshare',
