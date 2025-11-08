@@ -92,7 +92,7 @@ const projects: Project[] = [
     name: 'Louis Vuitton',
     logo: 'louis-vuitton',
     logoType: 'svg',
-    color: '#FFFFFF',
+    color: '#2C1B10',
     skills: [
       'Typescript',
       'Javascript',
