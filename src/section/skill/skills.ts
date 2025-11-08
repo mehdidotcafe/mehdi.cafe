@@ -36,6 +36,9 @@ const skills: Skill[] = [
     name: 'Next', logo: 'next', color: '#000000', experience: 1, kind: 'framework', logoType: 'svg',
   },
   {
+    name: 'Python', logo: 'python', color: '#366994', experience: 1, kind: 'language', logoType: 'svg',
+  },
+  {
     name: 'Angular', logo: 'angular', color: '#c30e2e', experience: 3, kind: 'framework', isVisible: false, logoType: 'svg',
   },
   {
@@ -133,7 +136,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Terraform', logo: 'terraform', color: '#5C4EE5', experience: 1, kind: 'tool', isFilterable: true, logoType: 'svg',
+    name: 'Terraform', logo: 'terraform', color: '#5C4EE5', experience: 1, kind: 'tool', isFilterable: true, logoType: 'svg', isVisible: false,
   },
 
   {
