@@ -2,6 +2,7 @@ import Document, {
   DocumentContext, DocumentInitialProps,
   Head, Html, Main, NextScript,
 } from 'next/document'
+import { Analytics } from '@vercel/analytics/next'
 import { ServerStyleSheet } from 'styled-components'
 
 import useTranslations from '@translation/useTranslations'
@@ -14,6 +15,7 @@ const AppDocument = () => {
       <Head />
       <body>
         <Main />
+        <Analytics />
         <NextScript />
       </body>
     </Html>
