@@ -153,14 +153,16 @@ const projects: Project[] = [
       'Web',
       'Git',
       'GCP',
+      'Redis',
     ],
     companies: [
       'freelancer',
     ],
     images: [],
-    description_project: 'Louis Vuitton est une marque de luxe Française.\nDéveloppement d’une API BFF au sein d’architecture en micro-services à destination des applications mobiles e-commerce de la marque.',
+    description_project: 'Louis Vuitton est une marque de luxe Française.\nDéveloppement d’une API Backend-for-Frontend au sein d’architecture en micro-services à destination des applications mobiles e-commerce de la marque.',
     description_mission: [
       'Développement de “Store mode”, une fonctionnalité permettant une expérience unique en magasin à partir du scan d’un QR Code',
+      'Développement d\' un système de salle d\'attente virtuelle afin de gérer les pics de trafic lors d\'évènements marketing majeurs (lancements de produits, drops ...)',
       'Développement de divers fonctionnalités relatives aux pages produits des applications tels que de la suggestion de contenu ou recherche de produit',
       'Divers remaniements techniques permettant une meilleure maintenabilité et testabilité du projet',
       'Mise en place de solutions DevOps tels que du caching, rate-limiting, feature-flagging, Dockerisation afin de mieux intégrer l’API dans une architecture en micro-service',
