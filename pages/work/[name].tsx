@@ -75,7 +75,7 @@ const WorkPage = () => {
       <Head>
         <meta name="robots" content="noindex" />
       </Head>
-      <StyledBasicSection noMargin>
+      <StyledBasicSection noMargin noPaddingTop>
         <Background />
         {project
           && skills && (
@@ -329,10 +329,11 @@ const BackButton = styled.button`
 
 const InfoContainer = styled.div`
         margin-left: 4%;
-        margin-right: 4%;
+        margin-right: 1%;
 
         ${(props) => props.theme.isPhone} {
-          flex - direction: column;
+          flex-direction: column;
+          padding-top: ${(props) => props.theme.sectionDefaultPaddingTop}px;
 }
         `
 

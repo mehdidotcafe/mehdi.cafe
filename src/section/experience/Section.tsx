@@ -78,21 +78,23 @@ const VerticalTimelineElement = ({
 )
 
 const VerticalTimelineElementRow = styled(Row)`
-margin-top: 32px;
-margin-bottom: 32px;
+margin-top: 16px;
+margin-bottom: 16px;
 flex-wrap: nowrap;
 z-index: 2;
 `
 
 const VerticalTimelineElementIcon = styled.div`
-height: calc(54px);
-width: calc(54px);
-border: 3px solid white;
+max-height: 54px;
+min-width: 54px;
 border-radius: 0;
 margin-left: -8px;
-box-shadow: none;
+box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
 box-sizing: border-box;
 z-index: 2;
+display: flex;
+align-items: center;
+justify-content: center;
 
 ${(props) => props.theme.isPhone} {
   display: none;
@@ -101,7 +103,6 @@ ${(props) => props.theme.isPhone} {
 img {
   height: 32px;
   width: 32px;
-  margin: 8px;
   display: block;
 }
 `
@@ -109,13 +110,14 @@ img {
 const VerticalTimelineElementContent = styled.div`
 border-radius: 0;
 box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
-margin-left: 38px;
-margin-right: 38px;
+margin-left: 24px;
+margin-right: 24px;
 background: white;
 color: black !important;
 padding-bottom: 0;
-padding: 1em;
+padding: 0.75em;
 z-index: 2;
+max-width:1600px;
 
 ${(props) => props.theme.isLaptop} {
   min-width: 500px;
@@ -145,19 +147,15 @@ padding-top: 0.8em;
 ${(props) => props.theme.isPhone} {
     color: white;
 }
-
-// @media (prefers-color-scheme: dark) {
-    color: white;
-// }
 `
 
 const VerticalTimelineContainer = styled.div`
   max-width: 100%;
-  padding-top: 64px;
+  padding-top: 32px;
   margin-left: -14px;
   padding-left: 0;
   margin-bottom: 0;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
   position: relative;
 
   &::before {
@@ -203,7 +201,7 @@ const NoPaddingBottomBasicSection = styled(BasicSection)`
 
 const ElementTitle = styled.em`
   font-family: var(${(props) => props.theme.font.title});
-  font-size: 2.25em;
+  font-size: 1.75em;
   margin-block-start: 0;
   margin-block-end: 0;
   font-style: normal;
