@@ -15,16 +15,16 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Javascript', logo: 'javascript', color: '#efdb5f', experience: 8, kind: 'language', logoType: 'svg',
+    name: 'Javascript', logo: 'javascript', color: '#efdb5f', experience: 9, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 6, kind: 'language', logoType: 'svg',
+    name: 'Typescript', logo: 'typescript', color: '#2d79c7', experience: 7, kind: 'language', logoType: 'svg',
   },
   {
-    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 6, kind: 'framework', logoType: 'svg',
+    name: 'NodeJS', logo: 'node', color: '#94b84d', experience: 7, kind: 'framework', logoType: 'svg',
   },
   {
-    name: 'Nest', logo: 'nest', color: '#e0234e', experience: 1, kind: 'framework', logoType: 'svg',
+    name: 'Nest', logo: 'nest', color: '#e0234e', experience: 3, kind: 'framework', logoType: 'svg',
   },
   {
     name: 'Bun', logo: 'bun', color: '#faf0e0', experience: 1, kind: 'framework', logoType: 'svg', isVisible: false, isFilterable: false,
@@ -56,13 +56,13 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Redis', logo: 'redis', color: '#FFFFFF', experience: 3, isVisible: true, kind: 'database', logoType: 'svg',
+    name: 'Redis', logo: 'redis', color: '#FFFFFF', experience: 4, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
-    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 6, isVisible: true, kind: 'database', logoType: 'svg',
+    name: 'mySQL', logo: 'mysql', color: '#00546b', experience: 7, isVisible: true, kind: 'database', logoType: 'svg',
   },
   {
-    name: 'Postgresql', logo: 'postgresql', color: '#336791', experience: 1, isVisible: false, kind: 'database', logoType: 'svg',
+    name: 'Postgresql', logo: 'postgresql', color: '#336791', experience: 3, isVisible: false, kind: 'database', logoType: 'svg',
   },
   {
     name: 'MongoDB', logo: 'mongo', color: '#69b23f', experience: 1, isVisible: false, kind: 'database', logoType: 'svg',
@@ -107,7 +107,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'Git', logo: 'git', color: '#f05033', experience: 8, isFilterable: false, isVisible: false, kind: 'tool',
+    name: 'Git', logo: 'git', color: '#f05033', experience: 10, isFilterable: false, isVisible: false, kind: 'tool',
   },
 
   {
@@ -125,7 +125,7 @@ const skills: Skill[] = [
   },
 
   {
-    name: 'AWS', logo: 'aws', color: '#082739', experience: 2, kind: 'tool', logoType: 'svg',
+    name: 'AWS', logo: 'aws', color: '#082739', experience: 4, kind: 'tool', logoType: 'svg',
   },
   {
     name: 'GCP', logo: 'gcp', color: '#FFFFFF', experience: 1, kind: 'tool', logoType: 'svg', isVisible: true, isFilterable: true,
@@ -149,9 +149,8 @@ const skills: Skill[] = [
     name: 'Jenkins', logo: 'jenkins', color: '#ffffff', experience: 1, isFilterable: false, isVisible: false, kind: 'tool',
   },
   {
-    name: 'Docker', logo: 'docker', color: '#ffffff', experience: 1, isFilterable: false, isVisible: false, kind: 'tool',
+    name: 'Docker', logo: 'docker', color: '#ffffff', experience: 3, isFilterable: false, isVisible: false, kind: 'tool',
   },
-
   {
     name: 'Datadog', logo: 'datadog', color: '#ffffff', experience: 1, kind: 'tool', isVisible: false, isFilterable: false,
   },
