@@ -78,8 +78,8 @@ const VerticalTimelineElement = ({
 )
 
 const VerticalTimelineElementRow = styled(Row)`
-margin-top: 16px;
-margin-bottom: 16px;
+margin-top: 0px;
+margin-bottom: 32px;
 flex-wrap: nowrap;
 z-index: 2;
 `
@@ -137,7 +137,7 @@ ${(props) => props.theme.isPhone} {
 
 const VerticalTimelineElementDate = styled.div`
 font-size: 18px;
-color: black;
+color: white;
 text-transform: uppercase;
 font-weight: normal;
 opacity: 1;
