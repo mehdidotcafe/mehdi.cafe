@@ -13,6 +13,6 @@ export type Project = {
   description_mission?: string[],
   recommendations: number[],
   start: string,
-  end: string,
+  end?: string,
   isVisible?: boolean,
 }
