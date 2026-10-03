@@ -76,7 +76,11 @@ const WorkPage = () => {
         <meta name="robots" content="noindex" />
       </Head>
       <StyledBasicSection noMargin noPaddingTop>
-        <Background />
+        {
+          project?.images?.length ? (
+            <Background />
+          ) : null
+        }
         {project
           && skills && (
             <InfoContainer>
@@ -242,14 +246,6 @@ const ProjectDescriptionTabs = ({
 
     },
     {
-      key: 'duration',
-      test: project.start,
-      name: t.projectPage.tabs.duration,
-      Content: <Description
-        text={`${displayDate(t.lang, project.start)} - ${displayDate(t.lang, project.end) ?? t.projectPage.tabs.current}`}
-      />,
-    },
-    {
       key: 'skills',
       test: true,
       name: t.projectPage.tabs.skills,
@@ -294,14 +290,6 @@ const useProjectWithSkillsByName = (name: string) => {
     }, [] as Skill[]),
   }
 }
-
-const displayDate = (locale: string, dateStr?: string) => dateStr && new Date(dateStr)
-  .toLocaleDateString(locale, {
-    year: 'numeric',
-    month: 'long',
-    weekday: undefined,
-    day: undefined,
-  })
 
 const BackButton = styled.button`
         position: absolute;
@@ -469,7 +457,11 @@ const ProjectBack = styled.div`
         position: relative;
         `
 
-const DescriptionMissionContainer = styled.div``
+const DescriptionMissionContainer = styled.div`
+  > *:not(:last-child) {
+  margin-bottom: 8px;
+}
+`
 
 const DescriptionContent = styled.div`
         margin-bottom: 16px;
